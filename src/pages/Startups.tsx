@@ -1,0 +1,607 @@
+import { motion } from 'motion/react';
+import { 
+  Rocket, 
+  Users, 
+  Gift, 
+  ArrowRight, 
+  CheckCircle2, 
+  ShieldCheck,
+  Zap,
+  Target,
+  ClipboardList,
+  MessageSquare,
+  Scale,
+  Handshake,
+  TrendingUp,
+  Cpu,
+  ExternalLink
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+// Lista da vitrine fica em src/data/startups-fallback.ts (editável sem mexer no código).
+import { NINNA_STARTUPS } from '../data/startups-fallback';
+
+const StartupsHub = () => {
+  return (
+    <div className="pb-32">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-32 bg-brand-darker">
+        <div className="absolute inset-0 z-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#00bcd4,transparent_70%)]" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8 border border-brand-teal/20">
+                NINNA 4 Startups
+              </div>
+              <h1 className="text-5xl md:text-8xl font-black mb-8 uppercase tracking-tighter leading-none text-white italic">
+                IMPULSIONE SUA <br />
+                <span className="text-brand-teal">STARTUP AO TOPO</span>
+              </h1>
+              <p className="text-xl text-gray-400 mb-12 font-medium leading-relaxed">
+                Oferecemos as ferramentas, o networking e o suporte estratégico necessários para escalar sua solução no mercado global.
+              </p>
+
+              <div className="flex flex-wrap justify-center gap-6">
+                <Link 
+                  to="/startups/portfolio"
+                  className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20 flex items-center gap-3"
+                >
+                  Conheça o Portfólio <Rocket className="w-5 h-5" />
+                </Link>
+                <Link 
+                  to="/startups/ninna-4-startups"
+                  className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all flex items-center gap-3"
+                >
+                  NINNA 4 Startups <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features / Pillars Section */}
+      <section className="py-32 bg-white relative overflow-hidden">
+        {/* Subtle decorative elements */}
+        <div className="absolute top-1/3 left-0 w-80 h-80 bg-brand-teal/5 blur-[100px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-start justify-between mb-20 gap-12">
+            <div className="max-w-xl">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
+                Nosso Modo de Atuar
+              </div>
+              <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter italic leading-none">
+                MUITO ALÉM DA <br />
+                <span className="gradient-text">ACELERAÇÃO</span>
+              </h2>
+            </div>
+            <p className="text-gray-500 font-medium text-lg leading-relaxed max-w-xl lg:mt-6">
+              No NINNA Hub, não acreditamos em fórmulas prontas. Oferecemos um ecossistema completo e dinâmico, focado em suporte sob medida para transformar inovação em resultados sustentáveis e escala real de mercado.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                icon: Handshake,
+                title: "Conexões com o Mercado",
+                desc: "Promovemos pontes de negócios diretas e parcerias de alto impacto com grandes empresas, corporações líderes de mercado e players estratégicos para canais comerciais e pilotos.",
+              },
+              {
+                icon: Users,
+                title: "Rede de Mentores Ativa",
+                desc: "Garantimos o apoio contínuo de uma rede qualificada de mentores — líderes e executivos renomados que já fundaram, operaram e escalaram grandes negócios no Brasil e no mundo.",
+              },
+              {
+                icon: Target,
+                title: "Acompanhamento Próximo",
+                desc: "Atuamos lado a lado com os fundadores e as equipes no dia a dia. Através de rotinas estruturadas de acompanhamento próximo, ajudamos a desatar nós operacionais, otimizar estratégias e impulsionar a execução.",
+              },
+              {
+                icon: TrendingUp,
+                title: "Oportunidades de Crescimento",
+                desc: "Oferecemos apoio constante na identificação ativa de novas oportunidades de crescimento e canais de escala, auxiliando no mapeamento estratégico e captação de recursos relevantes.",
+              },
+            ].map((pillar, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                whileHover={{ y: -8 }}
+                className="group relative p-10 bg-[#fafafa] border border-gray-100 rounded-[48px] hover:bg-white hover:border-brand-teal/20 hover:shadow-2xl hover:shadow-brand-teal/5 transition-all duration-300"
+              >
+                <div className="relative z-10 flex flex-col sm:flex-row gap-6 items-start">
+                  <div className="w-16 h-16 bg-brand-teal/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <pillar.icon className="text-brand-teal w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-black text-gray-900 mb-3 uppercase tracking-tight italic">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 font-medium leading-relaxed">
+                      {pillar.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Onboarding Pipeline Section */}
+      <section className="py-32 bg-[#050911] relative overflow-hidden border-t border-b border-white/5 text-white" id="onboarding-pipeline-section">
+        {/* Background Image with Dark Gradient Overlays */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000" 
+            alt="Startup Flow Background" 
+            className="w-full h-full object-cover opacity-10 scale-105"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e17] via-[#050911]/95 to-[#0a0e17] z-10" />
+          <div className="absolute top-1/4 -right-20 w-96 h-96 bg-brand-teal/10 blur-[130px] rounded-full z-15" />
+          <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-brand-green/10 blur-[130px] rounded-full z-15" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+          <div className="text-center mb-20">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-[#0ae2b1] text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-[#0ae2b1]/20">
+              Jornada de Parceria
+            </div>
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic">
+              PASSO A PASSO PARA SE TORNAR UM <span className="gradient-text font-black">PARCEIRO NINNA</span>
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto font-semibold mt-4">
+              Uma jornada transparente e estruturada para integrar sua startup ao ecossistema de inovação mais dinâmico da região.
+            </p>
+          </div>
+ 
+          {/* Steps Timeline Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4 relative">
+            {/* Horizontal Line Connector for Desktop */}
+            <div className="hidden lg:block absolute top-[4.5rem] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-brand-teal/20 via-[#0ae2b1] to-brand-green/20 z-0" />
+ 
+            {[
+              {
+                step: "01",
+                title: "Inscrição",
+                desc: "A startup se candidata inserindo suas informações no programa através do nosso portal.",
+                icon: ClipboardList,
+              },
+              {
+                step: "02",
+                title: "Avaliação & Entrevista",
+                desc: "Nossa equipe realiza a avaliação inicial e em seguida agenda uma entrevista de fit estratégico.",
+                icon: MessageSquare,
+              },
+              {
+                step: "03",
+                title: "Conselho do NINNA",
+                desc: "Após a entrevista bem-sucedida, a startup passa pela avaliação do conselho estratégico do NINNA.",
+                icon: Users,
+              },
+              {
+                step: "04",
+                title: "Aprovação Jurídica",
+                desc: "Sendo aprovada pelo conselho, a startup segue para a formalização e aprovação jurídica.",
+                icon: Scale,
+              },
+              {
+                step: "05",
+                title: "Boas-Vindas!",
+                desc: "Por fim, a startup é recebida de braços abertos pelo time e mentores do NINNA.",
+                icon: Handshake,
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.15, duration: 0.5 }}
+                className="relative z-10 flex flex-col items-center text-center px-4 group"
+              >
+                {/* Step badge & icon */}
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[28px] shadow-lg flex items-center justify-center group-hover:border-[#0ae2b1]/40 group-hover:scale-110 transition-all duration-300">
+                    <item.icon className="w-8 h-8 text-[#0ae2b1]" />
+                  </div>
+                  
+                  {/* Step Number Bubble */}
+                  <div className="absolute -top-2 -right-2 w-7 h-7 bg-[#0ae2b1] text-gray-950 text-[11px] font-black rounded-full flex items-center justify-center shadow-lg border-2 border-[#050911]">
+                    {item.step}
+                  </div>
+                </div>
+ 
+                {/* Info */}
+                <h3 className="text-xl font-black text-white uppercase tracking-tight italic mb-2 group-hover:text-[#0ae2b1] transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-white/50 font-semibold leading-relaxed max-w-[200px] lg:max-w-none group-hover:text-white/70 transition-colors">
+                  {item.desc}
+                </p>
+                
+                {/* Mobile Connector Arrow */}
+                {idx < 4 && (
+                  <div className="block lg:hidden my-4 text-[#0ae2b1]/60 animate-pulse text-lg font-black font-mono">
+                    ↓
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Startups Showcase */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal/5 blur-[160px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-brand-teal/20">
+              Membros do Ecossistema
+            </div>
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter italic">
+              STARTUPS DO <span className="gradient-text">NINNA HUB</span>
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
+              Conheça as soluções inovadoras que compõem o nosso ecossistema e transformam diferentes indústrias diariamente.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {NINNA_STARTUPS.map((startup, idx) => (
+              <motion.a
+                key={idx}
+                href={startup.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (idx % 6) * 0.08, duration: 0.4 }}
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="group relative flex flex-col justify-between items-center p-5 bg-[#fafafa] border border-gray-100 rounded-[32px] hover:bg-white hover:border-brand-teal/20 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300 cursor-pointer text-current no-underline"
+              >
+                {/* Logo Area */}
+                <div className="w-full aspect-video flex items-center justify-center mb-3 overflow-hidden rounded-2xl bg-white p-3 border border-gray-50 transition-colors group-hover:border-gray-100 flex-shrink-0">
+                  <img
+                    src={startup.logo}
+                    alt={`${startup.name} logo`}
+                    className="max-h-12 max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      // fallback for broken images
+                      (e.target as HTMLElement).style.display = 'none';
+                      const parent = (e.target as HTMLElement).parentElement;
+                      if (parent) {
+                        const fallback = parent.querySelector('.logo-fallback');
+                        if (fallback) fallback.classList.remove('hidden');
+                      }
+                    }}
+                  />
+                  {/* Fallback Display */}
+                  <div className="logo-fallback hidden font-black text-xs text-gray-400 font-mono tracking-tighter uppercase italic text-center">
+                    {startup.name}
+                  </div>
+                </div>
+
+                {/* Name & Market Category */}
+                <div className="text-center w-full mt-2 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xs font-black text-gray-900 uppercase tracking-tight line-clamp-1 mb-1 italic">
+                      {startup.name}
+                    </h3>
+                    <span className="inline-block text-[8px] font-black tracking-widest text-brand-teal/80 bg-brand-teal/[0.04] px-2 py-0.5 rounded-lg border border-brand-teal/[0.08] uppercase">
+                      {startup.category}
+                    </span>
+                  </div>
+                  
+                  {/* Visitar Button */}
+                  <div className="mt-4 w-full flex justify-center">
+                    <div className="w-full py-2 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[9px] font-black uppercase tracking-wider text-gray-500 group-hover:bg-brand-teal group-hover:border-brand-teal group-hover:text-white transition-all duration-300 flex items-center justify-center gap-1.5 shadow-sm shadow-black/2 active:scale-95">
+                      Visitar Site
+                      <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-white transition-colors" />
+                    </div>
+                  </div>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cases de Sucesso (NINNA Cases) */}
+      <section className="py-32 bg-[#050911] relative overflow-hidden border-t border-b border-white/5 text-white" id="ninna-cases-section">
+        {/* Dark Background Overlay details */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-teal/5 blur-[140px] rounded-full pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-green/5 blur-[140px] rounded-full pointer-events-none" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-[#0ae2b1] text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-[#0ae2b1]/20">
+              Conexões que Geram Resultados
+            </div>
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic">
+              NINNA <span className="gradient-text font-black">CASES</span>
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto font-semibold mt-4">
+              Histórias reais de conexões e inovação aberta onde startups de destaque encontram as maiores corporações do mercado.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Case 1: Pague Menos + Suri.ai */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[48px] overflow-hidden shadow-2xl hover:border-brand-teal/30 transition-all duration-500 flex flex-col justify-between"
+            >
+              <div>
+                {/* Header inside Card */}
+                <div className="p-8 border-b border-white/10 bg-gradient-to-r from-white/[0.02] to-transparent">
+                  <div className="flex items-center justify-between gap-4">
+                    {/* Logos & Connection */}
+                    <div className="flex items-center gap-4">
+                      {/* Corporativa Logo */}
+                      <div className="w-16 h-16 bg-red-500/[0.03] border border-red-500/20 rounded-2xl flex items-center justify-center p-3 shadow-sm bg-white shrink-0">
+                        <img 
+                          src="/Imagens_NINNA/PagueMenos.png" 
+                          alt="Pague Menos logo" 
+                          className="max-h-full max-w-full object-contain"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
+                      {/* Plus sign divider */}
+                      <div className="text-white/40 font-black text-xl">+</div>
+                      {/* Startup representation */}
+                      <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
+                        <MessageSquare className="w-5 h-5 text-[#0ae2b1] mb-0.5" />
+                        <span className="text-[8px] font-black text-[#0ae2b1] tracking-widest uppercase">SURI.AI</span>
+                      </div>
+                    </div>
+
+                    <span className="inline-block text-[8px] font-black tracking-widest text-red-400 bg-red-400/10 px-2.5 py-1 rounded-full border border-red-400/20 uppercase">
+                      Conexão Corporativa
+                    </span>
+                  </div>
+                </div>
+
+                {/* Core Content */}
+                <div className="p-8 md:p-10">
+                  <h3 className="text-2xl font-black text-white uppercase tracking-tighter italic leading-none mb-4 group-hover:text-brand-teal transition-colors">
+                    Aceleração de Atendimento com IA Conversacional
+                  </h3>
+                  <p className="text-white/60 font-semibold text-sm leading-relaxed mb-8">
+                    Como uma das maiores redes de varejo farmacêutico do Brasil se uniu à Suri.ai, startup de inteligência artificial do ecossistema NINNA, para digitalizar e otimizar canais de atendimento e engajamento via WhatsApp nacionalmente.
+                  </p>
+
+                  <div className="space-y-4 mb-8">
+                    <div className="flex gap-3">
+                      <div className="w-6 h-6 rounded bg-red-500/10 text-red-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <Target className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <h4 className="text-[10px] font-black uppercase text-white tracking-wide">O Desafio</h4>
+                        <p className="text-xs text-white/50 font-semibold leading-relaxed">Atender com agilidade milhares de dúvidas cotidianas sobre lojas e entregas de forma escalável.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="w-6 h-6 rounded bg-brand-teal/10 text-[#0ae2b1] flex items-center justify-center shrink-0 mt-0.5">
+                        <Rocket className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <h4 className="text-[10px] font-black uppercase text-white tracking-wide">A Solução</h4>
+                        <p className="text-xs text-white/50 font-semibold leading-relaxed">Integração do motor de inteligência conversacional da Suri.ai ao canal oficial de WhatsApp.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Metrics Block */}
+              <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-tighter italic">+80%</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Média Automação</span>
+                </div>
+                <div className="border-l border-r border-white/10">
+                  <span className="block text-2xl font-black text-white tracking-tighter italic">24/7</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Respostas Real</span>
+                </div>
+                <div>
+                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-tighter italic">-70%</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Tempo Espera</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Case 2: Mold IAX */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[48px] overflow-hidden shadow-2xl hover:border-brand-teal/30 transition-all duration-500 flex flex-col justify-between"
+            >
+              <div>
+                {/* Header inside Card */}
+                <div className="p-8 border-b border-white/10 bg-gradient-to-r from-white/[0.02] to-transparent">
+                  <div className="flex items-center justify-between gap-4">
+                    {/* Logos & Connection */}
+                    <div className="flex items-center gap-4">
+                      {/* Startup Logo/Representation */}
+                      <div className="w-16 h-16 bg-purple-500/[0.04] border border-purple-100 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0 bg-white">
+                        <Cpu className="w-5 h-5 text-purple-600 mb-0.5" />
+                        <span className="text-[8px] font-black text-purple-600 tracking-widest uppercase text-center leading-none">MOLD IAX</span>
+                      </div>
+                      {/* Plus sign divider */}
+                      <div className="text-white/40 font-black text-xl">+</div>
+                      {/* NINNA Indicator */}
+                      <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
+                        <Zap className="w-5 h-5 text-[#0ae2b1] mb-0.5" />
+                        <span className="text-[8px] font-black text-[#0ae2b1] tracking-widest uppercase">NINNA</span>
+                      </div>
+                    </div>
+
+                    <span className="inline-block text-[8px] font-black tracking-widest text-[#9333ea] bg-purple-500/10 px-2.5 py-1 rounded-full border border-purple-500/20 uppercase">
+                      Fomento & Captação
+                    </span>
+                  </div>
+                </div>
+
+                {/* Core Content */}
+                <div className="p-8 md:p-10">
+                  <h3 className="text-2xl font-black text-white uppercase tracking-tighter italic leading-none mb-4 group-hover:text-brand-teal transition-colors">
+                    Acesso Expresso a Recursos Estaduais e Federais
+                  </h3>
+                  <p className="text-white/60 font-semibold text-sm leading-relaxed mb-8">
+                    Como a startup do nosso ecossistema focada em inteligência de hardware e processos industriais obteve acesso a recursos de inovação acelerado com fôlego e curadoria consultiva pelo time do NINNA Hub.
+                  </p>
+
+                  <div className="space-y-4 mb-8">
+                    <div className="flex gap-3">
+                      <div className="w-6 h-6 rounded bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <Target className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <h4 className="text-[10px] font-black uppercase text-white tracking-wide">O Desafio</h4>
+                        <p className="text-xs text-white/50 font-semibold leading-relaxed">Equipes pequenas de forte base técnica sem tempo para burocracia de fomento contínuo e submissões densas.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="w-6 h-6 rounded bg-brand-teal/10 text-[#0ae2b1] flex items-center justify-center shrink-0 mt-0.5">
+                        <TrendingUp className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <h4 className="text-[10px] font-black uppercase text-white tracking-wide">A Solução</h4>
+                        <p className="text-xs text-white/50 font-semibold leading-relaxed">Mapeamento expresso e curadoria de editais efetuada em menos de 1 mês de aceleração integrada no hub.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Metrics Block */}
+              <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <span className="block text-2xl font-black text-purple-400 tracking-tighter italic">R$ 800K</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Recursos</span>
+                </div>
+                <div className="border-l border-r border-white/10">
+                  <span className="block text-2xl font-black text-white tracking-tighter italic">&lt; 1 mês</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-semibold">Estudo / Acesso</span>
+                </div>
+                <div>
+                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-tighter italic">100%</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Compliance</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Join NINNA Section (Replacing the previous CTA card) - converted to Light Background Section */}
+      <section className="py-32 bg-white relative overflow-hidden border-b border-gray-100" id="why-join-ninna-light">
+        {/* Subtle Decorative backgrounds */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-teal/5 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-green/5 blur-[150px] rounded-full pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-gray-900">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            {/* Left Column: Bold Header, pitch, and high-impact CTA button */}
+            <div className="lg:col-span-12 xl:col-span-5 text-left">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
+                Alavanque seu Negócio
+              </div>
+              <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter italic leading-none mb-8">
+                POR QUE SER UMA <br />
+                <span className="text-brand-teal">NINNA STARTUP?</span>
+              </h2>
+              <p className="text-gray-500 font-semibold text-lg leading-relaxed mb-12">
+                Conectar-se ao NINNA Hub significa integrar um ecossistema projetado do zero para destravar canais de vendas, otimizar sua tração de mercado, capacitar sua equipe e impulsionar suas rodadas de investimento de modo sustentável.
+              </p>
+              
+              <Link
+                to="/empresas"
+                className="inline-flex items-center gap-3 bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20 hover:scale-[1.03] active:scale-95 cursor-pointer"
+              >
+                faça parte do NINNA 4 STARTUPS! <Rocket className="w-5 h-5" />
+              </Link>
+            </div>
+
+            {/* Right Column: Premium Interactive Feature Mesh displaying core reasons */}
+            <div className="lg:col-span-12 xl:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                {
+                  number: "01",
+                  title: "Acesso a Grandes Corporações",
+                  desc: "Faça negócios com players consolidados. Reduza o ciclo de venda (B2B/B2B2C) fechando pilotos e contratos comerciais com dezenas de mantenedoras parceiras."
+                },
+                {
+                  number: "02",
+                  title: "Clube de Benefícios Premium",
+                  desc: "Economize milhares de reais em infraestrutura de nuvem, CRM, serviços jurídicos, marketing e design com as vantagens exclusivas concedidas pelas nossas parceiras globais."
+                },
+                {
+                  number: "03",
+                  title: "Mentores de Alto Nível",
+                  desc: "Acesso direto a fundadores, C-levels e investidores altamente qualificados. Orientações sob medida para te guiar na resolução de gargalos estratégicos e operacionais."
+                },
+                {
+                  number: "04",
+                  title: "Espaço Físico & conexões",
+                  desc: "Instale-se em um hub moderno no coração do ecossistema. Trabalhe, interaja diariamente com outros fundadores e participe de eventos fechados com investidores."
+                }
+              ].map((reason, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, duration: 0.5 }}
+                  className="bg-[#fafafa] border border-gray-150 rounded-[32px] p-8 hover:bg-white hover:border-brand-teal/20 hover:shadow-2xl hover:shadow-brand-teal/5 transition-all duration-300 group"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-black font-mono tracking-widest text-[#00bcd4]/60 group-hover:text-brand-teal transition-colors duration-300">
+                      RAZÃO {reason.number}
+                    </span>
+                    <div className="w-8 h-8 rounded-full bg-brand-teal/10 flex items-center justify-center border border-brand-teal/20">
+                      <CheckCircle2 className="w-4 h-4 text-brand-teal" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-black text-gray-900 uppercase tracking-tight italic mb-3 group-hover:text-brand-teal transition-colors">
+                    {reason.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 font-semibold leading-relaxed">
+                    {reason.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default StartupsHub;

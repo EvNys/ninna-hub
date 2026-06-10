@@ -1,0 +1,249 @@
+{
+  "entities": {
+    "Startup": {
+      "title": "Startup",
+      "description": "Startups conectadas ao NINNA Hub",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nome": { "type": "string" },
+        "descricaoCurta": { "type": "string" },
+        "descricaoCompleta": { "type": "string" },
+        "categoria": { "type": "string", "enum": ["fintech", "healthtech", "agtech", "edtech", "retailtech", "other"] },
+        "estagio": { "type": "string", "enum": ["early", "growth", "scale"] },
+        "logo": { "type": "string" },
+        "site": { "type": "string" },
+        "cidade": { "type": "string" },
+        "estado": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": "string", "enum": ["ativo", "inativo"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["nome", "descricaoCurta", "categoria", "estagio", "status"]
+    },
+    "Oportunidade": {
+      "title": "Oportunidade",
+      "description": "Investimentos, editais e parcerias",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "titulo": { "type": "string" },
+        "descricao": { "type": "string" },
+        "tipo": { "type": "string", "enum": ["investimento", "edital", "parceria"] },
+        "linkExterno": { "type": "string" },
+        "dataLimite": { "type": "string", "format": "date" },
+        "imagem": { "type": "string" },
+        "status": { "type": "string", "enum": ["ativo", "inativo"] },
+        "destaque": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["titulo", "descricao", "tipo", "status"]
+    },
+    "Evento": {
+      "title": "Evento",
+      "description": "Eventos realizados pelo NINNA Hub",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nome": { "type": "string" },
+        "descricao": { "type": "string" },
+        "data": { "type": "string", "format": "date" },
+        "horario": { "type": "string" },
+        "local": { "type": "string" },
+        "imagem": { "type": "string" },
+        "linkInscricao": { "type": "string" },
+        "status": { "type": "string", "enum": ["ativo", "inativo"] },
+        "destaque": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["nome", "descricao", "data", "status"]
+    },
+    "KPI": {
+      "title": "KPI",
+      "description": "Indicadores de impacto do Hub",
+      "type": "object",
+      "properties": {
+        "kpi1_label": { "type": "string" },
+        "kpi1_value": { "type": "string" },
+        "kpi2_label": { "type": "string" },
+        "kpi2_value": { "type": "string" },
+        "kpi3_label": { "type": "string" },
+        "kpi3_value": { "type": "string" },
+        "kpi4_label": { "type": "string" },
+        "kpi4_value": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "Parceiro": {
+      "title": "Parceiro",
+      "description": "Corporações e parceiros do ecossistema",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nome": { "type": "string" },
+        "tipo": { "type": "string", "enum": ["corporacao", "startup", "parceiro_estrategico"] },
+        "logo": { "type": "string" },
+        "site": { "type": "string" },
+        "status": { "type": "string", "enum": ["ativo", "inativo"] }
+      },
+      "required": ["nome", "tipo", "logo", "status"]
+    },
+    "User": {
+      "title": "User",
+      "description": "Usuários e Membros da Comunidade",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "editor", "user"] },
+        "name": { "type": "string" },
+        "telefone": { "type": "string" },
+        "nomeEmpresa": { "type": "string" },
+        "foto": { "type": "string" },
+        "publico": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "role"]
+    },
+    "Treinamento": {
+      "title": "Treinamento",
+      "description": "Cursos e treinamentos para a comunidade",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "titulo": { "type": "string" },
+        "descricao": { "type": "string" },
+        "capa": { "type": "string" },
+        "categoria": { "type": "string", "enum": ["Marketing", "Vendas", "Operacional", "Estratégico", "Jurídico", "Outros"] },
+        "ordem": { "type": "number" },
+        "status": { "type": "string", "enum": ["ativo", "inativo"] },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["titulo", "categoria", "status"]
+    },
+    "Aula": {
+      "title": "Aula",
+      "description": "Aulas individuais de um treinamento",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "titulo": { "type": "string" },
+        "descricao": { "type": "string" },
+        "mediaUrl": { "type": "string", "description": "URL do vídeo ou áudio" },
+        "capa": { "type": "string" },
+        "ordem": { "type": "number" }
+      },
+      "required": ["titulo"]
+    },
+    "TeamMember": {
+      "title": "TeamMember",
+      "description": "Membros da equipe NINNA Hub",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nome": { "type": "string" },
+        "cargo": { "type": "string" },
+        "foto": { "type": "string" },
+        "linkedin": { "type": "string" },
+        "ordem": { "type": "number" }
+      },
+      "required": ["nome", "cargo", "foto", "ordem"]
+    },
+    "Premiacao": {
+      "title": "Premiacao",
+      "description": "Prêmios e reconhecimentos do NINNA Hub",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "titulo": { "type": "string" },
+        "organizacao": { "type": "string" },
+        "ano": { "type": "string" },
+        "imagem": { "type": "string" },
+        "status": { "type": "string", "enum": ["ativo", "inativo"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["titulo", "organizacao", "ano", "status"]
+    },
+    "Mentor": {
+      "title": "Mentor",
+      "description": "Mentores do programa de startups",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nome": { "type": "string" },
+        "cargo": { "type": "string" },
+        "empresa": { "type": "string" },
+        "foto": { "type": "string" },
+        "linkedin": { "type": "string" },
+        "ordem": { "type": "number" },
+        "status": { "type": "string", "enum": ["ativo", "inativo"] }
+      },
+      "required": ["nome", "cargo", "empresa", "foto", "status"]
+    },
+    "Beneficio": {
+      "title": "Beneficio",
+      "description": "Clube de benefícios para startups",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nomeEmpresa": { "type": "string" },
+        "logo": { "type": "string" },
+        "ordem": { "type": "number" },
+        "status": { "type": "string", "enum": ["ativo", "inativo"] }
+      },
+      "required": ["nomeEmpresa", "logo", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Coleção de usuários e permissões"
+    },
+    "/startups/{startupId}": {
+      "schema": "Startup",
+      "description": "Coleção de startups"
+    },
+    "/oportunidades/{oportunidadeId}": {
+      "schema": "Oportunidade",
+      "description": "Coleção de oportunidades"
+    },
+    "/eventos/{eventoId}": {
+      "schema": "Evento",
+      "description": "Coleção de eventos"
+    },
+    "/kpis/main": {
+      "schema": "KPI",
+      "description": "Documento único de KPIs"
+    },
+    "/parceiros/{parceiroId}": {
+      "schema": "Parceiro",
+      "description": "Coleção de parceiros"
+    },
+    "/equipe/{memberId}": {
+      "schema": "TeamMember",
+      "description": "Coleção de membros da equipe"
+    },
+    "/premiacoes/{awardId}": {
+      "schema": "Premiacao",
+      "description": "Coleção de prêmios"
+    },
+    "/mentores/{mentorId}": {
+      "schema": "Mentor",
+      "description": "Coleção de mentores"
+    },
+    "/beneficios/{beneficioId}": {
+      "schema": "Beneficio",
+      "description": "Coleção de benefícios"
+    },
+    "/treinamentos/{treinamentoId}": {
+      "schema": "Treinamento",
+      "description": "Coleção de treinamentos"
+    },
+    "/treinamentos/{treinamentoId}/aulas/{aulaId}": {
+      "schema": "Aula",
+      "description": "Coleção de aulas de um treinamento"
+    }
+  }
+}

@@ -1,0 +1,308 @@
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
+import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
+import { db } from '../lib/firebase';
+import { Calendar, MapPin, Clock, Ticket, Users, Sparkles, SlidersHorizontal, Search } from 'lucide-react';
+
+const AgendaEventos = () => {
+  const [eventos, setEventos] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filterType, setFilterType] = useState<'todos' | 'destaque' | 'regular'>('todos');
+
+  const backupEcosystemEvents = [
+    {
+      id: 'backup_1',
+      nome: 'NINNA Connection Day: Startups & Corporates',
+      descricao: 'O maior fórum de conexões estratégicas de Fortaleza. Pitch sessions de startups pré-selecionadas com diretores de inovação corporativa de grandes marcas regionais.',
+      data: '2026-06-18',
+      horario: '14:00 às 18:00',
+      local: 'Auditório Principal NINNA',
+      linkInscricao: 'https://wa.me/5585989844779',
+      destaque: true,
+      imagem: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600'
+    },
+    {
+      id: 'backup_2',
+      nome: 'Workshop: Inteligência Artificial no Corporate Venture Capital',
+      descricao: 'Painel interativo focado na implementação prática de ferramentas preditivas e LLMs para avaliação de teses tecnológicas em portfólios corporativos.',
+      data: '2026-07-02',
+      horario: '09:00 às 11:30',
+      local: 'Sala Pregão NINNA',
+      linkInscricao: 'https://wa.me/5585989844779',
+      destaque: false,
+      imagem: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=600'
+    }
+  ];
+
+  useEffect(() => {
+    const fetchEventos = async () => {
+      try {
+        const q = query(
+          collection(db, 'eventos'),
+          where('status', '==', 'ativo'),
+          orderBy('data', 'asc')
+        );
+        const querySnapshot = await getDocs(q);
+        const dbEvents = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as any));
+        
+        // Merge page specific events (all that have a valid date)
+        const combined = [...dbEvents] as any[];
+        
+        // Add backup events if they aren't already represented (by name/id matching)
+        backupEcosystemEvents.forEach(b => {
+          if (!combined.some(c => c.nome?.toLowerCase() === b.nome.toLowerCase())) {
+            combined.push(b);
+          }
+        });
+
+        // Ensure we filter to only those that have a marked date
+        const eventsWithDates = combined.filter((ev: any) => ev.data);
+
+        // Sort by date ascending
+        eventsWithDates.sort((a: any, b: any) => new Date(a.data).getTime() - new Date(b.data).getTime());
+
+        setEventos(eventsWithDates);
+      } catch (error) {
+        console.error("Erro ao carregar agenda de eventos:", error);
+        // Fallback to backup if Firebase fails
+        setEventos(backupEcosystemEvents);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEventos();
+  }, []);
+
+  // Filter & Search Logic
+  const filteredEvents = eventos.filter(ev => {
+    const matchesSearch = ev.nome?.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                          ev.descricao?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          ev.local?.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    if (filterType === 'destaque') {
+      return matchesSearch && ev.destaque;
+    }
+    if (filterType === 'regular') {
+      return matchesSearch && !ev.destaque;
+    }
+    return matchesSearch;
+  });
+
+  return (
+    <div className="pb-32 bg-[#fafafa] min-h-screen">
+      {/* Page Header */}
+      <section className="relative overflow-hidden py-24 border-b border-gray-100 bg-white">
+        <div className="absolute top-1/2 left-0 w-32 h-[400px] bg-brand-teal/5 -translate-y-1/2 -skew-x-12 z-10 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-teal/5 blur-[120px] rounded-full -mr-40 -mt-40 z-10 pointer-events-none" />
+
+        {/* Low opacity background image */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-white/85 z-10" />
+          <img 
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000" 
+            alt="Event Stage" 
+            className="w-full h-full object-cover grayscale scale-110 opacity-70"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent z-20" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+              Programação NINNA Hub
+            </div>
+            <h1 className="text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter leading-none text-gray-900 italic">
+              AGENDA DE <br /><span className="gradient-text">EVENTOS</span>
+            </h1>
+            <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed border-t border-gray-100 pt-6 mt-6 font-medium">
+              Acompanhe discussões disruptivas, workshops interativos, painéis de CVC e encontros estratégicos do ecossistema de inovação.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Filter and Search Bar */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <div className="bg-white p-6 rounded-[30px] border border-gray-100 shadow-md flex flex-col md:flex-row gap-4 items-center justify-between">
+          
+          {/* Search Input */}
+          <div className="relative w-full md:w-96">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
+            <input
+              type="text"
+              placeholder="Buscar por evento, local ou tema..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-11 pr-4 py-3 bg-gray-50 hover:bg-gray-50/50 border border-gray-100 rounded-2xl text-xs font-bold text-gray-800 placeholder-gray-400 focus:outline-none focus:border-brand-teal/50 focus:ring-1 focus:ring-brand-teal/20 transition-all font-sans"
+            />
+          </div>
+
+          {/* Filter categories */}
+          <div className="flex flex-wrap gap-2 w-full md:w-auto">
+            <button
+              onClick={() => setFilterType('todos')}
+              className={`px-5 py-3 rounded-xl text-[9px] font-black uppercase tracking-wider transition-all cursor-pointer ${
+                filterType === 'todos'
+                  ? 'bg-brand-teal text-white shadow-md shadow-brand-teal/20'
+                  : 'bg-gray-50 text-gray-500 hover:bg-gray-100 hover:text-gray-900'
+              }`}
+            >
+              Todos os Eventos
+            </button>
+            <button
+              onClick={() => setFilterType('destaque')}
+              className={`px-5 py-3 rounded-xl text-[9px] font-black uppercase tracking-wider transition-all cursor-pointer ${
+                filterType === 'destaque'
+                  ? 'bg-brand-teal text-white shadow-md shadow-brand-teal/20'
+                  : 'bg-gray-50 text-gray-500 hover:bg-gray-100 hover:text-gray-900'
+              }`}
+            >
+              Eventos Especiais
+            </button>
+            <button
+              onClick={() => setFilterType('regular')}
+              className={`px-5 py-3 rounded-xl text-[9px] font-black uppercase tracking-wider transition-all cursor-pointer ${
+                filterType === 'regular'
+                  ? 'bg-brand-teal text-white shadow-md shadow-brand-teal/20'
+                  : 'bg-gray-50 text-gray-500 hover:bg-gray-100 hover:text-gray-900'
+              }`}
+            >
+              Workshops e Painéis
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Events Listing */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        {loading ? (
+          <div className="space-y-8">
+            {[1, 2].map(i => (
+              <div key={i} className="bg-white h-[380px] animate-pulse rounded-[40px] border border-gray-100 shadow-md" />
+            ))}
+          </div>
+        ) : filteredEvents.length === 0 ? (
+          <div className="text-center py-24 bg-white rounded-[40px] border border-gray-100 shadow-sm">
+            <Calendar className="w-16 h-16 text-gray-300 mx-auto mb-6" />
+            <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight italic">Nenhum evento encontrado</h3>
+            <p className="text-gray-500 mt-2 font-medium">Experimente mudar o filtro de busca ou conferir mais tarde.</p>
+          </div>
+        ) : (
+          <div className="space-y-12">
+            {filteredEvents.map((evento, index) => (
+              <motion.div
+                key={evento.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: Math.min(index * 0.05, 0.3), duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-[40px] overflow-hidden group hover:shadow-2xl transition-all duration-500 border border-gray-100 shadow-xl"
+              >
+                <div className="flex flex-col lg:flex-row min-h-[380px]">
+                  {/* Event Banner Image */}
+                  <div className="lg:w-2/5 relative h-64 lg:h-auto overflow-hidden bg-gray-50">
+                    {evento.imagem ? (
+                      <img 
+                        src={evento.imagem} 
+                        alt={evento.nome} 
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        referrerPolicy="no-referrer"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center p-12 bg-gray-50">
+                        <Calendar className="w-16 h-16 text-gray-200" />
+                      </div>
+                    )}
+                    {evento.destaque && (
+                      <div className="absolute top-6 left-6">
+                        <span className="bg-brand-teal text-white px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest shadow-xl">
+                          Destaque
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* Event Content Custom Styling */}
+                  <div className="p-10 lg:p-14 lg:w-3/5 flex flex-col justify-center">
+                    <div className="flex flex-wrap gap-4 mb-6">
+                      <span className="flex items-center text-brand-teal font-black text-[9px] uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        {new Date(evento.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
+                      </span>
+                      {evento.horario && (
+                        <span className="flex items-center text-gray-500 font-bold text-[9px] uppercase tracking-widest border border-gray-100 px-4 py-2 rounded-xl">
+                          <Clock className="w-4 h-4 mr-2 text-brand-teal animate-pulse" />
+                          {evento.horario}
+                        </span>
+                      )}
+                      <span className="flex items-center text-gray-500 font-bold text-[9px] uppercase tracking-widest border border-gray-100 px-4 py-2 rounded-xl">
+                        <MapPin className="w-4 h-4 mr-2 text-brand-teal" />
+                        {evento.local || 'NINNA Hub'}
+                      </span>
+                    </div>
+
+                    <h3 className="text-3xl md:text-4xl font-black mb-4 group-hover:text-brand-teal transition-colors text-gray-950 uppercase tracking-tighter italic leading-none">
+                      {evento.nome}
+                    </h3>
+                    <p className="text-gray-500 mb-8 leading-relaxed text-sm font-medium">
+                      {evento.descricao}
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row items-center gap-4">
+                      <a 
+                        href={evento.linkInscricao || 'https://wa.me/5585989844779'} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto px-8 py-4 bg-gray-900 text-white font-black text-[10px] tracking-widest uppercase rounded-2xl flex items-center justify-center transition-all shadow-lg hover:bg-brand-teal"
+                      >
+                        <Ticket className="mr-2 w-5 h-5" /> Garantir meu Ingresso
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* Proactive Realization CTA Card */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <div className="relative rounded-[40px] overflow-hidden bg-gray-900 py-16 px-8 md:p-20 shadow-2xl text-center">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-brand-teal/10 blur-[100px] rounded-full" />
+          <div className="relative z-10 max-w-3xl mx-auto space-y-6">
+            <span className="text-brand-teal text-[9px] font-black uppercase tracking-[0.4em] block">Sua marca no Hub</span>
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter italic">QUER CO-REALIZAR OU PATROCINAR UM EVENTO?</h2>
+            <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
+              Conecte sua корпорация ao ecossistema do NINNA de forma dinâmica. Fale conosco para agendar o Auditório Premium ou promover painéis temáticos.
+            </p>
+            <div className="pt-6 flex flex-wrap justify-center gap-4">
+              <Link
+                to="/ecossistema?action=booking"
+                className="px-8 py-4 bg-brand-teal text-white font-black uppercase text-[10px] tracking-widest rounded-xl hover:bg-brand-teal/90 transition-all cursor-pointer shadow-lg shadow-brand-teal/10 hover:scale-[1.02]"
+              >
+                Reservar um Espaço
+              </Link>
+              <Link
+                to="/ecossistema?action=sponsor"
+                className="px-8 py-4 bg-white/10 text-white border border-white/10 font-black uppercase text-[10px] tracking-widest rounded-xl hover:bg-white/20 transition-all cursor-pointer hover:scale-[1.02]"
+              >
+                Seja Patrocinador
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AgendaEventos;

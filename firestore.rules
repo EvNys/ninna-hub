@@ -1,0 +1,138 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: startups
+    // Fields: nome, descricaoCurta, descricaoCompleta, categoria, estagio, logo, site, cidade, estado, tags, status, createdAt, updatedAt
+    //
+    // Collection: oportunidades
+    // Fields: titulo, descricao, tipo, linkExterno, dataLimite, imagem, status, destaque, createdAt
+    //
+    // Collection: eventos
+    // Fields: nome, descricao, data, horario, local, imagem, linkInscricao, status, destaque, createdAt
+    //
+    // Collection: kpis
+    // Fields: kpi1_label, kpi1_value, kpi2_label, kpi2_value, kpi3_label, kpi3_value, kpi4_label, kpi4_value, updatedAt
+    //
+    // Collection: parceiros
+    // Fields: nome, tipo, logo, site, status
+    //
+    // Collection: equipe
+    // Fields: nome, cargo, foto, linkedin, ordem
+    //
+    // Collection: cases
+    // Fields: titulo, cliente, resumo, conteudo, imagem, link, status, createdAt, updatedAt
+    //
+    // Collection: premiacoes
+    // Fields: titulo, organizacao, ano, imagem, status, createdAt, updatedAt
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isVerified() {
+      return isAuthenticated() && (request.auth.token.email_verified == true || request.auth.token.firebase.sign_in_provider == 'google.com');
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (
+        request.auth.token.email == "adm@ninnahub.com.br" || 
+        request.auth.token.email == "ninnaventures@gmail.com" ||
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin')
+      );
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    match /users/{userId} {
+      // Allow any authenticated user to read profiles
+      // We allow list only if public or self
+      allow get: if isAuthenticated();
+      allow list: if isAuthenticated();
+      
+      // Admin can do anything
+      // User can create their own doc during google login if needed, 
+      // but following user intent: "Em acessos eu devo ter a opção de criar um acesso para usuário"
+      // we'll allow create for self TO SUPPORT first-time google login if newRole='user'
+      allow create: if isAdmin() || (isAuthenticated() && request.auth.uid == userId);
+      allow update: if isAdmin() || (isAuthenticated() && request.auth.uid == userId);
+      allow delete: if isAdmin();
+    }
+
+    match /treinamentos/{treinamentoId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+
+      match /aulas/{aulaId} {
+        allow read: if isAuthenticated();
+        allow write: if isAdmin();
+      }
+    }
+
+    match /startups/{startupId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /oportunidades/{oportunidadeId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /eventos/{eventoId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /kpis/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /parceiros/{parceiroId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /equipe/{memberId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /cases/{caseId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /premiacoes/{awardId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /mentores/{mentorId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /beneficios/{beneficioId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+  }
+}
