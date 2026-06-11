@@ -30,12 +30,26 @@ const Navbar = () => {
   const [startupsTimeoutId, setStartupsTimeoutId] = useState<any>(null);
 
   const showDropdown = () => {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-      setTimeoutId(null);
-    }
-    setIsDropdownActive(true);
-  };
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+    setTimeoutId(null);
+  }
+  // Fecha o dropdown de Startups ao abrir Ecossistema
+  if (startupsTimeoutId) clearTimeout(startupsTimeoutId);
+  setIsStartupsDropdownActive(false);
+  setIsDropdownActive(true);
+};
+
+const showStartupsDropdown = () => {
+  if (startupsTimeoutId) {
+    clearTimeout(startupsTimeoutId);
+    setStartupsTimeoutId(null);
+  }
+  // Fecha o dropdown de Ecossistema ao abrir Startups
+  if (timeoutId) clearTimeout(timeoutId);
+  setIsDropdownActive(false);
+  setIsStartupsDropdownActive(true);
+};
 
   const hideDropdown = () => {
     if (timeoutId) {
@@ -45,14 +59,6 @@ const Navbar = () => {
       setIsDropdownActive(false);
     }, 300);
     setTimeoutId(id);
-  };
-
-  const showStartupsDropdown = () => {
-    if (startupsTimeoutId) {
-      clearTimeout(startupsTimeoutId);
-      setStartupsTimeoutId(null);
-    }
-    setIsStartupsDropdownActive(true);
   };
 
   const hideStartupsDropdown = () => {

@@ -206,24 +206,7 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
         {/* Invading Shapes */}
         <div className="absolute inset-0 z-10 pointer-events-none">
-          <motion.div 
-            animate={{ 
-              x: [0, 50, 0],
-              y: [0, -30, 0],
-              rotate: [0, 10, 0]
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[10%] -left-20 w-96 h-96 bg-brand-teal/10 blur-[100px] rounded-full" 
-          />
-          <motion.div 
-            animate={{ 
-              x: [0, -40, 0],
-              y: [0, 50, 0],
-              rotate: [0, -15, 0]
-            }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-[20%] -right-20 w-[500px] h-[500px] bg-brand-teal/10 blur-[130px] rounded-full" 
-          />
+          
           
           {/* Geometric Invading Shapes */}
           <motion.div 
@@ -235,11 +218,11 @@ const Home = () => {
         </div>
 
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[#fafafa]/90 z-10" />
+          <div className="absolute inset-0 bg-[#fafafa]/60 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2000" 
+            src="../Imagens_NINNA/2.png" 
             alt="Hub Atmosphere" 
-            className="w-full h-full object-cover grayscale scale-110"
+            className="w-full h-full object-cover scale-110"
             referrerPolicy="no-referrer"
           />
           <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#fafafa] to-transparent z-20" />
@@ -312,7 +295,7 @@ const Home = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6">
                 Referência Regional
               </div>
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter italic leading-[0.9]">
+              <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter leading-[0.9]">
                 O MAIOR HUB DE <br />
                 <span className="text-brand-teal">INOVAÇÃO DO NORDESTE</span>
               </h2>
@@ -350,7 +333,7 @@ const Home = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4">
                 Atuação Transversal
               </div>
-              <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter italic">
+              <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
                 NOSSAS <span className="gradient-text font-black">FRENTES</span>
               </h2>
               <p className="text-white/60 text-xl leading-relaxed font-semibold">
@@ -421,7 +404,7 @@ const Home = () => {
                     </span>
 
                     {/* Title */}
-                    <h3 className="text-3xl font-black mb-6 uppercase tracking-tight italic text-white group-hover:text-brand-teal transition-colors">
+                    <h3 className="text-3xl font-black mb-6 uppercase tracking-tight text-white group-hover:text-brand-teal transition-colors">
                       {pillar.title}
                     </h3>
 
@@ -450,8 +433,8 @@ const Home = () => {
       </section>
 
 
-      {/* Marcos do NINNA Section */}
-      <section className="py-32 bg-[#fafafa] relative overflow-hidden border-y border-gray-100" id="marcos-do-ninna">
+      {/* Números do NINNA + Award Section */}
+      <section className="py-32 bg-[#fafafa] relative overflow-hidden border-y border-gray-100" id="numeros-do-ninna">
         {/* Subtle Decorative background glows */}
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
         <div className="absolute top-12 right-12 w-[400px] h-[400px] bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
@@ -461,8 +444,8 @@ const Home = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/5 border border-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em]">
               Metas & Conquistas
             </div>
-            <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter italic">
-              MARCOS DO <span className="text-brand-teal underline decoration-gray-200">NINNA</span>
+            <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter">
+              NÚMEROS DO <span className="text-brand-teal underline decoration-gray-200">NINNA</span>
             </h2>
             <p className="text-gray-500 font-semibold text-lg leading-relaxed">
               Consolidação de esforço, conexão constante e geração de inovação real. Nossos números refletem nosso compromisso com o ecossistema.
@@ -470,27 +453,23 @@ const Home = () => {
             <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
             {/* KPI 1 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col justify-between"
+              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
               id="marco-kpi-1"
             >
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-brand-teal/5 text-brand-teal flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                  <Users className="w-7 h-7" />
-                </div>
-                <div className="text-5xl font-black text-gray-900 tabular-nums mb-2">
-                  {kpis?.kpi1_value || '150'}
-                </div>
+              <div className="text-6xl font-black text-gray-900 tabular-nums">
+                  {kpis?.kpi1_value || '200'}
               </div>
-              <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em] pl-1 mt-4">
-                {kpis?.kpi1_label || 'Eventos Realizados'}
-              </div>
+                <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+                <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                  {kpis?.kpi1_label || 'Eventos Realizados'}
+                </div>
             </motion.div>
 
             {/* KPI 2 */}
@@ -499,20 +478,16 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col justify-between"
+              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
               id="marco-kpi-2"
             >
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-[#0ae2b1]/10 text-brand-teal flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                  <Globe className="w-7 h-7 text-[#0ae2b1]" />
-                </div>
-                <div className="text-5xl font-black text-gray-900 tabular-nums mb-2">
-                  {kpis?.kpi2_value || '500'}
-                </div>
+              <div className="text-6xl font-black text-gray-900 tabular-nums">
+                  {kpis?.kpi2_value || '200'}
               </div>
-              <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em] pl-1 mt-4">
-                {kpis?.kpi2_label || 'Conexões Geradas'}
-              </div>
+                <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+                <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                  {kpis?.kpi2_label || 'Conexões Geradas'}
+                </div>
             </motion.div>
 
             {/* KPI 3 */}
@@ -521,20 +496,16 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col justify-between"
+              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
               id="marco-kpi-3"
             >
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-brand-green/10 text-brand-green flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                  <TrendingUp className="w-7 h-7" />
-                </div>
-                <div className="text-5xl font-black text-gray-900 tabular-nums mb-2">
+              <div className="text-6xl font-black text-gray-900 tabular-nums">
                   {kpis?.kpi3_value || '10M'}
+              </div>
+                <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+                <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                  {kpis?.kpi3_label || 'Negócios Gerados'}
                 </div>
-              </div>
-              <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em] pl-1 mt-4">
-                {kpis?.kpi3_label || 'Negócios Gerados'}
-              </div>
             </motion.div>
 
             {/* KPI 4 */}
@@ -543,37 +514,33 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col justify-between"
+              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
               id="marco-kpi-4"
             >
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-brand-teal/10 text-brand-teal flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                  <Rocket className="w-7 h-7" />
-                </div>
-                <div className="text-5xl font-black text-gray-900 tabular-nums mb-2">
+              <div className="text-6xl font-black text-gray-900 tabular-nums">
                   {kpis?.kpi4_value || '200'}
+              </div>
+                <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+                <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                  {kpis?.kpi4_label || 'Startups Impactadas'}
                 </div>
-              </div>
-              <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em] pl-1 mt-4">
-                {kpis?.kpi4_label || 'Startups Impactadas'}
-              </div>
             </motion.div>
           </div>
         </div>
-      </section>
       
-{/* Awards Section */}
-     <section className="py-32 bg-white relative overflow-hidden border-b border-gray-100" id="nossas-conquistas-section">
+      
+{/*Antigo Awards Section */}
+    
   {/* Subtle decorative glows */}
   <div className="absolute top-1/3 left-0 w-96 h-96 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
   <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
 
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <div className="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div className="text-center mb-24 space-y-4">
       <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block">
         Reconhecimento & Impacto
       </span>
-      <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter italic">
+      <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter">
         NOSSAS <span className="text-brand-teal">CONQUISTAS</span>
       </h2>
       <p className="text-gray-500 font-semibold text-lg max-w-2xl mx-auto">
@@ -647,7 +614,7 @@ const Home = () => {
               <div className="inline-block px-4 py-1 rounded-full bg-brand-teal text-white text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                 Referência Regional
               </div>
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter italic leading-[0.9]">
+              <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter leading-[0.9]">
                 O MAIOR HUB DE <br />
                 <span className="text-brand-teal">INOVAÇÃO DO NORDESTE</span>
               </h2>
@@ -671,7 +638,7 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-darker/80 to-transparent" />
                 <div className="absolute bottom-10 left-10">
-                  <div className="text-4xl font-black text-white italic tracking-tighter mb-1">Ceará</div>
+                  <div className="text-4xl font-black text-white tracking-tighter mb-1">Ceará</div>
                   <div className="text-brand-teal text-xs font-black uppercase tracking-widest">Base de Operações</div>
                 </div>
               </div>
@@ -733,7 +700,7 @@ const Home = () => {
     <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block mb-4">
       O que dizem sobre nós
     </span>
-    <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter italic">
+    <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter">
       QUEM ACREDITA <span className="text-brand-teal">FALA</span>
     </h2>
   </div>
@@ -805,7 +772,7 @@ const Home = () => {
             </div>
             
             {/* Beautiful Heading */}
-            <h2 className="text-5xl md:text-8xl font-black mb-8 uppercase tracking-tighter italic leading-[0.9] text-white">
+            <h2 className="text-5xl md:text-8xl font-black mb-8 uppercase tracking-tighter leading-[0.9] text-white">
               PRONTO PARA <br />
               <span className="gradient-text font-black">INOVAR?</span>
             </h2>

@@ -206,7 +206,7 @@ const Eventos = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               Conexão, Inovação e Negócios
             </div>
-            <h1 className="text-5xl md:text-[90px] font-black mb-8 uppercase tracking-tighter leading-[0.85] text-gray-900 italic">
+            <h1 className="text-5xl md:text-[90px] font-black mb-8 uppercase tracking-tighter leading-[0.85] text-gray-900 ">
               O NOSSO <br /><span className="gradient-text">ECOSSISTEMA</span>
             </h1>
             <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed border-t border-gray-100 pt-8 mt-8 font-medium">
@@ -237,7 +237,7 @@ const Eventos = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-5 space-y-6">
               <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em]">Palco das Conexões</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter italic leading-none">
+              <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter  leading-none">
                 ECOSSISTEMAS QUE <span className="gradient-text">GERAM</span> IMPACTO
               </h2>
               <p className="text-white/60 text-lg leading-relaxed font-semibold">
@@ -271,7 +271,7 @@ const Eventos = () => {
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="p-8 bg-white/[0.03] backdrop-blur-md rounded-[30px] border border-white/10 space-y-4">
                 <Sparkles className="w-10 h-10 text-brand-teal" />
-                <h3 className="text-xl font-black italic uppercase text-white">Transformação</h3>
+                <h3 className="text-xl font-black  uppercase text-white">Transformação</h3>
                 <p className="text-white/50 text-sm font-semibold leading-relaxed">
                   Espaço favorável para compartilhar descobertas, cases corporativos e estratégias práticas de mercado.
                 </p>
@@ -279,7 +279,7 @@ const Eventos = () => {
 
               <div className="p-8 bg-white/[0.03] backdrop-blur-md rounded-[30px] border border-white/10 space-y-4 sm:translate-y-6">
                 <Users className="w-10 h-10 text-brand-teal" />
-                <h3 className="text-xl font-black italic uppercase text-white">Conexões</h3>
+                <h3 className="text-xl font-black  uppercase text-white">Conexões</h3>
                 <p className="text-white/50 text-sm font-semibold leading-relaxed">
                   Proximidade direta com mais de 100+ startups em tecnologia e dezenas de corporações parceiras de inovação aberta.
                 </p>
@@ -287,7 +287,7 @@ const Eventos = () => {
 
               <div className="p-8 bg-white/[0.03] backdrop-blur-md rounded-[30px] border border-white/10 space-y-4">
                 <Building2 className="w-10 h-10 text-brand-teal" />
-                <h3 className="text-xl font-black italic uppercase text-white">Oportunidades</h3>
+                <h3 className="text-xl font-black  uppercase text-white">Oportunidades</h3>
                 <p className="text-white/50 text-sm font-semibold leading-relaxed">
                   Equipamentos audiovisuais de ponta, internet dedicada corporativa de alto desempenho e equipe de suporte operacional local.
                 </p>
@@ -295,7 +295,7 @@ const Eventos = () => {
 
               <div className="p-8 bg-white/[0.03] backdrop-blur-md rounded-[30px] border border-white/10 space-y-4 sm:translate-y-6">
                 <Laptop className="w-10 h-10 text-brand-teal" />
-                <h3 className="text-xl font-black italic uppercase text-white">Eventos</h3>
+                <h3 className="text-xl font-black  uppercase text-white">Eventos</h3>
                 <p className="text-white/50 text-sm font-semibold leading-relaxed">
                   Ambiente acolhedor e dinâmico, focado na cultura ágil de feedback, cocriação e colaboração.
                 </p>
@@ -325,7 +325,7 @@ const Eventos = () => {
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Ecossistema Ativo</span>
-                  <h3 className="text-3xl font-black text-white uppercase tracking-tighter italic leading-none">Conhecer Oportunidades</h3>
+                  <h3 className="text-3xl font-black text-white uppercase tracking-tighter  leading-none">Conhecer Oportunidades</h3>
                   <p className="text-white/60 font-semibold text-sm sm:text-base leading-relaxed">
                     Aproximação direta com o mercado inovador cearense. Explore projetos abertos, vagas em tecnologia, desafios de inovação corporativa corporativa e programas dedicados a acelerar marcas.
                   </p>
@@ -351,7 +351,7 @@ const Eventos = () => {
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Programações Oficiais</span>
-                  <h3 className="text-3xl font-black text-white uppercase tracking-tighter italic leading-none">Ver Agenda de Eventos</h3>
+                  <h3 className="text-3xl font-black text-white uppercase tracking-tighter  leading-none">Ver Agenda de Eventos</h3>
                   <p className="text-white/60 font-semibold text-sm sm:text-base leading-relaxed">
                     Participe de sessões de networking e treinamentos enriquecedores e happy hours. Fique por dentro de todos os encontros de startups e palestras promovidas no hub.
                   </p>
@@ -380,7 +380,7 @@ const Eventos = () => {
           {/* Header */}
           <div className="text-center mb-24">
             <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em] mb-4 block">Nossos Selos Oficiais</span>
-            <h3 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter italic">EVENTOS PROPRIETÁRIOS DO <span className="gradient-text">NINNA</span></h3>
+            <h3 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter ">EVENTOS PROPRIETÁRIOS DO <span className="gradient-text">NINNA</span></h3>
             <p className="text-gray-500 max-w-xl mx-auto font-medium mt-4">
               Formatos exclusivos criados e promovidos pelo NINNA para catalisar conexões valiosas, desenvolver capacitações e aproximar marcas inovadoras do mercado.
             </p>
@@ -396,7 +396,7 @@ const Eventos = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse" />
                   Conexão Corporativa
                 </div>
-                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter italic leading-none">
+                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
                   NINNA Connection
                 </h4>
                 <p className="text-gray-500 font-medium text-base md:text-lg leading-relaxed">
@@ -469,7 +469,7 @@ const Eventos = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse" />
                   Ecossistema Informal
                 </div>
-                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter italic leading-none">
+                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
                   Terceiro Tempo
                 </h4>
                 <p className="text-gray-500 font-medium text-base md:text-lg leading-relaxed">
@@ -505,7 +505,7 @@ const Eventos = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse" />
                   Mentoria & Educação
                 </div>
-                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter italic leading-none">
+                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
                   Hub Session
                 </h4>
                 <p className="text-gray-500 font-medium text-base md:text-lg leading-relaxed">
@@ -567,7 +567,7 @@ const Eventos = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse" />
                   Institucional & Ecossistema
                 </div>
-                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter italic leading-none">
+                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
                   Licor
                 </h4>
                 <p className="text-gray-500 font-medium text-base md:text-lg leading-relaxed">
@@ -606,7 +606,7 @@ const Eventos = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em] mb-4">Estrutura de Alto Nível</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter italic">NOSSOS <span className="gradient-text">ESPAÇOS</span></h3>
+            <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter ">NOSSOS <span className="gradient-text">ESPAÇOS</span></h3>
             <p className="text-white/60 max-w-xl mx-auto font-semibold mt-4">
               Equipados com o melhor em tecnologia para garantir que seu treinamento, convenção ou pitch day seja impecável.
             </p>
@@ -633,7 +633,7 @@ const Eventos = () => {
               <div className="p-8 flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-2xl font-black text-white uppercase tracking-tight italic">AUDITÓRIO NINNA</h4>
+                    <h4 className="text-2xl font-black text-white uppercase tracking-tight ">AUDITÓRIO NINNA</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 94 Pessoas</span>
                   </div>
                   <p className="text-white/60 font-semibold leading-relaxed mb-6">
@@ -700,7 +700,7 @@ const Eventos = () => {
               <div className="p-8 flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-2xl font-black text-white uppercase tracking-tight italic">ESPAÇO PREGÃO</h4>
+                    <h4 className="text-2xl font-black text-white uppercase tracking-tight ">ESPAÇO PREGÃO</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 30 Pessoas</span>
                   </div>
                   <p className="text-white/60 font-semibold leading-relaxed mb-6">
@@ -755,7 +755,7 @@ const Eventos = () => {
               <div className="p-8 flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-2xl font-black text-white uppercase tracking-tight italic">SALA OVAL</h4>
+                    <h4 className="text-2xl font-black text-white uppercase tracking-tight ">SALA OVAL</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 12 a 20 Pessoas</span>
                   </div>
                   <p className="text-white/60 font-semibold leading-relaxed mb-6">
@@ -810,7 +810,7 @@ const Eventos = () => {
               <div className="p-8 flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-2xl font-black text-white uppercase tracking-tight italic">SALA SPRINT</h4>
+                    <h4 className="text-2xl font-black text-white uppercase tracking-tight ">SALA SPRINT</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 8 a 10 Pessoas</span>
                   </div>
                   <p className="text-white/60 font-semibold leading-relaxed mb-6">
@@ -851,7 +851,7 @@ const Eventos = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">RECONHECIMENTO & AUTORIDADE</h4>
-            <h5 className="text-xl font-black text-gray-900 uppercase tracking-tight italic mt-2">EMPRESAS QUE REALIZAM EVENTOS NO NINNA</h5>
+            <h5 className="text-xl font-black text-gray-900 uppercase tracking-tight  mt-2">EMPRESAS QUE REALIZAM EVENTOS NO NINNA</h5>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5">
@@ -895,7 +895,7 @@ const Eventos = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] border border-brand-teal/20">
                 Hub de Grande Impacto
               </div>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter uppercase italic leading-[0.95]">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter uppercase  leading-[0.95]">
                 QUERO REALIZAR MEU <span className="gradient-text">EVENTO</span> NO NINNA
               </h2>
               <div className="h-1.5 w-24 bg-gradient-to-r from-brand-teal to-transparent rounded-full" />
@@ -934,7 +934,7 @@ const Eventos = () => {
               >
                 <div className="space-y-4 mb-8">
                   <span className="text-[9px] font-black text-brand-teal uppercase tracking-widest block">PROPOSTA COMERCIAL</span>
-                  <h3 className="text-2xl font-black uppercase text-white tracking-tight italic">PRONTO PARA CONECTAR?</h3>
+                  <h3 className="text-2xl font-black uppercase text-white tracking-tight ">PRONTO PARA CONECTAR?</h3>
                   <p className="text-sm text-gray-400 font-medium leading-relaxed">
                     Nossa equipe comercial desenhará um formato sob medida para o seu orçamento e objetivos estratégicos de marca.
                   </p>
@@ -970,7 +970,7 @@ const Eventos = () => {
                 <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[9px] font-black uppercase tracking-[0.2em]">
                   Impulsione o Ecossistema
                 </div>
-                <h3 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter italic leading-none">
+                <h3 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
                   SEJA UM <span className="gradient-text">PATROCINADOR</span>
                 </h3>
                 <p className="text-gray-500 font-medium text-lg leading-relaxed">
@@ -978,11 +978,11 @@ const Eventos = () => {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                   <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                    <h5 className="font-black uppercase text-sm text-gray-900 italic mb-2">Visibilidade Exclusiva</h5>
+                    <h5 className="font-black uppercase text-sm text-gray-900  mb-2">Visibilidade Exclusiva</h5>
                     <p className="text-gray-500 text-xs font-semibold">Exposição em banners físicos, mídias digitais e painéis de palestras.</p>
                   </div>
                   <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                    <h5 className="font-black uppercase text-sm text-gray-900 italic mb-2">Pitch e Networking</h5>
+                    <h5 className="font-black uppercase text-sm text-gray-900  mb-2">Pitch e Networking</h5>
                     <p className="text-gray-500 text-xs font-semibold">Slots dedicados para pitch e lista exclusiva de leads cadastrados.</p>
                   </div>
                 </div>
@@ -991,7 +991,7 @@ const Eventos = () => {
               <div className="lg:col-span-5 text-center lg:text-left bg-white p-10 rounded-[35px] border border-gray-100 shadow-xl space-y-8">
                 <div className="space-y-2">
                   <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest block">OPORTUNIDADES DE PARCERIA</span>
-                  <h4 className="text-xl font-black text-gray-900 uppercase tracking-tight italic">AGENDA COMUNIDADE CO-CREATE</h4>
+                  <h4 className="text-xl font-black text-gray-900 uppercase tracking-tight ">AGENDA COMUNIDADE CO-CREATE</h4>
                   <p className="text-sm text-gray-500 font-medium leading-relaxed">
                     Ajude-nos a apoiar o desenvolvimento do ecossistema e posicione a sua marca no topo da pirâmide de inovação regional cearense.
                   </p>
@@ -1004,7 +1004,7 @@ const Eventos = () => {
                   >
                     Ver Pacotes de Patrocínio
                   </button>
-                  <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest italic text-center">
+                  <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest  text-center">
                     Ou agende uma reunião com nossa secretaria corporativa
                   </p>
                 </div>
@@ -1045,7 +1045,7 @@ const Eventos = () => {
                   <div className="w-20 h-20 bg-brand-teal/10 text-brand-teal rounded-full flex items-center justify-center mx-auto mb-6">
                     <Check className="w-10 h-10" />
                   </div>
-                  <h3 className="text-3xl font-black uppercase tracking-tighter italic text-gray-950">SOLICITAÇÃO RECEBIDA!</h3>
+                  <h3 className="text-3xl font-black uppercase tracking-tighter  text-gray-950">SOLICITAÇÃO RECEBIDA!</h3>
                   <p className="text-gray-500 font-medium max-w-sm mx-auto">
                     Nossa equipe de curadoria do ecossistema entrará em contato comercial dentro de até 24 horas úteis para alinhar os detalhes operacionais.
                   </p>
@@ -1059,7 +1059,7 @@ const Eventos = () => {
               ) : (
                 <div className="space-y-6">
                   <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.3em] block">Inscrição de Interesse</span>
-                  <h3 className="text-3xl font-black uppercase tracking-tighter italic text-gray-950">
+                  <h3 className="text-3xl font-black uppercase tracking-tighter  text-gray-950">
                     {modalType === 'booking' ? 'Quero Realizar meu Evento' : 'Seja um Patrocinador'}
                   </h3>
                   <p className="text-xs text-gray-400 font-medium">

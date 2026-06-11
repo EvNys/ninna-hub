@@ -100,7 +100,7 @@ const Sobre = () => {
             <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               Nossa Essência
             </div>
-            <h1 className="text-7xl md:text-[120px] font-black mb-8 uppercase tracking-tighter leading-[0.85] text-gray-900 italic">
+            <h1 className="text-7xl md:text-[120px] font-black mb-8 uppercase tracking-tighter leading-[0.85] text-gray-900 ">
               NOSSA <br /><span className="gradient-text">HISTÓRIA</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed border-t border-gray-200 pt-8 mt-8 font-medium">
@@ -127,11 +127,11 @@ const Sobre = () => {
               viewport={{ once: true }}
               className="relative z-10"
             >
-              <div className="flex items-center space-x-3 text-brand-teal font-black uppercase tracking-[0.2em] text-[10px] mb-8 italic">
+              <div className="flex items-center space-x-3 text-brand-teal font-black uppercase tracking-[0.2em] text-[10px] mb-8 ">
                 <History className="w-5 h-5 text-[#0ae2b1]" />
                 <span className="text-[#0ae2b1]">Trajetória</span>
               </div>
-              <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] text-white uppercase tracking-tighter italic">
+              <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] text-white uppercase tracking-tighter ">
                 INOVAÇÃO COM <br /><span className="text-[#0ae2b1] underline decoration-white/20">DNA CEARENSE</span>
               </h2>
               <div className="space-y-8 text-white/75 text-lg leading-relaxed font-semibold">
@@ -148,10 +148,10 @@ const Sobre = () => {
                   Com o avanço da inteligência artificial e a necessidade pulsante de digitalização ágil, o NINNA consolidou-se como o porto seguro de fomento, mentorias e validação rápida de MVPs, conectando empreendedores de vanguarda com tomadores de decisão corporativos de forma madura, séria e unificada.
                 </p>
                 <div className="p-8 rounded-[30px] bg-white/[0.03] border border-white/10 mt-12 group hover:border-[#0ae2b1]/30 hover:bg-white/[0.05] transition-all duration-500">
-                  <h4 className="text-[10px] font-black text-[#0ae2b1] uppercase tracking-widest mb-3 italic flex items-center gap-2">
+                  <h4 className="text-[10px] font-black text-[#0ae2b1] uppercase tracking-widest mb-3  flex items-center gap-2">
                     <Heart className="w-4 h-4 text-[#0ae2b1]" /> Impacto Social
                   </h4>
-                  <p className="text-sm text-white/80 italic font-semibold">
+                  <p className="text-sm text-white/80  font-semibold">
                     Orgulhosamente apoiamos o projeto social <strong>Amontada Valley</strong>, uma iniciativa pioneira e transformadora que leva capacitação tecnológica de qualidade e excelentes oportunidades profissionais para o interior do Ceará, provando que a inovação de impacto não possui barreiras geográficas.
                   </p>
                 </div>
@@ -187,7 +187,7 @@ const Sobre = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-24 space-y-4">
             <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block">Nossos Pilares</span>
-            <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter italic">
+            <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter ">
               NOSSOS <span className="text-brand-teal underline decoration-gray-200">VALORES</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto font-semibold text-lg">
@@ -230,7 +230,7 @@ const Sobre = () => {
 
                       <div className="space-y-1 w-full">
                         <div className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em]">VALOR {String(index + 1).padStart(2, '0')}</div>
-                        <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter italic leading-none group-hover:text-brand-teal transition-colors">
+                        <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter  leading-none group-hover:text-brand-teal transition-colors">
                           {value.title}
                         </h3>
                       </div>
@@ -250,7 +250,7 @@ const Sobre = () => {
                         <span className="w-10 h-[2px] bg-brand-teal" />
                         <span className="text-xs font-black uppercase text-brand-teal tracking-[0.2em]">CULTURA • IMPACTO</span>
                       </div>
-                      <h4 className="text-2xl font-black text-gray-900 uppercase tracking-tight italic">
+                      <h4 className="text-2xl font-black text-gray-900 uppercase tracking-tight ">
                         {value.title}
                       </h4>
                       <p className="text-gray-500 font-semibold text-base leading-relaxed max-w-md md:max-w-xl lg:max-w-md inline-block">
@@ -283,7 +283,7 @@ const Sobre = () => {
                 <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-[#0ae2b1] text-[10px] font-black uppercase tracking-[0.3em] mb-8 border border-[#0ae2b1]/20">
                   Nossa Base
                 </div>
-                <h2 className="text-4xl md:text-6xl font-black mb-10 text-white uppercase tracking-tighter leading-none italic">ONDE A <br /><span className="text-[#0ae2b1] underline decoration-white/20">MÁGICA</span> ACONTECE</h2>
+                <h2 className="text-4xl md:text-6xl font-black mb-10 text-white uppercase tracking-tighter leading-none ">ONDE A <br /><span className="text-[#0ae2b1] underline decoration-white/20">MÁGICA</span> ACONTECE</h2>
                 
                 <div className="space-y-10 mb-12">
                   <div className="flex items-center space-x-6 group">
@@ -345,7 +345,7 @@ const Sobre = () => {
               <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                 Responsabilidade Social
               </div>
-              <h2 className="text-5xl md:text-7xl font-black mb-10 text-gray-900 uppercase tracking-tighter leading-[0.9] italic">
+              <h2 className="text-5xl md:text-7xl font-black mb-10 text-gray-900 uppercase tracking-tighter leading-[0.9] ">
                 INOVAÇÃO QUE <br /><span className="text-brand-teal">TRANSFORMA VIDAS</span>
               </h2>
               <p className="text-xl text-gray-500 font-medium leading-relaxed mb-12">
@@ -357,9 +357,9 @@ const Sobre = () => {
                   <div className="p-3 bg-brand-teal text-white rounded-2xl shadow-lg shadow-brand-teal/20">
                     <Heart className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter italic">Amontada Valley</h3>
+                  <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter ">Amontada Valley</h3>
                 </div>
-                <p className="text-gray-600 font-medium leading-relaxed italic">
+                <p className="text-gray-600 font-medium leading-relaxed ">
                   Nosso principal braço social. O Amontada Valley é um ecossistema de inovação social focado em transformar o interior do Ceará através da educação tecnológica, empreendedorismo e economia criativa.
                 </p>
                 <div className="mt-8 flex items-center text-[10px] font-black uppercase tracking-widest text-brand-teal group-hover:translate-x-2 transition-transform cursor-pointer">
@@ -385,13 +385,13 @@ const Sobre = () => {
                     />
                   </div>
                   <div className="bg-brand-teal p-8 rounded-[30px] text-white shadow-xl shadow-brand-teal/20">
-                    <div className="text-4xl font-black mb-2 italic tracking-tighter">+500</div>
+                    <div className="text-4xl font-black mb-2  tracking-tighter">+500</div>
                     <div className="text-[10px] font-black uppercase tracking-widest opacity-80">Jovens Impactados</div>
                   </div>
                 </div>
                 <div className="space-y-6">
                   <div className="bg-gray-900 p-8 rounded-[30px] text-white shadow-xl">
-                    <div className="text-4xl font-black mb-2 italic tracking-tighter">10+</div>
+                    <div className="text-4xl font-black mb-2  tracking-tighter">10+</div>
                     <div className="text-[10px] font-black uppercase tracking-widest opacity-80">Cidades Atendidas</div>
                   </div>
                   <div className="rounded-[30px] overflow-hidden border border-gray-100 shadow-xl h-[320px] grayscale hover:grayscale-0 transition-all duration-700">
@@ -421,8 +421,8 @@ const Sobre = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-24">
-            <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter text-white italic">TIME <span className="text-[#0ae2b1] underline decoration-white/20">NINNA</span></h2>
-            <p className="text-white/60 max-w-2xl mx-auto font-semibold text-lg italic uppercase tracking-widest">Gente que acredita e faz acontecer.</p>
+            <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter text-white ">TIME <span className="text-[#0ae2b1] underline decoration-white/20">NINNA</span></h2>
+            <p className="text-white/60 max-w-2xl mx-auto font-semibold text-lg  uppercase tracking-widest">Gente que acredita e faz acontecer.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -450,7 +450,7 @@ const Sobre = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/15 to-transparent opacity-70 group-hover:opacity-55 transition-opacity" />
                     
                     <div className="absolute bottom-10 left-10 right-10 z-10">
-                      <h4 className="text-2xl font-black text-white uppercase tracking-tighter italic leading-none mb-1 font-sans">
+                      <h4 className="text-2xl font-black text-white uppercase tracking-tighter  leading-none mb-1 font-sans">
                         {member.nome}
                       </h4>
                       <p className="text-[10px] font-black text-[#0ae2b1] uppercase tracking-[0.2em] mb-4">

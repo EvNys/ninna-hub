@@ -119,7 +119,7 @@ const AgendaEventos = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6">
               Programação NINNA Hub
             </div>
-            <h1 className="text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter leading-none text-gray-900 italic">
+            <h1 className="text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter leading-none text-gray-900 ">
               AGENDA DE <br /><span className="gradient-text">EVENTOS</span>
             </h1>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed border-t border-gray-100 pt-6 mt-6 font-medium">
@@ -192,7 +192,7 @@ const AgendaEventos = () => {
         ) : filteredEvents.length === 0 ? (
           <div className="text-center py-24 bg-white rounded-[40px] border border-gray-100 shadow-sm">
             <Calendar className="w-16 h-16 text-gray-300 mx-auto mb-6" />
-            <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight italic">Nenhum evento encontrado</h3>
+            <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight ">Nenhum evento encontrado</h3>
             <p className="text-gray-500 mt-2 font-medium">Experimente mudar o filtro de busca ou conferir mais tarde.</p>
           </div>
         ) : (
@@ -249,7 +249,7 @@ const AgendaEventos = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-3xl md:text-4xl font-black mb-4 group-hover:text-brand-teal transition-colors text-gray-950 uppercase tracking-tighter italic leading-none">
+                    <h3 className="text-3xl md:text-4xl font-black mb-4 group-hover:text-brand-teal transition-colors text-gray-950 uppercase tracking-tighter  leading-none">
                       {evento.nome}
                     </h3>
                     <p className="text-gray-500 mb-8 leading-relaxed text-sm font-medium">
@@ -280,7 +280,7 @@ const AgendaEventos = () => {
           <div className="absolute top-0 right-0 w-80 h-80 bg-brand-teal/10 blur-[100px] rounded-full" />
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
             <span className="text-brand-teal text-[9px] font-black uppercase tracking-[0.4em] block">Sua marca no Hub</span>
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter italic">QUER CO-REALIZAR OU PATROCINAR UM EVENTO?</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter ">QUER CO-REALIZAR OU PATROCINAR UM EVENTO?</h2>
             <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
               Conecte sua корпорация ao ecossistema do NINNA de forma dinâmica. Fale conosco para agendar o Auditório Premium ou promover painéis temáticos.
             </p>
