@@ -160,26 +160,26 @@ const Home = () => {
   const TESTIMONIALS = [
   {
     id: 1,
-    nome: 'Ana Lima',
-    cargo: 'CEO',
-    empresa: 'Empresa Alpha',
-    texto: 'O NINNA foi fundamental para escalarmos nossa operação. O ecossistema de parceiros e a mentoria acelerou em meses o que levaria anos.',
+    nome: 'Tiago Amarante',
+    cargo: 'CEO e Fundador',
+    empresa: 'SURI',
+    texto: 'O Ninna é um local de muitas trocas, onde existem grandes empresas que podem impulsionar as startups. A Suri, estava procurando exatamente esse tipo de local que pudesse impulsionar dentro das ideias do que a gente já vinha trabalhando.',
     avatar: '',
   },
   {
     id: 2,
-    nome: 'Carlos Mendes',
-    cargo: 'Head de Inovação',
-    empresa: 'Empresa Beta',
-    texto: 'Nunca vi um hub tão comprometido com resultado real. Não é só espaço — é uma rede viva de oportunidades.',
+    nome: 'Lucas Melo',
+    cargo: 'Fundador e Diretor Médico',
+    empresa: 'Straloo',
+    texto: 'O que me chamou a atenção foram os eventos.Sempre tem alguns eventos legais que a gente acaba participando. Teve uma palestra do Deusmar que foi bem bacana, super aberto falando de tudo, foi bem legal.',
     avatar: '',
   },
   {
     id: 3,
-    nome: 'Juliana Costa',
-    cargo: 'Fundadora',
-    empresa: 'Empresa Gamma',
-    texto: 'Entramos como startup em fase seed e saímos com três contratos enterprise. O NINNA abre portas que a gente nem sabia que existiam.',
+    nome: 'Paulo Pelaez',
+    cargo: 'Fundador',
+    empresa: 'Lovel',
+    texto: 'Conheci o NINNA através de um evento de inovação e o espaço me atraiu muito. O grande diferencial é estar em contato com quem está na mesma jornada que você.',
     avatar: '',
   },
   {
@@ -527,10 +527,12 @@ const Home = () => {
             </motion.div>
           </div>
         </div>
+      </section>
       
       
 {/*Antigo Awards Section */}
-    
+<section className="py-32 bg-[#050911] relative overflow-hidden border-t border-gray-100" id="premiacoes-section">
+    <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-teal/5 -skew-x-12 translate-x-1/4 pointer-events-none" />
   {/* Subtle decorative glows */}
   <div className="absolute top-1/3 left-0 w-96 h-96 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
   <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
@@ -540,7 +542,7 @@ const Home = () => {
       <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block">
         Reconhecimento & Impacto
       </span>
-      <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter">
+      <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter">
         NOSSAS <span className="text-brand-teal">CONQUISTAS</span>
       </h2>
       <p className="text-gray-500 font-semibold text-lg max-w-2xl mx-auto">
