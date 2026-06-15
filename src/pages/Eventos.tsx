@@ -146,7 +146,8 @@ const Eventos = () => {
     { name: 'Pax', logo: '/Imagens_NINNA/Pax.png' },
     { name: 'Solar Coca-Cola', logo: '/Imagens_NINNA/Solar_CocaCola.png' },
     { name: 'SulAmérica', logo: '/Imagens_NINNA/SulAmerica.png' },
-    { name: 'L\'auto', logo: "/Imagens_NINNA/l'auto.png" }
+    { name: 'L\'auto', logo: "/Imagens_NINNA/l'auto.png" },
+    { name: 'Grupo Fortes', logo: '/Imagens_NINNA/grupo_fortes.png' }
   ];
 
   // Backup ecosystem events if Firestore collection is empty, guaranteeing an incredibly populated and gorgeous section

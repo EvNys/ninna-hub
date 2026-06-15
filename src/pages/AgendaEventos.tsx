@@ -183,96 +183,93 @@ const AgendaEventos = () => {
 
       {/* Events Listing */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        {loading ? (
-          <div className="space-y-8">
-            {[1, 2].map(i => (
-              <div key={i} className="bg-white h-[380px] animate-pulse rounded-[40px] border border-gray-100 shadow-md" />
-            ))}
+  {loading ? (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[1, 2, 3, 4, 5, 6].map(i => (
+        <div key={i} className="bg-white h-[420px] animate-pulse rounded-[40px] border border-gray-100 shadow-md" />
+      ))}
+    </div>
+  ) : filteredEvents.length === 0 ? (
+    <div className="text-center py-24 bg-white rounded-[40px] border border-gray-100 shadow-sm">
+      <Calendar className="w-16 h-16 text-gray-300 mx-auto mb-6" />
+      <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight ">Nenhum evento encontrado</h3>
+      <p className="text-gray-500 mt-2 font-medium">Experimente mudar o filtro de busca ou conferir mais tarde.</p>
+    </div>
+  ) : (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {filteredEvents.map((evento, index) => (
+        <motion.div
+          key={evento.id}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: Math.min(index * 0.05, 0.3), duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-[40px] overflow-hidden group hover:shadow-2xl transition-all duration-500 border border-gray-100 shadow-xl flex flex-col"
+        >
+          {/* Event Banner Image */}
+          <div className="relative h-64 overflow-hidden bg-gray-50">
+            {evento.imagem ? (
+              <img 
+                src={evento.imagem} 
+                alt={evento.nome} 
+                className="w-full h-full object-bottom group-hover:scale-110 transition-transform duration-700"
+                referrerPolicy="no-referrer"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center p-12 bg-gray-50">
+                <Calendar className="w-16 h-16 text-gray-200" />
+              </div>
+            )}
+            {evento.destaque && (
+              <div className="absolute top-4 left-4">
+                <span className="bg-brand-teal text-white px-3 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest shadow-xl">
+                  Destaque
+                </span>
+              </div>
+            )}
           </div>
-        ) : filteredEvents.length === 0 ? (
-          <div className="text-center py-24 bg-white rounded-[40px] border border-gray-100 shadow-sm">
-            <Calendar className="w-16 h-16 text-gray-300 mx-auto mb-6" />
-            <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight ">Nenhum evento encontrado</h3>
-            <p className="text-gray-500 mt-2 font-medium">Experimente mudar o filtro de busca ou conferir mais tarde.</p>
-          </div>
-        ) : (
-          <div className="space-y-12">
-            {filteredEvents.map((evento, index) => (
-              <motion.div
-                key={evento.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: Math.min(index * 0.05, 0.3), duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-[40px] overflow-hidden group hover:shadow-2xl transition-all duration-500 border border-gray-100 shadow-xl"
-              >
-                <div className="flex flex-col lg:flex-row min-h-[380px]">
-                  {/* Event Banner Image */}
-                  <div className="lg:w-2/5 relative h-64 lg:h-auto overflow-hidden bg-gray-50">
-                    {evento.imagem ? (
-                      <img 
-                        src={evento.imagem} 
-                        alt={evento.nome} 
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        referrerPolicy="no-referrer"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center p-12 bg-gray-50">
-                        <Calendar className="w-16 h-16 text-gray-200" />
-                      </div>
-                    )}
-                    {evento.destaque && (
-                      <div className="absolute top-6 left-6">
-                        <span className="bg-brand-teal text-white px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest shadow-xl">
-                          Destaque
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  
-                  {/* Event Content Custom Styling */}
-                  <div className="p-10 lg:p-14 lg:w-3/5 flex flex-col justify-center">
-                    <div className="flex flex-wrap gap-4 mb-6">
-                      <span className="flex items-center text-brand-teal font-black text-[9px] uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        {new Date(evento.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
-                      </span>
-                      {evento.horario && (
-                        <span className="flex items-center text-gray-500 font-bold text-[9px] uppercase tracking-widest border border-gray-100 px-4 py-2 rounded-xl">
-                          <Clock className="w-4 h-4 mr-2 text-brand-teal animate-pulse" />
-                          {evento.horario}
-                        </span>
-                      )}
-                      <span className="flex items-center text-gray-500 font-bold text-[9px] uppercase tracking-widest border border-gray-100 px-4 py-2 rounded-xl">
-                        <MapPin className="w-4 h-4 mr-2 text-brand-teal" />
-                        {evento.local || 'NINNA Hub'}
-                      </span>
-                    </div>
 
-                    <h3 className="text-3xl md:text-4xl font-black mb-4 group-hover:text-brand-teal transition-colors text-gray-950 uppercase tracking-tighter  leading-none">
-                      {evento.nome}
-                    </h3>
-                    <p className="text-gray-500 mb-8 leading-relaxed text-sm font-medium">
-                      {evento.descricao}
-                    </p>
+          {/* Event Content */}
+          <div className="p-8 flex flex-col flex-1">
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="flex items-center text-brand-teal font-black text-[9px] uppercase tracking-widest bg-brand-teal/5 px-3 py-1.5 rounded-xl border border-brand-teal/10">
+                <Calendar className="w-3.5 h-3.5 mr-1.5" />
+                {new Date(evento.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' })}
+              </span>
+              {evento.horario && (
+                <span className="flex items-center text-gray-500 font-bold text-[9px] uppercase tracking-widest border border-gray-100 px-3 py-1.5 rounded-xl">
+                  <Clock className="w-3.5 h-3.5 mr-1.5 text-brand-teal" />
+                  {evento.horario}
+                </span>
+              )}
+            </div>
 
-                    <div className="flex flex-col sm:flex-row items-center gap-4">
-                      <a 
-                        href={evento.linkInscricao || 'https://wa.me/5585989844779'} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="w-full sm:w-auto px-8 py-4 bg-gray-900 text-white font-black text-[10px] tracking-widest uppercase rounded-2xl flex items-center justify-center transition-all shadow-lg hover:bg-brand-teal"
-                      >
-                        <Ticket className="mr-2 w-5 h-5" /> Garantir meu Ingresso
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+            <span className="flex items-center text-gray-500 font-bold text-[9px] uppercase tracking-widest mb-3">
+              <MapPin className="w-3.5 h-3.5 mr-1.5 text-brand-teal" />
+              {evento.local || 'NINNA Hub'}
+            </span>
+
+            <h3 className="text-xl font-black mb-3 group-hover:text-brand-teal transition-colors text-gray-950 uppercase tracking-tight leading-tight">
+              {evento.nome}
+            </h3>
+            <p className="text-gray-500 mb-6 leading-relaxed text-sm font-medium line-clamp-3 flex-1">
+              {evento.descricao}
+            </p>
+
+            <a 
+              href={evento.linkInscricao || 'https://wa.me/5585989844779'} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full px-6 py-3.5 bg-gray-900 text-white font-black text-[10px] tracking-widest uppercase rounded-2xl flex items-center justify-center transition-all shadow-lg hover:bg-brand-teal"
+            >
+              <Ticket className="mr-2 w-4 h-4" /> Garantir Ingresso
+            </a>
           </div>
-        )}
-      </section>
+        </motion.div>
+      ))}
+    </div>
+  )}
+</section>
 
       {/* Proactive Realization CTA Card */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">

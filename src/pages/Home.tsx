@@ -53,12 +53,12 @@ const Home = () => {
             (data.nome && data.nome.toLowerCase().includes('igc')) ||
             (data.logo && data.logo.toLowerCase().includes('igc'))
           ) {
-            logoUrl = '/Imagens_NINNA/IGCLogo.png';
+            logoUrl = '../Imagens_NINNA/IGCLogo.png';
           } else if (
             (data.nome && data.nome.toLowerCase().includes('uece')) ||
             (data.logo && data.logo.toLowerCase().includes('uece'))
           ) {
-            logoUrl = '/Imagens_NINNA/UECE.png';
+            logoUrl = '../Imagens_NINNA/Uece.png';
           }
           return { id: doc.id, ...data, logo: logoUrl } as any;
         });
@@ -102,11 +102,11 @@ const Home = () => {
           if (nameLower.includes('uece') || nameLower.includes('universidade estadual')) {
             groupKey = 'uece';
             partner.nome = 'UECE';
-            partner.logo = '/Imagens_NINNA/UECE.png';
+            partner.logo = '../Imagens_NINNA/Uece.png';
           } else if (nameLower.includes('igc') || nameLower.includes('gestão e cidadania') || nameLower.includes('gestao e cidadania')) {
             groupKey = 'igc';
             partner.nome = 'Instituto de Gestão e Cidadania';
-            partner.logo = '/Imagens_NINNA/IGCLogo.png';
+            partner.logo = '../Imagens_NINNA/IGCLogo.png';
           }
 
           // Strict filter out card if name is literally "IGC" as requested
@@ -182,22 +182,6 @@ const Home = () => {
     texto: 'Conheci o NINNA através de um evento de inovação e o espaço me atraiu muito. O grande diferencial é estar em contato com quem está na mesma jornada que você.',
     avatar: '',
   },
-  {
-    id: 4,
-    nome: 'Rafael Torres',
-    cargo: 'CTO',
-    empresa: 'Empresa Delta',
-    texto: 'A infraestrutura técnica e o suporte jurídico do hub nos pouparam muito tempo e dinheiro. Recomendo sem hesitar.',
-    avatar: '',
-  },
-  {
-    id: 5,
-    nome: 'Fernanda Rocha',
-    cargo: 'Diretora Comercial',
-    empresa: 'Empresa Epsilon',
-    texto: 'Participar do NINNA nos deu credibilidade no mercado nordestino e acesso direto a grandes players do setor.',
-    avatar: '',
-  },
 ];
 
   return (
@@ -218,14 +202,14 @@ const Home = () => {
         </div>
 
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[#fafafa]/60 z-10" />
+          <div className="absolute inset-0 bg-[#fafafa]/90 z-10" />
           <img 
-            src="../Imagens_NINNA/2.png" 
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2000" 
             alt="Hub Atmosphere" 
             className="w-full h-full object-cover scale-110"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#fafafa] to-transparent z-20" />
+          <div className="w-full h-full object-cover grayscale scale-110" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
@@ -433,111 +417,138 @@ const Home = () => {
       </section>
 
 
-      {/* Números do NINNA + Award Section */}
+      {/* Números do NINNA */}
       <section className="py-32 bg-[#fafafa] relative overflow-hidden border-y border-gray-100" id="numeros-do-ninna">
-        {/* Subtle Decorative background glows */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute top-12 right-12 w-[400px] h-[400px] bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
+  {/* Subtle Decorative background glows */}
+  <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
+  <div className="absolute top-12 right-12 w-[400px] h-[400px] bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-gray-900">
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/5 border border-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em]">
-              Metas & Conquistas
-            </div>
-            <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter">
-              NÚMEROS DO <span className="text-brand-teal underline decoration-gray-200">NINNA</span>
-            </h2>
-            <p className="text-gray-500 font-semibold text-lg leading-relaxed">
-              Consolidação de esforço, conexão constante e geração de inovação real. Nossos números refletem nosso compromisso com o ecossistema.
-            </p>
-            <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
-          </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-gray-900">
 
-          <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
-            {/* KPI 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
-              id="marco-kpi-1"
-            >
-              <div className="text-6xl font-black text-gray-900 tabular-nums">
-                  {kpis?.kpi1_value || '200'}
-              </div>
-                <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-                <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-                  {kpis?.kpi1_label || 'Eventos Realizados'}
-                </div>
-            </motion.div>
+  {/* Título centralizado no topo */}
+    <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+      <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/5 border border-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em]">
+        Metas & Conquistas
+      </div>
+      <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter">
+        NÚMEROS DO <span className="text-brand-teal underline decoration-gray-200">NINNA</span>
+      </h2>
+      <p className="text-gray-500 font-semibold text-lg leading-relaxed">
+        Consolidação de esforço, conexão constante e geração de inovação real. Nossos números refletem nosso compromisso com o ecossistema.
+      </p>
+      <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
+    </div>
 
-            {/* KPI 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
-              id="marco-kpi-2"
-            >
-              <div className="text-6xl font-black text-gray-900 tabular-nums">
-                  {kpis?.kpi2_value || '200'}
-              </div>
-                <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-                <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-                  {kpis?.kpi2_label || 'Conexões Geradas'}
-                </div>
-            </motion.div>
-
-            {/* KPI 3 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
-              id="marco-kpi-3"
-            >
-              <div className="text-6xl font-black text-gray-900 tabular-nums">
-                  {kpis?.kpi3_value || '10M'}
-              </div>
-                <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-                <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-                  {kpis?.kpi3_label || 'Negócios Gerados'}
-                </div>
-            </motion.div>
-
-            {/* KPI 4 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
-              id="marco-kpi-4"
-            >
-              <div className="text-6xl font-black text-gray-900 tabular-nums">
-                  {kpis?.kpi4_value || '200'}
-              </div>
-                <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-                <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-                  {kpis?.kpi4_label || 'Startups Impactadas'}
-                </div>
-            </motion.div>
-          </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      {/* Coluna Esquerda - Imagem */}
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="relative"
+      >
+        <div className="aspect-[5/5] w-full rounded-[40px] overflow-hidden bg-gray-200 border border-gray-100 shadow-lg">
+          <img
+            src="../Imagens_NINNA/eco-scaled.jpg"
+            alt="NINNA"
+            className="w-full h-full object-cover"
+          />
         </div>
-      </section>
+      </motion.div>
+
+      {/* Coluna Direita - Conteúdo e KPIs */}
+      <div>
+        
+
+        <div className="grid grid-cols-2 gap-8">
+          {/* KPI 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
+            id="marco-kpi-1"
+          >
+            <div className="text-6xl font-black text-gray-900 tabular-nums">
+              {kpis?.kpi1_value || '200'}
+            </div>
+            <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+            <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+              {kpis?.kpi1_label || 'Eventos Realizados'}
+            </div>
+          </motion.div>
+
+          {/* KPI 2 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
+            id="marco-kpi-2"
+          >
+            <div className="text-6xl font-black text-gray-900 tabular-nums">
+              {kpis?.kpi2_value || '200'}
+            </div>
+            <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+            <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+              {kpis?.kpi2_label || 'Conexões Geradas'}
+            </div>
+          </motion.div>
+
+          {/* KPI 3 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
+            id="marco-kpi-3"
+          >
+            <div className="text-6xl font-black text-gray-900 tabular-nums">
+              {kpis?.kpi3_value || '10M'}
+            </div>
+            <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+            <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+              {kpis?.kpi3_label || 'Negócios Gerados'}
+            </div>
+          </motion.div>
+
+          {/* KPI 4 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
+            id="marco-kpi-4"
+          >
+            <div className="text-6xl font-black text-gray-900 tabular-nums">
+              {kpis?.kpi4_value || '200'}
+            </div>
+            <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+            <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+              {kpis?.kpi4_label || 'Startups Impactadas'}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
       
       
 {/*Antigo Awards Section */}
 <section className="py-32 bg-[#050911] relative overflow-hidden border-t border-gray-100" id="premiacoes-section">
     <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-teal/5 -skew-x-12 translate-x-1/4 pointer-events-none" />
-  {/* Subtle decorative glows */}
   <div className="absolute top-1/3 left-0 w-96 h-96 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
   <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
 
-  <div className="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div className="text-center mb-24 space-y-4">
       <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block">
         Reconhecimento & Impacto
@@ -551,54 +562,63 @@ const Home = () => {
       <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
     </div>
 
-    {/* Grid Layout */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {/* Awards Timeline Grid */}
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-4 relative">
+      {/* Horizontal Line Connector for Desktop */}
+      <div className="hidden lg:block absolute top-[4.5rem] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-brand-teal/20 via-[#0ae2b1] to-brand-green/20 z-0" />
+
       {(awards.length > 0 ? awards : [
         { id: 'aw-default-1', titulo: 'Hub Referência',         ano: '2026', organizacao: 'Prêmio Nordeste Inovação',       imagem: '' },
         { id: 'aw-default-2', titulo: 'Hub Referência',         ano: '2025', organizacao: 'Startup Awards Brasil',          imagem: '' },
         { id: 'aw-default-3', titulo: 'Melhor Hub de Inovação', ano: '2024', organizacao: 'Associação Cearense de Startups', imagem: '' },
         { id: 'aw-default-4', titulo: 'Inovação Aberta',        ano: '2023', organizacao: 'Prêmio Eco Inovar',              imagem: '' },
-      ]).map((award, index) => {
-        const description = getAwardDescription(award.titulo, award.organizacao, award.ano);
+      ]).map((award, idx) => (
+        <motion.div
+          key={award.id || idx}
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: idx * 0.15, duration: 0.5 }}
+          className="relative z-10 flex flex-col items-center text-center px-4 group"
+        >
+          {/* Icon / Image badge */}
+          <div className="relative mb-6">
+            <div className="absolute inset-0 bg-brand-teal/10 blur-xl rounded-full scale-125 group-hover:scale-130 transition-transform duration-500" />
+            {award.imagem ? (
+              <img
+                src={award.imagem}
+                alt={award.titulo}
+                className="relative z-10 w-20 h-20 object-contain bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[28px] shadow-lg p-3 group-hover:border-[#0ae2b1]/40 group-hover:scale-110 transition-all duration-300"
+                referrerPolicy="no-referrer"
+              />
+            ) : (
+              <div className="relative z-10 w-20 h-20 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[28px] shadow-lg flex items-center justify-center group-hover:border-[#0ae2b1]/40 group-hover:scale-110 transition-all duration-300">
+                <Award className="w-8 h-8 text-[#0ae2b1]" />
+              </div>
+            )}
 
-        return (
-          <motion.div
-            key={award.id || index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="bg-white border border-gray-150 p-8 md:p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center gap-6 relative overflow-hidden"
-          >
-            {/* Subtle glow touch */}
-            <div className="absolute top-0 right-0 w-24 h-24 bg-brand-teal/[0.02] rounded-full blur-xl pointer-events-none" />
-
-            {/* Icon / Image */}
-            <div className="relative shrink-0">
-              <div className="absolute inset-0 bg-brand-teal/10 blur-xl rounded-full scale-125 group-hover:scale-130 transition-transform duration-500" />
-              {award.imagem ? (
-                <img
-                  src={award.imagem}
-                  alt={award.titulo}
-                  className="relative z-10 h-20 w-20 object-contain group-hover:rotate-6 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
-                />
-              ) : (
-                <div className="relative z-10 w-16 h-16 bg-[#fafafa] border border-gray-100 rounded-2xl flex items-center justify-center text-brand-teal group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-8 h-8" />
-                </div>
-              )}
+            {/* Year Badge */}
+            <div className="absolute -top-2 -right-2 z-20 px-2.5 h-7 bg-[#0ae2b1] text-gray-950 text-[11px] font-black rounded-full flex items-center justify-center shadow-lg border-2 border-[#050911]">
+              {award.ano}
             </div>
+          </div>
 
-            {/* Text */}
-            <div className="flex flex-col items-center text-center gap-1">
-              <span className="text-xs font-bold text-brand-teal uppercase tracking-widest">{award.ano}</span>
-              <h3 className="text-lg font-black text-gray-900 uppercase tracking-tight">{award.titulo}</h3>
-              <p className="text-sm text-gray-500 font-medium">{award.organizacao}</p>
+          {/* Info */}
+          <h3 className="text-xl font-black text-white uppercase tracking-tight mb-2 group-hover:text-[#0ae2b1] transition-colors">
+            {award.titulo}
+          </h3>
+          <p className="text-sm text-white/50 font-semibold leading-relaxed max-w-[200px] lg:max-w-none group-hover:text-white/70 transition-colors">
+            {award.organizacao}
+          </p>
+
+          {/* Mobile Connector Arrow */}
+          {idx < (awards.length > 0 ? awards.length - 1 : 3) && (
+            <div className="block lg:hidden my-4 text-[#0ae2b1]/60 animate-pulse text-lg font-black font-mono">
+              ↓
             </div>
-          </motion.div>
-        );
-      })}
+          )}
+        </motion.div>
+      ))}
     </div>
   </div>
 </section>
@@ -657,7 +677,7 @@ const Home = () => {
             <div className="h-[2px] w-12 bg-brand-teal mx-auto" />
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
             {parceiros.length > 0 ? parceiros.map((p, index) => (
               <motion.div
                 key={p.id || index}

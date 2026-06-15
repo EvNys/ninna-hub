@@ -102,7 +102,7 @@ const Portfolio = () => {
             <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               Ecossistema em Movimento
             </div>
-            <h1 className="text-7xl md:text-[120px] font-black mb-8 uppercase tracking-tighter leading-[0.85] text-gray-900 italic">
+            <h1 className="text-7xl md:text-[120px] font-black mb-8 uppercase tracking-tighter leading-[0.85] text-gray-900 ">
               NINNA 4 <br /><span className="gradient-text">STARTUPS</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed border-t border-gray-200 pt-8 mt-8 font-medium">
@@ -124,7 +124,7 @@ const Portfolio = () => {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-125 transition-transform" />
             <div className="relative z-10">
-              <h3 className="text-4xl font-black text-white mb-4 leading-tight uppercase tracking-tighter italic">quero me conectar com as <br />soluções do NINNA hub</h3>
+              <h3 className="text-4xl font-black text-white mb-4 leading-tight uppercase tracking-tighter ">quero me conectar com as <br />soluções do NINNA hub</h3>
               <p className="text-white/80 mb-8 font-medium max-w-sm">Conecte sua startup a grandes corporações e acelere seu crescimento no maior hub de inovação do Ceará.</p>
               <button className="bg-white text-brand-teal px-8 py-4 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg">
                 Clique Aqui
@@ -142,7 +142,7 @@ const Portfolio = () => {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-125 transition-transform" />
             <div className="relative z-10">
-              <h3 className="text-4xl font-black text-white mb-4 leading-tight uppercase tracking-tighter italic">NINNA 4 <br />Startup</h3>
+              <h3 className="text-4xl font-black text-white mb-4 leading-tight uppercase tracking-tighter ">NINNA 4 <br />Startup</h3>
               <p className="text-white/70 mb-8 font-medium max-w-sm">O programa de fomento definitivo para startups que buscam escala, mentorias e networking estratégico.</p>
               <button className="bg-brand-teal text-white px-8 py-4 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg">
                 Clique Aqui
@@ -173,7 +173,7 @@ const Portfolio = () => {
 
               {/* Categorias List */}
               <div className="space-y-4">
-                <h4 className="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em] italic flex items-center gap-2">
+                <h4 className="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em]  flex items-center gap-2">
                   <Filter className="w-3 h-3 text-brand-teal" /> Categorias
                 </h4>
                 <div className="flex flex-col gap-1 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
@@ -196,7 +196,7 @@ const Portfolio = () => {
 
               {/* Maturidade List */}
               <div className="space-y-4">
-                <h4 className="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em] italic flex items-center gap-2">
+                <h4 className="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em]  flex items-center gap-2">
                   <Award className="w-3 h-3 text-brand-teal" /> Maturidade
                 </h4>
                 <div className="flex flex-col gap-1">
@@ -219,7 +219,7 @@ const Portfolio = () => {
 
               {/* Negócio List */}
               <div className="space-y-4">
-                <h4 className="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em] italic flex items-center gap-2">
+                <h4 className="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em]  flex items-center gap-2">
                   <Briefcase className="w-3 h-3 text-brand-teal" /> Tipo de Negócio
                 </h4>
                 <div className="flex flex-col gap-1">
@@ -267,8 +267,8 @@ const Portfolio = () => {
               ) : filteredStartups.length === 0 ? (
                 <div className="text-center py-32 bg-white rounded-[40px] border border-gray-100 shadow-xl">
                   <Rocket className="w-16 h-16 text-gray-300 mx-auto mb-6" />
-                  <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight italic">Nenhuma startup encontrada</h3>
-                  <p className="text-gray-500 font-medium italic text-xs uppercase tracking-widest mt-2">Tente ajustar seus filtros de busca.</p>
+                  <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight ">Nenhuma startup encontrada</h3>
+                  <p className="text-gray-500 font-medium  text-xs uppercase tracking-widest mt-2">Tente ajustar seus filtros de busca.</p>
                 </div>
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -295,7 +295,7 @@ const Portfolio = () => {
                         </div>
                       </div>
 
-                      <h3 className="text-2xl font-black mb-3 group-hover:text-brand-teal transition-colors text-gray-900 uppercase tracking-tight italic">{startup.nome}</h3>
+                      <h3 className="text-2xl font-black mb-3 group-hover:text-brand-teal transition-colors text-gray-900 uppercase tracking-tight ">{startup.nome}</h3>
                       <p className="text-gray-500 mb-6 flex-grow leading-relaxed line-clamp-3 font-medium text-sm">
                         {startup.descricaoCurta}
                       </p>
@@ -364,7 +364,7 @@ const Portfolio = () => {
                       <Rocket className="w-full h-full text-brand-teal" />
                     )}
                   </div>
-                  <h2 className="text-3xl font-black text-gray-900 mb-2 uppercase tracking-tighter italic">{selectedStartup.nome}</h2>
+                  <h2 className="text-3xl font-black text-gray-900 mb-2 uppercase tracking-tighter ">{selectedStartup.nome}</h2>
                   <div className="px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-widest mb-8 border border-brand-teal/20">
                     {selectedStartup.categoria}
                   </div>
@@ -406,7 +406,7 @@ const Portfolio = () => {
                 {/* Modal Content */}
                 <div className="md:col-span-3 p-10 md:p-16">
                   <h4 className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] mb-6">Sobre a Startup</h4>
-                  <p className="text-gray-900 text-2xl font-black leading-relaxed mb-8 italic uppercase tracking-tighter">
+                  <p className="text-gray-900 text-2xl font-black leading-relaxed mb-8  uppercase tracking-tighter">
                     "{selectedStartup.descricaoCurta}"
                   </p>
                   
@@ -418,7 +418,7 @@ const Portfolio = () => {
 
                     {selectedStartup.tags && selectedStartup.tags.length > 0 && (
                       <div>
-                        <h5 className="text-gray-900 font-black uppercase text-xs tracking-widest mb-4 italic">Keywords</h5>
+                        <h5 className="text-gray-900 font-black uppercase text-xs tracking-widest mb-4 ">Keywords</h5>
                         <div className="flex flex-wrap gap-2">
                           {selectedStartup.tags.map((tag: string) => (
                             <span key={tag} className="px-4 py-2 rounded-xl bg-gray-50 border border-gray-200 text-gray-400 text-[10px] font-black uppercase tracking-widest transition-all hover:border-brand-teal hover:text-brand-teal">
