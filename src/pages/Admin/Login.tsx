@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { auth, db } from '../../lib/firebase';
 import { doc, setDoc, getDoc, collection, query, where, getDocs, deleteDoc } from 'firebase/firestore';
 import { toast } from 'sonner';
-import { Rocket, Lock, Mail, ArrowRight, UserPlus, Chrome } from 'lucide-react';
+import { Rocket, Lock, Mail, ArrowRight, UserPlus, Chrome, ArrowLeft } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const AdminLogin = () => {
@@ -121,53 +121,7 @@ const AdminLogin = () => {
     }
   };
 
-  const setupAdmin = async () => {
-    setCreating(true);
-    const configs = [
-      { email: 'adm@ninnahub.com.br', pass: '123456*' },
-      { email: 'ninnaventures@gmail.com', pass: 'ninna2026' }
-    ];
-
-    try {
-      for (const config of configs) {
-        let uid = '';
-        try {
-          const userCredential = await createUserWithEmailAndPassword(auth, config.email, config.pass);
-          uid = userCredential.user.uid;
-        } catch (authError: any) {
-          if (authError.code === 'auth/email-already-in-use') {
-            try {
-              const loginRes = await signInWithEmailAndPassword(auth, config.email, config.pass);
-              uid = loginRes.user.uid;
-            } catch (loginError) {
-              if (config.email === 'adm@ninnahub.com.br') {
-                const loginRes = await signInWithEmailAndPassword(auth, config.email, '1123581321*Ninna');
-                uid = loginRes.user.uid;
-              }
-            }
-          }
-        }
-
-        if (uid) {
-          await setDoc(doc(db, 'users', uid), {
-            uid,
-            email: config.email,
-            role: 'admin',
-            createdAt: new Date().toISOString()
-          });
-        }
-      }
-
-      toast.success('Contas de administrador configuradas/verificadas!');
-      setEmail('ninnaventures@gmail.com');
-      setPassword('ninna2026');
-    } catch (error: any) {
-      console.error(error);
-      toast.error('Erro ao configurar sistema: ' + error.message);
-    } finally {
-      setCreating(false);
-    }
-  };
+  
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-4">
@@ -176,6 +130,14 @@ const AdminLogin = () => {
         animate={{ opacity: 1, scale: 1 }}
         className="max-w-md w-full bg-white border border-gray-100 rounded-[40px] p-12 shadow-2xl relative overflow-hidden"
       >
+        
+      <button
+      onClick={() => navigate('/')}
+      className="absolute top-6 left-6 text-gray-400 hover:text-gray-600 transition-colors"
+    >
+      <ArrowLeft size={20} />
+      </button>
+
         <div className="absolute top-0 right-0 w-32 h-32 bg-brand-teal/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2" />
         
         <div className="text-center mb-12 relative z-10">
@@ -253,14 +215,7 @@ const AdminLogin = () => {
         </form>
 
         <div className="mt-8 pt-8 border-t border-gray-50 opacity-40 hover:opacity-100 transition-opacity">
-          <button
-            onClick={setupAdmin}
-            disabled={creating}
-            className="w-full flex items-center justify-center space-x-2 py-4 px-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all text-gray-400 hover:text-brand-teal bg-gray-50 border border-transparent hover:border-brand-teal/30 disabled:opacity-50 italic"
-          >
-            <UserPlus className="w-4 h-4 mr-2" />
-            <span>{creating ? 'Resetando Acessos...' : 'Recuperar Acessos (Reset)'}</span>
-          </button>
+          
         </div>
 
         <div className="mt-8 text-center">
