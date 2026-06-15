@@ -7,5 +7,4 @@ coverage/
 .env*
 .env.example
 .claude
-firebase-applet-config.json
-firebase-debug.log
+
