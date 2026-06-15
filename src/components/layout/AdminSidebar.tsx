@@ -13,7 +13,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Settings,
-  Award
+  Award,
+  Home
 } from 'lucide-react';
 import { auth } from '../../lib/firebase';
 import { signOut } from 'firebase/auth';
@@ -118,6 +119,15 @@ const AdminSidebar = () => {
       </nav>
 
       <div className="p-2 md:p-4 border-t border-gray-100 space-y-2">
+        <button
+          onClick={() => window.location.href = '/'}
+          className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-blue-500 hover:bg-blue-50 transition-all"
+        >
+          <Home className="w-5 h-5 shrink-0" />
+          <span className="hidden md:block">Voltar para Home</span>
+         </button>
+
+      
         <button
           onClick={handleLogout}
           className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-red-500 hover:bg-red-50 transition-all"

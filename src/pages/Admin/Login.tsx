@@ -21,37 +21,21 @@ const AdminLogin = () => {
   const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email.trim(), password);
-      const userDoc = await getDoc(doc(db, 'users', userCredential.user.uid));
-      const userData = userDoc.data();
-      
-      toast.success('Login realizado com sucesso!');
-      
-      if (userData?.role === 'admin' || userData?.role === 'editor') {
-        navigate('/admin');
-      } else {
-        navigate('/dashboard/comunidade');
-      }
-    } catch (error: any) {
-      console.error("Login Error:", error);
-      let message = 'Erro ao realizar login.';
-      if (error.code === 'auth/user-not-found') message = 'Usuário não encontrado.';
-      else if (error.code === 'auth/wrong-password') message = 'Senha incorreta.';
-      else if (error.code === 'auth/invalid-email') message = 'E-mail inválido.';
-      else if (error.code === 'auth/operation-not-allowed') {
-        message = 'O login por e-mail ainda não foi ativado no Console do Firebase. Por favor, ative-o em Authentication > Sign-in method.';
-      }
-      else message = `Erro (${error.code}): Verifique suas credenciais.`;
-      
-      toast.error(message, { duration: 6000 });
-    } finally {
-      setLoading(false);
+    const { user } = await signInWithEmailAndPassword(auth, email, password)
+    
+    const userDoc = await getDoc(doc(db, 'users', user.uid))
+    const role = userDoc.data()?.role
+
+    if (role === 'admin') {
+      navigate('/dashboard')
+    } else {
+      navigate('/')
     }
-  };
+  } catch (error) {
+    toast.error('Email ou senha incorretos')
+  }
+};
 
   const handleGoogleLogin = async () => {
     setGoogleLoading(true);
@@ -95,7 +79,7 @@ const AdminLogin = () => {
         }
       }
 
-      const newRole = role || (user.email === 'ninnaventures@gmail.com' || user.email === 'adm@ninnahub.com.br' ? 'admin' : 'user');
+      const newRole = role || 'user';
 
       // 3. Final update/merge for current UID
       await setDoc(doc(db, 'users', user.uid), {
