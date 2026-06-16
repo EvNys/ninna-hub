@@ -18,6 +18,7 @@ import Oportunidades from './pages/Oportunidades';
 import Sobre from './pages/Sobre';
 import Cases from './pages/Cases';
 import Ninna4Startups from './pages/Ninna4Startups';
+import Servicos from './pages/Servicos';
 
 // Admin Pages
 import AdminLogin from './pages/Admin/Login';
@@ -88,7 +89,7 @@ function AppContent() {
           <Route path="/oportunidades" element={<Oportunidades />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/cases" element={<Cases />} />
-
+          <Route path="/servicos" element={<Servicos />} />
           {/* Admin & Member Auth */}
           <Route path="/admin/login" element={<AdminLogin />} />
           

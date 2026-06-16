@@ -17,6 +17,7 @@ export const NAV_LINKS: NavLink[] = [
   { name: 'Startups', path: '/startups' },
   { name: 'Ecossistema', path: '/ecossistema' },
   { name: 'Agenda de eventos', path: '/agenda' },
+  { name: 'Serviços', path: '/Servicos' },
   { name: 'Sobre nós', path: '/sobre' },
 ];
 

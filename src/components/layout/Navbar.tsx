@@ -232,7 +232,7 @@ const showStartupsDropdown = () => {
                       onClick={() => setIsOpen(false)}
                       className="block py-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
                     >
-                      • Seja um Patrocinador
+                      • Seja um Parceiro
                     </Link>
                   </div>
                 )}
@@ -314,7 +314,7 @@ const showStartupsDropdown = () => {
                           <Sparkles className="w-5 h-5 text-amber-300" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-white">Seja um Patrocinador</h5>
+                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-white">Seja um Parceiro</h5>
                           <p className="text-white/60 text-xs font-semibold">Impulsione a sua marca no ecossistema</p>
                         </div>
                       </div>
