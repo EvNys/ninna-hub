@@ -424,7 +424,7 @@ const Eventos = () => {
                   </li>
                   <div className="pt-2">
                         <a
-                        href="https://seu-link-aqui.com"
+                        href="https://ninna-connect-hub.lovable.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-teal text-white text-sm font-black uppercase tracking-widest hover:bg-brand-teal/90 hover:gap-3 transition-all duration-300 shadow-md hover:shadow-lg"
@@ -495,6 +495,15 @@ const Eventos = () => {
                     </div>
                     <span>Ambiente festivo propício para conectar e relaxar</span>
                   </li>
+                  <a
+                        href="https://ninnaterceirotempo.lovable.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-teal text-white text-sm font-black uppercase tracking-widest hover:bg-brand-teal/90 hover:gap-3 transition-all duration-300 shadow-md hover:shadow-lg"
+                      >
+                        Saiba mais
+                        <ArrowRight className="w-4 h-4" />
+                      </a>
                 </ul>
               </div>
             </div>
