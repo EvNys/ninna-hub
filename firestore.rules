@@ -134,6 +134,10 @@ service cloud.firestore {
       allow read: if true;
       allow write: if isAdmin();
     }
+    match /inscricoes_mentores/{id} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
   }
 }
 

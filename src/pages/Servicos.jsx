@@ -16,13 +16,16 @@ const BLOCOS = [
     subtitle: "Para quem quer clareza antes de agir",
     accent: "#00D4D4",
     cta: "Comece com um diagnóstico →",
-    cards: [
-      { title: "Diagnóstico de Maturidade em Inovação",  desc: "Metodologia ISO + McKinsey + H1/H2/H3 para mapear onde sua empresa está na jornada da inovação." },
+    description: "Antes de inovar, é preciso saber onde você está. Nossos diagnósticos combinam metodologias globais com uma leitura precisa da realidade da sua empresa — entregando clareza, prioridades e um ponto de partida sólido para qualquer jornada de transformação.",
+    cases: [
+      { company: "Empresa A", result: "Identificou gaps críticos de maturidade e reduziu o tempo de decisão estratégica em 40%." },
+      { company: "Empresa B", result: "Mapeou barreiras culturais invisíveis que travavam projetos de inovação há 2 anos." },
+    ],
+    cards: [ { title: "Diagnóstico de Maturidade em Inovação",  desc: "Metodologia ISO + McKinsey + H1/H2/H3 para mapear onde sua empresa está na jornada da inovação." },
       { title: "Diagnóstico de Perfil de Uso de Dados",  desc: "4 dimensões: Ler, Trabalhar, Raciocinar e Comunicar — entenda como sua organização usa dados hoje." },
       { title: "Diagnóstico de Cultura e Inovação",      desc: "ISO 56000 + barreiras culturais. Identifique os bloqueios reais que impedem a inovação de acontecer." },
       { title: "Diagnóstico de Transformação Digital",   desc: "Avalie o grau de digitalização dos processos e a prontidão da sua empresa para a transformação." },
-      { title: "Análise de Cenários Futuros",            desc: "Roadmaps tecnológicos e tendências para antecipar movimentos e tomar decisões estratégicas com mais segurança." },
-    ],
+      { title: "Análise de Cenários Futuros",            desc: "Roadmaps tecnológicos e tendências para antecipar movimentos e tomar decisões estratégicas com mais segurança." }, ],
   },
   {
     id: "bloco2",
@@ -30,12 +33,16 @@ const BLOCOS = [
     subtitle: "Para quem já sabe onde está e quer organizar a jornada",
     accent: "#00E676",
     cta: "Monte sua estratégia →",
-    cards: [
-      { title: "Mapeamento da Jornada do Cliente Inovador", desc: "Identifica dores e oportunidades ao longo da jornada, propondo soluções alinhadas à realidade do negócio." },
+    description: "Ter vontade de inovar não é suficiente — é preciso estrutura. Ajudamos sua empresa a construir os processos, governança e estratégias que transformam iniciativas isoladas em um sistema de inovação contínuo e escalável.",
+    cases: [
+      { company: "Empresa C", result: "Implantou funil de inovação e gerou pipeline de 30 projetos qualificados no primeiro trimestre." },
+      { company: "Empresa D", result: "Estruturou comitê de inovação com KPIs claros, conectando estratégia ao dia a dia dos times." },
+    ],
+    cards: [ { title: "Mapeamento da Jornada do Cliente Inovador", desc: "Identifica dores e oportunidades ao longo da jornada, propondo soluções alinhadas à realidade do negócio." },
       { title: "Construção de Estratégias Inovadoras",      desc: "Planejamento estratégico sob medida para posicionar a inovação como vantagem competitiva real." },
       { title: "Implantação de Funil de Inovação",          desc: "Pipeline estruturado de ideias e projetos — do desafio à solução escalada, com critérios claros de seleção." },
       { title: "Sistema de Gestão da Inovação",             desc: "Governança, KPIs, comitês e métricas para sustentar e acelerar a inovação no longo prazo." },
-    ],
+ ],
   },
   {
     id: "bloco3",
@@ -43,13 +50,16 @@ const BLOCOS = [
     subtitle: "Para quem quer colocar a mão na massa com parceiros e tecnologia",
     accent: "#7C6FF7",
     cta: "Encontre sua solução →",
-    cards: [
-      { title: "Hunting de Soluções Tecnológicas",   desc: "Curadoria ativa de tecnologias e fornecedores alinhados ao desafio específico da sua empresa." },
+    description: "Identificar a tecnologia certa e os parceiros ideais faz toda a diferença na execução. Conectamos sua empresa às melhores soluções do mercado e gerenciamos o processo de validação e aceleração de ponta a ponta.",
+    cases: [
+      { company: "Empresa E", result: "Conduziu PoC com 3 startups simultaneamente e implementou solução em produção em 90 dias." },
+      { company: "Empresa F", result: "Recebeu 80+ inscrições qualificadas em chamada de startups focada em logística." },
+    ],
+    cards: [ { title: "Hunting de Soluções Tecnológicas",   desc: "Curadoria ativa de tecnologias e fornecedores alinhados ao desafio específico da sua empresa." },
       { title: "Gestão de Prova de Conceito (PoC)",  desc: "Estruturação, execução e avaliação de PoCs para validar soluções antes de escalar investimentos." },
       { title: "Aceleração Corporativa de Soluções", desc: "Programa intensivo para co-criar e acelerar soluções entre sua empresa e startups selecionadas." },
       { title: "Programa de Chamadas de Startups",   desc: "Atração qualificada de startups para responder a desafios reais do seu negócio com método e critério." },
-      { title: "Programa de Inovação Aberta",        desc: "Metodologia proprietária de conexão com startups para criar valor mútuo e acelerar resultados." },
-    ],
+      { title: "Programa de Inovação Aberta",        desc: "Metodologia proprietária de conexão com startups para criar valor mútuo e acelerar resultados." }, ],
   },
   {
     id: "bloco4",
@@ -57,16 +67,19 @@ const BLOCOS = [
     subtitle: "Para quem quer engajar times e criar cultura de inovação",
     accent: "#FF6B6B",
     cta: "Engaje seu time →",
-    cards: [
-      { title: "Programa de Embaixadores",            desc: "Forme líderes internos que disseminam a cultura de inovação de dentro para fora da organização." },
+    description: "Inovação começa nas pessoas. Desenvolvemos programas que transformam colaboradores em agentes de mudança — engajando times, formando líderes e criando uma cultura onde novas ideias encontram espaço para crescer.",
+    cases: [
+      { company: "Empresa G", result: "Formou 120 embaixadores de inovação espalhados por 8 unidades de negócio em 6 meses." },
+      { company: "Empresa H", result: "Hackathon corporativo gerou 3 projetos que viraram iniciativas oficiais da empresa." },
+    ],
+    cards: [ { title: "Programa de Embaixadores",            desc: "Forme líderes internos que disseminam a cultura de inovação de dentro para fora da organização." },
       { title: "Programa de Mentores",                desc: "Conecte talentos internos com mentores especializados para acelerar o desenvolvimento em inovação." },
       { title: "Hackathons Corporativos",             desc: "Eventos de alta energia para resolver desafios reais do negócio com equipes multidisciplinares." },
       { title: "Programa de Ideias",                  desc: "Canal estruturado para capturar, avaliar e premiar as melhores ideias de toda a organização." },
       { title: "Formação Executiva em Inovação",      desc: "Trilhas práticas para líderes que precisam tomar decisões mais ágeis e orientadas à inovação." },
       { title: "Formação em Transformação Digital",   desc: "Capacitação estruturada para preparar gestores e times para operar no ambiente digital." },
       { title: "Workshops Estratégicos para Lideranças", desc: "Sessões de imersão para alinhar visão, prioridades e metodologia com alta liderança." },
-      { title: "Trilhas Customizadas para Times",     desc: "Jornadas de aprendizado adaptadas ao contexto, maturidade e objetivos de cada equipe." },
-    ],
+      { title: "Trilhas Customizadas para Times",     desc: "Jornadas de aprendizado adaptadas ao contexto, maturidade e objetivos de cada equipe." }, ],
   },
   {
     id: "bloco5",
@@ -74,13 +87,16 @@ const BLOCOS = [
     subtitle: "Para quem quer fazer parte de algo maior e se conectar com pares",
     accent: "#FFB800",
     cta: "Faça parte do ecossistema →",
-    cards: [
-      { title: "LI.COR",                              desc: "Encontro exclusivo de líderes de inovação corporativa para troca de experiências e geração de oportunidades." },
+    description: "As melhores oportunidades surgem das conexões certas. Facilitamos o acesso ao ecossistema de inovação — aproximando sua empresa de startups, líderes, investidores e parceiros estratégicos que aceleram resultados reais.",
+    cases: [
+      { company: "Empresa I", result: "Participou do LICOR e fechou parceria estratégica com outra corporação no mesmo evento." },
+      { company: "Empresa J", result: "Imersão técnica no Vale do Silício redefiniu o roadmap de tecnologia para os próximos 3 anos." },
+    ],
+    cards: [ { title: "LICOR",                              desc: "Encontro exclusivo de líderes de inovação corporativa para troca de experiências e geração de oportunidades." },
       { title: "Conexão com Ecossistema",             desc: "Curadoria de conexões relevantes com startups, aceleradoras, investidores e parceiros estratégicos." },
       { title: "Eventos para Comunidade de Inovação", desc: "Agenda de eventos abertos e fechados para fortalecer sua presença e influência no ecossistema." },
       { title: "Imersões Técnicas",                   desc: "Visitas e imersões em hubs de inovação, universidades e centros de tecnologia de referência." },
-      { title: "Eventos de Conexões Estratégicas",    desc: "Encontros customizados para gerar negócios, parcerias e colaborações de alto impacto entre empresas." },
-    ],
+      { title: "Eventos de Conexões Estratégicas",    desc: "Encontros customizados para gerar negócios, parcerias e colaborações de alto impacto entre empresas." }, ],
   },
 ];
 
@@ -193,6 +209,17 @@ function BlocoSection({ bloco, isOpen, onClose }) {
             {bloco.title.split(" ").slice(1).join(" ")}
           </h2>
 
+          {/* descrição do bloco */}
+          <p style={{
+            fontSize: "15px",
+            color: "rgba(255,255,255,0.55)",
+            lineHeight: 1.75,
+            maxWidth: "680px",
+            margin: "0 0 48px",
+          }}>
+            {bloco.description}
+          </p>
+
           {/* cards */}
           <div
             className="cards-grid"
@@ -207,6 +234,39 @@ function BlocoSection({ bloco, isOpen, onClose }) {
               <Card key={i} {...c} accent={bloco.accent} />
             ))}
           </div>
+
+          {/* cases */}
+          <div style={{ marginTop: "68px", marginBottom: "24px" }}>
+            <p style={{
+              fontSize: "11px",
+              fontWeight: 700,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.3)",
+              marginBottom: "16px",
+            }}>
+              Cases
+            </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "12px" }}>
+            {bloco.cases.map((c, i) => (
+              <div key={i} style={{
+                  background: bloco.accent + "0D",
+                  border: `1px solid ${bloco.accent}30`,
+                  borderRadius: "10px",
+                  padding: "20px 24px",
+                }}>
+                  <p style={{ margin: "0 0 8px", fontSize: "13px", fontWeight: 700, color: bloco.accent }}>
+                    {c.company}
+                  </p>
+                  <p style={{ margin: 0, fontSize: "13px", color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
+                    {c.result}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+         
 
           {/* CTA do bloco */}
           <button
@@ -394,7 +454,6 @@ export default function ServicosPage() {
           background: "#0f1422",
           borderBottom: "1px solid rgba(255,255,255,0.06)",
           padding: "48px 0",
-          position: "sticky",
           top: 0,
           zIndex: 10,
         }}

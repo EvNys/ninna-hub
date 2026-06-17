@@ -25,6 +25,7 @@ import AdminLogin from './pages/Admin/Login';
 import AdminDashboard from './pages/Admin/Dashboard';
 import AdminStartups from './pages/Admin/Startups';
 import AdminMentores from './pages/Admin/Mentores';
+import AdminInscricoesMentores from './pages/Admin/InscricaoMentores';
 import AdminBeneficios from './pages/Admin/Beneficios';
 import AdminOportunidades from './pages/Admin/Oportunidades';
 import AdminEventos from './pages/Admin/Eventos';
@@ -62,6 +63,7 @@ const AdminProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 };
 
 import AdminLayout from './components/layout/AdminLayout';
+import SejaUmMentor from './pages/SejaUmMentor';
 
 function AppContent() {
   const { user } = useAuth();
@@ -90,6 +92,7 @@ function AppContent() {
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/cases" element={<Cases />} />
           <Route path="/servicos" element={<Servicos />} />
+          <Route path="/seja-um-mentor" element={<SejaUmMentor />} />
           {/* Admin & Member Auth */}
           <Route path="/admin/login" element={<AdminLogin />} />
           
@@ -97,6 +100,7 @@ function AppContent() {
           <Route path="/admin" element={<AdminProtectedRoute><AdminLayout><AdminDashboard /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/startups" element={<AdminProtectedRoute><AdminLayout><AdminStartups /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/mentores" element={<AdminProtectedRoute><AdminLayout><AdminMentores /></AdminLayout></AdminProtectedRoute>} />
+          <Route path="/admin/InscricaoMentores" element={<AdminProtectedRoute><AdminLayout><AdminInscricoesMentores /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/beneficios" element={<AdminProtectedRoute><AdminLayout><AdminBeneficios /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/oportunidades" element={<AdminProtectedRoute><AdminLayout><AdminOportunidades /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/eventos" element={<AdminProtectedRoute><AdminLayout><AdminEventos /></AdminLayout></AdminProtectedRoute>} />

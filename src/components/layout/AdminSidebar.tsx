@@ -14,7 +14,8 @@ import {
   ChevronRight,
   Settings,
   Award,
-  Home
+  Home,
+  UserRoundPlus,
 } from 'lucide-react';
 import { auth } from '../../lib/firebase';
 import { signOut } from 'firebase/auth';
@@ -49,6 +50,7 @@ const AdminSidebar = () => {
     { icon: LayoutDashboard, label: 'Dashboard', path: '/admin' },
     { icon: Rocket, label: 'Startups', path: '/admin/startups' },
     { icon: Users, label: 'Mentores', path: '/admin/mentores' },
+    { icon: UserRoundPlus, label: 'Inscrição Mentores', path: '/admin/InscricaoMentores' },
     { icon: GraduationCap, label: 'Treinamentos', path: '/admin/treinamentos' },
     { icon: Gift, label: 'Benefícios', path: '/admin/beneficios' },
     { icon: FileText, label: 'Cases', path: '/admin/cases' },

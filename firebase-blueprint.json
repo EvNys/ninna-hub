@@ -194,6 +194,25 @@
         "status": { "type": "string", "enum": ["ativo", "inativo"] }
       },
       "required": ["nomeEmpresa", "logo", "status"]
+    },
+    "InscricaoMentor": {
+      "title": "InscricaoMentor",
+      "description": "Inscrições para ser mentor do Hub",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nome": { "type": "string" },
+        "telefone": { "type": "string" },
+        "email": { "type": "string" },
+        "cidade": { "type": "string" },
+        "areaMentoria": { "type": "string" },
+        "comoConheceu": { "type": "string" },
+        "motivoInscricao": { "type": "string" },
+        "cienteRegulamento": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["pendente", "aprovado", "rejeitado"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["nome", "telefone", "email", "cidade", "areaMentoria", "comoConheceu", "motivoInscricao", "cienteRegulamento"]
     }
   },
   "firestore": {
