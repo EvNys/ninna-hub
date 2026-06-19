@@ -133,6 +133,14 @@ const showStartupsDropdown = () => {
                 </Link>
                 
               ))}
+
+              <div className="flex items-center gap-3">
+                <Link
+                  to="/seja-um-mentor"
+                  className="px-4 py-2 bg-brand-teal text-white rounded-full text-[10px] font-black uppercase tracking-widest transition-all hover:bg-brand-teal/90 hover:shadow-md hover:shadow-brand-teal/20"
+                >
+                  Seja um mentor
+                </Link>
               {user && (
                 <Link
                   to={isAdmin || isEditor ? "/admin" : "/dashboard/comunidade"}
@@ -151,6 +159,7 @@ const showStartupsDropdown = () => {
                 </Link>
               )}
             </div>
+          </div>
           </div>
 
           {/* Mobile menu button */}

@@ -15,8 +15,14 @@ const BLOCOS = [
     title: "Diagnosticar para Decidir",
     subtitle: "Para quem quer clareza antes de agir",
     accent: "#00D4D4",
+    image: "../public/imagens_NINNA/images.png",
     cta: "Comece com um diagnóstico →",
     description: "Antes de inovar, é preciso saber onde você está. Nossos diagnósticos combinam metodologias globais com uma leitura precisa da realidade da sua empresa — entregando clareza, prioridades e um ponto de partida sólido para qualquer jornada de transformação.",
+    empresas: [
+      { nome: "Empresa A", logo: "../public/imagens/logo-a.png" },
+      { nome: "Empresa B", logo: "../public/imagens/logo-b.png" },
+      { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
+    ],
     cases: [
       { company: "Empresa A", result: "Identificou gaps críticos de maturidade e reduziu o tempo de decisão estratégica em 40%." },
       { company: "Empresa B", result: "Mapeou barreiras culturais invisíveis que travavam projetos de inovação há 2 anos." },
@@ -32,8 +38,14 @@ const BLOCOS = [
     title: "Estruturar para Escalar",
     subtitle: "Para quem já sabe onde está e quer organizar a jornada",
     accent: "#00E676",
+    image: "../public/imagens_NINNA/images.png",
     cta: "Monte sua estratégia →",
     description: "Ter vontade de inovar não é suficiente — é preciso estrutura. Ajudamos sua empresa a construir os processos, governança e estratégias que transformam iniciativas isoladas em um sistema de inovação contínuo e escalável.",
+    empresas: [
+      { nome: "Empresa A", logo: "../public/imagens/logo-a.png" },
+      { nome: "Empresa B", logo: "../public/imagens/logo-b.png" },
+      { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
+    ],
     cases: [
       { company: "Empresa C", result: "Implantou funil de inovação e gerou pipeline de 30 projetos qualificados no primeiro trimestre." },
       { company: "Empresa D", result: "Estruturou comitê de inovação com KPIs claros, conectando estratégia ao dia a dia dos times." },
@@ -49,8 +61,14 @@ const BLOCOS = [
     title: "Executar com Tecnologia e Parceiros",
     subtitle: "Para quem quer colocar a mão na massa com parceiros e tecnologia",
     accent: "#7C6FF7",
+    image: "../public/imagens_NINNA/images.png",
     cta: "Encontre sua solução →",
     description: "Identificar a tecnologia certa e os parceiros ideais faz toda a diferença na execução. Conectamos sua empresa às melhores soluções do mercado e gerenciamos o processo de validação e aceleração de ponta a ponta.",
+    empresas: [
+      { nome: "Empresa A", logo: "../public/imagens/logo-a.png" },
+      { nome: "Empresa B", logo: "../public/imagens/logo-b.png" },
+      { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
+    ],
     cases: [
       { company: "Empresa E", result: "Conduziu PoC com 3 startups simultaneamente e implementou solução em produção em 90 dias." },
       { company: "Empresa F", result: "Recebeu 80+ inscrições qualificadas em chamada de startups focada em logística." },
@@ -66,13 +84,19 @@ const BLOCOS = [
     title: "Ativar Cultura e Pessoas",
     subtitle: "Para quem quer engajar times e criar cultura de inovação",
     accent: "#FF6B6B",
+    image: "../public/imagens_NINNA/images.png",
     cta: "Engaje seu time →",
     description: "Inovação começa nas pessoas. Desenvolvemos programas que transformam colaboradores em agentes de mudança — engajando times, formando líderes e criando uma cultura onde novas ideias encontram espaço para crescer.",
+   empresas: [
+      { nome: "Empresa A", logo: "../public/imagens/logo-a.png" },
+      { nome: "Empresa B", logo: "../public/imagens/logo-b.png" },
+      { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
+    ],
     cases: [
       { company: "Empresa G", result: "Formou 120 embaixadores de inovação espalhados por 8 unidades de negócio em 6 meses." },
       { company: "Empresa H", result: "Hackathon corporativo gerou 3 projetos que viraram iniciativas oficiais da empresa." },
     ],
-    cards: [ { title: "Programa de Embaixadores",            desc: "Forme líderes internos que disseminam a cultura de inovação de dentro para fora da organização." },
+    cards: [ { title: "Programa de Embaixadores",     desc: "Forme líderes internos que disseminam a cultura de inovação de dentro para fora da organização." },
       { title: "Programa de Mentores",                desc: "Conecte talentos internos com mentores especializados para acelerar o desenvolvimento em inovação." },
       { title: "Hackathons Corporativos",             desc: "Eventos de alta energia para resolver desafios reais do negócio com equipes multidisciplinares." },
       { title: "Programa de Ideias",                  desc: "Canal estruturado para capturar, avaliar e premiar as melhores ideias de toda a organização." },
@@ -86,13 +110,19 @@ const BLOCOS = [
     title: "Conectar ao Ecossistema",
     subtitle: "Para quem quer fazer parte de algo maior e se conectar com pares",
     accent: "#FFB800",
+    image: "../public /imagens_NINNA/images.png",
     cta: "Faça parte do ecossistema →",
     description: "As melhores oportunidades surgem das conexões certas. Facilitamos o acesso ao ecossistema de inovação — aproximando sua empresa de startups, líderes, investidores e parceiros estratégicos que aceleram resultados reais.",
+   empresas: [
+      { nome: "Empresa A", logo: "../public/imagens/logo-a.png" },
+      { nome: "Empresa B", logo: "../public/imagens/logo-b.png" },
+      { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
+    ],
     cases: [
       { company: "Empresa I", result: "Participou do LICOR e fechou parceria estratégica com outra corporação no mesmo evento." },
       { company: "Empresa J", result: "Imersão técnica no Vale do Silício redefiniu o roadmap de tecnologia para os próximos 3 anos." },
     ],
-    cards: [ { title: "LICOR",                              desc: "Encontro exclusivo de líderes de inovação corporativa para troca de experiências e geração de oportunidades." },
+    cards: [ { title: "LICOR",                        desc: "Encontro exclusivo de líderes de inovação corporativa para troca de experiências e geração de oportunidades." },
       { title: "Conexão com Ecossistema",             desc: "Curadoria de conexões relevantes com startups, aceleradoras, investidores e parceiros estratégicos." },
       { title: "Eventos para Comunidade de Inovação", desc: "Agenda de eventos abertos e fechados para fortalecer sua presença e influência no ecossistema." },
       { title: "Imersões Técnicas",                   desc: "Visitas e imersões em hubs de inovação, universidades e centros de tecnologia de referência." },
@@ -210,6 +240,12 @@ function BlocoSection({ bloco, isOpen, onClose }) {
           </h2>
 
           {/* descrição do bloco */}
+          <div style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: "48px",
+            marginBottom: "48px",
+          }}>
           <p style={{
             fontSize: "15px",
             color: "rgba(255,255,255,0.55)",
@@ -219,6 +255,21 @@ function BlocoSection({ bloco, isOpen, onClose }) {
           }}>
             {bloco.description}
           </p>
+
+          {bloco.image && (
+              <img
+                src={bloco.image}
+                alt={bloco.title}
+                style={{
+                  width: "260px",
+                  flexShrink: 0,
+                  borderRadius: "12px",
+                  objectFit: "cover",
+                  opacity: 0.9,
+                }}
+              />
+            )}
+          </div>
 
           {/* cards */}
           <div
@@ -234,6 +285,39 @@ function BlocoSection({ bloco, isOpen, onClose }) {
               <Card key={i} {...c} accent={bloco.accent} />
             ))}
           </div>
+
+          {/* empresas atendidas */}
+            {bloco.empresas?.length > 0 && (
+              <div style={{ marginBottom: "40px" }}>
+                <p style={{
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.3)",
+                  marginBottom: "16px",
+                }}>
+                  Empresas atendidas
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", alignItems: "center" }}>
+                  {bloco.empresas.map((e, i) => (
+                    <div key={i} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                      {e.logo ? (
+                        <img
+                          src={e.logo}
+                          alt={e.nome}
+                          style={{ height: "24px", objectFit: "contain", opacity: 0.7 }}
+                        />
+                      ) : (
+                        <span style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)" }}>
+                          {e.nome}
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
           {/* cases */}
           <div style={{ marginTop: "68px", marginBottom: "24px" }}>
