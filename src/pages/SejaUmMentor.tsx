@@ -216,36 +216,36 @@ export default function SejaUmMentor() {
       </section>
 
       <section className="py-20 relative bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      
-      <div className="space-y-6">
-        <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em] bg-brand-teal/10 rounded-full px-3.5 py-1 border border-brand-teal/20">
-          Pilar NINNA Hub
-        </span>
-        
-        <h2 className="text-3xl sm:text-5xl font-black text-gray-900 uppercase tracking-tighter italic leading-tight">
-          Liderança Ativa que Constrói o Futuro de Fortaleza para o Mundo
-        </h2>
-        
-        <p className="text-gray-500 font-medium leading-relaxed text-sm sm:text-base">
-          O programa de mentoria é planejado para quem deseja compartilhar sua sabedoria mercadológica e estrutural de maneira coordenada. Como mentor voluntário do NINNA Hub (sob a diretriz legal da Lei de Voluntariado nº 9.608/1998), seu tempo será focado das demandas de tração operacional, tecnologia e governança estratégica.
-        </p>
-        <p className="text-gray-500 font-medium leading-relaxed text-sm sm:text-base">
-          Aqui investimos em quem ajuda: oferecemos uma jornada educacional moderna em parceria com formadores de renome, além de incluí-lo imediatamente na rede M2M interligada de CEOs, investidores anjos e diretores inovadores.
-        </p>
-        
-        <div className="pt-4 flex items-center gap-4">
-          <div className="flex -space-x-3">
-            <div className="w-10 h-10 rounded-full border-2 border-white bg-[#1A1A2E] flex items-center justify-center font-black text-xs text-white">CE</div>
-            <div className="w-10 h-10 rounded-full border-2 border-white bg-brand-teal flex items-center justify-center font-black text-xs text-white">SP</div>
-            <div className="w-10 h-10 rounded-full border-2 border-white bg-[#E63946] flex items-center justify-center font-black text-xs text-white">SC</div>
-          </div>
-          <p className="text-xs text-gray-500 font-medium">
-            Mentores integrados de diversas regiões e setores estratégicos.
-          </p>
-        </div>
-      </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div className="space-y-6">
+              <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em] bg-brand-teal/10 rounded-full px-3.5 py-1 border border-brand-teal/20">
+                Pilar NINNA Hub
+              </span>
+              
+              <h2 className="text-3xl sm:text-5xl font-black text-gray-900 uppercase tracking-tighter italic leading-tight">
+                Liderança Ativa que Constrói o Futuro de Fortaleza para o Mundo
+              </h2>
+              
+              <p className="text-gray-500 font-medium leading-relaxed text-sm sm:text-base">
+                O programa de mentoria é planejado para quem deseja compartilhar sua sabedoria mercadológica e estrutural de maneira coordenada. Como mentor voluntário do NINNA Hub (sob a diretriz legal da Lei de Voluntariado nº 9.608/1998), seu tempo será focado das demandas de tração operacional, tecnologia e governança estratégica.
+              </p>
+              <p className="text-gray-500 font-medium leading-relaxed text-sm sm:text-base">
+                Aqui investimos em quem ajuda: oferecemos uma jornada educacional moderna em parceria com formadores de renome, além de incluí-lo imediatamente na rede M2M interligada de CEOs, investidores anjos e diretores inovadores.
+              </p>
+              
+              <div className="pt-4 flex items-center gap-4">
+                <div className="flex -space-x-3">
+                  <div className="w-10 h-10 rounded-full border-2 border-white bg-[#1A1A2E] flex items-center justify-center font-black text-xs text-white">CE</div>
+                  <div className="w-10 h-10 rounded-full border-2 border-white bg-brand-teal flex items-center justify-center font-black text-xs text-white">SP</div>
+                  <div className="w-10 h-10 rounded-full border-2 border-white bg-[#E63946] flex items-center justify-center font-black text-xs text-white">SC</div>
+                </div>
+                <p className="text-xs text-gray-500 font-medium">
+                  Mentores integrados de diversas regiões e setores estratégicos.
+                </p>
+              </div>
+            </div>
 
             {/* Visual Box mapping timeline steps */}
             <div className="bg-[#111111] border border-white/5 rounded-2xl p-6 sm:p-8 relative">

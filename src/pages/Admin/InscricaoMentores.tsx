@@ -196,6 +196,35 @@ export default function AdminInscricoesMentores() {
     return matchesSearch && matchesStatus;
   });
 
+  const exportToCSV = (data: any[]) => {
+  const headers = [
+    'Nome', 'Email', 'Telefone', 'Cidade', 'Área de Mentoria',
+    'Status', 'Data de Inscrição'
+  ];
+
+  const rows = data.map(item => [
+    item.nome ?? '',
+    item.email ?? '',
+    item.telefone ?? '',
+    item.cidade ?? '',
+    item.areaMentoria ?? '',
+    item.status ?? 'pendente',
+    formatDate(item.createdAt)
+  ]);
+
+  const csvContent = [headers, ...rows]
+    .map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(','))
+    .join('\n');
+
+  const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `inscricoes_mentores_${new Date().toISOString().slice(0, 10)}.csv`;
+  link.click();
+  URL.revokeObjectURL(url);
+};
+
   return (
     <div className="max-w-7xl mx-auto py-12 px-6 font-sans">
       
@@ -213,36 +242,45 @@ export default function AdminInscricoesMentores() {
       </div>
 
       {/* Filters bar */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 bg-white p-4 border border-gray-100 rounded-3xl shadow-sm">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 bg-white p-4 border border-gray-100 rounded-3xl shadow-sm">
         
-        {/* Search */}
-        <div className="relative md:col-span-2">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
-          <input
-            type="text"
-            placeholder="Buscar por nome, e-mail, área predominante ou cidade..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl pl-12 pr-6 py-3.5 focus:outline-none focus:border-brand-teal transition-all text-sm font-semibold text-gray-800 placeholder:text-gray-400"
-          />
-        </div>
-
-        {/* Status Dropdown Filter */}
-        <div className="relative">
-          <Filter className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
-          <select
-            value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value)}
-            className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl pl-12 pr-6 py-3.5 focus:outline-none focus:border-brand-teal transition-all text-sm font-bold text-gray-700 appearance-none"
-          >
-            <option value="todos">Filtrar por Status (Todos)</option>
-            <option value="pendente">Pendente</option>
-            <option value="apto á começar o programa">Apto a Começar</option>
-            <option value="inapto">Inapto</option>
-          </select>
-        </div>
-
+      {/* Search */}
+      <div className="relative md:col-span-2">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
+        <input
+          type="text"
+          placeholder="Buscar por nome, e-mail, área predominante ou cidade..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl pl-12 pr-6 py-3.5 focus:outline-none focus:border-brand-teal transition-all text-sm font-semibold text-gray-800 placeholder:text-gray-400"
+        />
       </div>
+
+      {/* Status Dropdown Filter */}
+      <div className="relative">
+        <Filter className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+        <select
+          value={statusFilter}
+          onChange={(e) => setStatusFilter(e.target.value)}
+          className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl pl-12 pr-6 py-3.5 focus:outline-none focus:border-brand-teal transition-all text-sm font-bold text-gray-700 appearance-none"
+        >
+          <option value="todos">Filtrar por Status (Todos)</option>
+          <option value="pendente">Pendente</option>
+          <option value="apto á começar o programa">Apto a Começar</option>
+          <option value="inapto">Inapto</option>
+        </select>
+      </div>
+
+      {/* Export CSV Button */}
+      <button
+        onClick={() => exportToCSV(filteredInscricoes)}
+        className="inline-flex items-center justify-center gap-2 bg-[#fafafa] border border-gray-100 hover:border-brand-teal hover:bg-brand-teal/5 text-gray-700 hover:text-brand-teal rounded-2xl px-6 py-3.5 text-sm font-bold transition-all"
+      >
+        <ArrowUpRight className="w-4 h-4" />
+        Exportar CSV
+      </button>
+
+    </div>
 
       {/* Main Panel Content Split */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
