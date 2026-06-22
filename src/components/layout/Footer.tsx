@@ -1,4 +1,4 @@
-import { Rocket, Mail, Instagram, Linkedin, Twitter, MapPin, Phone } from 'lucide-react';
+import { Rocket, Mail, Instagram, Linkedin, Twitter, MapPin, Phone, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-brand-darker border-t border-white/10 pt-16 pb-8 text-white relative overflow-hidden">
       {/* Background Aura */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#0ae2b1,transparent_70%)]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#8CC63F,transparent_70%)]" />
       </div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-teal/5 blur-3xl rounded-full translate-x-1/2 translate-y-1/2" />
       
@@ -28,6 +28,18 @@ const Footer = () => {
                   <Icon className="w-5 h-5" />
                 </a>
               ))}
+            </div>
+
+            <div className="mt-6">
+              <a
+                href="/docs/Codigo-de-Conduta-e-Etica-Timbrado-NINNA-vyf150626.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 hover:border-brand-teal/60 hover:bg-brand-teal/10 text-white/60 hover:text-brand-teal rounded-xl text-[10px] font-black uppercase tracking-widest transition-all"
+              >
+                <FileText className="w-4 h-4" />
+                Código de ética e conduta
+              </a>
             </div>
           </div>
 

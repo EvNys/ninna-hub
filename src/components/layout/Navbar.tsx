@@ -84,13 +84,13 @@ const showStartupsDropdown = () => {
   const navLinks = NAV_LINKS;
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+    <nav className="sticky top-0 z-50 backdrop-blur-lg border-b border-[#1A237E]" style={{ backgroundColor: '#1A237E' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-black tracking-tighter uppercase text-gray-900">
-                NINNA<span className="text-brand-teal">HUB</span>
+              <span className="text-2xl font-black tracking-tighter uppercase" style = {{ color: '#f8f8f8'}}>
+                NINNA<span style={{ color: '#8CC63f' }}>HUB</span>
               </span>
             </Link>
           </div>
@@ -119,25 +119,24 @@ const showStartupsDropdown = () => {
                   }
                   className={`px-3 py-2 rounded-md text-[10px] font-black uppercase tracking-[0.2em] transition-colors relative flex items-center gap-1 ${
                     location.pathname === link.path
-                      ? 'text-brand-teal'
-                      : 'text-gray-500 hover:text-brand-teal'
+                      ? 'text-[#8CC63F]'
+                      : 'text-[#f8f8f8] hover:text-[#8CC63F]'
                   }`}
                 >
                   <span>{link.name}</span>
                   {link.name === 'Ecossistema' && (
-                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isDropdownActive ? 'rotate-180 text-brand-teal' : 'text-gray-400'}`} />
+                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isDropdownActive ? 'rotate-180 text-[#8CC63F]' : 'text-[#f8f8f8]'}`} />
                   )}
                   {link.name === 'Startups' && (
-                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isStartupsDropdownActive ? 'rotate-180 text-brand-teal' : 'text-gray-400'}`} />
+                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isStartupsDropdownActive ? 'rotate-180 text-[#8CC63F]' : 'text-[#f8f8f8]'}`} />
                   )}
                 </Link>
-                
               ))}
 
               <div className="flex items-center gap-3">
                 <Link
                   to="/seja-um-mentor"
-                  className="px-4 py-2 bg-brand-teal text-white rounded-full text-[10px] font-black uppercase tracking-widest transition-all hover:bg-brand-teal/90 hover:shadow-md hover:shadow-brand-teal/20"
+                  className="px-4 py-2 bg-[#8CC63F] text-white rounded-full text-[10px] font-black uppercase tracking-widest transition-all hover:bg-[#8CC63F]/90 hover:shadow-md hover:shadow-brand-teal/20"
                 >
                   Seja um mentor
                 </Link>
@@ -260,7 +259,7 @@ const showStartupsDropdown = () => {
         </motion.div>
       )}
 
-      {/* Horizontal Mega Menu for Ecossistema */}
+    {/* Horizontal Mega Menu for Ecossistema */}
       <AnimatePresence>
         {isDropdownActive && (
           <motion.div
@@ -270,53 +269,54 @@ const showStartupsDropdown = () => {
             transition={{ duration: 0.2 }}
             onMouseEnter={showDropdown}
             onMouseLeave={hideDropdown}
-            className="absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-2xl z-40 hidden md:block"
+            className="absolute top-20 left-0 w-full border-b border-[#0a0a0a]/30 shadow-2xl z-40 hidden md:block"
+            style={{ backgroundColor: '#0a0a0a' }}
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-left">
               <div className="grid grid-cols-12 gap-8">
                 
                 {/* Ações e Reservas */}
-                <div className="col-span-5 border-r border-gray-100 pr-8">
-                  <span className="text-[9px] font-black text-brand-teal uppercase tracking-[0.3em] block mb-4">Ações e Reservas</span>
+                <div className="col-span-5 border-r border-white/10 pr-8">
+                  <span className="text-[9px] font-black text-[#8CC63F] uppercase tracking-[0.3em] block mb-4">Ações e Reservas</span>
                   <div className="flex flex-col gap-3">
                     <Link
                       to="/ecossistema?action=booking&space=Auditório"
                       onClick={() => setIsDropdownActive(false)}
-                      className="group flex items-center justify-between p-4 bg-gray-50 hover:bg-brand-teal/5 border border-transparent hover:border-brand-teal/20 rounded-2xl transition-all"
+                      className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-xl bg-[#8CC63F]/20 flex items-center justify-center text-[#8CC63F] group-hover:scale-110 transition-transform">
                           <Calendar className="w-5 h-5" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-gray-900 group-hover:text-brand-teal transition-colors">Agende seu Evento</h5>
-                          <p className="text-gray-400 text-xs font-semibold">Reserve o Auditório Premium do NINNA</p>
+                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-[#f8f8f8] group-hover:text-[#8CC63F] transition-colors">Agende seu Evento</h5>
+                          <p className="text-white/40 text-xs font-semibold">Reserve o Auditório Premium do NINNA</p>
                         </div>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-brand-teal group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#8CC63F] group-hover:translate-x-1 transition-all" />
                     </Link>
 
                     <Link
                       to="/ecossistema?action=booking&space=Sala%20Pregão"
                       onClick={() => setIsDropdownActive(false)}
-                      className="group flex items-center justify-between p-4 bg-gray-50 hover:bg-brand-teal/5 border border-transparent hover:border-brand-teal/20 rounded-2xl transition-all"
+                      className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-xl bg-[#8CC63F]/20 flex items-center justify-center text-[#8CC63F] group-hover:scale-110 transition-transform">
                           <Laptop className="w-5 h-5" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-gray-900 group-hover:text-brand-teal transition-colors">Solicite seu Evento</h5>
-                          <p className="text-gray-400 text-xs font-semibold">Oficinas, workshops e hackathons modulares</p>
+                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-[#f8f8f8] group-hover:text-[#8CC63F] transition-colors">Solicite seu Evento</h5>
+                          <p className="text-white/40 text-xs font-semibold">Oficinas, workshops e hackathons modulares</p>
                         </div>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-brand-teal group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#8CC63F] group-hover:translate-x-1 transition-all" />
                     </Link>
 
                     <Link
                       to="/ecossistema?action=sponsor"
                       onClick={() => setIsDropdownActive(false)}
-                      className="group flex items-center justify-between p-4 bg-gray-900 hover:bg-brand-teal border border-transparent rounded-2xl transition-all"
+                      className="group flex items-center justify-between p-4 bg-white/10 hover:bg-[#8CC63F] border border-transparent rounded-2xl transition-all"
                     >
                       <div className="flex items-center gap-4">
                         <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
@@ -336,11 +336,11 @@ const showStartupsDropdown = () => {
                 <div className="col-span-7 pl-4 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[9px] font-black text-brand-teal uppercase tracking-[0.3em] block">Eventos do NINNA</span>
+                      <span className="text-[9px] font-black text-[#8CC63F] uppercase tracking-[0.3em] block">Eventos do NINNA</span>
                       <Link 
                         to="/agenda" 
                         onClick={() => setIsDropdownActive(false)}
-                        className="text-[9px] font-black text-gray-400 hover:text-brand-teal uppercase tracking-widest transition-all"
+                        className="text-[9px] font-black text-white/40 hover:text-[#8CC63F] uppercase tracking-widest transition-all"
                       >
                         Ver Agenda Completa →
                       </Link>
@@ -348,14 +348,14 @@ const showStartupsDropdown = () => {
 
                     <div className="grid grid-cols-2 gap-4">
                       {ninnaEvents.map((ev) => (
-                        <div key={ev.nome} className="bg-gray-50 border border-gray-100/50 p-5 rounded-2xl flex flex-col justify-between hover:shadow-md transition-shadow group">
+                        <div key={ev.nome} className="bg-white/5 border border-white/10 p-5 rounded-2xl flex flex-col justify-between hover:shadow-md transition-shadow group">
                           <div className="space-y-1">
-                            <h6 className="font-extrabold uppercase text-[10px] tracking-tight leading-normal text-gray-900 group-hover:text-brand-teal transition-colors">
+                            <h6 className="font-extrabold uppercase text-[10px] tracking-tight leading-normal text-[#f8f8f8] group-hover:text-[#8CC63F] transition-colors">
                               {ev.nome}
                             </h6>
                           </div>
-                          <div className="flex items-center gap-1.5 text-gray-400 text-[9px] font-bold uppercase tracking-wider mt-4">
-                            <MapPin className="w-3.5 h-3.5 text-brand-teal shrink-0" />
+                          <div className="flex items-center gap-1.5 text-white/40 text-[9px] font-bold uppercase tracking-wider mt-4">
+                            <MapPin className="w-3.5 h-3.5 text-[#8CC63F] shrink-0" />
                             <span className="truncate">{ev.local}</span>
                           </div>
                         </div>
@@ -363,16 +363,16 @@ const showStartupsDropdown = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 pt-6 border-t border-gray-100/65">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 pt-6 border-t border-white/10">
                     <Link
                       to="/oportunidades"
                       onClick={() => setIsDropdownActive(false)}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-teal/10 hover:bg-brand-teal text-brand-teal hover:text-white rounded-xl text-[9px] font-black uppercase tracking-[0.15em] transition-all cursor-pointer shadow-sm shadow-brand-teal/5"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#8CC63F]/20 hover:bg-[#8CC63F] text-[#8CC63F] hover:text-white rounded-xl text-[9px] font-black uppercase tracking-[0.15em] transition-all cursor-pointer shadow-sm"
                     >
                       <span>Abertura de Oportunidades</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
-                    <p className="text-[9px] text-gray-400 font-bold uppercase tracking-wider italic text-right">
+                    <p className="text-[9px] text-white/40 font-bold uppercase tracking-wider italic text-right">
                       Nossa equipe está pronta para integrar sua marca e comunidade.
                     </p>
                   </div>

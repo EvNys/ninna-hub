@@ -119,32 +119,32 @@ export default function SejaUmMentor() {
     {
       title: 'Networking de Alto Impacto',
       description: 'Conecte-se e troque experiências diretamente com outros mentores, executivos, investidores e fundadores do ecossistema nacional.',
-      icon: <Users className="w-8 h-8 text-brand-teal" />
+      icon: <Users className="w-8 h-8 text-[#8CC63F]" />
     },
     {
       title: 'Contato com Novas Tecnologias',
       description: 'Acompanhe de perto as ideias mais inovadoras, as tecnologias emergentes e os novos modelos de negócios escaláveis do mercado.',
-      icon: <Sparkles className="w-8 h-8 text-brand-teal" />
+      icon: <Sparkles className="w-8 h-8 text-[#8CC63F]" />
     },
     {
       title: 'Fomento e Impacto Real',
       description: 'Gere impacto real ao apoiar a criação e a consolidação de novas startups, fomentando inovação e gerando oportunidades regionais.',
-      icon: <Target className="w-8 h-8 text-brand-teal" />
+      icon: <Target className="w-8 h-8 text-[#8CC63F]" />
     },
     {
       title: 'Destaque e Visibilidade do Perfil',
       description: 'Apareça como mentor referência nas páginas exclusivas do NINNA Hub, em publicações do ecossistema e eventos parceiros.',
-      icon: <Award className="w-8 h-8 text-brand-teal" />
+      icon: <Award className="w-8 h-8 text-[#8CC63F]" />
     },
     {
       title: 'Aprimoramento de Liderança',
       description: 'Aconselhar fundadores em diferentes estágios ajuda a calibrar suas próprias capacidades de liderança, escuta e análise crítica.',
-      icon: <Heart className="w-8 h-8 text-brand-teal" />
+      icon: <Heart className="w-8 h-8 text-[#8CC63F]" />
     },
     {
       title: 'Encontros Exclusivos',
       description: 'Participe de jantares, meetups exclusivos de mentores, rituais de happy hour e receba convites especiais para eventos de inovação do Hub.',
-      icon: <Clock className="w-8 h-8 text-brand-teal" />
+      icon: <Clock className="w-8 h-8 text-[#8CC63F]" />
     }
   ];
 
@@ -154,7 +154,7 @@ export default function SejaUmMentor() {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 bg-brand-darker">
         <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#00bcd4,transparent_70%)]" />
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#8CC63F,transparent_70%)]" />
         </div>
         
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
@@ -162,7 +162,7 @@ export default function SejaUmMentor() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-brand-teal/10 text-brand-teal rounded-full text-[10px] font-black uppercase tracking-widest mb-6 border border-brand-teal/20"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#8CC63F]/10 text-[#8CC63F] rounded-full text-[10px] font-black uppercase tracking-widest mb-6 border border-[#8CC63F]/20"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Seja um Mentor</span>
@@ -176,7 +176,7 @@ export default function SejaUmMentor() {
             className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-[0.9] mb-6"
           >
             Guie as startups do amanhã. <br className="hidden md:inline" />
-            Compartilhe seu <span className="text-brand-teal">Legado</span>.
+            Compartilhe seu <span className="text-[#8CC63F]">Legado</span>.
           </motion.h1>
 
           {/* Alterado de 'text-gray-500' para 'text-gray-400' para garantir boa leitura sem agredir os olhos */}
@@ -198,7 +198,7 @@ export default function SejaUmMentor() {
           >
             <button
               onClick={() => scrollToSection('formulario')}
-              className="w-full sm:w-auto bg-brand-teal hover:bg-brand-teal/90 text-white rounded-2xl py-4 px-10 font-black uppercase text-[11px] tracking-widest transition-all shadow-xl shadow-brand-teal/20"
+              className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#8CC63F]/90 text-white rounded-2xl py-4 px-10 font-black uppercase text-[11px] tracking-widest transition-all shadow-xl shadow-[#8CC63F]/20"
             >
               Quero ser mentor
             </button>
@@ -220,7 +220,7 @@ export default function SejaUmMentor() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             <div className="space-y-6">
-              <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em] bg-brand-teal/10 rounded-full px-3.5 py-1 border border-brand-teal/20">
+              <span className="text-[10px] font-black text-[#8CC63F] uppercase tracking-[0.25em] bg-[#8CC63F]/10 rounded-full px-3.5 py-1 border border-[#8CC63F]/20">
                 Pilar NINNA Hub
               </span>
               
@@ -238,7 +238,7 @@ export default function SejaUmMentor() {
               <div className="pt-4 flex items-center gap-4">
                 <div className="flex -space-x-3">
                   <div className="w-10 h-10 rounded-full border-2 border-white bg-[#1A1A2E] flex items-center justify-center font-black text-xs text-white">CE</div>
-                  <div className="w-10 h-10 rounded-full border-2 border-white bg-brand-teal flex items-center justify-center font-black text-xs text-white">SP</div>
+                  <div className="w-10 h-10 rounded-full border-2 border-white bg-[#8CC63F] flex items-center justify-center font-black text-xs text-white">SP</div>
                   <div className="w-10 h-10 rounded-full border-2 border-white bg-[#E63946] flex items-center justify-center font-black text-xs text-white">SC</div>
                 </div>
                 <p className="text-xs text-gray-500 font-medium">
@@ -280,7 +280,7 @@ export default function SejaUmMentor() {
       {/* Benefits Grid (Por que ser mentor?) */}
       <section id="beneficios" className="py-24 max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em] block mb-2">Ecossistema de Alto Impacto</span>
+          <span className="text-[10px] font-black text-[#8CC63F] uppercase tracking-[0.25em] block mb-2">Ecossistema de Alto Impacto</span>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter italic">
             Benefícios de ser um Mentor NINNA
           </h2>
@@ -300,7 +300,7 @@ export default function SejaUmMentor() {
               className="bg-white p-8 border border-gray-100 rounded-[32px] hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-brand-teal/10 flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-[#8CC63F]/10 flex items-center justify-center mb-6">
                   {benefit.icon}
                 </div>
                 <h3 className="text-lg font-black text-gray-900 uppercase tracking-tighter italic mb-3">
@@ -318,12 +318,12 @@ export default function SejaUmMentor() {
       { /* Expectations Section (Compromisso Ético) */}
       <section className="py-16 bg-brand-darker border-t border-white/5 relative z-10">
       <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#00bcd4,transparent_70%)]" />
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#8CC63F,transparent_70%)]" />
       </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-2xl mx-auto text-center space-y-4 ">
             {/* Atualizado para a badge padrão em dark mode */}
-            <span className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-2 border border-brand-teal/20">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#8CC63F]/10 text-[#8CC63F] text-[10px] font-black uppercase tracking-[0.3em] mb-2 border border-[#8CC63F]/20">
               Compromisso Ético
             </span>
             
@@ -341,22 +341,22 @@ export default function SejaUmMentor() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
             {/* CARD 1 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
-              {/* Substituído pelo text-brand-teal do seu ecossistema */}
-              <span className="text-5xl text-brand-teal font-black tracking-tight block mb-2">4h</span>
+              {/* Substituído pelo text-[#8CC63F] do seu ecossistema */}
+              <span className="text-5xl text-[#8CC63F] font-black tracking-tight block mb-2">4h</span>
               <h4 className="text-sm font-black uppercase tracking-wider text-white">Disponibilidade Mensal</h4>
               <p className="text-xs text-gray-400 mt-2 leading-relaxed">Sessões individuais ou workshops de grupo previamente acordados.</p>
             </div>
             
             {/* CARD 2 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
-              <span className="text-5xl text-brand-teal font-black tracking-tight block mb-2">50%+</span>
+              <span className="text-5xl text-[#8CC63F] font-black tracking-tight block mb-2">50%+</span>
               <h4 className="text-sm font-black uppercase tracking-wider text-white">Taxa de Resposta</h4>
               <p className="text-xs text-gray-400 mt-2 leading-relaxed">Compromisso em responder solicitações de mentoria alinhadas ao seu perfil.</p>
             </div>
             
             {/* CARD 3 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
-              <span className="text-5xl text-brand-teal font-black tracking-tight block mb-2">12m</span>
+              <span className="text-5xl text-[#8CC63F] font-black tracking-tight block mb-2">12m</span>
               <h4 className="text-sm font-black uppercase tracking-wider text-white">Conclusão dos Módulos</h4>
               <p className="text-xs text-gray-400 mt-2 leading-relaxed">Conclusão de toda a trilha no período máximo de 1 ano letivo.</p>
             </div>
@@ -389,7 +389,7 @@ export default function SejaUmMentor() {
                 {/* Nome */}
                 <div className="space-y-2">
                   <label htmlFor="nome" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                    <User className="w-3.5 h-3.5 text-brand-teal" /> Nome Completo
+                    <User className="w-3.5 h-3.5 text-[#8CC63F]" /> Nome Completo
                   </label>
                   <input 
                     id="nome"
@@ -399,7 +399,7 @@ export default function SejaUmMentor() {
                     value={formData.nome}
                     onChange={handleInputChange}
                     placeholder="Ex: Roberto Silva"
-                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
                   />
                 </div>
 
@@ -408,7 +408,7 @@ export default function SejaUmMentor() {
                   {/* Telefone */}
                   <div className="space-y-2">
                     <label htmlFor="telefone" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                      <Phone className="w-3.5 h-3.5 text-brand-teal" /> Telefone para contato
+                      <Phone className="w-3.5 h-3.5 text-[#8CC63F]" /> Telefone para contato
                     </label>
                     <input 
                       id="telefone"
@@ -418,14 +418,14 @@ export default function SejaUmMentor() {
                       value={formData.telefone}
                       onChange={handleInputChange}
                       placeholder="(DD) 99999-9999"
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
                     />
                   </div>
 
                   {/* Email */}
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                      <Mail className="w-3.5 h-3.5 text-brand-teal" /> E-mail corporativo ou pessoal
+                      <Mail className="w-3.5 h-3.5 text-[#8CC63F]" /> E-mail corporativo ou pessoal
                     </label>
                     <input 
                       id="email"
@@ -435,7 +435,7 @@ export default function SejaUmMentor() {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="roberto.silva@suaempresa.com"
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
                     />
                   </div>
                 </div>
@@ -445,7 +445,7 @@ export default function SejaUmMentor() {
                   {/* Cidade */}
                   <div className="space-y-2">
                     <label htmlFor="cidade" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-brand-teal" /> Cidade / Estado
+                      <MapPin className="w-3.5 h-3.5 text-[#8CC63F]" /> Cidade / Estado
                     </label>
                     <input 
                       id="cidade"
@@ -455,14 +455,14 @@ export default function SejaUmMentor() {
                       value={formData.cidade}
                       onChange={handleInputChange}
                       placeholder="Ex: Fortaleza, CE"
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
                     />
                   </div>
 
                   {/* Área Predominante */}
                   <div className="space-y-2">
                     <label htmlFor="areaMentoria" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                      <Target className="w-3.5 h-3.5 text-brand-teal" /> Área predominante de mentoria
+                      <Target className="w-3.5 h-3.5 text-[#8CC63F]" /> Área predominante de mentoria
                     </label>
                     <select
                       id="areaMentoria"
@@ -470,7 +470,7 @@ export default function SejaUmMentor() {
                       required
                       value={formData.areaMentoria}
                       onChange={handleInputChange}
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm font-semibold"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold"
                     >
                       <option value="" disabled>Selecione uma área...</option>
                       {areasMentoriaOptions.map((opt, i) => (
@@ -483,7 +483,7 @@ export default function SejaUmMentor() {
                 {/* Como conheceu o HUB */}
                 <div className="space-y-2">
                   <label htmlFor="comoConheceu" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                    <HelpCircle className="w-3.5 h-3.5 text-brand-teal" /> Como você conheceu o NINNA HUB?
+                    <HelpCircle className="w-3.5 h-3.5 text-[#8CC63F]" /> Como você conheceu o NINNA HUB?
                   </label>
                   <input 
                     id="comoConheceu"
@@ -493,14 +493,14 @@ export default function SejaUmMentor() {
                     value={formData.comoConheceu}
                     onChange={handleInputChange}
                     placeholder="Ex: Redes sociais, indicação de parceiro, imprensa..."
-                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
                   />
                 </div>
 
                 {/* Descrição do motivo */}
                 <div className="space-y-2">
                   <label htmlFor="motivoInscricao" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                    <FileText className="w-3.5 h-3.5 text-brand-teal" /> Por que gostaria de ser um mentor NINNA?
+                    <FileText className="w-3.5 h-3.5 text-[#8CC63F]" /> Por que gostaria de ser um mentor NINNA?
                   </label>
                   <textarea 
                     id="motivoInscricao"
@@ -510,7 +510,7 @@ export default function SejaUmMentor() {
                     value={formData.motivoInscricao}
                     onChange={handleInputChange}
                     placeholder="Escreva brevemente seu propósito ao doar mentores, interesses e quais especialidades deseja trabalhar..."
-                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300 resize-none"
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300 resize-none"
                   />
                 </div>
 
@@ -533,7 +533,7 @@ export default function SejaUmMentor() {
                     required
                     checked={formData.cienteRegulamento}
                     onChange={handleCheckboxChange}
-                    className="w-5 h-5 bg-gray-50 border-gray-100 rounded-md focus:ring-brand-teal accent-brand-teal mt-0.5 shrink-0"
+                    className="w-5 h-5 bg-gray-50 border-gray-100 rounded-md focus:ring-[#8CC63F] accent-[#8CC63F] mt-0.5 shrink-0"
                   />
                   <label htmlFor="cienteRegulamento" className="text-xs text-gray-500 font-bold leading-snug cursor-pointer select-none">
                     Garanto que estou ciente das condições impostas no regulamento do programa de mentores e aceito os termos voluntários estabelecidos.
@@ -544,7 +544,7 @@ export default function SejaUmMentor() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white rounded-2xl py-4.5 font-black uppercase text-[11px] tracking-[0.2em] transition-all shadow-xl shadow-brand-teal/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="w-full bg-[#8CC63F] hover:bg-[#8CC63F]/90 text-white rounded-2xl py-4.5 font-black uppercase text-[11px] tracking-[0.2em] transition-all shadow-xl shadow-[#8CC63F]/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                 >
                   {loading ? 'Processando envio...' : 'Enviar Inscrição de Mentor'}
                   <ChevronRight className="w-4 h-4" />
@@ -559,7 +559,7 @@ export default function SejaUmMentor() {
               transition={{ type: 'spring', duration: 0.5 }}
               className="bg-white border border-gray-100 rounded-[40px] p-12 text-center shadow-xl space-y-6"
             >
-              <div className="w-20 h-20 bg-brand-teal/10 rounded-full flex items-center justify-center mx-auto text-brand-teal shrink-0">
+              <div className="w-20 h-20 bg-[#8CC63F]/10 rounded-full flex items-center justify-center mx-auto text-[#8CC63F] shrink-0">
                 <CheckCircle className="w-10 h-10" />
               </div>
 
@@ -587,7 +587,7 @@ export default function SejaUmMentor() {
                       cienteRegulamento: false
                     });
                   }}
-                  className="bg-brand-teal hover:bg-brand-teal/90 text-white rounded-2xl py-4 px-10 font-black uppercase text-[10px] tracking-widest transition-all shadow-xl shadow-brand-teal/15"
+                  className="bg-[#8CC63F] hover:bg-[#8CC63F]/90 text-white rounded-2xl py-4 px-10 font-black uppercase text-[10px] tracking-widest transition-all shadow-xl shadow-[#8CC63F]/15"
                 >
                   Fazer nova inscrição
                 </button>
