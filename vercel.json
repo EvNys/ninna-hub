@@ -1,6 +1,6 @@
 {
   "routes": [
     { "handle": "filesystem" },
-    { "source": "/((?!imagens_espaco/|outra_pasta/|favicon.ico).*)", "dest": "/index.html" }
+    { "source": "/((?!Imagens_espaco/|outra_pasta/|favicon.ico).*)", "dest": "/index.html" }
   ]
 }
