@@ -247,7 +247,7 @@ const Eventos = () => {
               <p className="text-white/60 text-lg leading-relaxed font-semibold">
                 Conecte-se com nosso hub e usufrua de uma comunidade vibrante ativa de mentores, investidores, líderes institucionais e parceiros estratégicos.
               </p>
-              <div className="pt-6">
+              <div className="pt-6 font-inter">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-6 h-6 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal">
                     <Check className="w-4 h-4" />
@@ -440,7 +440,7 @@ const Eventos = () => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-brand-teal to-brand-green opacity-20 blur-2xl rounded-[44px] group-hover:opacity-30 transition-opacity duration-500" />
                   <div className="relative rounded-[40px] overflow-hidden border border-gray-100 shadow-2xl h-[340px] md:h-[420px] bg-gray-50">
                     <img 
-                      src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200" 
+                      src="../public/Imagens_espaço/pregao_evento.jpeg" 
                       alt="NINNA Connection Event" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
@@ -457,7 +457,7 @@ const Eventos = () => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-brand-teal/15 to-brand-green/15 opacity-20 blur-2xl rounded-[44px] group-hover:opacity-30 transition-opacity duration-500" />
                   <div className="relative rounded-[40px] overflow-hidden border border-gray-100 shadow-2xl h-[340px] md:h-[420px] bg-gray-50">
                     <img 
-                      src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&q=80&w=1200" 
+                      src="../public/Imagens_espaço/auditorio_evento.jpg" 
                       alt="Terceiro Tempo Event" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
@@ -631,7 +631,7 @@ const Eventos = () => {
             >
               <div className="h-72 w-full relative overflow-hidden bg-gray-900">
                 <img 
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200" 
+                  src="../public/imagens_espaço/auditorio-vazio.jpg" 
                   alt="Auditório NINNA Hub" 
                   className="w-full h-full object-cover opacity-90"
                   referrerPolicy="no-referrer"
@@ -698,7 +698,7 @@ const Eventos = () => {
             >
               <div className="h-72 w-full relative overflow-hidden bg-gray-900">
                 <img 
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200" 
+                  src="../public/imagens_espaço/Pregao-vazio.jpg" 
                   alt="Espaço Pregão NINNA Hub" 
                   className="w-full h-full object-cover opacity-90"
                   referrerPolicy="no-referrer"
@@ -808,7 +808,7 @@ const Eventos = () => {
             >
               <div className="h-72 w-full relative overflow-hidden bg-gray-900">
                 <img 
-                  src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&q=80&w=1200" 
+                  src="../public/imagens_espaço/sala_sprint.png" 
                   alt="Sala Sprint NINNA Hub" 
                   className="w-full h-full object-cover opacity-90"
                   referrerPolicy="no-referrer"

@@ -84,7 +84,7 @@ const showStartupsDropdown = () => {
   const navLinks = NAV_LINKS;
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-lg border-b border-[#1A237E]" style={{ backgroundColor: '#1A237E' }}>
+    <nav className="sticky top-0 z-50 backdrop-blur-lg border-b border-[#1a1a2e]" style={{ backgroundColor: '#1a1a2e' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
