@@ -440,7 +440,7 @@ const Eventos = () => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-brand-teal to-brand-green opacity-20 blur-2xl rounded-[44px] group-hover:opacity-30 transition-opacity duration-500" />
                   <div className="relative rounded-[40px] overflow-hidden border border-gray-100 shadow-2xl h-[340px] md:h-[420px] bg-gray-50">
                     <img 
-                      src="../public/Imagens_espaço/pregao_evento.jpeg" 
+                      src="../public/imagens_espaco/pregao_evento.jpeg" 
                       alt="NINNA Connection Event" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
@@ -457,7 +457,7 @@ const Eventos = () => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-brand-teal/15 to-brand-green/15 opacity-20 blur-2xl rounded-[44px] group-hover:opacity-30 transition-opacity duration-500" />
                   <div className="relative rounded-[40px] overflow-hidden border border-gray-100 shadow-2xl h-[340px] md:h-[420px] bg-gray-50">
                     <img 
-                      src="../public/Imagens_espaço/auditorio_evento.jpg" 
+                      src="../public/imagens_espaco/auditorio_evento.jpg" 
                       alt="Terceiro Tempo Event" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
@@ -631,7 +631,7 @@ const Eventos = () => {
             >
               <div className="h-72 w-full relative overflow-hidden bg-gray-900">
                 <img 
-                  src="../public/imagens_espaço/auditorio-vazio.jpg" 
+                  src="../public/imagens_espaco/auditorio-vazio.jpg" 
                   alt="Auditório NINNA Hub" 
                   className="w-full h-full object-cover opacity-90"
                   referrerPolicy="no-referrer"
@@ -698,7 +698,7 @@ const Eventos = () => {
             >
               <div className="h-72 w-full relative overflow-hidden bg-gray-900">
                 <img 
-                  src="../public/imagens_espaço/Pregao-vazio.jpg" 
+                  src="../public/imagens_espaco/Pregao-vazio.jpg" 
                   alt="Espaço Pregão NINNA Hub" 
                   className="w-full h-full object-cover opacity-90"
                   referrerPolicy="no-referrer"
@@ -808,7 +808,7 @@ const Eventos = () => {
             >
               <div className="h-72 w-full relative overflow-hidden bg-gray-900">
                 <img 
-                  src="../public/imagens_espaço/sala_sprint.png" 
+                  src="../public/imagens_espaco/sala_sprint.png" 
                   alt="Sala Sprint NINNA Hub" 
                   className="w-full h-full object-cover opacity-90"
                   referrerPolicy="no-referrer"
