@@ -205,6 +205,8 @@
         "telefone": { "type": "string" },
         "email": { "type": "string" },
         "cidade": { "type": "string" },
+        "pais": { "type": "string" },
+        "estado": { "type": "string" },
         "areaMentoria": { "type": "string" },
         "comoConheceu": { "type": "string" },
         "motivoInscricao": { "type": "string" },
