@@ -626,7 +626,7 @@ export default function SejaUmMentor() {
 
                     {/* iframe do PDF */}
                     <iframe
-                      src="public/docs/RegulamentoMentores.pdf"
+                      src="../public/docs/RegulamentoMentores.pdf"
                       className="w-full h-48 border-0"
                       title="Termos do Programa de Mentoria Voluntária"
                     />
