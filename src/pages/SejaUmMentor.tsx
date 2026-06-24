@@ -225,7 +225,7 @@ export default function SejaUmMentor() {
             </button>
 
             <button
-              onClick={() => window.open('public/docs/Regulamento _ Mentores de Inovacao _ NINNA (1).pdf', '_blank')}
+              onClick={() => window.open('public/docs/RegulamentoMentores.pdf', '_blank')}
               className="w-full sm:w-auto border border-gray-800 bg-transparent hover:bg-gray-900 text-white rounded-2xl py-4 px-10 uppercase transition-all text-[13px]"
               style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: '3px' }}
             >
@@ -626,7 +626,7 @@ export default function SejaUmMentor() {
 
                     {/* iframe do PDF */}
                     <iframe
-                      src="public/docs/Regulamento _ Mentores de Inovacao _ NINNA (1).pdf"
+                      src="public/docs/RegulamentoMentores.pdf"
                       className="w-full h-48 border-0"
                       title="Termos do Programa de Mentoria Voluntária"
                     />
@@ -634,7 +634,7 @@ export default function SejaUmMentor() {
 
                   {/* Botão PDF completo */}
                         <a
-                          href="public/docs/Regulamento _ Mentores de Inovacao _ NINNA (1).pdf"
+                          href="public/docs/RegulamentoMentores.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="mt-2 flex items-center justify-center gap-1.5 w-full py-2 rounded-xl border border-gray-200 bg-white text-[11px] font-medium text-gray-700 hover:bg-gray-50 transition-colors"
