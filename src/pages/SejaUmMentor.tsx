@@ -18,7 +18,7 @@ import {
   User,
   Heart,
   DownloadIcon,
-  TriangleAlert,
+  CircleCheck,
   Building2,
   Briefcase,
   Layers,
@@ -204,6 +204,7 @@ const areasAtuacaoOptions = [
   // adicione mais conforme necessário
 ];
 
+
   return (
     <div className="pb-32 bg-[#fafafa] min-h-screen font-sans">
       
@@ -339,6 +340,109 @@ const areasAtuacaoOptions = [
         </div>
       </section>
 
+      {/* Seção Pricing Cards — NINNA Hub */}
+      <section className="relative overflow-hidden py-32 bg-brand-darker">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="absolute inset-0 z-0 opacity-20">
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#00c9a7,transparent_70%)]" />
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      {/* Esquerda: texto */}
+      <div className="space-y-6">
+        <span className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.25em] bg-[#00c9a7]/10 rounded-full px-3.5 py-1 border border-[#00c9a7]/20">
+          Investimento na Formação
+        </span>
+
+        <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tighter leading-tight">
+          Trilha de Mentoria<br />de Alto Impacto
+        </h2>
+
+        <p className="text-gray-500 font-medium leading-relaxed text-sm sm:text-base">
+          Formação completa para quem deseja mentorar com método, profundidade e impacto real no ecossistema inovador de Fortaleza e do Brasil.
+        </p>
+
+        <div className="flex items-center gap-4">
+          <div className="flex -space-x-3">
+            <div className="w-10 h-10 rounded-full border-2 border-white bg-[#1A1A2E] flex items-center justify-center font-black text-xs text-white">CE</div>
+            <div className="w-10 h-10 rounded-full border-2 border-white bg-[#00c9a7] flex items-center justify-center font-black text-xs text-white">SP</div>
+            <div className="w-10 h-10 rounded-full border-2 border-white bg-[#E63946] flex items-center justify-center font-black text-xs text-white">SC</div>
+          </div>
+          <p className="text-xs text-gray-500 font-medium">
+            Mentores integrados de diversas regiões e setores estratégicos.
+          </p>
+        </div>
+      </div>
+
+      {/* Direita: card */}
+      <div className="border-2 border-[#00c9a7] rounded-2xl p-6 sm:p-8">
+        <span className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.2em] bg-[#00c9a7]/10 rounded-full px-3 py-1 border border-[#00c9a7]/25">
+          Formação Completa
+        </span>
+
+        <h3 className="mt-4 text-xl font-barlow-cond font-black uppercase tracking-wide text-white">
+          Formação de mentoria em negócios inovadores
+        </h3>
+        <p className="mt-1 text-xs text-gray-400 font-medium leading-relaxed">
+          Todos os 8 módulos da trilha técnica, do papel do mentor à governança ética.
+        </p>
+
+        <div className="mt-4 flex items-center gap-4">
+          <p className="text-4xl font-barlow-cond font-black text-[#00c9a7] line-through"
+          style={{ textDecorationColor: '#e8171e', textDecorationThickness: '1.5px' }}>
+            <span className="text-base font-bold text-[#00c9a7] align-top mt-2 inline-block">R$</span> 2.457
+          </p>
+          <span className="text-gray-200 font-black text-3xl">→</span>
+          <p className="text-4xl font-barlow-cond font-black text-white">
+            <span className="text-base font-bold text-white align-top mt-2 inline-block">R$</span> 0
+          </p>
+        </div>
+        <p className="text-[11px] text-gray-400 font-medium mt-1">acesso completo à trilha · 12 meses</p>
+
+        <hr className="my-4 border-gray-100" />
+
+        <ul className="space-y-2 mb-5">
+          {[
+            '8 módulos completos da trilha',
+            'Acesso à rede M2M de CEOs e investidores',
+            'Jornada educacional com formadores de renome',
+            'Sessões práticas com casos reais',
+            'Frameworks e ferramentas para mentoria',
+            'Certificado de mentor credenciado NINNA Hub',
+          ].map((f, i) => (
+            <li key={i} className="flex items-start gap-2 text-xs text-gray-500 font-medium">
+              <CircleCheck className="w-4 h-4 text-[#00c9a7] flex-shrink-0 mt-0.5" />
+              {f}
+            </li>
+          ))}
+        </ul>
+
+        <div className="bg-[#00c9a7]/7 border border-[#00c9a7]/20 rounded-xl p-3 flex gap-2">
+          <div>
+            <p className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.1em] mb-0.5">
+              Gratuito para mentores selecionados
+            </p>
+            <span className="text-[11px] text-gray-400 font-medium leading-relaxed">
+              Mentores selecionados pela equipe NINNA têm acesso integral à formação sem nenhum custo
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Disclaimer */}
+    <div className="mt-8 bg-[#1a1a2e] border border-white/5 rounded-2xl px-5 py-4">
+      <p className="text-xs text-white/50 font-medium leading-relaxed">
+        Este card é apenas informativo.{' '}
+        <span className="text-[#00c9a7] font-bold">Nenhuma compra é realizada aqui.</span>{' '}
+        Os preços apresentados são de referência para o mercado. Mentores voluntários selecionados pelo NINNA Hub têm acesso integral à formação de forma completamente gratuita
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       {/* Benefits Grid (Por que ser mentor?) */}
       <section id="beneficios" className="py-24 max-w-7xl mx-auto px-6">
@@ -445,12 +549,6 @@ const areasAtuacaoOptions = [
                 <p className="text-gray-500 font-semibold text-xs leading-relaxed">
                   Preencha os campos abaixo com atenção para que possamos entender sua vivência profissional e combiná-la com as mentiras ideais.
                 </p>
-                <div className="mt-3 flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-left">
-                  <TriangleAlert className='w-3.5 h-3.5 text-amber-700'/>
-                  <p className="text-amber-700 font-semibold text-xs leading-relaxed">
-                    A formação de mentores é paga. Porém, caso você seja selecionado a formação é gratuita.
-                  </p>
-                </div>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
