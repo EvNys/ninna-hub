@@ -15,7 +15,8 @@ import { toast } from 'sonner';
 import { 
   Users, 
   UserPlus,
-  Trash2, 
+  MapPinned,
+  MapPinHouse, 
   Phone, 
   Mail, 
   MapPin, 
@@ -26,6 +27,9 @@ import {
   CheckCircle,
   XCircle,
   Clock,
+  Layers,
+  Building2,
+  Briefcase,
   ArrowUpRight,
   Search,
   Filter,
@@ -428,17 +432,22 @@ export default function AdminInscricoesMentores() {
                     <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100/50 text-xs text-gray-500 font-semibold space-y-2">
                       <div className="flex items-center gap-2.5"><Phone className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.telefone}</div>
                       <div className="flex items-center gap-2.5"><Mail className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.email}</div>
-                      <div className="flex items-center gap-2.5"><MapPin className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.cidade}</div>
+                      <div className="flex items-center gap-2.5"><MapPinned className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.pais}</div>
+                      <div className="flex items-center gap-2.5"><MapPin className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.estado}</div>
+                      <div className="flex items-center gap-2.5"><MapPinHouse className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.cidade}</div>
                       <div className="flex items-center gap-2.5"><Calendar className="w-4 h-4 text-brand-teal shrink-0" /> Inscrito em {formatDate(selectedInscricao.createdAt)}</div>
                     </div>
                   </div>
 
                   {/* Segment of mentorship area */}
-                  <div className="space-y-1">
-                    <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block flex items-center gap-1.5">
-                      <Target className="w-3.5 h-3.5 text-brand-teal" /> Área Predominante
-                    </span>
-                    <p className="text-gray-900 font-bold text-xs">{selectedInscricao.areaMentoria}</p>
+                  <div className="space-y-1.5">
+                    <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block">Informações de mentoria</span>
+                    <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100/50 text-xs text-gray-500 font-semibold space-y-2">                     
+                      <div className="flex items-center gap-2.5"><Building2 className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.empresa}</div>
+                      <div className="flex items-center gap-2.5"><Briefcase className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.cargo}</div>
+                      <div className="flex items-center gap-2.5"><Target className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.areaMentoria}</div>
+                      <div className="flex items-center gap-2.5"><Layers className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.areaAtuacao}</div>
+                    </div>
                   </div>
 
                   {/* How they knew */}

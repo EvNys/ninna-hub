@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Users, 
@@ -8,8 +8,7 @@ import {
   Award, 
   HelpCircle, 
   CheckCircle, 
-  Clock, 
-  ShieldAlert, 
+  Clock,  
   ChevronRight, 
   Sparkles, 
   MapPin, 
@@ -19,7 +18,11 @@ import {
   User,
   Heart,
   DownloadIcon,
-  FileTextIcon
+  TriangleAlert,
+  Building2,
+  Briefcase,
+  Layers,
+  ChevronDown
 } from 'lucide-react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../lib/firebase';
@@ -37,6 +40,9 @@ export default function SejaUmMentor() {
     cidade: '',
     pais: '',
     estado: '',
+    empresa: '',
+    cargo: '',
+    areaAtuacao: '', 
     areaMentoria: '',
     comoConheceu: '',
     motivoInscricao: '',
@@ -87,6 +93,9 @@ export default function SejaUmMentor() {
         telefone: formData.telefone,
         email: formData.email,
         cidade: formData.cidade,
+        empresa: formData.empresa,
+        cargo: formData.cargo,
+        areaAtuacao: formData.areaAtuacao,
         areaMentoria: formData.areaMentoria,
         comoConheceu: formData.comoConheceu,
         motivoInscricao: formData.motivoInscricao,
@@ -126,32 +135,32 @@ export default function SejaUmMentor() {
     {
       title: 'Networking de Alto Impacto',
       description: 'Conecte-se e troque experiências diretamente com outros mentores, executivos, investidores e fundadores do ecossistema nacional.',
-      icon: <Users className="w-8 h-8 text-[#8CC63F]" />
+      icon: <Users className="w-8 h-8 text-[#00c9a7]" />
     },
     {
       title: 'Contato com Novas Tecnologias',
       description: 'Acompanhe de perto as ideias mais inovadoras, as tecnologias emergentes e os novos modelos de negócios escaláveis do mercado.',
-      icon: <Sparkles className="w-8 h-8 text-[#8CC63F]" />
+      icon: <Sparkles className="w-8 h-8 text-[#00c9a7]" />
     },
     {
       title: 'Fomento e Impacto Real',
       description: 'Gere impacto real ao apoiar a criação e a consolidação de novas startups, fomentando inovação e gerando oportunidades regionais.',
-      icon: <Target className="w-8 h-8 text-[#8CC63F]" />
+      icon: <Target className="w-8 h-8 text-[#00c9a7]" />
     },
     {
       title: 'Destaque e Visibilidade do Perfil',
       description: 'Apareça como mentor referência nas páginas exclusivas do NINNA Hub, em publicações do ecossistema e eventos parceiros.',
-      icon: <Award className="w-8 h-8 text-[#8CC63F]" />
+      icon: <Award className="w-8 h-8 text-[#00c9a7]" />
     },
     {
       title: 'Aprimoramento de Liderança',
       description: 'Aconselhar fundadores em diferentes estágios ajuda a calibrar suas próprias capacidades de liderança, escuta e análise crítica.',
-      icon: <Heart className="w-8 h-8 text-[#8CC63F]" />
+      icon: <Heart className="w-8 h-8 text-[#00c9a7]" />
     },
     {
       title: 'Encontros Exclusivos',
       description: 'Participe de jantares, meetups exclusivos de mentores, rituais de happy hour e receba convites especiais para eventos de inovação do Hub.',
-      icon: <Clock className="w-8 h-8 text-[#8CC63F]" />
+      icon: <Clock className="w-8 h-8 text-[#00c9a7]" />
     }
   ];
 
@@ -162,7 +171,36 @@ export default function SejaUmMentor() {
   return `(${numeros.slice(0, 2)}) ${numeros.slice(2, 7)}-${numeros.slice(7)}`
 }
 
+// estados
+const [areaAtuacaoOpen, setAreaAtuacaoOpen] = useState(false);
+const [areaAtuacaoSearch, setAreaAtuacaoSearch] = useState("");
+const areaAtuacaoRef = useRef<HTMLDivElement>(null);
 
+// fechar ao clicar fora
+useEffect(() => {
+  const handler = (e: MouseEvent) => {
+    if (areaAtuacaoRef.current && !areaAtuacaoRef.current.contains(e.target as Node)) {
+      setAreaAtuacaoOpen(false);
+    }
+  };
+  document.addEventListener("mousedown", handler);
+  return () => document.removeEventListener("mousedown", handler);
+}, []);
+
+// opções
+const areasAtuacaoOptions = [
+  "Agronegócio",
+  "Comércio",
+  "Construção Civil & Imobiliário",
+  "Educação",
+  "Energia & Recursos Naturais",
+  "Finanças",
+  "Indústria",
+  "Saúde",
+  "Serviços",
+  "Tecnologia da Informação (TI)",
+  // adicione mais conforme necessário
+];
 
   return (
     <div className="pb-32 bg-[#fafafa] min-h-screen font-sans">
@@ -170,7 +208,7 @@ export default function SejaUmMentor() {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 bg-brand-darker">
         <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#8CC63F,transparent_70%)]" />
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#00c9a7,transparent_70%)]" />
         </div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
@@ -178,7 +216,7 @@ export default function SejaUmMentor() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[#8CC63F]/10 text-[#8CC63F] rounded-full text-[11px] border border-[#8CC63F]/20 mb-6 uppercase tracking-widest"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#00c9a7]/10 text-[#00c9a7] rounded-full text-[11px] border border-[#00c9a7]/20 mb-6 uppercase tracking-widest"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: '3px' }}
           >
             <Sparkles className="w-3.5 h-3.5" />
@@ -194,7 +232,7 @@ export default function SejaUmMentor() {
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, letterSpacing: '-0.5px' }}
           >
             Guie as startups do amanhã. <br className="hidden md:inline" />
-            Compartilhe seu <span className="text-[#8CC63F]">Legado</span>.
+            Compartilhe seu <span className="text-[#00c9a7]">Legado</span>.
           </motion.h1>
 
           {/* Subtítulo → Barlow Condensed Bold, weight 700, size 24–36px, leading 1.2 */}
@@ -218,7 +256,7 @@ export default function SejaUmMentor() {
             {/* Labels/Tags → Barlow Condensed Semibold, weight 600, uppercase, tracking +2–4px, size 12–16px */}
             <button
               onClick={() => scrollToSection('formulario')}
-              className="w-full sm:w-auto bg-[#8CC63F] hover:bg-[#8CC63F]/90 text-white rounded-2xl py-4 px-10 uppercase transition-all shadow-xl shadow-[#8CC63F]/20 text-[13px]"
+              className="w-full sm:w-auto bg-[#00c9a7] hover:bg-[#00c9a7]/90 text-white rounded-2xl py-4 px-10 uppercase transition-all shadow-xl shadow-[#00c9a7]/20 text-[13px]"
               style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: '3px' }}
             >
               Quero ser mentor
@@ -240,7 +278,7 @@ export default function SejaUmMentor() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             <div className="space-y-6">
-              <span className="text-[10px] font-black text-[#8CC63F] uppercase tracking-[0.25em] bg-[#8CC63F]/10 rounded-full px-3.5 py-1 border border-[#8CC63F]/20">
+              <span className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.25em] bg-[#00c9a7]/10 rounded-full px-3.5 py-1 border border-[#00c9a7]/20">
                 Pilar NINNA Hub
               </span>
               
@@ -258,7 +296,7 @@ export default function SejaUmMentor() {
               <div className="pt-4 flex items-center gap-4">
                 <div className="flex -space-x-3">
                   <div className="w-10 h-10 rounded-full border-2 border-white bg-[#1A1A2E] flex items-center justify-center font-black text-xs text-white">CE</div>
-                  <div className="w-10 h-10 rounded-full border-2 border-white bg-[#8CC63F] flex items-center justify-center font-black text-xs text-white">SP</div>
+                  <div className="w-10 h-10 rounded-full border-2 border-white bg-[#00c9a7] flex items-center justify-center font-black text-xs text-white">SP</div>
                   <div className="w-10 h-10 rounded-full border-2 border-white bg-[#E63946] flex items-center justify-center font-black text-xs text-white">SC</div>
                 </div>
                 <p className="text-xs text-gray-500 font-medium">
@@ -303,7 +341,7 @@ export default function SejaUmMentor() {
       {/* Benefits Grid (Por que ser mentor?) */}
       <section id="beneficios" className="py-24 max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-[10px] font-black text-[#8CC63F] uppercase tracking-[0.25em] block mb-2">Ecossistema de Alto Impacto</span>
+          <span className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.25em] block mb-2">Ecossistema de Alto Impacto</span>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter ">
             Benefícios de ser um Mentor NINNA
           </h2>
@@ -323,7 +361,7 @@ export default function SejaUmMentor() {
               className="bg-white p-8 border border-gray-100 rounded-[32px] hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-[#8CC63F]/10 flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-[#00c9a7]/10 flex items-center justify-center mb-6">
                   {benefit.icon}
                 </div>
                 <h3 className="text-lg font-black text-gray-900 uppercase tracking-tighter  mb-3">
@@ -341,12 +379,12 @@ export default function SejaUmMentor() {
       { /* Expectations Section (Compromisso Ético) */}
       <section className="py-16 bg-brand-darker border-t border-white/5 relative z-10">
       <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#8CC63F,transparent_70%)]" />
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#00c9a7,transparent_70%)]" />
       </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-2xl mx-auto text-center space-y-4 ">
             {/* Atualizado para a badge padrão em dark mode */}
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#8CC63F]/10 text-[#8CC63F] text-[10px] font-black uppercase tracking-[0.3em] mb-2 border border-[#8CC63F]/20">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#00c9a7]/10 text-[#00c9a7] text-[10px] font-black uppercase tracking-[0.3em] mb-2 border border-[#00c9a7]/20">
               Compromisso Ético
             </span>
             
@@ -364,22 +402,22 @@ export default function SejaUmMentor() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
             {/* CARD 1 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
-              {/* Substituído pelo text-[#8CC63F] do seu ecossistema */}
-              <span className="text-5xl text-[#8CC63F] font-black tracking-tight block mb-2">4h</span>
+              {/* Substituído pelo text-[#00c9a7] do seu ecossistema */}
+              <span className="text-5xl text-[#00c9a7] font-black tracking-tight block mb-2">4h</span>
               <h4 className="text-sm font-black uppercase tracking-wider text-white">Disponibilidade Mensal</h4>
               <p className="text-xs text-gray-400 mt-2 leading-relaxed">Sessões individuais ou workshops de grupo previamente acordados.</p>
             </div>
             
             {/* CARD 2 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
-              <span className="text-5xl text-[#8CC63F] font-black tracking-tight block mb-2">50%+</span>
+              <span className="text-5xl text-[#00c9a7] font-black tracking-tight block mb-2">50%+</span>
               <h4 className="text-sm font-black uppercase tracking-wider text-white">Taxa de Resposta</h4>
               <p className="text-xs text-gray-400 mt-2 leading-relaxed">Compromisso em responder solicitações de mentoria alinhadas ao seu perfil.</p>
             </div>
             
             {/* CARD 3 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
-              <span className="text-5xl text-[#8CC63F] font-black tracking-tight block mb-2">12m</span>
+              <span className="text-5xl text-[#00c9a7] font-black tracking-tight block mb-2">12m</span>
               <h4 className="text-sm font-black uppercase tracking-wider text-white">Conclusão dos Módulos</h4>
               <p className="text-xs text-gray-400 mt-2 leading-relaxed">Conclusão de toda a trilha no período máximo de 1 ano letivo.</p>
             </div>
@@ -405,6 +443,12 @@ export default function SejaUmMentor() {
                 <p className="text-gray-500 font-semibold text-xs leading-relaxed">
                   Preencha os campos abaixo com atenção para que possamos entender sua vivência profissional e combiná-la com as mentiras ideais.
                 </p>
+                <div className="mt-3 flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-left">
+                  <TriangleAlert className='w-3.5 h-3.5 text-amber-700'/>
+                  <p className="text-amber-700 font-semibold text-xs leading-relaxed">
+                    A formação de mentores é paga. Porém, caso você seja selecionado a formação é gratuita.
+                  </p>
+                </div>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -412,7 +456,7 @@ export default function SejaUmMentor() {
                 {/* Nome */}
                 <div className="space-y-2">
                   <label htmlFor="nome" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                    <User className="w-3.5 h-3.5 text-[#8CC63F]" /> Nome Completo
+                    <User className="w-3.5 h-3.5 text-[#00c9a7]" /> Nome Completo
                   </label>
                   <input 
                     id="nome"
@@ -422,7 +466,7 @@ export default function SejaUmMentor() {
                     value={formData.nome}
                     onChange={handleInputChange}
                     placeholder="Ex: Roberto Silva"
-                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
                   />
                 </div>
 
@@ -431,7 +475,7 @@ export default function SejaUmMentor() {
                   {/* Telefone */}
                   <div className="space-y-2">
                     <label htmlFor="telefone" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                      <Phone className="w-3.5 h-3.5 text-[#8CC63F]" /> Telefone para contato
+                      <Phone className="w-3.5 h-3.5 text-[#00c9a7]" /> Telefone para contato
                     </label>
                     <input 
                       id="telefone"
@@ -441,14 +485,14 @@ export default function SejaUmMentor() {
                       value={formData.telefone}
                       onChange={handleInputChange}
                       placeholder="(DD) 99999-9999"
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
                     />
                   </div>
 
                   {/* Email */}
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                      <Mail className="w-3.5 h-3.5 text-[#8CC63F]" /> E-mail corporativo ou pessoal
+                      <Mail className="w-3.5 h-3.5 text-[#00c9a7]" /> E-mail corporativo ou pessoal
                     </label>
                     <input 
                       id="email"
@@ -458,19 +502,19 @@ export default function SejaUmMentor() {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="roberto.silva@suaempresa.com"
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
                     />
                   </div>
                 </div>
 
                 
 
-                {/* Grid País e Estado */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Grid País, Estado e Cidade */}
+                  <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                     {/* País */}
                     <div className="space-y-2">
                       <label htmlFor="pais" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                        <MapPin className="w-3.5 h-3.5 text-[#8CC63F]" /> País
+                        <MapPin className="w-3.5 h-3.5 text-[#00c9a7]" /> País
                       </label>
                       <input
                         id="pais"
@@ -480,14 +524,14 @@ export default function SejaUmMentor() {
                         value={formData.pais}
                         onChange={handleInputChange}
                         placeholder="Ex: Brasil"
-                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
                       />
                     </div>
 
                     {/* Estado */}
                     <div className="space-y-2">
                       <label htmlFor="estado" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                        <MapPin className="w-3.5 h-3.5 text-[#8CC63F]" /> Estado
+                        <MapPin className="w-3.5 h-3.5 text-[#00c9a7]" /> Estado
                       </label>
                       <select
                         id="estado"
@@ -495,7 +539,7 @@ export default function SejaUmMentor() {
                         required
                         value={formData.estado}
                         onChange={handleInputChange}
-                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold appearance-none cursor-pointer"
+                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold appearance-none cursor-pointer"
                       >
                         <option value="" disabled>Selecione o estado</option>
                         <option value="AC">Acre</option>
@@ -528,31 +572,141 @@ export default function SejaUmMentor() {
                         <option value="Outros">Outros</option>
                       </select>
                     </div>
+
+                    {/* Cidade */}
+                    <div className="space-y-2">
+                      <label htmlFor="cidade" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
+                        <MapPin className="w-3.5 h-3.5 text-[#00c9a7]" /> Cidade
+                      </label>
+                      <input 
+                        id="cidade"
+                        name="cidade"
+                        type="text"
+                        required
+                        value={formData.cidade}
+                        onChange={handleInputChange}
+                        placeholder="Ex: Fortaleza, CE"
+                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Grid Empresa, Cargo e Área de Atuação */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Empresa */}
+                    <div className="space-y-2">
+                      <label htmlFor="empresa" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
+                        <Building2 className="w-3.5 h-3.5 text-[#00c9a7]" /> Empresa
+                      </label>
+                      <input
+                        id="empresa"
+                        name="empresa"
+                        type="text"
+                        required
+                        value={formData.empresa}
+                        onChange={handleInputChange}
+                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                      />
+                    </div>
+
+                    {/* Cargo */}
+                    <div className="space-y-2">
+                      <label htmlFor="cargo" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
+                        <Briefcase className="w-3.5 h-3.5 text-[#00c9a7]" /> Cargo
+                      </label>
+                      <input
+                        id="cargo"
+                        name="cargo"
+                        type="text"
+                        required
+                        value={formData.cargo}
+                        onChange={handleInputChange}
+                        placeholder="Ex: Gerente Comercial"
+                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Área de Atuação — largura total com dropdown pesquisável */}
+                  <div className="space-y-2 relative" ref={areaAtuacaoRef}>
+                    <label htmlFor="areaAtuacao" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
+                      <Layers className="w-3.5 h-3.5 text-[#00c9a7]" /> Área de Atuação
+                    </label>
+
+                    {/* Input de busca / valor selecionado */}
+                    <div
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 flex items-center justify-between cursor-pointer focus-within:border-[#00c9a7] transition-all shadow-sm"
+                      onClick={() => setAreaAtuacaoOpen(prev => !prev)}
+                    >
+                      <input
+                        id="areaAtuacao"
+                        name="areaAtuacao"
+                        type="text"
+                        autoComplete="off"
+                        value={areaAtuacaoSearch}
+                        onChange={e => {
+                          setAreaAtuacaoSearch(e.target.value);
+                          setAreaAtuacaoOpen(true);
+                          // limpa seleção ao digitar novamente
+                          setFormData(prev => ({ ...prev, areaAtuacao: "" }));
+                        }}
+                        placeholder="Buscar área de atuação..."
+                        className="bg-transparent w-full focus:outline-none text-gray-900 font-semibold placeholder:text-gray-300"
+                      />
+                      <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ${areaAtuacaoOpen ? "rotate-180" : ""}`} />
+                    </div>
+
+                    {/* Dropdown */}
+                    <AnimatePresence>
+                      {areaAtuacaoOpen && (
+                        <motion.ul
+                          initial={{ opacity: 0, y: -6 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -6 }}
+                          transition={{ duration: 0.15 }}
+                          className="absolute z-50 mt-2 w-full bg-white border border-gray-100 rounded-2xl shadow-xl overflow-hidden"
+                        >
+                          <div className="max-h-60 overflow-y-auto divide-y divide-gray-50">
+                            {areasAtuacaoOptions
+                              .filter(opt => opt.toLowerCase().includes(areaAtuacaoSearch.toLowerCase()))
+                              .map((opt, i) => (
+                                <li
+                                  key={i}
+                                  onClick={() => {
+                                    setFormData(prev => ({ ...prev, areaAtuacao: opt }));
+                                    setAreaAtuacaoSearch(opt);
+                                    setAreaAtuacaoOpen(false);
+                                  }}
+                                  className={`px-6 py-3.5 cursor-pointer text-sm font-semibold transition-colors
+                                    ${formData.areaAtuacao === opt
+                                      ? "bg-[#f0fdf9] text-[#00c9a7]"
+                                      : "text-gray-700 hover:bg-gray-50"
+                                    }`}
+                                >
+                                  {opt}
+                                </li>
+                              ))}
+
+                            {areasAtuacaoOptions.filter(opt =>
+                              opt.toLowerCase().includes(areaAtuacaoSearch.toLowerCase())
+                            ).length === 0 && (
+                              <li className="px-6 py-4 text-sm text-gray-400 font-semibold text-center">
+                                Nenhuma área encontrada
+                              </li>
+                            )}
+                          </div>
+                        </motion.ul>
+                      )}
+                    </AnimatePresence>
                   </div>
 
                 {/* Grid Cidade e Area Predominante */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Cidade */}
-                  <div className="space-y-2">
-                    <label htmlFor="cidade" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-[#8CC63F]" /> Cidade
-                    </label>
-                    <input 
-                      id="cidade"
-                      name="cidade"
-                      type="text"
-                      required
-                      value={formData.cidade}
-                      onChange={handleInputChange}
-                      placeholder="Ex: Fortaleza, CE"
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
-                    />
-                  </div>
-
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+                  
                   {/* Área Predominante */}
                   <div className="space-y-2">
                     <label htmlFor="areaMentoria" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                      <Target className="w-3.5 h-3.5 text-[#8CC63F]" /> Área predominante de mentoria
+                      <Target className="w-3.5 h-3.5 text-[#00c9a7]" /> Área predominante de mentoria
                     </label>
                     <select
                       id="areaMentoria"
@@ -560,7 +714,7 @@ export default function SejaUmMentor() {
                       required
                       value={formData.areaMentoria}
                       onChange={handleInputChange}
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold"
                     >
                       <option value="" disabled>Selecione uma área...</option>
                       {areasMentoriaOptions.map((opt, i) => (
@@ -573,7 +727,7 @@ export default function SejaUmMentor() {
                 {/* Como conheceu o HUB */}
                 <div className="space-y-2">
                   <label htmlFor="comoConheceu" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                    <HelpCircle className="w-3.5 h-3.5 text-[#8CC63F]" /> Como você conheceu o NINNA HUB?
+                    <HelpCircle className="w-3.5 h-3.5 text-[#00c9a7]" /> Como você conheceu o NINNA HUB?
                   </label>
                   <input 
                     id="comoConheceu"
@@ -583,14 +737,14 @@ export default function SejaUmMentor() {
                     value={formData.comoConheceu}
                     onChange={handleInputChange}
                     placeholder="Ex: Redes sociais, indicação de parceiro, imprensa..."
-                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
                   />
                 </div>
 
                 {/* Descrição do motivo */}
                 <div className="space-y-2">
                   <label htmlFor="motivoInscricao" className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 flex items-center gap-1.5">
-                    <FileText className="w-3.5 h-3.5 text-[#8CC63F]" /> Por que gostaria de ser um mentor NINNA?
+                    <FileText className="w-3.5 h-3.5 text-[#00c9a7]" /> Por que gostaria de ser um mentor NINNA?
                   </label>
                   <textarea 
                     id="motivoInscricao"
@@ -600,7 +754,7 @@ export default function SejaUmMentor() {
                     value={formData.motivoInscricao}
                     onChange={handleInputChange}
                     placeholder="Escreva brevemente seu propósito ao doar mentores, interesses e quais especialidades deseja trabalhar..."
-                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300 resize-none"
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300 resize-none"
                   />
                 </div>
 
@@ -653,7 +807,7 @@ export default function SejaUmMentor() {
                     required
                     checked={formData.cienteRegulamento}
                     onChange={handleCheckboxChange}
-                    className="w-5 h-5 bg-gray-50 border-gray-100 rounded-md focus:ring-[#8CC63F] accent-[#8CC63F] mt-0.5 shrink-0"
+                    className="w-5 h-5 bg-gray-50 border-gray-100 rounded-md focus:ring-[#00c9a7] accent-[#00c9a7] mt-0.5 shrink-0"
                   />
                   <label htmlFor="cienteRegulamento" className="text-xs text-gray-500 font-bold leading-snug cursor-pointer select-none">
                     Garanto que estou ciente das condições impostas no regulamento do programa de mentores e aceito os termos voluntários estabelecidos.
@@ -664,7 +818,7 @@ export default function SejaUmMentor() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#8CC63F] hover:bg-[#8CC63F]/90 text-white rounded-2xl py-4.5 font-black uppercase text-[11px] tracking-[0.2em] transition-all shadow-xl shadow-[#8CC63F]/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="w-full bg-[#00c9a7] hover:bg-[#00c9a7]/90 text-white rounded-2xl py-4.5 font-black uppercase text-[11px] tracking-[0.2em] transition-all shadow-xl shadow-[#00c9a7]/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                 >
                   {loading ? 'Processando envio...' : 'Enviar Inscrição de Mentor'}
                   <ChevronRight className="w-4 h-4" />
@@ -679,7 +833,7 @@ export default function SejaUmMentor() {
               transition={{ type: 'spring', duration: 0.5 }}
               className="bg-white border border-gray-100 rounded-[40px] p-12 text-center shadow-xl space-y-6"
             >
-              <div className="w-20 h-20 bg-[#8CC63F]/10 rounded-full flex items-center justify-center mx-auto text-[#8CC63F] shrink-0">
+              <div className="w-20 h-20 bg-[#00c9a7]/10 rounded-full flex items-center justify-center mx-auto text-[#00c9a7] shrink-0">
                 <CheckCircle className="w-10 h-10" />
               </div>
 
@@ -703,13 +857,16 @@ export default function SejaUmMentor() {
                       cidade: '',
                       pais: '',
                       estado: '',
+                      empresa: '',
+                      cargo: '',
+                      areaAtuacao: '',
                       areaMentoria: '',
                       comoConheceu: '',
                       motivoInscricao: '',
                       cienteRegulamento: false
                     });
                   }}
-                  className="bg-[#8CC63F] hover:bg-[#8CC63F]/90 text-white rounded-2xl py-4 px-10 font-black uppercase text-[10px] tracking-widest transition-all shadow-xl shadow-[#8CC63F]/15"
+                  className="bg-[#00c9a7] hover:bg-[#00c9a7]/90 text-white rounded-2xl py-4 px-10 font-black uppercase text-[10px] tracking-widest transition-all shadow-xl shadow-[#00c9a7]/15"
                 >
                   Fazer nova inscrição
                 </button>

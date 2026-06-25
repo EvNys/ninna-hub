@@ -44,7 +44,7 @@ import {
 import { toast } from 'sonner';
 import { db } from '../lib/firebase';
 import { handleFirestoreError, OperationType } from '../lib/firestore-errors';
-import type { BaseDoc } from '../types';
+import type { BaseDoc } from '../types/firestore';
 
 type OrderDirection = 'asc' | 'desc';
 

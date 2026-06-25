@@ -195,8 +195,8 @@
       },
       "required": ["nomeEmpresa", "logo", "status"]
     },
-    "InscricaoMentor": {
-      "title": "InscricaoMentor",
+    "InscricaoMentores": {
+      "title": "InscricaoMentores",
       "description": "Inscrições para ser mentor do Hub",
       "type": "object",
       "properties": {
@@ -207,6 +207,9 @@
         "cidade": { "type": "string" },
         "pais": { "type": "string" },
         "estado": { "type": "string" },
+        "empresa": {"type": "string"},
+        "cargo": {"type": "string"},
+        "areaAtuacao": {"type": "string"},
         "areaMentoria": { "type": "string" },
         "comoConheceu": { "type": "string" },
         "motivoInscricao": { "type": "string" },

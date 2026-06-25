@@ -74,6 +74,7 @@ function AppContent() {
       <Routes>
         <Route path="/admin/*" element={null} />
         <Route path="/dashboard/*" element={null} />
+        <Route path="/seja-um-mentor/*" element={null} />
         <Route path="*" element={<Navbar />} />
       </Routes>
 
