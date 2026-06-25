@@ -93,6 +93,8 @@ export default function SejaUmMentor() {
         telefone: formData.telefone,
         email: formData.email,
         cidade: formData.cidade,
+        pais: formData.pais,
+        estado: formData.estado,
         empresa: formData.empresa,
         cargo: formData.cargo,
         areaAtuacao: formData.areaAtuacao,
