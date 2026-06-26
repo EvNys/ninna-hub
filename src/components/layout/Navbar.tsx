@@ -134,12 +134,12 @@ const showStartupsDropdown = () => {
               ))}
 
               <div className="flex items-center gap-3">
-                <Link
+                {/* <Link
                   to="/seja-um-mentor"
                   className="px-4 py-2 bg-[#8CC63F] text-white rounded-full text-[10px] font-black uppercase tracking-widest transition-all hover:bg-[#8CC63F]/90 hover:shadow-md hover:shadow-brand-teal/20"
                 >
                   Seja um mentor
-                </Link>
+                </Link> */}
               {user && (
                 <Link
                   to={isAdmin || isEditor ? "/admin" : "/dashboard/comunidade"}
