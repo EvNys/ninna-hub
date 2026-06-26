@@ -216,16 +216,14 @@ const areasAtuacaoOptions = [
         </div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[#00c9a7]/10 text-[#00c9a7] rounded-full text-[11px] border border-[#00c9a7]/20 mb-6 uppercase tracking-widest"
-            style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: '3px' }}
-          >
-            <Rocket className="w-3.5 h-3.5" />
-            <span>Seja um Mentor</span>
-          </motion.div>
+          <div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] mb-6 uppercase tracking-widest">
+            <img
+                src="/Imagens_NINNA/NINNA.png"
+                alt="NinnaHub Logo"
+                className="h-20 w-auto"
+              />
+          </div>
 
           {/* Título Hero → Barlow Condensed Black, weight 900, uppercase, size 48–80px */}
           <motion.h1

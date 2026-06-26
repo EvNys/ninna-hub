@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2 space-y-6">
             <Link to="/" className="inline-block mb-4">
               <img
-                src="/Imagens_NINNA/NinnaHub_footer.png"
+                src="/Imagens_NINNA/NINNA.png"
                 alt="NinnaHub Logo"
                 className="h-20 w-auto"
               />
