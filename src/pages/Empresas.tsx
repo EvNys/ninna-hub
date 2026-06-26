@@ -46,7 +46,7 @@ const Empresas = () => {
           if (nameLower.includes('uece') || nameLower.includes('universidade estadual')) {
             groupKey = 'uece';
             partner.nome = 'UECE';
-            partner.logo = '/Imagens_NINNA/UECE.png';
+            partner.logo = '/Imagens_NINNA/Uece.png';
           } else if (nameLower.includes('igc') || nameLower.includes('gestão e cidadania') || nameLower.includes('gestao e cidadania')) {
             groupKey = 'igc';
             partner.nome = 'Instituto de Gestão e Cidadania';

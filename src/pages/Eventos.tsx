@@ -457,7 +457,7 @@ const Eventos = () => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-brand-teal/15 to-brand-green/15 opacity-20 blur-2xl rounded-[44px] group-hover:opacity-30 transition-opacity duration-500" />
                   <div className="relative rounded-[40px] overflow-hidden border border-gray-100 shadow-2xl h-[340px] md:h-[420px] bg-gray-50">
                     <img 
-                      src="/Imagens_espaco/auditorio_evento.jpg" 
+                      src="/Imagens_espaco/Auditorio_evento.jpg" 
                       alt="Terceiro Tempo Event" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
