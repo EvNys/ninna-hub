@@ -15,9 +15,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2 space-y-6">
             <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl font-black tracking-tighter uppercase">
-                NINNA<span className="text-[#00c9a7] ml-1">HUB</span>
-              </span>
+              <img
+                src="/Imagens_NINNA/NinnaHub_footer.png"
+                alt="NinnaHub Logo"
+                className="h-20 w-auto"
+              />
             </Link>
             <p className="text-white/60 max-w-sm text-lg leading-relaxed font-medium">
               O NINNA é um hub de inovação focado em gerar conexões estratégicas entre empresas, startups e o ecossistema, com foco em resultados reais.

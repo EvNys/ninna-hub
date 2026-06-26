@@ -22,7 +22,8 @@ import {
   Building2,
   Briefcase,
   Layers,
-  ChevronDown
+  ChevronDown,
+  Rocket
 } from 'lucide-react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../lib/firebase';
@@ -222,7 +223,7 @@ const areasAtuacaoOptions = [
             className="inline-flex items-center gap-2 px-4 py-2 bg-[#00c9a7]/10 text-[#00c9a7] rounded-full text-[11px] border border-[#00c9a7]/20 mb-6 uppercase tracking-widest"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: '3px' }}
           >
-            <Sparkles className="w-3.5 h-3.5" />
+            <Rocket className="w-3.5 h-3.5" />
             <span>Seja um Mentor</span>
           </motion.div>
 
