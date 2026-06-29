@@ -24,7 +24,7 @@ const StartupsHub = () => {
   return (
     <div className="pb-32">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-32 bg-brand-darker">
+      <section className="relative overflow-hidden py-32 bg-[#1A1A2E]">
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#00bcd4,transparent_70%)]" />
         </div>
@@ -36,14 +36,14 @@ const StartupsHub = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8 border border-brand-teal/20">
+              <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-inter font-black uppercase tracking-[0.3em] mb-8 border border-brand-teal/20">
                 NINNA 4 Startups
               </div>
-              <h1 className="text-5xl md:text-8xl font-black mb-8 uppercase tracking-tighter leading-none text-white ">
+              <h1 className="text-5xl md:text-8xl font-barlowCondensed-Black font-black mb-8 uppercase tracking-wide leading-none text-white ">
                 IMPULSIONE SUA <br />
                 <span className="text-brand-teal">STARTUP AO TOPO</span>
               </h1>
-              <p className="text-xl text-gray-400 mb-12 font-medium leading-relaxed">
+              <p className="text-xl text-gray-400 mb-12 font-barlow font-medium leading-relaxed">
                 Oferecemos as ferramentas, o networking e o suporte estratégico necessários para escalar sua solução no mercado global.
               </p>
 
@@ -77,7 +77,7 @@ const StartupsHub = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
                 Nosso Modo de Atuar
               </div>
-              <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
+              <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide leading-none">
                 MUITO ALÉM DA <br />
                 <span className="gradient-text">ACELERAÇÃO</span>
               </h2>
@@ -158,7 +158,7 @@ const StartupsHub = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-[#0ae2b1] text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-[#0ae2b1]/20">
               Jornada de Parceria
             </div>
-            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter ">
+            <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide ">
               PASSO A PASSO PARA SE TORNAR UM <span className="gradient-text font-black">PARCEIRO NINNA</span>
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto font-semibold mt-4">
@@ -252,7 +252,7 @@ const StartupsHub = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-brand-teal/20">
               Membros do Ecossistema
             </div>
-            <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter ">
+            <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide ">
               STARTUPS DO <span className="gradient-text">NINNA HUB</span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
@@ -292,7 +292,7 @@ const StartupsHub = () => {
                     }}
                   />
                   {/* Fallback Display */}
-                  <div className="logo-fallback hidden font-black text-xs text-gray-400 font-mono tracking-tighter uppercase  text-center">
+                  <div className="logo-fallback hidden font-black text-xs text-gray-400 font-mono tracking-wide uppercase  text-center">
                     {startup.name}
                   </div>
                 </div>
@@ -333,7 +333,7 @@ const StartupsHub = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-[#0ae2b1] text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-[#0ae2b1]/20">
               Conexões que Geram Resultados
             </div>
-            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter ">
+            <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide ">
               NINNA <span className="gradient-text font-black">CASES</span>
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto font-semibold mt-4">
@@ -382,7 +382,7 @@ const StartupsHub = () => {
 
                 {/* Core Content */}
                 <div className="p-8 md:p-10">
-                  <h3 className="text-2xl font-black text-white uppercase tracking-tighter  leading-none mb-4 group-hover:text-brand-teal transition-colors">
+                  <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
                     Aceleração de Atendimento com IA Conversacional
                   </h3>
                   <p className="text-white/60 font-semibold text-sm leading-relaxed mb-8">
@@ -415,15 +415,15 @@ const StartupsHub = () => {
               {/* Metrics Block */}
               <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-tighter ">+80%</span>
+                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">+80%</span>
                   <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Média Automação</span>
                 </div>
                 <div className="border-l border-r border-white/10">
-                  <span className="block text-2xl font-black text-white tracking-tighter ">24/7</span>
+                  <span className="block text-2xl font-black text-white tracking-wide ">24/7</span>
                   <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Respostas Real</span>
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-tighter ">-70%</span>
+                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">-70%</span>
                   <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Tempo Espera</span>
                 </div>
               </div>
@@ -465,7 +465,7 @@ const StartupsHub = () => {
 
                 {/* Core Content */}
                 <div className="p-8 md:p-10">
-                  <h3 className="text-2xl font-black text-white uppercase tracking-tighter  leading-none mb-4 group-hover:text-brand-teal transition-colors">
+                  <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
                     Acesso Expresso a Recursos Estaduais e Federais
                   </h3>
                   <p className="text-white/60 font-semibold text-sm leading-relaxed mb-8">
@@ -498,15 +498,15 @@ const StartupsHub = () => {
               {/* Metrics Block */}
               <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <span className="block text-2xl font-black text-purple-400 tracking-tighter ">R$ 800K</span>
+                  <span className="block text-2xl font-black text-purple-400 tracking-wide ">R$ 800K</span>
                   <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Recursos</span>
                 </div>
                 <div className="border-l border-r border-white/10">
-                  <span className="block text-2xl font-black text-white tracking-tighter ">&lt; 1 mês</span>
+                  <span className="block text-2xl font-black text-white tracking-wide ">&lt; 1 mês</span>
                   <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-semibold">Estudo / Acesso</span>
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-tighter ">100%</span>
+                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">100%</span>
                   <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Compliance</span>
                 </div>
               </div>
@@ -529,7 +529,7 @@ const StartupsHub = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
                 Alavanque seu Negócio
               </div>
-              <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter  leading-none mb-8">
+              <h2 className="text-5xl md:text-7xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide  leading-none mb-8">
                 POR QUE SER UMA <br />
                 <span className="text-brand-teal">NINNA STARTUP?</span>
               </h2>

@@ -604,7 +604,7 @@ export default function ServicosPage() {
                     }
                   }}
                 >
-                  <Icon size={22} aria-hidden="true" />
+                  <Icon size={22} aria-hidden="true" style={{ color: isActive ? "#0B0E1A" : "#00c9a7" }}/>
                   <span>{item.label}</span>
                 </button>
               );

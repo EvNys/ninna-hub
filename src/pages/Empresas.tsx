@@ -100,8 +100,8 @@ const Empresas = () => {
     <div className="pb-32 bg-[#fafafa]">
       {/* Hero */}
       <section className="relative py-32 overflow-hidden border-b border-gray-100">
-        <div className="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 bg-[#8CC63F]/5 blur-[120px] rounded-full z-10 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -ml-40 -mb-40 w-96 h-96 bg-[#8CC63F]/5 blur-[120px] rounded-full z-10 pointer-events-none" />
+        <div className="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 bg-[#00c9a7]/5 blur-[120px] rounded-full z-10 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 -ml-40 -mb-40 w-96 h-96 bg-[#00c9a7]/5 blur-[120px] rounded-full z-10 pointer-events-none" />
         
         {/* Low opacity background image */}
         <div className="absolute inset-0 z-0">
@@ -121,7 +121,7 @@ const Empresas = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
             >
-              <div className="px-4 py-1 rounded-full bg-[#8CC63F]/10 text-[#8CC63F] text-[10px] font-black uppercase tracking-[0.3em] mb-8 inline-block">
+              <div className="px-4 py-1 rounded-full bg-[#00c9a7]/10 text-[#00c9a7] text-[10px] font-black uppercase tracking-[0.3em] mb-8 inline-block">
                 Corporate Innovation
               </div>
               <h1 className="text-6xl md:text-8xl font-black mb-8 leading-[0.85] text-gray-900 uppercase tracking-tighter">
@@ -131,7 +131,7 @@ const Empresas = () => {
                 Ajudamos grandes empresas a navegar na complexidade da inovação, gerando eficiência, novos modelos de negócio e impacto real.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                <button className="bg-[#8CC63F] text-white px-8 py-5 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-[#8CC63F]/20">
+                <button className="bg-[#00c9a7] text-white px-8 py-5 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-[#00c9a7]/20">
                   Falar com Especialista
                 </button>
                 <Link 
@@ -156,7 +156,7 @@ const Empresas = () => {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#8CC63F]/10 blur-3xl rounded-full -z-10" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#00c9a7]/10 blur-3xl rounded-full -z-10" />
             </motion.div>
           </div>
         </div>
@@ -166,7 +166,7 @@ const Empresas = () => {
       <section className="py-32 border-b border-gray-100 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-tighter">empresas que acreditam no <span className="text-[#8CC63F] underline decoration-gray-200">NINNA</span></h2>
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-tighter">empresas que acreditam no <span className="text-[#00c9a7] underline decoration-gray-200">NINNA</span></h2>
             <p className="text-gray-600 max-w-2xl mx-auto font-medium">
               Conheça as corporações que acreditam e investem no NINNA Hub como motor de transformação e inovação.
             </p>
@@ -192,7 +192,7 @@ const Empresas = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="group relative h-48 bg-white border border-gray-100 rounded-3xl flex items-center justify-center p-8 hover:bg-gray-50 hover:border-[#8CC63F]/30 hover:shadow-xl transition-all overflow-hidden"
+                  className="group relative h-48 bg-white border border-gray-100 rounded-3xl flex items-center justify-center p-8 hover:bg-gray-50 hover:border-[#00c9a7]/30 hover:shadow-xl transition-all overflow-hidden"
                 >
                   {partner.logo ? (
                     <img 
@@ -203,7 +203,7 @@ const Empresas = () => {
                     />
                   ) : (
                     <div className="flex flex-col items-center justify-center">
-                      <Building2 className="w-10 h-10 text-gray-300 group-hover:text-[#8CC63F] transition-colors mb-2" />
+                      <Building2 className="w-10 h-10 text-gray-300 group-hover:text-[#00c9a7] transition-colors mb-2" />
                       <span className="font-extrabold text-[#1a1a1a] text-[10px] uppercase tracking-wider block">{partner.nome}</span>
                     </div>
                   )}
@@ -225,17 +225,17 @@ const Empresas = () => {
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e17] via-[#050911]/95 to-[#0a0e17] z-10" />
-          <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#8CC63F]/10 blur-[130px] rounded-full z-15" />
+          <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#00c9a7]/10 blur-[130px] rounded-full z-15" />
           <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-brand-green/10 blur-[130px] rounded-full z-15" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="text-center mb-24">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-[#8CC63F]/10 border border-[#8CC63F]/20 text-[#8CC63F] text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-[#00c9a7]/10 border border-[#00c9a7]/20 text-[#00c9a7] text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               Nossas Soluções
             </div>
             <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">Como apoiamos sua <br />
-              <span className="font-black bg-gradient-to-r from-[#00C9B1] to-[#8CC63F] bg-clip-text text-transparent">
+              <span className="font-black bg-gradient-to-r from-[#00C9B1] to-[#00c9a7] bg-clip-text text-transparent">
                 Jornada Corporativa
               </span>
             </h2>
@@ -244,7 +244,7 @@ const Empresas = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => {
               const borderColorsGlow = [
-                "group-hover:border-[#8CC63F]/40 hover:shadow-[#8CC63F]/10",
+                "group-hover:border-[#00c9a7]/40 hover:shadow-[#00c9a7]/10",
                 "group-hover:border-[#0ae2b1]/40 hover:shadow-[#0ae2b1]/10",
                 "group-hover:border-brand-green/40 hover:shadow-brand-green/10",
                 "group-hover:border-blue-400/40 hover:shadow-blue-400/10"
@@ -271,11 +271,11 @@ const Empresas = () => {
                     {service.icon}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tighter group-hover:text-[#8CC63F] transition-colors">{service.title}</h3>
+                    <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tighter group-hover:text-[#00c9a7] transition-colors">{service.title}</h3>
                     <p className="text-white/60 leading-relaxed mb-8 font-semibold group-hover:text-white/80 transition-colors">
                       {service.description}
                     </p>
-                    <button className="text-xs font-black text-[#8CC63F] flex items-center hover:translate-x-2 transition-transform uppercase tracking-[0.2em] cursor-pointer">
+                    <button className="text-xs font-black text-[#00c9a7] flex items-center hover:translate-x-2 transition-transform uppercase tracking-[0.2em] cursor-pointer">
                       Saiba mais <ArrowRight className="ml-2 w-4 h-4 text-[#b5ff53]" />
                     </button>
                   </div>
@@ -290,20 +290,20 @@ const Empresas = () => {
       <section className="py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white p-12 md:p-24 rounded-[60px] border border-gray-100 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#8CC63F]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#00c9a7]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
               <div>
-                <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-tighter leading-[0.85]">Por que ser uma <br /><span className="text-[#8CC63F]">Corporação?</span></h3>
+                <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-tighter leading-[0.85]">Por que ser uma <br /><span className="text-[#00c9a7]">Corporação?</span></h3>
                 <div className="space-y-10 mt-12">
                   {[
-                    { title: 'Acesso ao Dealflow', desc: 'Curadoria exclusiva de startups alinhadas aos seus desafios estratégicos.', color: 'text-[#8CC63F]' },
+                    { title: 'Acesso ao Dealflow', desc: 'Curadoria exclusiva de startups alinhadas aos seus desafios estratégicos.', color: 'text-[#00c9a7]' },
                     { title: 'Networking C-Level', desc: 'Troca de experiências com outros executivos de grandes corporações nacionais.', color: 'text-brand-purple' },
                     { title: 'Visibilidade de Marca', desc: 'Posicionamento como líder em inovação no cenário global corporativo.', color: 'text-brand-green' }
                   ].map((item, i) => (
                     <div key={i} className="flex items-start space-x-6">
                       <div className="mt-1 flex-shrink-0">
-                        <div className="w-6 h-6 rounded-full border-2 border-[#8CC63F] flex items-center justify-center p-1">
-                          <div className="w-full h-full bg-[#8CC63F] rounded-full" />
+                        <div className="w-6 h-6 rounded-full border-2 border-[#00c9a7] flex items-center justify-center p-1">
+                          <div className="w-full h-full bg-[#00c9a7] rounded-full" />
                         </div>
                       </div>
                       <div>
@@ -316,34 +316,34 @@ const Empresas = () => {
               </div>
               
               <div className="relative">
-                <div className="absolute -inset-1 bg-[#8CC63F]/20 blur-2xl rounded-[40px]" />
+                <div className="absolute -inset-1 bg-[#00c9a7]/20 blur-2xl rounded-[40px]" />
                 <div className="relative bg-[#fafafa] border border-gray-200 p-10 md:p-14 rounded-[40px] shadow-inner">
                   <h3 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-tighter">Solicite uma Proposta</h3>
                   <form className="space-y-6">
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Nome Completo</label>
-                      <input type="text" placeholder="Seu nome" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] text-gray-900" />
+                      <input type="text" placeholder="Seu nome" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">E-mail Corporativo</label>
-                      <input type="email" placeholder="nome@empresa.com.br" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] text-gray-900" />
+                      <input type="email" placeholder="nome@empresa.com.br" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Sua Empresa</label>
-                      <input type="text" placeholder="Nome da empresa" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#8CC63F] text-gray-900" />
+                      <input type="text" placeholder="Nome da empresa" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
                     </div>
                     <div className="space-y-4 pt-2 mb-6">
                       <label className="flex items-center space-x-3 cursor-pointer group">
-                        <div className="w-6 h-6 rounded border-2 border-gray-200 flex items-center justify-center group-hover:border-[#8CC63F] transition-all">
+                        <div className="w-6 h-6 rounded border-2 border-gray-200 flex items-center justify-center group-hover:border-[#00c9a7] transition-all">
                           {/* Visual Checkbox using a simple indicator */}
-                          <div className="w-full h-full p-1 opacity-100 bg-[#8CC63F]/0 group-hover:bg-[#8CC63F]/5">
-                            <Rocket className="w-full h-full text-[#8CC63F] opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <div className="w-full h-full p-1 opacity-100 bg-[#00c9a7]/0 group-hover:bg-[#00c9a7]/5">
+                            <Rocket className="w-full h-full text-[#00c9a7] opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
                         </div>
                         <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest group-hover:text-gray-900 transition-colors">Desejo conectar-me com soluções tecnológicas</span>
                       </label>
                     </div>
-                    <button className="w-full bg-gray-900 text-white py-5 rounded-2xl font-black uppercase text-sm tracking-widest shadow-xl hover:bg-[#8CC63F] transition-all">
+                    <button className="w-full bg-gray-900 text-white py-5 rounded-2xl font-black uppercase text-sm tracking-widest shadow-xl hover:bg-[#00c9a7] transition-all">
                       Enviar Solicitação
                     </button>
                   </form>
