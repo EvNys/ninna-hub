@@ -178,7 +178,7 @@ const AdminCases = () => {
               <div className="w-16 h-16 bg-red-50 text-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Trash2 className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-black text-gray-900 uppercase tracking-tighter italic mb-2">Confirmar Exclusão</h3>
+              <h3 className="text-xl font-black text-gray-900 uppercase tracking-wide italic mb-2">Confirmar Exclusão</h3>
               <p className="text-gray-500 text-sm font-medium mb-8 italic">Você tem certeza que deseja excluir este case de sucesso? Esta ação é irreversível.</p>
               <div className="flex gap-4">
                 <button onClick={() => setIsDeleting(null)}
@@ -221,7 +221,7 @@ const AdminCases = () => {
                   <span className="text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded bg-brand-teal font-white text-white italic">Case</span>
                   <span className="text-xs font-black text-brand-teal uppercase tracking-widest">{item.cliente}</span>
                 </div>
-                <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter italic leading-none">{item.titulo}</h3>
+                <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide italic leading-none">{item.titulo}</h3>
                 <p className="text-gray-500 mt-2 text-sm line-clamp-1 italic">{item.resumo}</p>
               </div>
 

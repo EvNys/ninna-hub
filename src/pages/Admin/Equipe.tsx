@@ -200,7 +200,7 @@ const AdminEquipe = () => {
 
               <div className="p-8 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-black text-gray-900 uppercase tracking-tighter italic leading-tight mb-2 min-h-[2.5rem] flex items-end">{item.nome}</h3>
+                  <h3 className="text-xl font-black text-gray-900 uppercase tracking-wide italic leading-tight mb-2 min-h-[2.5rem] flex items-end">{item.nome}</h3>
                   <p className="text-brand-teal text-[10px] font-black uppercase tracking-widest leading-none mb-6">{item.cargo}</p>
                 </div>
 

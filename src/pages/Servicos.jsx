@@ -1,5 +1,17 @@
 import { useState, useRef, useEffect } from "react";
-import { SearchCheck, Wrench, Rocket, Sprout, Handshake, ChevronUp } from "lucide-react";
+import { motion } from 'motion/react';
+import { SearchCheck,
+    Wrench,
+    Rocket,
+    Sprout,
+    Handshake,
+    ChevronUp,
+    Building2,
+    MessageSquare,
+    Target,
+    TrendingUp,
+    Cpu, 
+    Zap } from "lucide-react";
 
 const NAV_ITEMS = [
   { id: "bloco1", icon: SearchCheck, label: "Quero clareza onde estou",          aria: "Diagnóstico" },
@@ -15,12 +27,12 @@ const BLOCOS = [
     title: "Diagnosticar para Decidir",
     subtitle: "Para quem quer clareza antes de agir",
     accent: "#00D4D4",
-    image: "../public/imagens_NINNA/images.png",
+    image: "",
     cta: "Comece com um diagnóstico →",
     description: "Antes de inovar, é preciso saber onde você está. Nossos diagnósticos combinam metodologias globais com uma leitura precisa da realidade da sua empresa — entregando clareza, prioridades e um ponto de partida sólido para qualquer jornada de transformação.",
     empresas: [
-      { nome: "Empresa A", logo: "../public/imagens/logo-a.png" },
-      { nome: "Empresa B", logo: "../public/imagens/logo-b.png" },
+      { nome: "Empresa A", logo: "/Imagens_NINNA/l'auto.png" },
+      { nome: "Empresa B", logo: "/Imagens_NINNA/Extrafarma.png" },
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
     cases: [
@@ -38,12 +50,12 @@ const BLOCOS = [
     title: "Estruturar para Escalar",
     subtitle: "Para quem já sabe onde está e quer organizar a jornada",
     accent: "#00E676",
-    image: "../public/imagens_NINNA/images.png",
+    image: "/Imagens_NINNA/images.png",
     cta: "Monte sua estratégia →",
     description: "Ter vontade de inovar não é suficiente — é preciso estrutura. Ajudamos sua empresa a construir os processos, governança e estratégias que transformam iniciativas isoladas em um sistema de inovação contínuo e escalável.",
     empresas: [
-      { nome: "Empresa A", logo: "../public/imagens/logo-a.png" },
-      { nome: "Empresa B", logo: "../public/imagens/logo-b.png" },
+      { nome: "Empresa A", logo: "/Imagens_NINNA/logo-a.png" },
+      { nome: "Empresa B", logo: "/Imagens_NINNA/logo-b.png" },
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
     cases: [
@@ -61,12 +73,12 @@ const BLOCOS = [
     title: "Executar com Tecnologia e Parceiros",
     subtitle: "Para quem quer colocar a mão na massa com parceiros e tecnologia",
     accent: "#7C6FF7",
-    image: "../public/imagens_NINNA/images.png",
+    image: "/Imagens_NINNA/images.png",
     cta: "Encontre sua solução →",
     description: "Identificar a tecnologia certa e os parceiros ideais faz toda a diferença na execução. Conectamos sua empresa às melhores soluções do mercado e gerenciamos o processo de validação e aceleração de ponta a ponta.",
     empresas: [
-      { nome: "Empresa A", logo: "../public/imagens/logo-a.png" },
-      { nome: "Empresa B", logo: "../public/imagens/logo-b.png" },
+      { nome: "Empresa A", logo: "/Imagens_NINNA/logo-a.png" },
+      { nome: "Empresa B", logo: "/Imagens_NINNA/logo-b.png" },
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
     cases: [
@@ -84,12 +96,12 @@ const BLOCOS = [
     title: "Ativar Cultura e Pessoas",
     subtitle: "Para quem quer engajar times e criar cultura de inovação",
     accent: "#FF6B6B",
-    image: "../public/imagens_NINNA/images.png",
+    image: "/Imagens_NINNA/images.png",
     cta: "Engaje seu time →",
     description: "Inovação começa nas pessoas. Desenvolvemos programas que transformam colaboradores em agentes de mudança — engajando times, formando líderes e criando uma cultura onde novas ideias encontram espaço para crescer.",
    empresas: [
-      { nome: "Empresa A", logo: "../public/imagens/logo-a.png" },
-      { nome: "Empresa B", logo: "../public/imagens/logo-b.png" },
+      { nome: "Empresa A", logo: "/Imagens_NINNA/logo-a.png" },
+      { nome: "Empresa B", logo: "/Imagens_NINNA/logo-b.png" },
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
     cases: [
@@ -114,8 +126,8 @@ const BLOCOS = [
     cta: "Faça parte do ecossistema →",
     description: "As melhores oportunidades surgem das conexões certas. Facilitamos o acesso ao ecossistema de inovação — aproximando sua empresa de startups, líderes, investidores e parceiros estratégicos que aceleram resultados reais.",
    empresas: [
-      { nome: "Empresa A", logo: "../public/imagens/logo-a.png" },
-      { nome: "Empresa B", logo: "../public/imagens/logo-b.png" },
+      { nome: "Empresa A", logo: "/Imagens_NINNA/logo-a.png" },
+      { nome: "Empresa B", logo: "/Imagens_NINNA/logo-b.png" },
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
     cases: [
@@ -141,7 +153,7 @@ const CSS = `
     transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1),
                 opacity    0.4s ease;
   }
-  .bloco-content.open  { max-height: 3000px; opacity: 1; }
+  .bloco-content.open  { max-height: 10000px; opacity: 1; }
   .bloco-content.closed { max-height: 0;     opacity: 0; }
   .bloco-content.open .cards-grid > * {
     animation: fadeSlideIn 0.35s ease both;
@@ -287,71 +299,287 @@ function BlocoSection({ bloco, isOpen, onClose }) {
           </div>
 
           {/* empresas atendidas */}
-            {bloco.empresas?.length > 0 && (
-              <div style={{ marginBottom: "40px" }}>
-                <p style={{
-                  fontSize: "11px",
-                  fontWeight: 700,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.3)",
-                  marginBottom: "16px",
-                }}>
-                  Empresas atendidas
+          <section className="py-32 border-b rounded-3xl mb-10 border-gray-100 bg-white shadow-sm">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-20">
+                <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-wide">
+                  empresas que acreditam no <span className="text-[#00c9a7] underline decoration-gray-200">NINNA</span>
+                </h2>
+                <p className="text-gray-600 max-w-2xl mx-auto font-medium">
+                  Conheça as corporações que acreditam e investem no NINNA Hub como motor de transformação e inovação.
                 </p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", alignItems: "center" }}>
-                  {bloco.empresas.map((e, i) => (
-                    <div key={i} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                {!bloco.empresas || bloco.empresas.length === 0 ? (
+                  <div className="col-span-full py-20 text-center text-gray-400 font-bold uppercase tracking-widest text-sm">
+                    Nenhum parceiro cadastrado no momento.
+                  </div>
+                ) : (
+                  bloco.empresas.map((e, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      viewport={{ once: true }}
+                      className="group relative h-48 bg-white border border-gray-100 rounded-3xl flex items-center justify-center p-8 hover:bg-gray-50 hover:border-[#00c9a7]/30 hover:shadow-xl transition-all overflow-hidden"
+                    >
                       {e.logo ? (
                         <img
                           src={e.logo}
                           alt={e.nome}
-                          style={{ height: "24px", objectFit: "contain", opacity: 0.7 }}
+                          className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500 scale-90 group-hover:scale-100"
+                          referrerPolicy="no-referrer"
                         />
                       ) : (
-                        <span style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)" }}>
-                          {e.nome}
-                        </span>
+                        <div className="flex flex-col items-center justify-center">
+                          <Building2 className="w-10 h-10 text-gray-300 group-hover:text-[#00c9a7] transition-colors mb-2" />
+                          <span className="font-extrabold text-[#1a1a1a] text-[10px] uppercase tracking-wider block text-center">
+                            {e.nome}
+                          </span>
+                        </div>
                       )}
-                    </div>
-                  ))}
-                </div>
+                    </motion.div>
+                  ))
+                )}
               </div>
-            )}
-
-          {/* cases */}
-          <div style={{ marginTop: "68px", marginBottom: "24px" }}>
-            <p style={{
-              fontSize: "11px",
-              fontWeight: 700,
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.3)",
-              marginBottom: "16px",
-            }}>
-              Cases
-            </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "12px" }}>
-            {bloco.cases.map((c, i) => (
-              <div key={i} style={{
-                  background: bloco.accent + "0D",
-                  border: `1px solid ${bloco.accent}30`,
-                  borderRadius: "10px",
-                  padding: "20px 24px",
-                }}>
-                  <p style={{ margin: "0 0 8px", fontSize: "13px", fontWeight: 700, color: bloco.accent }}>
-                    {c.company}
-                  </p>
-                  <p style={{ margin: 0, fontSize: "13px", color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
-                    {c.result}
-                  </p>
-                </div>
-              ))}
             </div>
-          </div>
+          </section>
+        
+          {/* cases */}
+          <section className="py-32 bg-[#050911] relative overflow-hidden rounded-3xl mb-10 border-t border-b border-white/5 text-white" id="ninna-cases-section">
+            {/* Dark Background Overlay details */}
+            <div className="absolute inset-0 z-0">
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-teal/5 blur-[140px] rounded-full pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-green/5 blur-[140px] rounded-full pointer-events-none" />
+            </div>
+            
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+              <div className="text-center mb-16">
+                <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-[#0ae2b1] text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-[#0ae2b1]/20">
+                  CASES
+                </div>
+                <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide ">
+                  CONEXÕES QUE GERAM <span className="gradient-text font-black">NEGÓCIOS</span>
+                </h2>
+                <p className="text-white/60 max-w-2xl mx-auto font-semibold mt-4">
+                  O maior diferencial do NINNA é conectar startups às oportunidades certas. Conheça histórias em que essas conexões se transformaram em inovação aberta, novos negócios e resultados concretos.
+                </p>
+              </div>
+    
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                {/* Case 1: Pague Menos + Suri.ai */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[48px] overflow-hidden shadow-2xl hover:border-brand-teal/30 transition-all duration-500 flex flex-col justify-between"
+                >
+                  <div>
+                    {/* Header inside Card */}
+                    <div className="p-8 border-b border-white/10 bg-gradient-to-r from-white/[0.02] to-transparent">
+                      <div className="flex items-center justify-between gap-4">
+                        {/* Logos & Connection */}
+                        <div className="flex items-center gap-4">
+                          {/* Corporativa Logo */}
+                          <div className="w-16 h-16 bg-red-500/[0.03] border border-red-500/20 rounded-2xl flex items-center justify-center p-3 shadow-sm bg-white shrink-0">
+                            <img 
+                              src="/Imagens_NINNA/PagueMenos.png" 
+                              alt="Pague Menos logo" 
+                              className="max-h-full max-w-full object-contain"
+                              referrerPolicy="no-referrer"
+                            />
+                          </div>
+                          {/* Plus sign divider */}
+                          <div className="text-white/40 font-black text-xl">+</div>
+                          {/* Startup representation */}
+                          <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
+                            <MessageSquare className="w-5 h-5 text-[#0ae2b1] mb-0.5" />
+                            <span className="text-[8px] font-black text-[#0ae2b1] tracking-widest uppercase">SURI.AI</span>
+                          </div>
+                        </div>
+    
+                        <span className="inline-block text-[8px] font-black tracking-widest text-red-400 bg-red-400/10 px-2.5 py-1 rounded-full border border-red-400/20 uppercase">
+                          Conexão Corporativa
+                        </span>
+                      </div>
+                    </div>
+    
+                    {/* Core Content */}
+                    <div className="p-8 md:p-10">
+                      <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
+                        Aceleração de Atendimento com IA Conversacional
+                      </h3>
+                      <p className="text-white/60 font-semibold text-sm leading-relaxed mb-8">
+                        Como uma das maiores redes de varejo farmacêutico do Brasil se uniu à Suri.ai, startup de inteligência artificial do ecossistema NINNA, para digitalizar e otimizar canais de atendimento e engajamento via WhatsApp nacionalmente.
+                      </p>
+    
+                      <div className="space-y-4 mb-8">
+                        <div className="flex gap-3">
+                          <div className="w-6 h-6 rounded bg-red-500/10 text-red-400 flex items-center justify-center shrink-0 mt-0.5">
+                            <Target className="w-3.5 h-3.5" />
+                          </div>
+                          <div>
+                            <h4 className="text-[10px] font-black uppercase text-white tracking-wide">O Desafio</h4>
+                            <p className="text-xs text-white/50 font-semibold leading-relaxed">Atender com agilidade milhares de dúvidas cotidianas sobre lojas e entregas de forma escalável.</p>
+                          </div>
+                        </div>
+                        <div className="flex gap-3">
+                          <div className="w-6 h-6 rounded bg-brand-teal/10 text-[#0ae2b1] flex items-center justify-center shrink-0 mt-0.5">
+                            <Rocket className="w-3.5 h-3.5" />
+                          </div>
+                          <div>
+                            <h4 className="text-[10px] font-black uppercase text-white tracking-wide">A Solução</h4>
+                            <p className="text-xs text-white/50 font-semibold leading-relaxed">Integração do motor de inteligência conversacional da Suri.ai ao canal oficial de WhatsApp.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  {/* Metrics Block */}
+                  <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
+                    <div>
+                      <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">+80%</span>
+                      <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Média Automação</span>
+                    </div>
+                    <div className="border-l border-r border-white/10">
+                      <span className="block text-2xl font-black text-white tracking-wide ">24/7</span>
+                      <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Respostas Real</span>
+                    </div>
+                    <div>
+                      <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">-70%</span>
+                      <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Tempo Espera</span>
+                    </div>
+                  </div>
+                </motion.div>
+    
+                {/* Case 2: Mold IAX */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[48px] overflow-hidden shadow-2xl hover:border-brand-teal/30 transition-all duration-500 flex flex-col justify-between"
+                >
+                  <div>
+                    {/* Header inside Card */}
+                    <div className="p-8 border-b border-white/10 bg-gradient-to-r from-white/[0.02] to-transparent">
+                      <div className="flex items-center justify-between gap-4">
+                        {/* Logos & Connection */}
+                        <div className="flex items-center gap-4">
+                          {/* Startup Logo/Representation */}
+                          <div className="w-16 h-16 bg-purple-500/[0.04] border border-purple-100 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0 bg-white">
+                            <Cpu className="w-5 h-5 text-purple-600 mb-0.5" />
+                            <span className="text-[8px] font-black text-purple-600 tracking-widest uppercase text-center leading-none">MOLD IAX</span>
+                          </div>
+                          {/* Plus sign divider */}
+                          <div className="text-white/40 font-black text-xl">+</div>
+                          {/* NINNA Indicator */}
+                          <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
+                            <Zap className="w-5 h-5 text-[#0ae2b1] mb-0.5" />
+                            <span className="text-[8px] font-black text-[#0ae2b1] tracking-widest uppercase">NINNA</span>
+                          </div>
+                        </div>
+    
+                        <span className="inline-block text-[8px] font-black tracking-widest text-[#9333ea] bg-purple-500/10 px-2.5 py-1 rounded-full border border-purple-500/20 uppercase">
+                          Fomento & Captação
+                        </span>
+                      </div>
+                    </div>
+    
+                    {/* Core Content */}
+                    <div className="p-8 md:p-10">
+                      <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
+                        Acesso Expresso a Recursos Estaduais e Federais
+                      </h3>
+                      <p className="text-white/60 font-semibold text-sm leading-relaxed mb-8">
+                        Como a startup do nosso ecossistema focada em inteligência de hardware e processos industriais obteve acesso a recursos de inovação acelerado com fôlego e curadoria consultiva pelo time do NINNA Hub.
+                      </p>
+    
+                      <div className="space-y-4 mb-8">
+                        <div className="flex gap-3">
+                          <div className="w-6 h-6 rounded bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 mt-0.5">
+                            <Target className="w-3.5 h-3.5" />
+                          </div>
+                          <div>
+                            <h4 className="text-[10px] font-black uppercase text-white tracking-wide">O Desafio</h4>
+                            <p className="text-xs text-white/50 font-semibold leading-relaxed">Equipes pequenas de forte base técnica sem tempo para burocracia de fomento contínuo e submissões densas.</p>
+                          </div>
+                        </div>
+                        <div className="flex gap-3">
+                          <div className="w-6 h-6 rounded bg-brand-teal/10 text-[#0ae2b1] flex items-center justify-center shrink-0 mt-0.5">
+                            <TrendingUp className="w-3.5 h-3.5" />
+                          </div>
+                          <div>
+                            <h4 className="text-[10px] font-black uppercase text-white tracking-wide">A Solução</h4>
+                            <p className="text-xs text-white/50 font-semibold leading-relaxed">Mapeamento expresso e curadoria de editais efetuada em menos de 1 mês de aceleração integrada no hub.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  {/* Metrics Block */}
+                  <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
+                    <div>
+                      <span className="block text-2xl font-black text-purple-400 tracking-wide ">R$ 800K</span>
+                      <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Recursos</span>
+                    </div>
+                    <div className="border-l border-r border-white/10">
+                      <span className="block text-2xl font-black text-white tracking-wide ">&lt; 1 mês</span>
+                      <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-semibold">Estudo / Acesso</span>
+                    </div>
+                    <div>
+                      <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">100%</span>
+                      <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Compliance</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </section>
 
-         
-
+          {/* CTA / Proposal */}
+           <section className="py-32">                
+                  <div className="relative">
+                    <div className="absolute -inset-1 bg-[#00c9a7]/20 blur-2xl rounded-[40px]" />
+                    <div className="relative bg-[#fafafa] border border-gray-200 p-10 md:p-14 rounded-[40px] shadow-inner">
+                      <h3 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-wide">Solicite uma Proposta</h3>
+                      <form className="space-y-6">
+                        <div className="space-y-2">
+                          <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Nome Completo</label>
+                          <input type="text" placeholder="Seu nome" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">E-mail Corporativo</label>
+                          <input type="email" placeholder="nome@empresa.com.br" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Sua Empresa</label>
+                          <input type="text" placeholder="Nome da empresa" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
+                        </div>
+                        <div className="space-y-4 pt-2 mb-6">
+                          <label className="flex items-center space-x-3 cursor-pointer group">
+                            <div className="w-6 h-6 rounded border-2 border-gray-200 flex items-center justify-center group-hover:border-[#00c9a7] transition-all">
+                              {/* Visual Checkbox using a simple indicator */}
+                              <div className="w-full h-full p-1 opacity-100 bg-[#00c9a7]/0 group-hover:bg-[#00c9a7]/5">
+                                <Rocket className="w-full h-full text-[#00c9a7] opacity-0 group-hover:opacity-100 transition-opacity" />
+                              </div>
+                            </div>
+                            <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest group-hover:text-gray-900 transition-colors">Desejo conectar-me com soluções tecnológicas</span>
+                          </label>
+                        </div>
+                        <button className="w-full bg-gray-900 text-white py-5 rounded-2xl font-black uppercase text-sm tracking-widest shadow-xl hover:bg-[#00c9a7] transition-all">
+                          Enviar Solicitação
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+           </section>
+       
           {/* CTA do bloco */}
           <button
             style={{
@@ -373,6 +601,8 @@ function BlocoSection({ bloco, isOpen, onClose }) {
           >
             {bloco.cta}
           </button>
+
+          
 
           {/* botão voltar ao topo */}
           <div style={{ marginTop: "40px" }}>
@@ -535,8 +765,8 @@ export default function ServicosPage() {
       <div
         ref={navRef}
         style={{
-          background: "#0f1422",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
+          background: "#ffffff",
+          borderBottom: "1px solid #f3f4f6",
           padding: "48px 0",
           top: 0,
           zIndex: 10,
@@ -550,7 +780,7 @@ export default function ServicosPage() {
               fontWeight: 700,
               letterSpacing: "0.16em",
               textTransform: "uppercase",
-              color: "rgba(255,255,255,0.35)",
+              color: "#9ca3af",
               marginBottom: "24px",
             }}
           >
@@ -573,11 +803,11 @@ export default function ServicosPage() {
                   aria-pressed={isActive}
                   onClick={() => toggleBloco(item.id)}
                   style={{
-                    background: isActive ? "#00D4D4" : "#141827",
-                    border: `1px solid ${isActive ? "#00D4D4" : "rgba(255,255,255,0.08)"}`,
+                    background: isActive ? "#00c9a7" : "#f9fafb",
+                    border: `1px solid ${isActive ? "#00c9a7" : "#e5e7eb"}`,
                     borderRadius: "12px",
                     padding: "20px 16px",
-                    color: isActive ? "#0B0E1A" : "#fff",
+                    color: isActive ? "#0f1422" : "#1f2937",
                     fontSize: "13px",
                     fontWeight: 600,
                     lineHeight: 1.4,
@@ -591,20 +821,20 @@ export default function ServicosPage() {
                   }}
                   onMouseEnter={e => {
                     if (!isActive) {
-                      e.currentTarget.style.background = "#1c2338";
-                      e.currentTarget.style.borderColor = "#00D4D4";
+                      e.currentTarget.style.background = "#eef2f6";
+                      e.currentTarget.style.borderColor = "#00c9a7";
                       e.currentTarget.style.transform = "translateY(-2px)";
                     }
                   }}
                   onMouseLeave={e => {
                     if (!isActive) {
-                      e.currentTarget.style.background = "#141827";
-                      e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
+                      e.currentTarget.style.background = "#f9fafb";
+                      e.currentTarget.style.borderColor = "#e5e7eb";
                       e.currentTarget.style.transform = "translateY(0)";
                     }
                   }}
                 >
-                  <Icon size={22} aria-hidden="true" style={{ color: isActive ? "#0B0E1A" : "#00c9a7" }}/>
+                  <Icon size={22} aria-hidden="true" style={{ color: isActive ? "#0f1422" : "#00c9a7" }}/>
                   <span>{item.label}</span>
                 </button>
               );

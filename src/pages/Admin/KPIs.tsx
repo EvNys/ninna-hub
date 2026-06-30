@@ -76,7 +76,7 @@ const AdminKPIs = () => {
   return (
     <div className="max-w-4xl mx-auto py-12">
       <div className="mb-12">
-        <h1 className="text-4xl font-black flex items-center gap-4 uppercase tracking-tighter italic text-gray-900">
+        <h1 className="text-4xl font-black flex items-center gap-4 uppercase tracking-wide italic text-gray-900">
           <BarChart3 className="text-brand-teal w-8 h-8" />
           Gestão de Métricas
         </h1>
@@ -114,7 +114,7 @@ const AdminKPIs = () => {
                   required 
                   value={formData.kpi1_value} 
                   onChange={e => setFormData({...formData, kpi1_value: e.target.value})}
-                  className="w-full bg-gray-50 border border-gray-100 rounded-3xl px-8 py-6 text-5xl font-black text-gray-900 focus:outline-none focus:border-brand-teal transition-all tracking-tighter shadow-sm"
+                  className="w-full bg-gray-50 border border-gray-100 rounded-3xl px-8 py-6 text-5xl font-black text-gray-900 focus:outline-none focus:border-brand-teal transition-all tracking-wide shadow-sm"
                 />
               </div>
             </div>
@@ -141,7 +141,7 @@ const AdminKPIs = () => {
                   required 
                   value={formData.kpi2_value} 
                   onChange={e => setFormData({...formData, kpi2_value: e.target.value})}
-                  className="w-full bg-gray-50 border border-gray-100 rounded-3xl px-8 py-6 text-5xl font-black text-gray-900 focus:outline-none focus:border-brand-teal transition-all tracking-tighter shadow-sm"
+                  className="w-full bg-gray-50 border border-gray-100 rounded-3xl px-8 py-6 text-5xl font-black text-gray-900 focus:outline-none focus:border-brand-teal transition-all tracking-wide shadow-sm"
                 />
               </div>
             </div>
@@ -168,7 +168,7 @@ const AdminKPIs = () => {
                   required 
                   value={formData.kpi3_value} 
                   onChange={e => setFormData({...formData, kpi3_value: e.target.value})}
-                  className="w-full bg-gray-50 border border-gray-100 rounded-3xl px-8 py-6 text-5xl font-black text-gray-900 focus:outline-none focus:border-brand-teal transition-all tracking-tighter shadow-sm"
+                  className="w-full bg-gray-50 border border-gray-100 rounded-3xl px-8 py-6 text-5xl font-black text-gray-900 focus:outline-none focus:border-brand-teal transition-all tracking-wide shadow-sm"
                 />
               </div>
             </div>
@@ -195,7 +195,7 @@ const AdminKPIs = () => {
                   required 
                   value={formData.kpi4_value} 
                   onChange={e => setFormData({...formData, kpi4_value: e.target.value})}
-                  className="w-full bg-gray-50 border border-gray-100 rounded-3xl px-8 py-6 text-5xl font-black text-gray-900 focus:outline-none focus:border-brand-teal transition-all tracking-tighter shadow-sm"
+                  className="w-full bg-gray-50 border border-gray-100 rounded-3xl px-8 py-6 text-5xl font-black text-gray-900 focus:outline-none focus:border-brand-teal transition-all tracking-wide shadow-sm"
                 />
               </div>
             </div>

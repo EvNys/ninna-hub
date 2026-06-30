@@ -136,7 +136,7 @@ const AdminTreinamentos = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
         <div>
-          <h1 className="text-4xl font-black flex items-center gap-4 uppercase tracking-tighter italic text-gray-900">
+          <h1 className="text-4xl font-black flex items-center gap-4 uppercase tracking-wide italic text-gray-900">
             <GraduationCap className="text-brand-teal w-8 h-8" />
             Gestão de Treinamentos
           </h1>
@@ -171,7 +171,7 @@ const AdminTreinamentos = () => {
                 <X className="w-6 h-6" />
               </button>
 
-              <h2 className="text-2xl font-black mb-8 uppercase tracking-tighter italic text-gray-900">
+              <h2 className="text-2xl font-black mb-8 uppercase tracking-wide italic text-gray-900">
                 {editingItem ? 'Editar Treinamento' : 'Novo Treinamento'}
               </h2>
               
@@ -324,7 +324,7 @@ const AdminTreinamentos = () => {
               <span className="text-[10px] font-black text-gray-300 uppercase tracking-widest">Ordem: {item.ordem}</span>
             </div>
             
-            <h3 className="text-xl font-black text-gray-900 uppercase tracking-tighter italic leading-none mb-3 line-clamp-2">{item.titulo}</h3>
+            <h3 className="text-xl font-black text-gray-900 uppercase tracking-wide italic leading-none mb-3 line-clamp-2">{item.titulo}</h3>
             <p className="text-gray-500 text-sm font-medium line-clamp-4 italic mb-6">{item.descricao}</p>
 
             <Link 
@@ -352,7 +352,7 @@ const AdminTreinamentos = () => {
               <div className="w-20 h-20 bg-red-50 text-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Trash2 className="w-10 h-10" />
               </div>
-              <h2 className="text-2xl font-black mb-4 uppercase tracking-tighter italic text-gray-900">Excluir?</h2>
+              <h2 className="text-2xl font-black mb-4 uppercase tracking-wide italic text-gray-900">Excluir?</h2>
               <p className="text-gray-500 font-medium italic mb-8">
                 Tem certeza que deseja apagar permanentemente o treinamento <span className="text-gray-900 font-black">"{deletingItem?.titulo}"</span>?
               </p>

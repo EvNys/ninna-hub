@@ -160,7 +160,7 @@ const AdminParceiros = () => {
               <div className="w-16 h-16 bg-red-50 text-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Trash2 className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-black text-gray-900 uppercase tracking-tighter italic mb-2">Confirmar Exclusão</h3>
+              <h3 className="text-xl font-black text-gray-900 uppercase tracking-wide italic mb-2">Confirmar Exclusão</h3>
               <p className="text-gray-500 text-sm font-medium mb-8 italic">Ao excluir este parceiro, ele não será mais exibido na vitrine. Confirmar?</p>
               <div className="flex gap-4">
                 <button onClick={() => setIsDeleting(null)}
@@ -208,7 +208,7 @@ const AdminParceiros = () => {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter italic mb-2 leading-none">{item.nome}</h3>
+              <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide italic mb-2 leading-none">{item.nome}</h3>
               <div className="flex items-center justify-between mt-auto pt-6 border-t border-gray-100">
                 <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] italic">
                   {item.tipo === 'corporacao' ? 'Corporações' : item.tipo.replace('_', ' ')}

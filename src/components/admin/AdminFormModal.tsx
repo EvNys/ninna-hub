@@ -33,7 +33,7 @@ const AdminFormModal = ({ isOpen, onClose, title, children, maxWidth = 'max-w-lg
           >
             <X className="w-6 h-6" />
           </button>
-          <h2 className="text-2xl font-black mb-8 uppercase tracking-tighter italic text-gray-900">{title}</h2>
+          <h2 className="text-2xl font-black mb-8 uppercase tracking-wide italic text-gray-900">{title}</h2>
           {children}
         </motion.div>
       </div>

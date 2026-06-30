@@ -65,7 +65,7 @@ const Oportunidades = () => {
             <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               Dealflow & Growth
             </div>
-            <h1 className="text-7xl md:text-[120px] font-black mb-8 uppercase tracking-tighter leading-[0.85] text-gray-900 ">
+            <h1 className="text-7xl md:text-[120px] font-black mb-8 uppercase tracking-wide leading-[0.85] text-gray-900 ">
               OPORTU<br /><span className="gradient-text">NIDADES</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed border-t border-gray-200 pt-8 mt-8 font-medium">
@@ -110,7 +110,7 @@ const Oportunidades = () => {
                     )}
                   </div>
 
-                  <h3 className="text-3xl md:text-4xl font-black mb-6 group-hover:text-brand-teal transition-colors text-gray-900 uppercase tracking-tighter  leading-[0.9]">{item.titulo}</h3>
+                  <h3 className="text-3xl md:text-4xl font-black mb-6 group-hover:text-brand-teal transition-colors text-gray-900 uppercase tracking-wide  leading-[0.9]">{item.titulo}</h3>
                   <p className="text-gray-500 mb-10 leading-relaxed text-lg font-medium flex-grow">
                     {item.descricao}
                   </p>
@@ -149,7 +149,7 @@ const Oportunidades = () => {
             <div className="absolute bottom-0 right-0 w-80 h-80 bg-brand-teal/5 blur-[120px] rounded-full translate-x-1/2 translate-y-1/2" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-8 uppercase tracking-tighter ">SUA EMPRESA QUER <br /><span className="text-brand-teal">LANÇAR UM EDITAL?</span></h2>
+                <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-8 uppercase tracking-wide ">SUA EMPRESA QUER <br /><span className="text-brand-teal">LANÇAR UM EDITAL?</span></h2>
                 <p className="text-gray-500 text-lg font-medium mb-10 max-w-lg leading-relaxed">
                   Conectamos os desafios da sua corporação com as melhores soluções do mercado através de chamadas personalizadas e curadoria especializada.
                 </p>
@@ -159,11 +159,11 @@ const Oportunidades = () => {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-8 bg-gray-50 border border-gray-100 rounded-3xl">
-                  <div className="text-brand-teal font-black text-4xl mb-2  tracking-tighter">+20</div>
+                  <div className="text-brand-teal font-black text-4xl mb-2  tracking-wide">+20</div>
                   <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Editais Lançados</div>
                 </div>
                 <div className="p-8 bg-gray-50 border border-gray-100 rounded-3xl">
-                  <div className="text-brand-teal font-black text-4xl mb-2  tracking-tighter">R$5M</div>
+                  <div className="text-brand-teal font-black text-4xl mb-2  tracking-wide">R$5M</div>
                   <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Em Investimentos</div>
                 </div>
               </div>

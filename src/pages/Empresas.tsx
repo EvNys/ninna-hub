@@ -124,7 +124,7 @@ const Empresas = () => {
               <div className="px-4 py-1 rounded-full bg-[#00c9a7]/10 text-[#00c9a7] text-[10px] font-black uppercase tracking-[0.3em] mb-8 inline-block">
                 Corporate Innovation
               </div>
-              <h1 className="text-6xl md:text-8xl font-black mb-8 leading-[0.85] text-gray-900 uppercase tracking-tighter">
+              <h1 className="text-6xl md:text-8xl font-black mb-8 leading-[0.85] text-gray-900 uppercase tracking-wide">
                 IMPULSIONE SUA <br /><span className="gradient-text">ESTRATÉGIA</span>
               </h1>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-xl font-medium">
@@ -166,7 +166,7 @@ const Empresas = () => {
       <section className="py-32 border-b border-gray-100 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-tighter">empresas que acreditam no <span className="text-[#00c9a7] underline decoration-gray-200">NINNA</span></h2>
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-wide">empresas que acreditam no <span className="text-[#00c9a7] underline decoration-gray-200">NINNA</span></h2>
             <p className="text-gray-600 max-w-2xl mx-auto font-medium">
               Conheça as corporações que acreditam e investem no NINNA Hub como motor de transformação e inovação.
             </p>
@@ -234,7 +234,7 @@ const Empresas = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-[#00c9a7]/10 border border-[#00c9a7]/20 text-[#00c9a7] text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               Nossas Soluções
             </div>
-            <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-none">Como apoiamos sua <br />
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase tracking-wide leading-none">Como apoiamos sua <br />
               <span className="font-black bg-gradient-to-r from-[#00C9B1] to-[#00c9a7] bg-clip-text text-transparent">
                 Jornada Corporativa
               </span>
@@ -271,7 +271,7 @@ const Empresas = () => {
                     {service.icon}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tighter group-hover:text-[#00c9a7] transition-colors">{service.title}</h3>
+                    <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-wide group-hover:text-[#00c9a7] transition-colors">{service.title}</h3>
                     <p className="text-white/60 leading-relaxed mb-8 font-semibold group-hover:text-white/80 transition-colors">
                       {service.description}
                     </p>
@@ -293,7 +293,7 @@ const Empresas = () => {
             <div className="absolute top-0 right-0 w-80 h-80 bg-[#00c9a7]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
               <div>
-                <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-tighter leading-[0.85]">Por que ser uma <br /><span className="text-[#00c9a7]">Corporação?</span></h3>
+                <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-wide leading-[0.85]">Por que ser uma <br /><span className="text-[#00c9a7]">Corporação?</span></h3>
                 <div className="space-y-10 mt-12">
                   {[
                     { title: 'Acesso ao Dealflow', desc: 'Curadoria exclusiva de startups alinhadas aos seus desafios estratégicos.', color: 'text-[#00c9a7]' },
@@ -307,7 +307,7 @@ const Empresas = () => {
                         </div>
                       </div>
                       <div>
-                        <h4 className="text-xl font-black text-gray-900 uppercase tracking-tighter mb-2">{item.title}</h4>
+                        <h4 className="text-xl font-black text-gray-900 uppercase tracking-wide mb-2">{item.title}</h4>
                         <p className="text-gray-500 font-medium leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -318,7 +318,7 @@ const Empresas = () => {
               <div className="relative">
                 <div className="absolute -inset-1 bg-[#00c9a7]/20 blur-2xl rounded-[40px]" />
                 <div className="relative bg-[#fafafa] border border-gray-200 p-10 md:p-14 rounded-[40px] shadow-inner">
-                  <h3 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-tighter">Solicite uma Proposta</h3>
+                  <h3 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-wide">Solicite uma Proposta</h3>
                   <form className="space-y-6">
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Nome Completo</label>

@@ -94,7 +94,7 @@ const Profile = () => {
                   </label>
                 </div>
               </div>
-              <h1 className="text-3xl font-black text-white uppercase tracking-tighter italic italic">{formData.name || 'Seu Nome'}</h1>
+              <h1 className="text-3xl font-black text-white uppercase tracking-wide italic italic">{formData.name || 'Seu Nome'}</h1>
               <p className="text-brand-teal font-black text-[10px] uppercase tracking-[0.3em] mt-2">{userData?.role === 'admin' ? 'Administrador' : 'Membro da Comunidade'}</p>
             </div>
           </div>

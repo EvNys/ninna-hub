@@ -179,7 +179,7 @@ const AdminOportunidades = () => {
                 </div>
               </div>
 
-              <h3 className="text-3xl font-black text-gray-900 uppercase tracking-tighter italic mb-4 leading-none">{item.titulo}</h3>
+              <h3 className="text-3xl font-black text-gray-900 uppercase tracking-wide italic mb-4 leading-none">{item.titulo}</h3>
               <p className="text-gray-500 text-sm font-medium line-clamp-3 mb-10 leading-relaxed">{item.descricao}</p>
 
               <div className="flex items-center justify-between mt-auto pt-8 border-t border-gray-100">

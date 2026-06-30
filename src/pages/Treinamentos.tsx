@@ -91,7 +91,7 @@ const Treinamentos = () => {
           </button>
           <div className="text-right">
             <h2 className="text-xs font-black uppercase tracking-widest text-brand-teal">{selectedTraining.categoria}</h2>
-            <h1 className="text-sm font-black uppercase tracking-tighter italic text-white">{selectedTraining.titulo}</h1>
+            <h1 className="text-sm font-black uppercase tracking-wide italic text-white">{selectedTraining.titulo}</h1>
           </div>
         </div>
 
@@ -115,7 +115,7 @@ const Treinamentos = () => {
               )}
             </div>
             <div className="p-12 max-w-4xl">
-              <h2 className="text-3xl font-black uppercase tracking-tighter italic mb-4">
+              <h2 className="text-3xl font-black uppercase tracking-wide italic mb-4">
                 {selectedLesson?.titulo || 'Instruções do Treinamento'}
               </h2>
               <p className="text-gray-400 font-medium text-lg leading-relaxed italic">
@@ -146,7 +146,7 @@ const Treinamentos = () => {
                     <span className="font-black text-xs italic">{idx + 1}</span>
                   </div>
                   <div className="flex-grow py-1">
-                    <h4 className="text-[10px] font-black uppercase tracking-tighter italic leading-tight mb-1 line-clamp-2">
+                    <h4 className="text-[10px] font-black uppercase tracking-wide italic leading-tight mb-1 line-clamp-2">
                       {lsn.titulo}
                     </h4>
                     <div className="flex items-center gap-2 text-[8px] font-black uppercase tracking-widest opacity-60">
@@ -177,7 +177,7 @@ const Treinamentos = () => {
             animate={{ opacity: 1, scale: 1 }}
           >
             <h2 className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em] mb-4 italic">Conhecimento que escala</h2>
-            <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter italic leading-none mb-8">
+            <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wide italic leading-none mb-8">
               HUB DE <span className="gradient-text">TREINAMENTOS</span>
             </h1>
             <p className="text-gray-400 max-w-2xl mx-auto font-medium text-lg italic">
@@ -240,7 +240,7 @@ const Treinamentos = () => {
                       </div>
                     </div>
 
-                    <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter italic leading-none mb-4 group-hover:text-brand-teal transition-colors line-clamp-2">
+                    <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide italic leading-none mb-4 group-hover:text-brand-teal transition-colors line-clamp-2">
                       {tm.titulo}
                     </h3>
                     

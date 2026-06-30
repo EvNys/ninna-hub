@@ -165,7 +165,7 @@ const AdminUsuarios = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
         <div>
-          <h1 className="text-4xl font-black flex items-center gap-4 uppercase tracking-tighter italic text-gray-900">
+          <h1 className="text-4xl font-black flex items-center gap-4 uppercase tracking-wide italic text-gray-900">
             <Users className="text-brand-teal w-8 h-8" />
             Gestão da Comunidade
           </h1>
@@ -204,7 +204,7 @@ const AdminUsuarios = () => {
                 <X className="w-6 h-6" />
               </button>
 
-              <h2 className="text-2xl font-black mb-8 uppercase tracking-tighter italic text-gray-900">
+              <h2 className="text-2xl font-black mb-8 uppercase tracking-wide italic text-gray-900">
                 {editingUser ? 'Editar Usuário' : 'Novo Administrador'}
               </h2>
               
@@ -341,7 +341,7 @@ const AdminUsuarios = () => {
                       <div className="w-12 h-12 rounded-2xl bg-brand-teal/10 flex items-center justify-center text-brand-teal font-black text-xl italic shadow-sm border border-brand-teal/10">
                         {user.name?.charAt(0) || user.email.charAt(0).toUpperCase()}
                       </div>
-                      <span className="font-black text-gray-900 text-lg tracking-tighter italic uppercase">{user.name || 'Sem nome'}</span>
+                      <span className="font-black text-gray-900 text-lg tracking-wide italic uppercase">{user.name || 'Sem nome'}</span>
                     </div>
                   </td>
                   <td className="py-8 px-6 text-gray-500 font-medium">{user.email}</td>

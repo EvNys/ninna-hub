@@ -13,7 +13,7 @@ interface AdminPageHeaderProps {
 const AdminPageHeader = ({ icon, title, subtitle, addButtonLabel, onAdd, extraActions }: AdminPageHeaderProps) => (
   <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
     <div>
-      <h1 className="text-4xl font-black flex items-center gap-4 uppercase tracking-tighter italic text-gray-900">
+      <h1 className="text-4xl font-black flex items-center gap-4 uppercase tracking-wide italic text-gray-900">
         {icon}
         {title}
       </h1>

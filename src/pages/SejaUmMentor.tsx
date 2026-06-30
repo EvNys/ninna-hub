@@ -284,7 +284,7 @@ const areasAtuacaoOptions = [
                 Pilar NINNA Hub
               </span>
               
-              <h2 className="text-3xl sm:text-5xl font-black text-gray-900 uppercase tracking-tighter  leading-tight">
+              <h2 className="text-3xl sm:text-5xl font-black text-gray-900 uppercase tracking-wide  leading-tight">
                 Liderança Ativa que Constrói o Futuro de Fortaleza para o Mundo
               </h2>
               
@@ -353,7 +353,7 @@ const areasAtuacaoOptions = [
           Investimento na Formação
         </span>
 
-        <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tighter leading-tight">
+        <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-wide leading-tight">
           Trilha de Mentoria<br />de Alto Impacto
         </h2>
 
@@ -447,7 +447,7 @@ const areasAtuacaoOptions = [
       <section id="beneficios" className="py-24 max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.25em] block mb-2">Ecossistema de Alto Impacto</span>
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter ">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide ">
             Benefícios de ser um Mentor NINNA
           </h2>
           <p className="text-gray-500 font-medium max-w-xl mx-auto mt-3 text-sm">
@@ -469,7 +469,7 @@ const areasAtuacaoOptions = [
                 <div className="w-16 h-16 rounded-2xl bg-[#00c9a7]/10 flex items-center justify-center mb-6">
                   {benefit.icon}
                 </div>
-                <h3 className="text-lg font-black text-gray-900 uppercase tracking-tighter  mb-3">
+                <h3 className="text-lg font-black text-gray-900 uppercase tracking-wide  mb-3">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-500 font-semibold text-xs leading-relaxed">
@@ -494,7 +494,7 @@ const areasAtuacaoOptions = [
             </span>
             
             {/* Atualizado para combinar com o estilo dos H1s anteriores */}
-            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tighter text-white leading-none">
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-wide text-white leading-none">
               Qual a nossa expectativa mútua?
             </h2>
             
@@ -542,7 +542,7 @@ const areasAtuacaoOptions = [
               className="bg-white border border-gray-100 rounded-[40px] p-8 md:p-12 shadow-xl"
             >
               <div className="text-center md:text-left mb-10 border-b border-gray-100 pb-8">
-                <h2 className="text-3xl font-black text-gray-900 uppercase tracking-tighter  mb-2">
+                <h2 className="text-3xl font-black text-gray-900 uppercase tracking-wide  mb-2">
                   Ficha de Inscrição
                 </h2>
                 <p className="text-gray-500 font-semibold text-xs leading-relaxed">
@@ -936,7 +936,7 @@ const areasAtuacaoOptions = [
                 <CheckCircle className="w-10 h-10" />
               </div>
 
-              <h2 className="text-3xl font-black text-gray-900 uppercase tracking-tighter ">
+              <h2 className="text-3xl font-black text-gray-900 uppercase tracking-wide ">
                 Inscrição Enviada!
               </h2>
 

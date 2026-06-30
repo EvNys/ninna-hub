@@ -104,7 +104,7 @@ const Ninna4Startups = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8 border border-brand-teal/20">
                 Iniciativa Exclusiva
               </div>
-              <h1 className="text-5xl md:text-8xl font-black mb-8 uppercase tracking-tighter leading-none text-white ">
+              <h1 className="text-5xl md:text-8xl font-black mb-8 uppercase tracking-wide leading-none text-white ">
                 NINNA <span className="text-brand-teal">4 STARTUPS</span>
               </h1>
               <p className="text-xl text-gray-400 mb-12 font-medium leading-relaxed max-w-3xl mx-auto">
@@ -133,7 +133,7 @@ const Ninna4Startups = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-red-100 text-red-600 text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-red-200">
                 O Grande Desafio
               </div>
-              <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter  leading-none mb-6">
+              <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-wide  leading-none mb-6">
                 VENCENDO O <br />
                 <span className="text-red-600">VALE DA MORTE</span>
               </h2>
@@ -181,7 +181,7 @@ const Ninna4Startups = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em]">
               Resultados Práticos
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter ">
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-wide ">
               NOSSOS NÚMEROS NO <span className="text-brand-teal">ECOSSISTEMA</span>
             </h2>
             <p className="text-gray-400 font-semibold text-base leading-relaxed">
@@ -198,7 +198,7 @@ const Ninna4Startups = () => {
               whileHover={{ y: -8 }}
               className="bg-white/5 border border-white/10 p-10 rounded-[40px] backdrop-blur-sm hover:border-brand-teal/30 hover:bg-white/[0.07] transition-all duration-300"
             >
-              <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-tighter  mb-4">
+              <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-wide  mb-4">
                 +500
               </span>
               <h3 className="text-lg font-black text-white uppercase tracking-tight  mb-2">
@@ -217,7 +217,7 @@ const Ninna4Startups = () => {
               whileHover={{ y: -8 }}
               className="bg-white/5 border border-white/10 p-10 rounded-[40px] backdrop-blur-sm hover:border-brand-teal/30 hover:bg-white/[0.07] transition-all duration-300"
             >
-              <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-tighter  mb-4">
+              <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-wide  mb-4">
                 +3 Milhões
               </span>
               <h3 className="text-lg font-black text-white uppercase tracking-tight  mb-2">
@@ -236,7 +236,7 @@ const Ninna4Startups = () => {
               whileHover={{ y: -8 }}
               className="bg-white/5 border border-white/10 p-10 rounded-[40px] backdrop-blur-sm hover:border-brand-teal/30 hover:bg-white/[0.07] transition-all duration-300"
             >
-              <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-tighter  mb-4">
+              <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-wide  mb-4">
                 3
               </span>
               <h3 className="text-lg font-black text-white uppercase tracking-tight  mb-2">
@@ -259,7 +259,7 @@ const Ninna4Startups = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-brand-teal/20">
               Pilares de Atuação
             </div>
-            <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter ">
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-wide ">
               COMO APOIAMOS <span className="gradient-text">SUA STARTUP</span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
@@ -311,7 +311,7 @@ const Ninna4Startups = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/15 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/30">
               Experiência Compartilhada
             </div>
-            <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter  leading-none mb-6">
+            <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-wide  leading-none mb-6">
               PROGRAMA DE <br />
               <span className="gradient-text">MENTORIAS</span>
             </h2>
@@ -343,7 +343,7 @@ const Ninna4Startups = () => {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent flex flex-col justify-end p-8">
-                    <h3 className="text-2xl font-black text-white uppercase tracking-tighter  mb-1">{mentor.nome}</h3>
+                    <h3 className="text-2xl font-black text-white uppercase tracking-wide  mb-1">{mentor.nome}</h3>
                     <p className="text-brand-teal text-[10px] font-black uppercase tracking-widest mb-1">{mentor.cargo}</p>
                     <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-6">{mentor.empresa}</p>
                     
@@ -372,7 +372,7 @@ const Ninna4Startups = () => {
             <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
               Vantagens Exclusivas
             </div>
-            <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter  leading-none mb-8">
+            <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-wide  leading-none mb-8">
               CLUBE DE <span className="gradient-text">BENEFÍCIOS</span>
             </h2>
             <p className="text-gray-500 font-medium text-xl max-w-2xl mx-auto">
@@ -410,7 +410,7 @@ const Ninna4Startups = () => {
                     />
                     {/* Tooltip on hover */}
                     <div className="absolute inset-0 bg-brand-teal/95 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                      <span className="text-white font-black uppercase text-[10px] tracking-tighter leading-none">{beneficio.nomeEmpresa}</span>
+                      <span className="text-white font-black uppercase text-[10px] tracking-wide leading-none">{beneficio.nomeEmpresa}</span>
                     </div>
                   </motion.div>
                 );
@@ -422,7 +422,7 @@ const Ninna4Startups = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-teal/10 blur-[100px] -translate-y-1/2 translate-x-1/2" />
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="max-w-xl">
-                <h3 className="text-3xl font-black text-white uppercase tracking-tighter  mb-4">Sua empresa quer oferecer benefícios?</h3>
+                <h3 className="text-3xl font-black text-white uppercase tracking-wide  mb-4">Sua empresa quer oferecer benefícios?</h3>
                 <p className="text-gray-400 font-medium">Junte-se ao nosso ecossistema e conecte sua solução com centenas de startups inovadoras.</p>
               </div>
               <Link 
@@ -445,7 +445,7 @@ const Ninna4Startups = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-brand-teal/20">
               Tração e Resultados Reais
             </div>
-            <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter ">
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-wide ">
               NINNA <span className="gradient-text">CASES</span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
@@ -490,7 +490,7 @@ const Ninna4Startups = () => {
                 </div>
 
                 <div className="p-8 md:p-10">
-                  <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter  leading-none mb-4">
+                  <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide  leading-none mb-4">
                     Aceleração de Atendimento com IA Conversacional
                   </h3>
                   <p className="text-gray-500 font-medium text-sm leading-relaxed mb-8">
@@ -523,15 +523,15 @@ const Ninna4Startups = () => {
               {/* Metrics block */}
               <div className="p-8 bg-gray-50 border-t border-gray-100 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <span className="block text-2xl font-black text-brand-teal tracking-tighter ">+80%</span>
+                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">+80%</span>
                   <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Altas de Automação</span>
                 </div>
                 <div className="border-l border-r border-gray-200">
-                  <span className="block text-2xl font-black text-gray-900 tracking-tighter ">24/7</span>
+                  <span className="block text-2xl font-black text-gray-900 tracking-wide ">24/7</span>
                   <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Disponibilidade</span>
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-brand-teal tracking-tighter ">-70%</span>
+                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">-70%</span>
                   <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Tempo Espera</span>
                 </div>
               </div>
@@ -568,7 +568,7 @@ const Ninna4Startups = () => {
                 </div>
 
                 <div className="p-8 md:p-10">
-                  <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter  leading-none mb-4">
+                  <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide  leading-none mb-4">
                     Acesso Expresso a Recursos Estaduais e Federais
                   </h3>
                   <p className="text-gray-500 font-medium text-sm leading-relaxed mb-8">
@@ -601,15 +601,15 @@ const Ninna4Startups = () => {
               {/* Metrics block */}
               <div className="p-8 bg-gray-50 border-t border-gray-100 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <span className="block text-2xl font-black text-[#9333ea] tracking-tighter ">R$ 800K</span>
+                  <span className="block text-2xl font-black text-[#9333ea] tracking-wide ">R$ 800K</span>
                   <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Em Recursos</span>
                 </div>
                 <div className="border-l border-r border-gray-200">
-                  <span className="block text-2xl font-black text-gray-900 tracking-tighter ">&lt; 1 mês</span>
+                  <span className="block text-2xl font-black text-gray-900 tracking-wide ">&lt; 1 mês</span>
                   <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider font-medium">Estudo e Acesso</span>
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-brand-teal tracking-tighter ">Dezenas</span>
+                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">Dezenas</span>
                   <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">De Linhas Hub</span>
                 </div>
               </div>
@@ -627,7 +627,7 @@ const Ninna4Startups = () => {
           <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
             Chegou a Sua Hora
           </div>
-          <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter  leading-none mb-6">
+          <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-wide  leading-none mb-6">
             NÃO DEIXE SUA IDEIA <br />
             <span className="text-brand-teal">SE PERDER NO CAMINHO</span>
           </h2>

@@ -92,7 +92,7 @@ const AdminDashboard = () => {
     <div className="max-w-7xl mx-auto py-12">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
         <div>
-          <h1 className="text-4xl font-black uppercase tracking-tighter italic text-gray-900 flex items-center gap-4">
+          <h1 className="text-4xl font-black uppercase tracking-wide italic text-gray-900 flex items-center gap-4">
             Painel <span className="text-brand-teal">Administrativo</span>
           </h1>
           <p className="text-gray-500 font-medium mt-2">Bem-vindo de volta! O que vamos gerenciar hoje?</p>
@@ -133,7 +133,7 @@ const AdminDashboard = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-black mb-2 uppercase tracking-tighter italic text-gray-900">{module.title}</h3>
+                <h3 className="text-2xl font-black mb-2 uppercase tracking-wide italic text-gray-900">{module.title}</h3>
                 <p className="text-gray-500 mb-8 font-medium">{module.description}</p>
                 
                 <div className="flex items-center text-[10px] font-black uppercase tracking-widest text-brand-teal group-hover:translate-x-2 transition-transform">

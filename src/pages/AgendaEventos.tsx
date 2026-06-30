@@ -119,7 +119,7 @@ const AgendaEventos = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6">
               Programação NINNA Hub
             </div>
-            <h1 className="text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter leading-none text-gray-900 ">
+            <h1 className="text-4xl md:text-7xl font-black mb-6 uppercase tracking-wide leading-none text-gray-900 ">
               AGENDA DE <br /><span className="gradient-text">EVENTOS</span>
             </h1>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed border-t border-gray-100 pt-6 mt-6 font-medium">
@@ -277,7 +277,7 @@ const AgendaEventos = () => {
           <div className="absolute top-0 right-0 w-80 h-80 bg-brand-teal/10 blur-[100px] rounded-full" />
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
             <span className="text-brand-teal text-[9px] font-black uppercase tracking-[0.4em] block">Sua marca no Hub</span>
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter ">QUER CO-REALIZAR OU PATROCINAR UM EVENTO?</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-wide ">QUER CO-REALIZAR OU PATROCINAR UM EVENTO?</h2>
             <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
               Conecte sua корпорация ao ecossistema do NINNA de forma dinâmica. Fale conosco para agendar o Auditório Premium ou promover painéis temáticos.
             </p>

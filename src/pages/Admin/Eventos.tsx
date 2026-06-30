@@ -240,7 +240,7 @@ const AdminEventos = () => {
                         </div>
                       )}
                       <div>
-                        <span className={`font-black uppercase tracking-tighter text-xl italic ${item.destaque ? 'text-brand-teal' : 'text-gray-900'}`}>
+                        <span className={`font-black uppercase tracking-wide text-xl italic ${item.destaque ? 'text-brand-teal' : 'text-gray-900'}`}>
                           {item.nome}
                         </span>
                         {item.destaque && (

@@ -58,7 +58,7 @@ const Comunidade = () => {
             animate={{ opacity: 1, y: 0 }}
           >
             <h2 className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em] mb-4">Network & Conexão</h2>
-            <h1 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter italic leading-none mb-8">
+            <h1 className="text-5xl md:text-7xl font-black text-white uppercase tracking-wide italic leading-none mb-8">
               NOSSA <span className="gradient-text">COMUNIDADE</span>
             </h1>
             <p className="text-gray-400 max-w-2xl mx-auto font-medium text-lg">

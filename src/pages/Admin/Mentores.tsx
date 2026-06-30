@@ -178,7 +178,7 @@ const AdminMentores = () => {
               </div>
 
               <div className="p-8">
-                <h3 className="text-xl font-black text-gray-900 uppercase tracking-tighter italic leading-none mb-2">{item.nome}</h3>
+                <h3 className="text-xl font-black text-gray-900 uppercase tracking-wide italic leading-none mb-2">{item.nome}</h3>
                 <p className="text-brand-teal text-[10px] font-black uppercase tracking-widest leading-none mb-1">{item.cargo}</p>
                 <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest leading-none">{item.empresa}</p>
               </div>

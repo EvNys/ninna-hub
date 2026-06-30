@@ -81,7 +81,7 @@ const AdminSidebar = () => {
           <div className="w-8 h-8 bg-brand-teal rounded-lg flex items-center justify-center shadow-lg shadow-brand-teal/20 shrink-0">
             <Rocket className="text-white w-5 h-5" />
           </div>
-          <span className="font-black text-xl tracking-tighter uppercase text-gray-900 hidden md:block">NINNA <span className="text-brand-teal">HUB</span></span>
+          <span className="font-black text-xl tracking-wide uppercase text-gray-900 hidden md:block">NINNA <span className="text-brand-teal">HUB</span></span>
         </NavLink>
       </div>
 

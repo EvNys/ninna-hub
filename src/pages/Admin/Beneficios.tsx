@@ -151,7 +151,7 @@ const AdminBeneficios = () => {
               </div>
 
               <div className="p-8 border-t border-gray-100">
-                <h3 className="text-xl font-black text-gray-900 uppercase tracking-tighter italic leading-none mb-2">{item.nomeEmpresa}</h3>
+                <h3 className="text-xl font-black text-gray-900 uppercase tracking-wide italic leading-none mb-2">{item.nomeEmpresa}</h3>
               </div>
             </motion.div>
           ))

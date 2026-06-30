@@ -63,7 +63,7 @@ const Cases = () => {
               <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6">
                 Success Stories
               </div>
-              <h1 className="text-6xl md:text-8xl font-black mb-0 uppercase tracking-tighter leading-[0.85] text-gray-900 italic">
+              <h1 className="text-6xl md:text-8xl font-black mb-0 uppercase tracking-wide leading-[0.85] text-gray-900 italic">
                 HISTÓRIAS DE <br /><span className="gradient-text">SUCESSO</span>
               </h1>
             </div>
@@ -86,7 +86,7 @@ const Cases = () => {
           ) : cases.length === 0 ? (
             <div className="text-center py-32 bg-white rounded-[60px] border border-gray-100 shadow-2xl">
               <FileText className="w-16 h-16 text-gray-200 mx-auto mb-6" />
-              <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter italic">Nenhuma história registrada ainda</h3>
+              <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide italic">Nenhuma história registrada ainda</h3>
               <p className="text-gray-500 mt-2 font-medium">Estamos preparando grandes novidades para você.</p>
             </div>
           ) : (
@@ -116,7 +116,7 @@ const Cases = () => {
                     </div>
                   </div>
                   <div className="p-10">
-                    <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter italic leading-none mb-4 group-hover:text-brand-teal transition-colors">
+                    <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide italic leading-none mb-4 group-hover:text-brand-teal transition-colors">
                       {item.titulo}
                     </h3>
                     <p className="text-gray-500 font-medium line-clamp-3 mb-8 italic">
@@ -174,7 +174,7 @@ const Cases = () => {
                   <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 italic">Case de Sucesso</span>
                 </div>
                 
-                <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter italic leading-[0.9] mb-10">
+                <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-wide italic leading-[0.9] mb-10">
                   {selectedCase.titulo}
                 </h2>
 

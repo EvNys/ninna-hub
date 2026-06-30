@@ -235,7 +235,7 @@ export default function AdminInscricoesMentores() {
       {/* Title Segment */}
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-6 pb-6 border-b border-gray-100">
         <div>
-          <h1 className="text-4xl font-black flex items-center gap-4 uppercase tracking-tighter italic text-gray-900">
+          <h1 className="text-4xl font-black flex items-center gap-4 uppercase tracking-wide italic text-gray-900">
             <UserPlus className="text-brand-teal w-8 h-8" />
             Inscrições de Mentores
           </h1>

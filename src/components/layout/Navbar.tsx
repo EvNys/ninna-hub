@@ -89,9 +89,11 @@ const showStartupsDropdown = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-black tracking-tighter uppercase" style = {{ color: '#f8f8f8'}}>
-                NINNA<span style={{ color: '#00c9a7' }}>HUB</span>
-              </span>
+              <img
+                src="/Imagens_NINNA/NINNA.png"
+                alt="NinnaHub Logo"
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 

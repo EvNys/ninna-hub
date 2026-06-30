@@ -138,22 +138,22 @@ const Home = () => {
 
   const pillars = [
     {
-      title: 'Empresas',
-      description: 'Conectamos corporações a soluções que geram resultado real e inovação aberta através de estratégia e rede.',
+      title: 'Corporate',
+      description: 'Apoiamos empresas na construção de estratégias de inovação, conectando desafios reais às melhores soluções do ecossistema por meio de programas, conexões e experiências que geram resultados.',
       icon: <Target className="w-12 h-12" />,
       link: '/empresas'
     },
     {
       title: 'Startups',
-      description: 'Apoiamos startups com conexões estratégicas, mentorias e desenvolvimento de negócios em escala global.',
+      description: 'Conectamos startups a oportunidades de mercado, mentorias, grandes empresas, investidores e programas que impulsionam seu desenvolvimento e ampliam seu potencial de crescimento.',
       icon: <Rocket className="w-12 h-12" />,
       link: '/startups'
     },
     {
       title: 'Ecossistema',
-      description: 'Conectamos atores para geração de negócios e fortalecimento da cultura de inovação no Ammontada Valley.',
+      description: 'Promovemos encontros, eventos, networking e experiências que aproximam empreendedores, executivos, universidades e investidores para fortalecer a cultura de inovação e gerar novas oportunidades de negócio.',
       icon: <Globe className="w-12 h-12" />,
-      link: '/sobre'
+      link: '/Ecossistema'
     }
   ];
 
@@ -202,9 +202,9 @@ const Home = () => {
         </div>
 
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[#fafafa]/90 z-10" />
+          
           <img 
-            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2000" 
+            src="/Imagens_NINNA/CONECTAR CRESCER RESULTAR (1).png" 
             alt="Hub Atmosphere" 
             className="w-full h-full object-cover scale-110"
             referrerPolicy="no-referrer"
@@ -229,17 +229,17 @@ const Home = () => {
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Inovação se dá pelo resultado</span>
             </motion.div>
             
-            <h1 className="text-7xl md:text-[140px] font-black tracking-tighter leading-[0.85] mb-12 text-gray-900">
-              CONECTAR<br />
-              <span className="gradient-text">CRESCER</span><br />
+            <h1 className="text-7xl md:text-[100px] font-black tracking-wide leading-[0.85] mb-15 text-[#F5F5F5]">
+              CONECTANDO <br className='mb-15' /> PESSOAS<br className='mb-15'/>
+              <span className="gradient-text mb-10">NEGÓCIOS E</span><br />
               <span className="inline-block px-6 py-2 md:px-10 md:py-4 bg-gradient-to-r from-brand-teal to-brand-green text-white rounded-3xl md:rounded-[48px] shadow-xl shadow-brand-teal/20 transform hover:scale-[1.02] transition-transform duration-300 mt-4">
-                RESULTAR
+              INOVAÇÃO
               </span>
             </h1>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
-              <p className="text-xl text-gray-600 leading-relaxed border-l-2 border-brand-teal pl-8 font-medium">
-                O NINNA é o motor de transformação que conecta corporações, startups e talentos para escala global.
+              <p className="text-xl text-[#F5F5F5] leading-relaxed border-l-2 border-brand-teal pl-8 font-medium">
+                No NINNA Hub, startups, empresas, investidores e instituições encontram o ambiente ideal para colaborar, desenvolver soluções e construir o futuro da inovação.
               </p>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
@@ -253,7 +253,7 @@ const Home = () => {
       </section>
 
       {/* Pillars & Hub Reference Unified Section */}
-      <section className="py-32 bg-[#050911] relative overflow-hidden text-white" id="nossas-frentes-section">
+      <section className="py-32 bg-[#1a1a2e] relative overflow-hidden text-white" id="nossas-frentes-section">
         {/* Background Image with Dark Gradient Overlays */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -262,7 +262,7 @@ const Home = () => {
             className="w-full h-full object-cover opacity-10 scale-105"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e17] via-brand-darker/95 to-[#0a0e17] z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a2e] via-brand-darker/95 to-[#0a0e17] z-10" />
           <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#fafafa] to-transparent pointer-events-none z-10 opacity-5" />
           <div className="absolute top-1/4 -right-20 w-96 h-96 bg-brand-teal/10 blur-[130px] rounded-full z-15" />
           <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-brand-green/10 blur-[130px] rounded-full z-15" />
@@ -277,14 +277,14 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6">
-                Referência Regional
+                Referência em Inovação
               </div>
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter leading-[0.9]">
-                O MAIOR HUB DE <br />
-                <span className="text-brand-teal">INOVAÇÃO DO NORDESTE</span>
+              <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-wide leading-[0.9]">
+                O HUB QUE CONECTA <br />
+                <span className="text-brand-teal">INOVAÇÃO A RESULTADOS</span>
               </h2>
               <p className="text-white/60 text-xl font-medium leading-relaxed max-w-xl">
-                O NINNA Hub é o principal ponto de conexão para o ecossistema de inovação no Nordeste brasileiro, atraindo as mentes mais brilhantes e as corporações mais visionárias do país.
+                O NINNA Hub conecta grandes empresas, startups, investidores, universidades e lideranças para transformar desafios em oportunidades de negócio. Somos um ambiente onde conexões geram inovação, crescimento e impacto para todo o ecossistema.
               </p>
             </motion.div>
             
@@ -315,13 +315,13 @@ const Home = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
             <div className="max-w-2xl">
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4">
-                Atuação Transversal
+                Nossas Frentes
               </div>
-              <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
-                NOSSAS <span className="gradient-text font-black">FRENTES</span>
+              <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-wide">
+                UM ECOSSISTEMA. <span className="gradient-text font-black">MÚLTIPLAS FORMAS DE GERAR IMPACTO</span>
               </h2>
               <p className="text-white/60 text-xl leading-relaxed font-semibold">
-                Atuamos de forma transversal para garantir que a inovação aconteça em todos os níveis do ecossistema.
+                Criamos conexões estratégicas entre empresas, startups e comunidade para acelerar a inovação aberta, desenvolver novos negócios e fortalecer o ecossistema de inovação do Nordeste.
               </p>
             </div>
           </div>
@@ -367,7 +367,7 @@ const Home = () => {
                   <div className={`absolute top-0 left-0 w-full h-[6px] bg-gradient-to-r ${customDetails.gradientLine} transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500`} />
                   
                   {/* Watermark Number */}
-                  <div className="absolute right-8 top-6 select-none pointer-events-none text-white/[0.02] font-black text-8xl tracking-tighter group-hover:text-white/[0.04] transition-colors duration-500">
+                  <div className="absolute right-8 top-6 select-none pointer-events-none text-white/[0.02] font-black text-8xl tracking-wide group-hover:text-white/[0.04] transition-colors duration-500">
                     {customDetails.number}
                   </div>
 
@@ -428,13 +428,13 @@ const Home = () => {
   {/* Título centralizado no topo */}
     <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
       <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/5 border border-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em]">
-        Metas & Conquistas
+        Números
       </div>
-      <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter">
-        NÚMEROS DO <span className="text-brand-teal underline decoration-gray-200">NINNA</span>
+      <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-wide">
+        O IMPACTO DO <span className="text-brand-teal underline decoration-gray-200">NINNA HUB</span>
       </h2>
       <p className="text-gray-500 font-semibold text-lg leading-relaxed">
-        Consolidação de esforço, conexão constante e geração de inovação real. Nossos números refletem nosso compromisso com o ecossistema.
+       Mais do que indicadores, estes números representam empresas transformadas, startups fortalecidas e conexões que geraram novos negócios para o ecossistema.
       </p>
       <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
     </div>
@@ -553,11 +553,11 @@ const Home = () => {
       <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block">
         Reconhecimento & Impacto
       </span>
-      <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter">
+      <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-wide">
         NOSSAS <span className="text-brand-teal">CONQUISTAS</span>
       </h2>
       <p className="text-gray-500 font-semibold text-lg max-w-2xl mx-auto">
-        Chancelas de excelência que comprovam nossa consistência física, maturidade e liderança na aceleração de ecossistemas inovadores.
+        O trabalho desenvolvido pelo NINNA Hub é reconhecido nacionalmente por fortalecer o ecossistema de inovação, impulsionar a inovação aberta e criar conexões que transformam organizações e pessoas.
       </p>
       <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
     </div>
@@ -624,50 +624,7 @@ const Home = () => {
 </section>
 
       {/* Innovation Reference Section */}
-      <section className="py-24 bg-brand-darker relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-teal/5 -skew-x-12 translate-x-1/4 pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="inline-block px-4 py-1 rounded-full bg-brand-teal text-white text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                Referência Regional
-              </div>
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter leading-[0.9]">
-                O MAIOR HUB DE <br />
-                <span className="text-brand-teal">INOVAÇÃO DO NORDESTE</span>
-              </h2>
-              <p className="text-white/60 text-xl font-medium leading-relaxed max-w-xl">
-                O NINNA Hub é o principal ponto de conexão para o ecossistema de inovação no Nordeste brasileiro, atraindo as mentes mais brilhantes e as corporações mais visionárias do país.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="aspect-video rounded-[40px] overflow-hidden border border-white/10 shadow-2xl relative group">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000" 
-                  alt="Ecossistema Nordeste" 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-darker/80 to-transparent" />
-                <div className="absolute bottom-10 left-10">
-                  <div className="text-4xl font-black text-white tracking-tighter mb-1">Ceará</div>
-                  <div className="text-brand-teal text-xs font-black uppercase tracking-widest">Base de Operações</div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* Partners Section */}
       <section className="py-32 bg-[#fafafa] overflow-hidden border-t border-b border-gray-100">
@@ -722,7 +679,7 @@ const Home = () => {
     <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block mb-4">
       O que dizem sobre nós
     </span>
-    <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter">
+    <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide">
       QUEM ACREDITA <span className="text-brand-teal">FALA</span>
     </h2>
   </div>
@@ -794,14 +751,14 @@ const Home = () => {
             </div>
             
             {/* Beautiful Heading */}
-            <h2 className="text-5xl md:text-8xl font-black mb-8 uppercase tracking-tighter leading-[0.9] text-white">
-              PRONTO PARA <br />
-              <span className="gradient-text font-black">INOVAR?</span>
+            <h2 className="text-5xl md:text-6xl font-black mb-8 uppercase tracking-wide leading-[0.9] text-white">
+              FAÇA PARTE DO <br /> FUTURO DA &nbsp;
+              <span className="gradient-text font-black">INOVAÇÃO</span>
             </h2>
             
             {/* Description */}
-            <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl mx-auto font-semibold leading-relaxed">
-              Junte-se ao ecossistema que mais cresce no Ceará e impulsione sua empresa ou startup à liderança do amanhã.
+            <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl mx-auto font-regular leading-relaxed">
+              Seja para acelerar uma startup, transformar sua empresa ou ampliar sua rede de conexões, o NINNA Hub é o ambiente certo para inovar com propósito, colaboração e resultados.
             </p>
             
             {/* Call to Actions with high design finish */}
@@ -810,13 +767,13 @@ const Home = () => {
                 to="/startups" 
                 className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-[#0ae2b1] hover:bg-brand-teal text-gray-950 font-black uppercase text-[11px] tracking-widest hover:scale-105 active:scale-95 shadow-xl shadow-[#0ae2b1]/20 transition-all text-center"
               >
-                Sou uma Startup
+                Quero acelerar minha Startup
               </Link>
               <Link 
                 to="/empresas" 
                 className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-white hover:bg-white/95 text-gray-950 font-black uppercase text-[11px] tracking-widest hover:scale-105 active:scale-95 shadow-xl shadow-white/5 transition-all text-center"
               >
-                Sou uma Empresa
+                Transformar minha Empresa
               </Link>
             </div>
           </motion.div>

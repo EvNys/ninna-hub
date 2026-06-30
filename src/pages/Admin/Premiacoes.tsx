@@ -153,7 +153,7 @@ const AdminPremiacoes = () => {
               <div className="w-20 h-20 bg-red-50 text-red-500 rounded-3xl flex items-center justify-center mx-auto mb-8">
                 <Trash2 className="w-10 h-10" />
               </div>
-              <h2 className="text-3xl font-black text-gray-900 uppercase tracking-tighter italic mb-4">Excluir Premiação?</h2>
+              <h2 className="text-3xl font-black text-gray-900 uppercase tracking-wide italic mb-4">Excluir Premiação?</h2>
               <p className="text-gray-500 mb-10 font-medium">Esta ação não pode ser desfeita. A premiação será removida permanentemente do portal.</p>
               <div className="flex gap-4">
                 <button onClick={() => setIsDeleting(null)}
@@ -208,7 +208,7 @@ const AdminPremiacoes = () => {
                     <span className="text-red-400 text-[8px] font-black uppercase tracking-widest border border-red-100 px-2 py-0.5 rounded-full">Inativo</span>
                   )}
                 </div>
-                <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tighter italic leading-none mb-4">{item.titulo}</h3>
+                <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide italic leading-none mb-4">{item.titulo}</h3>
                 <p className="text-gray-400 font-bold uppercase text-[10px] tracking-widest">{item.organizacao}</p>
               </div>
             </motion.div>

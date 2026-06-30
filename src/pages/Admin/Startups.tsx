@@ -281,14 +281,14 @@ const AdminStartups = () => {
                 </div>
               </div>
 
-              <h3 className="text-3xl font-black text-gray-900 uppercase tracking-tighter italic mb-3 leading-none">{item.nome}</h3>
+              <h3 className="text-3xl font-black text-gray-900 uppercase tracking-wide italic mb-3 leading-none">{item.nome}</h3>
               <p className="text-gray-500 text-sm font-medium line-clamp-2 mb-8 leading-relaxed">{item.descricaoCurta}</p>
 
               <div className="flex items-center justify-between mt-auto pt-8 border-t border-gray-100">
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.2em]">{item.categoria}</span>
-                    <span className="text-[8px] font-black bg-gray-900/5 text-gray-500 px-2 py-0.5 rounded-full uppercase tracking-tighter">{item.tipoNegocio || 'N/A'}</span>
+                    <span className="text-[8px] font-black bg-gray-900/5 text-gray-500 px-2 py-0.5 rounded-full uppercase tracking-wide">{item.tipoNegocio || 'N/A'}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="flex items-center text-[10px] text-gray-400 font-black uppercase tracking-widest gap-1 italic">

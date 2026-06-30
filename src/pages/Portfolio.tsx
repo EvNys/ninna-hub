@@ -102,7 +102,7 @@ const Portfolio = () => {
             <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               Ecossistema em Movimento
             </div>
-            <h1 className="text-7xl md:text-[120px] font-black mb-8 uppercase tracking-tighter leading-[0.85] text-gray-900 ">
+            <h1 className="text-7xl md:text-[120px] font-black mb-8 uppercase tracking-wide leading-[0.85] text-gray-900 ">
               NINNA 4 <br /><span className="gradient-text">STARTUPS</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed border-t border-gray-200 pt-8 mt-8 font-medium">
@@ -124,7 +124,7 @@ const Portfolio = () => {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-125 transition-transform" />
             <div className="relative z-10">
-              <h3 className="text-4xl font-black text-white mb-4 leading-tight uppercase tracking-tighter ">quero me conectar com as <br />soluções do NINNA hub</h3>
+              <h3 className="text-4xl font-black text-white mb-4 leading-tight uppercase tracking-wide ">quero me conectar com as <br />soluções do NINNA hub</h3>
               <p className="text-white/80 mb-8 font-medium max-w-sm">Conecte sua startup a grandes corporações e acelere seu crescimento no maior hub de inovação do Ceará.</p>
               <button className="bg-white text-brand-teal px-8 py-4 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg">
                 Clique Aqui
@@ -142,7 +142,7 @@ const Portfolio = () => {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-125 transition-transform" />
             <div className="relative z-10">
-              <h3 className="text-4xl font-black text-white mb-4 leading-tight uppercase tracking-tighter ">NINNA 4 <br />Startup</h3>
+              <h3 className="text-4xl font-black text-white mb-4 leading-tight uppercase tracking-wide ">NINNA 4 <br />Startup</h3>
               <p className="text-white/70 mb-8 font-medium max-w-sm">O programa de fomento definitivo para startups que buscam escala, mentorias e networking estratégico.</p>
               <button className="bg-brand-teal text-white px-8 py-4 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg">
                 Clique Aqui
@@ -364,7 +364,7 @@ const Portfolio = () => {
                       <Rocket className="w-full h-full text-brand-teal" />
                     )}
                   </div>
-                  <h2 className="text-3xl font-black text-gray-900 mb-2 uppercase tracking-tighter ">{selectedStartup.nome}</h2>
+                  <h2 className="text-3xl font-black text-gray-900 mb-2 uppercase tracking-wide ">{selectedStartup.nome}</h2>
                   <div className="px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-widest mb-8 border border-brand-teal/20">
                     {selectedStartup.categoria}
                   </div>
@@ -406,7 +406,7 @@ const Portfolio = () => {
                 {/* Modal Content */}
                 <div className="md:col-span-3 p-10 md:p-16">
                   <h4 className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] mb-6">Sobre a Startup</h4>
-                  <p className="text-gray-900 text-2xl font-black leading-relaxed mb-8  uppercase tracking-tighter">
+                  <p className="text-gray-900 text-2xl font-black leading-relaxed mb-8  uppercase tracking-wide">
                     "{selectedStartup.descricaoCurta}"
                   </p>
                   

@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { 
   Rocket, 
   Users, 
-  Gift, 
+  CheckCircle, 
   ArrowRight, 
   CheckCircle2, 
   ShieldCheck,
@@ -40,11 +40,11 @@ const StartupsHub = () => {
                 NINNA 4 Startups
               </div>
               <h1 className="text-5xl md:text-8xl font-barlowCondensed-Black font-black mb-8 uppercase tracking-wide leading-none text-white ">
-                IMPULSIONE SUA <br />
-                <span className="text-brand-teal">STARTUP AO TOPO</span>
+                ONDE STARTUPS GERAM <br />
+                <span className="text-brand-teal">NEGÓCIOS</span>
               </h1>
               <p className="text-xl text-gray-400 mb-12 font-barlow font-medium leading-relaxed">
-                Oferecemos as ferramentas, o networking e o suporte estratégico necessários para escalar sua solução no mercado global.
+                Mais do que um hub de inovação, somos um ambiente que cria conexões entre empreendedores, grandes empresas e investidores para acelerar a geração de oportunidades e fortalecer o ecossistema.
               </p>
 
               <div className="flex flex-wrap justify-center gap-6">
@@ -78,12 +78,12 @@ const StartupsHub = () => {
                 Nosso Modo de Atuar
               </div>
               <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide leading-none">
-                MUITO ALÉM DA <br />
-                <span className="gradient-text">ACELERAÇÃO</span>
+                COMO APOIAMOS STARTUPS MAIS DO QUE UM HUB,<br />
+                <span className="gradient-text"> UM ECOSSISTEMA DE OPORTUNIDADES</span>
               </h2>
             </div>
             <p className="text-gray-500 font-medium text-lg leading-relaxed max-w-xl lg:mt-6">
-              No NINNA Hub, não acreditamos em fórmulas prontas. Oferecemos um ecossistema completo e dinâmico, focado em suporte sob medida para transformar inovação em resultados sustentáveis e escala real de mercado.
+              Cada startup enfrenta desafios diferentes. Por isso, atuamos como um hub de conexões, aproximando empreendedores das pessoas, organizações e oportunidades que aceleram a geração de negócios e fortalecem seu crescimento.
             </p>
           </div>
 
@@ -91,23 +91,23 @@ const StartupsHub = () => {
             {[
               {
                 icon: Handshake,
-                title: "Conexões com o Mercado",
-                desc: "Promovemos pontes de negócios diretas e parcerias de alto impacto com grandes empresas, corporações líderes de mercado e players estratégicos para canais comerciais e pilotos.",
+                title: "Conexões com Grandes Empresas",
+                desc: "Aproximamos startups de organizações que buscam inovação para desenvolver pilotos, validar soluções e criar novas oportunidades comerciais.",
               },
               {
                 icon: Users,
-                title: "Rede de Mentores Ativa",
-                desc: "Garantimos o apoio contínuo de uma rede qualificada de mentores — líderes e executivos renomados que já fundaram, operaram e escalaram grandes negócios no Brasil e no mundo.",
+                title: "Mentoria e Especialista",
+                desc: "Nossa rede reúne empreendedores, executivos e especialistas que compartilham experiências práticas para apoiar decisões estratégicas e o desenvolvimento do negócio.",
               },
               {
                 icon: Target,
-                title: "Acompanhamento Próximo",
-                desc: "Atuamos lado a lado com os fundadores e as equipes no dia a dia. Através de rotinas estruturadas de acompanhamento próximo, ajudamos a desatar nós operacionais, otimizar estratégias e impulsionar a execução.",
+                title: "Desenvolvimento do Negócio",
+                desc: "Promovemos iniciativas, programas e acompanhamentos que ajudam startups a estruturar estratégias, fortalecer sua operação e ampliar sua presença no mercado.",
               },
               {
                 icon: TrendingUp,
-                title: "Oportunidades de Crescimento",
-                desc: "Oferecemos apoio constante na identificação ativa de novas oportunidades de crescimento e canais de escala, auxiliando no mapeamento estratégico e captação de recursos relevantes.",
+                title: "Investimento e Fomento",
+                desc: "Conectamos startups a editais, investidores, programas de incentivo e oportunidades de financiamento para apoiar seu crescimento.",
               },
             ].map((pillar, i) => (
               <motion.div
@@ -253,10 +253,10 @@ const StartupsHub = () => {
               Membros do Ecossistema
             </div>
             <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide ">
-              STARTUPS DO <span className="gradient-text">NINNA HUB</span>
+              <span className="gradient-text">MERCADOS</span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
-              Conheça as soluções inovadoras que compõem o nosso ecossistema e transformam diferentes indústrias diariamente.
+              Conheça algumas das startups que fazem parte do ecossistema NINNA e desenvolvem soluções inovadoras para diferentes setores da economia.
             </p>
           </div>
 
@@ -331,13 +331,13 @@ const StartupsHub = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-[#0ae2b1] text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-[#0ae2b1]/20">
-              Conexões que Geram Resultados
+              CASES
             </div>
             <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide ">
-              NINNA <span className="gradient-text font-black">CASES</span>
+              CONEXÕES QUE GERAM <span className="gradient-text font-black">NEGÓCIOS</span>
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto font-semibold mt-4">
-              Histórias reais de conexões e inovação aberta onde startups de destaque encontram as maiores corporações do mercado.
+              O maior diferencial do NINNA é conectar startups às oportunidades certas. Conheça histórias em que essas conexões se transformaram em inovação aberta, novos negócios e resultados concretos.
             </p>
           </div>
 
@@ -527,14 +527,14 @@ const StartupsHub = () => {
             {/* Left Column: Bold Header, pitch, and high-impact CTA button */}
             <div className="lg:col-span-12 xl:col-span-5 text-left">
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
-                Alavanque seu Negócio
+                POR QUE FAZER PARTE
               </div>
               <h2 className="text-5xl md:text-7xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide  leading-none mb-8">
-                POR QUE SER UMA <br />
-                <span className="text-brand-teal">NINNA STARTUP?</span>
+                POR QUE FAZER PARTE DO <br />
+                <span className="text-brand-teal">NINNA?</span>
               </h2>
               <p className="text-gray-500 font-semibold text-lg leading-relaxed mb-12">
-                Conectar-se ao NINNA Hub significa integrar um ecossistema projetado do zero para destravar canais de vendas, otimizar sua tração de mercado, capacitar sua equipe e impulsionar suas rodadas de investimento de modo sustentável.
+                azer parte do NINNA significa integrar um dos ecossistemas de inovação mais relevantes do Nordeste, ampliando sua rede de relacionamento, acesso ao mercado e oportunidades de crescimento.
               </p>
               
               <Link
@@ -550,23 +550,33 @@ const StartupsHub = () => {
               {[
                 {
                   number: "01",
-                  title: "Acesso a Grandes Corporações",
-                  desc: "Faça negócios com players consolidados. Reduza o ciclo de venda (B2B/B2B2C) fechando pilotos e contratos comerciais com dezenas de mantenedoras parceiras."
+                  title: "Acesso ao Mercado",
+                  desc: "Conectamos startups a grandes empresas para gerar pilotos, validar soluções e abrir novas oportunidades comerciais."
                 },
                 {
                   number: "02",
-                  title: "Clube de Benefícios Premium",
-                  desc: "Economize milhares de reais em infraestrutura de nuvem, CRM, serviços jurídicos, marketing e design com as vantagens exclusivas concedidas pelas nossas parceiras globais."
+                  title: "Rede Estratégica",
+                  desc: "Tenha acesso a uma comunidade formada por empreendedores, investidores, executivos, universidades e organizações que impulsionam inovação."
                 },
                 {
                   number: "03",
-                  title: "Mentores de Alto Nível",
-                  desc: "Acesso direto a fundadores, C-levels e investidores altamente qualificados. Orientações sob medida para te guiar na resolução de gargalos estratégicos e operacionais."
+                  title: "Mentoria Especializada",
+                  desc: "Conte com especialistas e líderes experientes para apoiar decisões estratégicas e o desenvolvimento do seu negócio."
                 },
                 {
                   number: "04",
-                  title: "Espaço Físico & conexões",
-                  desc: "Instale-se em um hub moderno no coração do ecossistema. Trabalhe, interaja diariamente com outros fundadores e participe de eventos fechados com investidores."
+                  title: "Benefícios Exclusivos",
+                  desc: "Aproveite condições especiais em ferramentas, serviços, parceiros e iniciativas que fortalecem a operação da sua startup."
+                },               
+                {
+                  number: "05",
+                  title: "Ambiente de Conexões",
+                  desc: "Participe de eventos, encontros e experiências que estimulam colaboração, networking e geração de negócios."
+                },
+                {
+                  number: "06",
+                  title: "Visibilidade para Crescer",
+                  desc: "Amplie sua exposição dentro do ecossistema e esteja mais próximo de oportunidades com investidores, parceiros e grandes empresas."
                 }
               ].map((reason, idx) => (
                 <motion.div
@@ -598,6 +608,78 @@ const StartupsHub = () => {
           </div>
         </div>
       </section>
+
+      <section className="py-32 bg-[#050911] relative overflow-hidden border-t border-b border-white/5 text-white" id="para-quem-section">
+        {/* Background Image with Dark Gradient Overlays */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=2000" 
+            alt="Startup Team Background" 
+            className="w-full h-full object-cover opacity-10 scale-105"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e17] via-[#050911]/95 to-[#0a0e17] z-10" />
+          <div className="absolute top-1/3 -left-20 w-96 h-96 bg-brand-teal/10 blur-[130px] rounded-full z-15" />
+          <div className="absolute bottom-1/3 -right-20 w-96 h-96 bg-brand-green/10 blur-[130px] rounded-full z-15" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            {/* Left Column - Title */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-5"
+            >
+              <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-[#0ae2b1] text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-[#0ae2b1]/20">
+                Perfil Ideal
+              </div>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide leading-[0.95]">
+                PARA QUEM É O <span className="gradient-text font-black">NINNA?</span>
+              </h2>
+              <p className="text-white/60 font-semibold mt-6 text-lg leading-relaxed">
+                O NINNA é o ambiente ideal para startups que desejam crescer por meio de conexões estratégicas e inovação colaborativa.
+              </p>
+              <p className="text-white/40 font-semibold mt-4 text-sm uppercase tracking-wider">
+                O ecossistema é indicado para startups que:
+              </p>
+            </motion.div>
+
+            {/* Right Column - Checklist */}
+            <div className="lg:col-span-7 flex flex-col gap-4">
+              {[
+                "Empreendedores e negócios que estão mais estruturados.",
+                "Possuem uma solução inovadora e buscam validar ou expandir sua atuação.",
+                "Querem se conectar com grandes empresas e acessar oportunidades de inovação aberta.",
+                "Buscam ampliar sua rede de relacionamento com investidores, especialistas e outros empreendedores.",
+                "Desejam fortalecer sua estratégia de crescimento e desenvolvimento de negócios.",
+                "Acreditam na colaboração como caminho para gerar impacto e crescer de forma sustentável.",
+              ].map((text, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, duration: 0.5 }}
+                  className="group flex items-center gap-4 p-5 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl hover:border-[#0ae2b1]/40 hover:bg-white/[0.05] transition-all duration-300"
+                >
+                  <div className="flex-shrink-0 w-9 h-9 rounded-full bg-[#0ae2b1]/10 border border-[#0ae2b1]/30 flex items-center justify-center group-hover:bg-[#0ae2b1] group-hover:scale-110 transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-[#0ae2b1] group-hover:text-gray-950 transition-colors" />
+                  </div>
+                  <p className="text-sm md:text-base text-white/70 font-semibold leading-relaxed group-hover:text-white transition-colors">
+                    {text}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };

@@ -207,7 +207,7 @@ const Eventos = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               Conexão, Inovação e Negócios
             </div>
-            <h1 className="text-5xl md:text-[90px] font-black mb-8 uppercase tracking-tighter leading-[0.85] text-gray-900 ">
+            <h1 className="text-5xl md:text-[90px] font-black mb-8 uppercase tracking-wide leading-[0.85] text-gray-900 ">
               O NOSSO <br /><span className="gradient-text">ECOSSISTEMA</span>
             </h1>
             <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed border-t border-gray-100 pt-8 mt-8 font-medium">
@@ -238,7 +238,7 @@ const Eventos = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-5 space-y-6">
               <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em]">Palco das Conexões</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter  leading-none">
+              <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-wide  leading-none">
                 ECOSSISTEMAS QUE <span className="gradient-text">GERAM</span> IMPACTO
               </h2>
               <p className="text-white/60 text-lg leading-relaxed font-semibold">
@@ -326,7 +326,7 @@ const Eventos = () => {
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Ecossistema Ativo</span>
-                  <h3 className="text-3xl font-black text-white uppercase tracking-tighter  leading-none">Conhecer Oportunidades</h3>
+                  <h3 className="text-3xl font-black text-white uppercase tracking-wide  leading-none">Conhecer Oportunidades</h3>
                   <p className="text-white/60 font-semibold text-sm sm:text-base leading-relaxed">
                     Aproximação direta com o mercado inovador cearense. Explore projetos abertos, vagas em tecnologia, desafios de inovação corporativa corporativa e programas dedicados a acelerar marcas.
                   </p>
@@ -352,7 +352,7 @@ const Eventos = () => {
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Programações Oficiais</span>
-                  <h3 className="text-3xl font-black text-white uppercase tracking-tighter  leading-none">Ver Agenda de Eventos</h3>
+                  <h3 className="text-3xl font-black text-white uppercase tracking-wide  leading-none">Ver Agenda de Eventos</h3>
                   <p className="text-white/60 font-semibold text-sm sm:text-base leading-relaxed">
                     Participe de sessões de networking e treinamentos enriquecedores e happy hours. Fique por dentro de todos os encontros de startups e palestras promovidas no hub.
                   </p>
@@ -381,7 +381,7 @@ const Eventos = () => {
           {/* Header */}
           <div className="text-center mb-24">
             <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em] mb-4 block">Nossos Selos Oficiais</span>
-            <h3 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter ">EVENTOS PROPRIETÁRIOS DO <span className="gradient-text">NINNA</span></h3>
+            <h3 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-wide ">EVENTOS PROPRIETÁRIOS DO <span className="gradient-text">NINNA</span></h3>
             <p className="text-gray-500 max-w-xl mx-auto font-medium mt-4">
               Formatos exclusivos criados e promovidos pelo NINNA para catalisar conexões valiosas, desenvolver capacitações e aproximar marcas inovadoras do mercado.
             </p>
@@ -397,7 +397,7 @@ const Eventos = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse" />
                   Conexão Corporativa
                 </div>
-                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
+                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide  leading-none">
                   NINNA Connection
                 </h4>
                 <p className="text-gray-500 font-medium text-base md:text-lg leading-relaxed">
@@ -470,7 +470,7 @@ const Eventos = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse" />
                   Ecossistema Informal
                 </div>
-                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
+                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide  leading-none">
                   Terceiro Tempo
                 </h4>
                 <p className="text-gray-500 font-medium text-base md:text-lg leading-relaxed">
@@ -515,7 +515,7 @@ const Eventos = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse" />
                   Mentoria & Educação
                 </div>
-                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
+                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide  leading-none">
                   Hub Session
                 </h4>
                 <p className="text-gray-500 font-medium text-base md:text-lg leading-relaxed">
@@ -577,7 +577,7 @@ const Eventos = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse" />
                   Institucional & Ecossistema
                 </div>
-                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
+                <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide  leading-none">
                   Licor
                 </h4>
                 <p className="text-gray-500 font-medium text-base md:text-lg leading-relaxed">
@@ -616,7 +616,7 @@ const Eventos = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em] mb-4">Estrutura de Alto Nível</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter ">NOSSOS <span className="gradient-text">ESPAÇOS</span></h3>
+            <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-wide ">NOSSOS <span className="gradient-text">ESPAÇOS</span></h3>
             <p className="text-white/60 max-w-xl mx-auto font-semibold mt-4">
               Equipados com o melhor em tecnologia para garantir que seu treinamento, convenção ou pitch day seja impecável.
             </p>
@@ -905,7 +905,7 @@ const Eventos = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] border border-brand-teal/20">
                 Hub de Grande Impacto
               </div>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter uppercase  leading-[0.95]">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-wide uppercase  leading-[0.95]">
                 QUERO REALIZAR MEU <span className="gradient-text">EVENTO</span> NO NINNA
               </h2>
               <div className="h-1.5 w-24 bg-gradient-to-r from-brand-teal to-transparent rounded-full" />
@@ -980,7 +980,7 @@ const Eventos = () => {
                 <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[9px] font-black uppercase tracking-[0.2em]">
                   Impulsione o Ecossistema
                 </div>
-                <h3 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter  leading-none">
+                <h3 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-wide  leading-none">
                   SEJA UM <span className="gradient-text">PATROCINADOR</span>
                 </h3>
                 <p className="text-gray-500 font-medium text-lg leading-relaxed">
@@ -1055,7 +1055,7 @@ const Eventos = () => {
                   <div className="w-20 h-20 bg-brand-teal/10 text-brand-teal rounded-full flex items-center justify-center mx-auto mb-6">
                     <Check className="w-10 h-10" />
                   </div>
-                  <h3 className="text-3xl font-black uppercase tracking-tighter  text-gray-950">SOLICITAÇÃO RECEBIDA!</h3>
+                  <h3 className="text-3xl font-black uppercase tracking-wide  text-gray-950">SOLICITAÇÃO RECEBIDA!</h3>
                   <p className="text-gray-500 font-medium max-w-sm mx-auto">
                     Nossa equipe de curadoria do ecossistema entrará em contato comercial dentro de até 24 horas úteis para alinhar os detalhes operacionais.
                   </p>
@@ -1069,7 +1069,7 @@ const Eventos = () => {
               ) : (
                 <div className="space-y-6">
                   <span className="text-[10px] font-black text-brand-teal uppercase tracking-[0.3em] block">Inscrição de Interesse</span>
-                  <h3 className="text-3xl font-black uppercase tracking-tighter  text-gray-950">
+                  <h3 className="text-3xl font-black uppercase tracking-wide  text-gray-950">
                     {modalType === 'booking' ? 'Quero Realizar meu Evento' : 'Seja um Patrocinador'}
                   </h3>
                   <p className="text-xs text-gray-400 font-medium">

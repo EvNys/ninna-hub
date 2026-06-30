@@ -128,7 +128,7 @@ const AdminLogin = () => {
           <div className="inline-flex items-center justify-center w-24 h-24 bg-brand-teal/10 rounded-[32px] mb-8 group transition-all hover:rotate-6 hover:scale-105 shadow-sm border border-brand-teal/10">
             <Rocket className="text-brand-teal w-10 h-10" />
           </div>
-          <h2 className="text-4xl font-black mb-2 uppercase tracking-tighter italic text-gray-900 leading-none">NINNA <span className="text-brand-teal">HUB</span></h2>
+          <h2 className="text-4xl font-black mb-2 uppercase tracking-wide italic text-gray-900 leading-none">NINNA <span className="text-brand-teal">HUB</span></h2>
           <p className="text-gray-400 font-black uppercase text-[10px] tracking-[0.3em] italic">Painel Administrativo CMS</p>
         </div>
 

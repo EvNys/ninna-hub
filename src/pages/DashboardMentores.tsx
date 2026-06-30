@@ -45,7 +45,7 @@ const DashboardMentores = () => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-teal opacity-10 blur-[100px] -translate-y-1/2 translate-x-1/2" />
         <div className="max-w-4xl">
           <h2 className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em] mb-4">Capital Intelectual</h2>
-          <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-none mb-6">
+          <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-wide italic leading-none mb-6">
             NOSSOS <span className="gradient-text">MENTORES</span>
           </h1>
           <p className="text-gray-400 font-medium text-lg italic">
@@ -114,7 +114,7 @@ const DashboardMentores = () => {
                   </div>
                   
                   <div className="p-8 text-center bg-white">
-                    <h3 className="text-xl font-black text-gray-900 uppercase tracking-tighter italic mb-1 px-4">{mentor.nome}</h3>
+                    <h3 className="text-xl font-black text-gray-900 uppercase tracking-wide italic mb-1 px-4">{mentor.nome}</h3>
                     <p className="text-brand-teal font-black text-[10px] uppercase tracking-widest mb-1 italic px-2">{mentor.cargo}</p>
                     <p className="text-gray-400 font-bold text-[10px] uppercase tracking-widest italic">{mentor.empresa}</p>
                   </div>
