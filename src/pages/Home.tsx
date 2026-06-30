@@ -189,17 +189,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
         {/* Invading Shapes */}
-        <div className="absolute inset-0 z-10 pointer-events-none">
-          
-          
-          {/* Geometric Invading Shapes */}
-          <motion.div 
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 0.1 }}
-            transition={{ duration: 1.5, delay: 0.5 }}
-            className="absolute top-1/4 -left-10 w-40 h-[600px] bg-brand-teal transform -skew-x-12"
-          />
-        </div>
+        
 
         <div className="absolute inset-0 z-0">
           
