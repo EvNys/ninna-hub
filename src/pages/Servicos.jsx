@@ -693,12 +693,12 @@ export default function ServicosPage() {
       <div className="absolute inset-0 z-0">
         
         <img 
-          src="/Imagens_NINNA/CONECTAR CRESCER RESULTAR (1).png" 
+          src="/Imagens_NINNA/header_servicos.png" 
           alt="Hub Atmosphere" 
-          className="w-full h-full object-cover scale-110"
+          className="w-full h-full object-cover scale-100"
           referrerPolicy="no-referrer"
         />
-        <div className="w-full h-full object-cover grayscale scale-110" />
+        <div className="w-full h-full object-cover grayscale scale-100" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">

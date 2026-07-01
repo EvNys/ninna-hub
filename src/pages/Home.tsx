@@ -444,7 +444,7 @@ const Home = () => {
             Números
           </div>
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-wide">
-            O IMPACTO DO <span className="text-brand-teal underline decoration-gray-200">NINNA HUB</span>
+            O IMPACTO DO <br/><span className="text-brand-teal underline decoration-gray-200">NINNA HUB</span>
           </h2>
           <p className="text-gray-500 font-semibold text-lg leading-relaxed">
            Mais do que indicadores, estes números representam empresas transformadas, startups fortalecidas e conexões que geraram novos negócios para o ecossistema.
