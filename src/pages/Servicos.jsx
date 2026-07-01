@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { SearchCheck,
     Wrench,
     Rocket,
@@ -8,6 +9,7 @@ import { SearchCheck,
     ChevronUp,
     Building2,
     MessageSquare,
+    ArrowRight,
     Target,
     TrendingUp,
     Cpu, 
@@ -543,7 +545,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
           </section>
 
           {/* CTA / Proposal */}
-           <section className="py-32">                
+           <section className="py-32 roun">                
                   <div className="relative">
                     <div className="absolute -inset-1 bg-[#00c9a7]/20 blur-2xl rounded-[40px]" />
                     <div className="relative bg-[#fafafa] border border-gray-200 p-10 md:p-14 rounded-[40px] shadow-inner">
@@ -682,16 +684,41 @@ export default function ServicosPage() {
         color: "#fff",
       }}
     >
-      {/* ── HEADER ── */}
-      <div
-        style={{
-          background: "linear-gradient(180deg, #0d1221 0%, #0B0E1A 100%)",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
-          padding: "80px 0 70px",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 24px" }}>
+     
+    {/* Hero Section */}
+    <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
+      {/* Invading Shapes */}
+      
+
+      <div className="absolute inset-0 z-0">
+        
+        <img 
+          src="/Imagens_NINNA/CONECTAR CRESCER RESULTAR (1).png" 
+          alt="Hub Atmosphere" 
+          className="w-full h-full object-cover scale-110"
+          referrerPolicy="no-referrer"
+        />
+        <div className="w-full h-full object-cover grayscale scale-110" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="max-w-4xl"
+        >
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5 }}
+            className="inline-flex items-center space-x-3 px-4 py-2 rounded-full bg-brand-teal/5 border border-brand-teal/10 mb-10 backdrop-blur-sm"
+          >
+            <div className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Inovação se dá pelo resultado</span>
+          </motion.div>
+          
+          <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 24px" }}>
           <p
             style={{
               margin: "0 0 16px",
@@ -759,7 +786,10 @@ export default function ServicosPage() {
             Fale com um especialista
           </button>
         </div>
-      </div>
+
+               </motion.div>
+             </div>
+           </section>
 
       {/* ── NAVIGATOR — O que você quer alcançar? ── */}
       <div

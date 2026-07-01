@@ -5,7 +5,6 @@ import {
   CheckCircle, 
   ArrowRight, 
   CheckCircle2, 
-  ShieldCheck,
   Zap,
   Target,
   ClipboardList,
@@ -14,7 +13,8 @@ import {
   Handshake,
   TrendingUp,
   Cpu,
-  ExternalLink
+  ExternalLink,
+  MessageCircle
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 // Lista da vitrine fica em src/data/startups-fallback.ts (editável sem mexer no código).
@@ -294,24 +294,6 @@ const StartupsHub = () => {
                   {/* Fallback Display */}
                   <div className="logo-fallback hidden font-black text-xs text-gray-400 font-mono tracking-wide uppercase  text-center">
                     {startup.name}
-                  </div>
-                </div>
-
-                {/* Name & Market Category */}
-                <div className="text-center w-full mt-2 flex-grow flex flex-col justify-between">
-                  <div>
-                    
-                    <span className="inline-block text-[8px] font-black tracking-widest text-brand-teal/80 bg-brand-teal/[0.04] px-2 py-0.5 rounded-lg border border-brand-teal/[0.08] uppercase">
-                      {startup.category}
-                    </span>
-                  </div>
-                  
-                  {/* Visitar Button */}
-                  <div className="mt-4 w-full flex justify-center">
-                    <div className="w-full py-2 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[9px] font-black uppercase tracking-wider text-gray-500 group-hover:bg-brand-teal group-hover:border-brand-teal group-hover:text-white transition-all duration-300 flex items-center justify-center gap-1.5 shadow-sm shadow-black/2 active:scale-95">
-                      Visitar Site
-                      <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-white transition-colors" />
-                    </div>
                   </div>
                 </div>
               </motion.a>
@@ -679,6 +661,66 @@ const StartupsHub = () => {
           </div>
         </div>
       </section>
+
+          <section
+      className="py-32 bg-[#f4faf9] relative overflow-hidden border-t border-gray-100"
+      id="cta-final"
+    >
+      {/* Decorative backgrounds - mesma linguagem visual da seção anterior, em versão clara */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-brand-teal/10 blur-[180px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-green/10 blur-[150px] rounded-full pointer-events-none" />
+
+      {/* Grid sutil de fundo para reforçar a ideia de "rede de conexões" */}
+      <div
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(#0d1b1e 1px, transparent 1px), linear-gradient(90deg, #0d1b1e 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+        }}
+      />
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8 border border-brand-teal/20">
+            CTA FINAL
+          </div>
+
+          <h2 className="text-5xl md:text-7xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide leading-none mb-8">
+            SUA PRÓXIMA GRANDE <br />
+            <span className="text-brand-teal">CONEXÃO COMEÇA AQUI</span>
+          </h2>
+
+          <p className="text-gray-500 font-semibold text-lg leading-relaxed max-w-2xl mx-auto mb-12">
+            Grandes oportunidades surgem quando as conexões certas acontecem.
+            Faça parte do ecossistema NINNA e conecte sua startup a empresas,
+            especialistas, investidores e parceiros que podem impulsionar o
+            próximo capítulo da sua história.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/empresas"
+              className="inline-flex items-center gap-3 bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20 hover:scale-[1.03] active:scale-95 cursor-pointer"
+            >
+              Quero fazer parte do NINNA <Rocket className="w-5 h-5" />
+            </Link>
+
+            <Link
+              to="/contato"
+              className="inline-flex items-center gap-3 bg-transparent hover:bg-gray-900/5 text-gray-900 px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all border border-gray-300 hover:border-gray-900/40 hover:scale-[1.03] active:scale-95 cursor-pointer"
+            >
+              Falar com nossa equipe <MessageCircle className="w-5 h-5" />
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </section>
 
     </div>
   );

@@ -407,7 +407,7 @@ const Home = () => {
       </section>
 
 
-      {/* Números do NINNA */}
+  {/* Números do NINNA */}
       <section className="py-32 bg-[#fafafa] relative overflow-hidden border-y border-gray-100" id="numeros-do-ninna">
   {/* Subtle Decorative background glows */}
   <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
@@ -415,23 +415,10 @@ const Home = () => {
 
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-gray-900">
 
-  {/* Título centralizado no topo */}
-    <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-      <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/5 border border-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em]">
-        Números
-      </div>
-      <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-wide">
-        O IMPACTO DO <span className="text-brand-teal underline decoration-gray-200">NINNA HUB</span>
-      </h2>
-      <p className="text-gray-500 font-semibold text-lg leading-relaxed">
-       Mais do que indicadores, estes números representam empresas transformadas, startups fortalecidas e conexões que geraram novos negócios para o ecossistema.
-      </p>
-      <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
-    </div>
-
+    {/* Grid principal: imagem à esquerda (altura total) + título e KPIs à direita */}
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      
-      {/* Coluna Esquerda - Imagem */}
+
+      {/* Coluna Esquerda - Imagem (fica ao lado do título + cards) */}
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -448,12 +435,25 @@ const Home = () => {
         </div>
       </motion.div>
 
-      {/* Coluna Direita - Conteúdo e KPIs */}
+      {/* Coluna Direita - Título + Grade de KPIs */}
       <div>
-        
+
+        {/* Título fica apenas em cima dos cards, não centralizado no topo da seção */}
+        <div className="mb-12 space-y-4">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/5 border border-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em]">
+            Números
+          </div>
+          <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-wide">
+            O IMPACTO DO <span className="text-brand-teal underline decoration-gray-200">NINNA HUB</span>
+          </h2>
+          <p className="text-gray-500 font-semibold text-lg leading-relaxed">
+           Mais do que indicadores, estes números representam empresas transformadas, startups fortalecidas e conexões que geraram novos negócios para o ecossistema.
+          </p>
+          <div className="h-[2px] w-20 bg-brand-teal mt-4" />
+        </div>
 
         <div className="grid grid-cols-2 gap-8">
-          {/* KPI 1 */}
+          {/* KPI 1 - Eventos Realizados */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -463,7 +463,7 @@ const Home = () => {
             id="marco-kpi-1"
           >
             <div className="text-6xl font-black text-gray-900 tabular-nums">
-              {kpis?.kpi1_value || '200'}
+              {kpis?.kpi1_value || '100'}
             </div>
             <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
             <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
@@ -471,7 +471,7 @@ const Home = () => {
             </div>
           </motion.div>
 
-          {/* KPI 2 */}
+          {/* KPI 2 - Conexões com Negócios */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -485,11 +485,11 @@ const Home = () => {
             </div>
             <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
             <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-              {kpis?.kpi2_label || 'Conexões Geradas'}
+              {kpis?.kpi2_label || 'Conexões com Negócios'}
             </div>
           </motion.div>
 
-          {/* KPI 3 */}
+          {/* KPI 3 - Negócios em Milhões */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -499,15 +499,15 @@ const Home = () => {
             id="marco-kpi-3"
           >
             <div className="text-6xl font-black text-gray-900 tabular-nums">
-              {kpis?.kpi3_value || '10M'}
+              {kpis?.kpi3_value || '35'}
             </div>
             <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
             <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-              {kpis?.kpi3_label || 'Negócios Gerados'}
+              {kpis?.kpi3_label || 'Negócios em Milhões'}
             </div>
           </motion.div>
 
-          {/* KPI 4 */}
+          {/* KPI 4 - Startups Impactadas */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -517,7 +517,7 @@ const Home = () => {
             id="marco-kpi-4"
           >
             <div className="text-6xl font-black text-gray-900 tabular-nums">
-              {kpis?.kpi4_value || '200'}
+              {kpis?.kpi4_value || '1400'}
             </div>
             <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
             <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
