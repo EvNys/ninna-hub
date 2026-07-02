@@ -198,7 +198,7 @@ const Treinamentos = () => {
           ) : trainings.length === 0 ? (
             <div className="text-center py-32 bg-white rounded-[40px] border border-gray-100 shadow-xl">
               <GraduationCap className="w-16 h-16 text-gray-300 mx-auto mb-6" />
-              <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight italic">Nenhum treinamento disponível</h3>
+              <h3 className="text-2xl font-black text-gray-400 uppercase tracking-wide italic">Nenhum treinamento disponível</h3>
               <p className="text-gray-500 font-medium italic uppercase tracking-widest mt-2">Em breve teremos novos conteúdos!</p>
             </div>
           ) : (
@@ -230,7 +230,7 @@ const Treinamentos = () => {
                     </div>
                   </div>
 
-                  <div className="p-10 flex-grow flex flex-col">
+                  <div className="p-10 grow flex flex-col">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="px-3 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[8px] font-black uppercase tracking-widest border border-brand-teal/20">
                         {tm.categoria || 'Curso'}

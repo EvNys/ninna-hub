@@ -250,7 +250,7 @@ const Sobre = () => {
                         <span className="w-10 h-[2px] bg-brand-teal" />
                         <span className="text-xs font-black uppercase text-brand-teal tracking-[0.2em]">CULTURA • IMPACTO</span>
                       </div>
-                      <h4 className="text-2xl font-black text-gray-900 uppercase tracking-tight ">
+                      <h4 className="text-2xl font-black text-gray-900 uppercase tracking-wide ">
                         {value.title}
                       </h4>
                       <p className="text-gray-500 font-semibold text-base leading-relaxed max-w-md md:max-w-xl lg:max-w-md inline-block">

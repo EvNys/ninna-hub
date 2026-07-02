@@ -124,7 +124,7 @@ const StartupsHub = () => {
                     <pillar.icon className="text-brand-teal w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black text-gray-900 mb-3 uppercase tracking-tight ">
+                    <h3 className="text-2xl font-black text-gray-900 mb-3 uppercase tracking-wide ">
                       {pillar.title}
                     </h3>
                     <p className="text-sm text-gray-500 font-medium leading-relaxed">
@@ -224,7 +224,7 @@ const StartupsHub = () => {
                 </div>
  
                 {/* Info */}
-                <h3 className="text-xl font-black text-white uppercase tracking-tight  mb-2 group-hover:text-[#0ae2b1] transition-colors">
+                <h3 className="text-xl font-black text-white uppercase tracking-wide  mb-2 group-hover:text-[#0ae2b1] transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-sm text-white/50 font-semibold leading-relaxed max-w-[200px] lg:max-w-none group-hover:text-white/70 transition-colors">
@@ -577,7 +577,7 @@ const StartupsHub = () => {
                       <CheckCircle2 className="w-4 h-4 text-brand-teal" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-black text-gray-900 uppercase tracking-tight  mb-3 group-hover:text-brand-teal transition-colors">
+                  <h3 className="text-xl font-black text-gray-900 uppercase tracking-wide  mb-3 group-hover:text-brand-teal transition-colors">
                     {reason.title}
                   </h3>
                   <p className="text-sm text-gray-500 font-semibold leading-relaxed">

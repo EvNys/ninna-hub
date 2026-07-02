@@ -150,7 +150,7 @@ const Ninna4Startups = () => {
                 <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-500 flex items-center justify-center mb-6">
                   <ShieldAlert className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-black text-gray-900 uppercase tracking-tight  mb-2">90% das Startups</h3>
+                <h3 className="text-lg font-black text-gray-900 uppercase tracking-wide  mb-2">90% das Startups</h3>
                 <p className="text-xs text-gray-500 font-medium leading-relaxed">
                   Enfrentam dificuldades severas de tração comercial e estagnação financeira nos primeiros 2 anos.
                 </p>
@@ -160,7 +160,7 @@ const Ninna4Startups = () => {
                 <div className="w-12 h-12 rounded-2xl bg-brand-teal/10 text-brand-teal flex items-center justify-center mb-6">
                   <HeartPlus className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-black text-gray-900 uppercase tracking-tight  mb-2">Sobrevivência Ativa</h3>
+                <h3 className="text-lg font-black text-gray-900 uppercase tracking-wide  mb-2">Sobrevivência Ativa</h3>
                 <p className="text-xs text-gray-500 font-medium leading-relaxed">
                   A nossa intervenção e apoio contínuo dão fôlego e velocidade às conexões e validação das soluções.
                 </p>
@@ -201,7 +201,7 @@ const Ninna4Startups = () => {
               <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-wide  mb-4">
                 +500
               </span>
-              <h3 className="text-lg font-black text-white uppercase tracking-tight  mb-2">
+              <h3 className="text-lg font-black text-white uppercase tracking-wide  mb-2">
                 Conexões com Mercado
               </h3>
               <p className="text-sm text-gray-400 font-medium leading-relaxed">
@@ -220,7 +220,7 @@ const Ninna4Startups = () => {
               <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-wide  mb-4">
                 +3 Milhões
               </span>
-              <h3 className="text-lg font-black text-white uppercase tracking-tight  mb-2">
+              <h3 className="text-lg font-black text-white uppercase tracking-wide  mb-2">
                 Em Investimentos
               </h3>
               <p className="text-sm text-gray-400 font-medium leading-relaxed">
@@ -239,7 +239,7 @@ const Ninna4Startups = () => {
               <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-wide  mb-4">
                 3
               </span>
-              <h3 className="text-lg font-black text-white uppercase tracking-tight  mb-2">
+              <h3 className="text-lg font-black text-white uppercase tracking-wide  mb-2">
                 Startups Top 3 Nacionais
               </h3>
               <p className="text-sm text-gray-400 font-medium leading-relaxed">
@@ -281,7 +281,7 @@ const Ninna4Startups = () => {
                 <div className="w-16 h-16 bg-brand-teal/10 rounded-2xl flex items-center justify-center shrink-0 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <pilar.icon className="text-brand-teal w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-black text-gray-900 mb-4 uppercase tracking-tight ">
+                <h3 className="text-xl font-black text-gray-900 mb-4 uppercase tracking-wide ">
                   {pilar.title}
                 </h3>
                 <p className="text-sm text-gray-500 font-medium leading-relaxed">

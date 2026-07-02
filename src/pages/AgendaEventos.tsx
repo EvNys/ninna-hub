@@ -192,7 +192,7 @@ const AgendaEventos = () => {
   ) : filteredEvents.length === 0 ? (
     <div className="text-center py-24 bg-white rounded-[40px] border border-gray-100 shadow-sm">
       <Calendar className="w-16 h-16 text-gray-300 mx-auto mb-6" />
-      <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight ">Nenhum evento encontrado</h3>
+      <h3 className="text-2xl font-black text-gray-400 uppercase tracking-wide ">Nenhum evento encontrado</h3>
       <p className="text-gray-500 mt-2 font-medium">Experimente mudar o filtro de busca ou conferir mais tarde.</p>
     </div>
   ) : (
@@ -249,7 +249,7 @@ const AgendaEventos = () => {
               {evento.local || 'NINNA Hub'}
             </span>
 
-            <h3 className="text-xl font-black mb-3 group-hover:text-brand-teal transition-colors text-gray-950 uppercase tracking-tight leading-tight">
+            <h3 className="text-xl font-black mb-3 group-hover:text-brand-teal transition-colors text-gray-950 uppercase tracking-wide leading-tight">
               {evento.nome}
             </h3>
             <p className="text-gray-500 mb-6 leading-relaxed text-sm font-medium line-clamp-3 flex-1">

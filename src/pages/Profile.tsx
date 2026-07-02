@@ -179,7 +179,7 @@ const Profile = () => {
                     <h4 className={`font-black uppercase text-xs tracking-widest ${formData.publico ? 'text-gray-900' : 'text-gray-400'}`}>
                       {formData.publico ? 'Perfil Público na Comunidade' : 'Perfil Privado'}
                     </h4>
-                    <p className="text-[10px] text-gray-400 font-medium mt-1 uppercase tracking-tight">
+                    <p className="text-[10px] text-gray-400 font-medium mt-1 uppercase tracking-wide">
                       {formData.publico ? 'Suas informações estão visíveis para outros membros conectados.' : 'Você não aparecerá na lista de membros da comunidade.'}
                     </p>
                   </div>

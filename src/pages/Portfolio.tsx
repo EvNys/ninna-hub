@@ -267,7 +267,7 @@ const Portfolio = () => {
               ) : filteredStartups.length === 0 ? (
                 <div className="text-center py-32 bg-white rounded-[40px] border border-gray-100 shadow-xl">
                   <Rocket className="w-16 h-16 text-gray-300 mx-auto mb-6" />
-                  <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight ">Nenhuma startup encontrada</h3>
+                  <h3 className="text-2xl font-black text-gray-400 uppercase tracking-wide ">Nenhuma startup encontrada</h3>
                   <p className="text-gray-500 font-medium  text-xs uppercase tracking-widest mt-2">Tente ajustar seus filtros de busca.</p>
                 </div>
               ) : (
@@ -295,7 +295,7 @@ const Portfolio = () => {
                         </div>
                       </div>
 
-                      <h3 className="text-2xl font-black mb-3 group-hover:text-brand-teal transition-colors text-gray-900 uppercase tracking-tight ">{startup.nome}</h3>
+                      <h3 className="text-2xl font-black mb-3 group-hover:text-brand-teal transition-colors text-gray-900 uppercase tracking-wide ">{startup.nome}</h3>
                       <p className="text-gray-500 mb-6 flex-grow leading-relaxed line-clamp-3 font-medium text-sm">
                         {startup.descricaoCurta}
                       </p>
@@ -372,7 +372,7 @@ const Portfolio = () => {
                   <div className="w-full space-y-4 text-left">
                     <div className="p-4 rounded-2xl bg-white border border-gray-100 shadow-sm">
                       <span className="text-gray-400 text-[10px] uppercase font-black tracking-widest block mb-1">Localização</span>
-                      <p className="text-gray-900 flex items-center font-black uppercase tracking-tight">
+                      <p className="text-gray-900 flex items-center font-black uppercase tracking-wide">
                         <MapPin className="w-4 h-4 mr-2 text-brand-teal" />
                         {selectedStartup.cidade}, {selectedStartup.estado}
                       </p>

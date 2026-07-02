@@ -87,7 +87,7 @@ const Oportunidades = () => {
           ) : oportunidades.length === 0 ? (
             <div className="text-center py-32 bg-white rounded-[40px] border border-gray-100 p-20 shadow-xl">
               <Zap className="w-16 h-16 text-gray-300 mx-auto mb-6" />
-              <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight ">Nenhuma oportunidade aberta</h3>
+              <h3 className="text-2xl font-black text-gray-400 uppercase tracking-wide ">Nenhuma oportunidade aberta</h3>
               <p className="text-gray-500 font-medium">Novas chamadas e editais serão publicados em breve. Fique atento!</p>
             </div>
           ) : (

@@ -181,7 +181,7 @@ export default function LandingPage({ onAddApplication, onOpenLogin }: LandingPa
               </div>
               
               {/* Ousado Rule: Big typography, Barlow Condensed Black 900 */}
-              <h1 className="text-5xl sm:text-7xl font-barlow-cond font-black uppercase text-white leading-[0.95] tracking-tight">
+              <h1 className="text-5xl sm:text-7xl font-barlow-cond font-black uppercase text-white leading-[0.95] tracking-wide">
                 SEJA MENTOR <br />
                 <span className="text-[#31c891]">
                   NINNA HUB
@@ -310,7 +310,7 @@ export default function LandingPage({ onAddApplication, onOpenLogin }: LandingPa
                 Pilar NINNA Hub
               </span>
               
-              <h2 className="text-3xl sm:text-5xl font-barlow-cond font-bold text-white uppercase tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-5xl font-barlow-cond font-bold text-white uppercase tracking-wide leading-tight">
                 Liderança Ativa que Constrói o Futuro de Fortaleza para o Mundo
               </h2>
               
@@ -366,7 +366,7 @@ export default function LandingPage({ onAddApplication, onOpenLogin }: LandingPa
       <section className="py-20 bg-[#111111]/30 border-t border-white/5" id="benefits">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <span className="text-[#31c891] font-bold uppercase tracking-[0.15em] text-xs pointer-events-none">Vantagens de se Associar</span>
-          <h2 className="text-3xl sm:text-5xl font-barlow-cond font-bold text-white uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-barlow-cond font-bold text-white uppercase tracking-wide">
             Uma relação de benefício integral
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto font-barlow">
@@ -454,7 +454,7 @@ export default function LandingPage({ onAddApplication, onOpenLogin }: LandingPa
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-10">
             <span className="text-[#31c891] font-bold uppercase tracking-[0.14em] text-xs font-sans">Inscrição de Novos Conselheiros</span>
-            <h2 className="text-3xl sm:text-5xl font-barlow-cond font-bold text-white uppercase tracking-tight">Postule Sua Candidatura</h2>
+            <h2 className="text-3xl sm:text-5xl font-barlow-cond font-bold text-white uppercase tracking-wide">Postule Sua Candidatura</h2>
             <p className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto font-barlow">
               Preencha os campos abaixo com precisão. Nossos gestores avaliarão suas informações e concederão a validação de aptidão para admissão.
             </p>
@@ -685,7 +685,7 @@ export default function LandingPage({ onAddApplication, onOpenLogin }: LandingPa
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center space-y-4 mb-10">
             <span className="text-[#31c891] font-bold uppercase tracking-[0.15em] text-xs font-sans">Dúvidas Frequentes</span>
-            <h2 className="text-3xl sm:text-5xl font-barlow-cond font-bold text-white uppercase tracking-tight">Central de Respostas FAQ</h2>
+            <h2 className="text-3xl sm:text-5xl font-barlow-cond font-bold text-white uppercase tracking-wide">Central de Respostas FAQ</h2>
           </div>
 
           <div className="space-y-4 font-barlow">

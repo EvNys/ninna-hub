@@ -431,10 +431,10 @@ export default function AdminDashboard({
                 <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="bg-slate-50/50 border-b border-slate-200 sticky top-0 z-10">
-                      <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-tight">Candidato</th>
-                      <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-tight">Especialidade / Origem</th>
-                      <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-tight">Status / Aptidão</th>
-                      <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-tight text-right">Ação</th>
+                      <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-wide">Candidato</th>
+                      <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-wide">Especialidade / Origem</th>
+                      <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-wide">Status / Aptidão</th>
+                      <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-wide text-right">Ação</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100">

@@ -508,21 +508,21 @@ const areasAtuacaoOptions = [
             {/* CARD 1 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
               {/* Substituído pelo text-[#00c9a7] do seu ecossistema */}
-              <span className="text-5xl text-[#00c9a7] font-black tracking-tight block mb-2">4h</span>
+              <span className="text-5xl text-[#00c9a7] font-black tracking-wide block mb-2">4h</span>
               <h4 className="text-sm font-black uppercase tracking-wider text-white">Disponibilidade Mensal</h4>
               <p className="text-xs text-gray-400 mt-2 leading-relaxed">Sessões individuais ou workshops de grupo previamente acordados.</p>
             </div>
             
             {/* CARD 2 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
-              <span className="text-5xl text-[#00c9a7] font-black tracking-tight block mb-2">50%+</span>
+              <span className="text-5xl text-[#00c9a7] font-black tracking-wide block mb-2">50%+</span>
               <h4 className="text-sm font-black uppercase tracking-wider text-white">Taxa de Resposta</h4>
               <p className="text-xs text-gray-400 mt-2 leading-relaxed">Compromisso em responder solicitações de mentoria alinhadas ao seu perfil.</p>
             </div>
             
             {/* CARD 3 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
-              <span className="text-5xl text-[#00c9a7] font-black tracking-tight block mb-2">12m</span>
+              <span className="text-5xl text-[#00c9a7] font-black tracking-wide block mb-2">12m</span>
               <h4 className="text-sm font-black uppercase tracking-wider text-white">Conclusão dos Módulos</h4>
               <p className="text-xs text-gray-400 mt-2 leading-relaxed">Conclusão de toda a trilha no período máximo de 1 ano letivo.</p>
             </div>

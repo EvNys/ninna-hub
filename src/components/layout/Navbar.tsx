@@ -352,7 +352,7 @@ const showStartupsDropdown = () => {
                       {ninnaEvents.map((ev) => (
                         <div key={ev.nome} className="bg-white/5 border border-white/10 p-5 rounded-2xl flex flex-col justify-between hover:shadow-md transition-shadow group">
                           <div className="space-y-1">
-                            <h6 className="font-extrabold uppercase text-[10px] tracking-tight leading-normal text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">
+                            <h6 className="font-extrabold uppercase text-[10px] tracking-wide leading-normal text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">
                               {ev.nome}
                             </h6>
                           </div>

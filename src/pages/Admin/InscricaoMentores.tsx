@@ -330,14 +330,14 @@ export default function AdminInscricoesMentores() {
                     >
                       <td className="py-4.5 px-6">
                         <div className="flex flex-col">
-                          <span className="font-extrabold text-[13px] text-gray-900 uppercase tracking-tight truncate max-w-[180px]">{item.nome}</span>
-                          <span className="text-xs text-gray-400 font-semibold tracking-tight">{item.email}</span>
-                          <span className="text-[10px] text-gray-400 font-medium tracking-tight mt-0.5">{item.telefone}</span>
+                          <span className="font-extrabold text-[13px] text-gray-900 uppercase tracking-wide truncate max-w-[180px]">{item.nome}</span>
+                          <span className="text-xs text-gray-400 font-semibold tracking-wide">{item.email}</span>
+                          <span className="text-[10px] text-gray-400 font-medium tracking-wide mt-0.5">{item.telefone}</span>
                         </div>
                       </td>
                       <td className="py-4.5 px-6">
                         <div className="flex flex-col">
-                          <span className="text-[11px] font-bold text-gray-800 tracking-tight line-clamp-1">{item.areaMentoria}</span>
+                          <span className="text-[11px] font-bold text-gray-800 tracking-wide line-clamp-1">{item.areaMentoria}</span>
                           <span className="text-[10px] text-gray-400 font-semibold">{item.cidade}</span>
                         </div>
                       </td>
@@ -375,7 +375,7 @@ export default function AdminInscricoesMentores() {
                 <div className="flex items-start justify-between border-b border-gray-100 pb-5">
                   <div className="min-w-0">
                     <span className="text-[9px] font-black text-brand-teal uppercase tracking-widest block mb-1">Candidato Escolhido</span>
-                    <h3 className="font-extrabold uppercase text-lg text-gray-900 tracking-tight leading-snug break-words">{selectedInscricao.nome}</h3>
+                    <h3 className="font-extrabold uppercase text-lg text-gray-900 tracking-wide leading-snug break-words">{selectedInscricao.nome}</h3>
                     <p className="text-gray-400 text-xs font-semibold truncate mt-0.5">{selectedInscricao.email}</p>
                   </div>
                 </div>

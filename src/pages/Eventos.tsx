@@ -643,7 +643,7 @@ const Eventos = () => {
               <div className="p-8 flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-2xl font-black text-white uppercase tracking-tight ">AUDITÓRIO NINNA</h4>
+                    <h4 className="text-2xl font-black text-white uppercase tracking-wide ">AUDITÓRIO NINNA</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 94 Pessoas</span>
                   </div>
                   <p className="text-white/60 font-semibold leading-relaxed mb-6">
@@ -710,7 +710,7 @@ const Eventos = () => {
               <div className="p-8 flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-2xl font-black text-white uppercase tracking-tight ">ESPAÇO PREGÃO</h4>
+                    <h4 className="text-2xl font-black text-white uppercase tracking-wide ">ESPAÇO PREGÃO</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 30 Pessoas</span>
                   </div>
                   <p className="text-white/60 font-semibold leading-relaxed mb-6">
@@ -765,7 +765,7 @@ const Eventos = () => {
               <div className="p-8 flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-2xl font-black text-white uppercase tracking-tight ">SALA OVAL</h4>
+                    <h4 className="text-2xl font-black text-white uppercase tracking-wide ">SALA OVAL</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 12 a 20 Pessoas</span>
                   </div>
                   <p className="text-white/60 font-semibold leading-relaxed mb-6">
@@ -820,7 +820,7 @@ const Eventos = () => {
               <div className="p-8 flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-2xl font-black text-white uppercase tracking-tight ">SALA SPRINT</h4>
+                    <h4 className="text-2xl font-black text-white uppercase tracking-wide ">SALA SPRINT</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 8 a 10 Pessoas</span>
                   </div>
                   <p className="text-white/60 font-semibold leading-relaxed mb-6">
@@ -861,7 +861,7 @@ const Eventos = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">RECONHECIMENTO & AUTORIDADE</h4>
-            <h5 className="text-xl font-black text-gray-900 uppercase tracking-tight  mt-2">EMPRESAS QUE REALIZAM EVENTOS NO NINNA</h5>
+            <h5 className="text-xl font-black text-gray-900 uppercase tracking-wide  mt-2">EMPRESAS QUE REALIZAM EVENTOS NO NINNA</h5>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5">
@@ -944,7 +944,7 @@ const Eventos = () => {
               >
                 <div className="space-y-4 mb-8">
                   <span className="text-[9px] font-black text-brand-teal uppercase tracking-widest block">PROPOSTA COMERCIAL</span>
-                  <h3 className="text-2xl font-black uppercase text-white tracking-tight ">PRONTO PARA CONECTAR?</h3>
+                  <h3 className="text-2xl font-black uppercase text-white tracking-wide ">PRONTO PARA CONECTAR?</h3>
                   <p className="text-sm text-gray-400 font-medium leading-relaxed">
                     Nossa equipe comercial desenhará um formato sob medida para o seu orçamento e objetivos estratégicos de marca.
                   </p>
@@ -1001,7 +1001,7 @@ const Eventos = () => {
               <div className="lg:col-span-5 text-center lg:text-left bg-white p-10 rounded-[35px] border border-gray-100 shadow-xl space-y-8">
                 <div className="space-y-2">
                   <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest block">OPORTUNIDADES DE PARCERIA</span>
-                  <h4 className="text-xl font-black text-gray-900 uppercase tracking-tight ">AGENDA COMUNIDADE CO-CREATE</h4>
+                  <h4 className="text-xl font-black text-gray-900 uppercase tracking-wide ">AGENDA COMUNIDADE CO-CREATE</h4>
                   <p className="text-sm text-gray-500 font-medium leading-relaxed">
                     Ajude-nos a apoiar o desenvolvimento do ecossistema e posicione a sua marca no topo da pirâmide de inovação regional cearense.
                   </p>

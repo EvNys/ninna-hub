@@ -95,7 +95,7 @@ const Comunidade = () => {
           ) : filteredMembers.length === 0 ? (
             <div className="text-center py-32 bg-white rounded-[40px] border border-gray-100 shadow-xl">
               <Users className="w-16 h-16 text-gray-300 mx-auto mb-6" />
-              <h3 className="text-2xl font-black text-gray-400 uppercase tracking-tight italic">Nenhum membro encontrado</h3>
+              <h3 className="text-2xl font-black text-gray-400 uppercase tracking-wide italic">Nenhum membro encontrado</h3>
               <p className="text-gray-500 font-medium">Experimente outro termo de busca.</p>
             </div>
           ) : (
@@ -119,7 +119,7 @@ const Comunidade = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-black text-gray-900 uppercase tracking-tight italic mb-1 px-2 line-clamp-1">{member.name}</h3>
+                  <h3 className="text-xl font-black text-gray-900 uppercase tracking-wide italic mb-1 px-2 line-clamp-1">{member.name}</h3>
                   <div className="flex items-center justify-center gap-2 text-brand-teal font-black text-[10px] uppercase tracking-widest mb-6 italic">
                     <Building2 className="w-3 h-3" />
                     {member.nomeEmpresa || 'Hub Ninja'}

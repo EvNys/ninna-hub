@@ -147,7 +147,7 @@ const AdminDashboard = () => {
 
       {/* Quick Stats Summary */}
       <div className="mt-16 bg-white border border-gray-100 rounded-[40px] p-8 shadow-xl">
-        <h2 className="text-xl font-black uppercase tracking-tight italic mb-8 flex items-center text-gray-900">
+        <h2 className="text-xl font-black uppercase tracking-wide italic mb-8 flex items-center text-gray-900">
           <BarChart3 className="w-5 h-5 mr-3 text-brand-teal" />
           Resumo de Atividade
         </h2>

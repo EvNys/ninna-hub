@@ -253,7 +253,7 @@ const AdminEventos = () => {
                   </td>
                   <td className="py-8 px-6">
                     <div className="flex flex-col">
-                      <span className="font-black text-gray-900 text-sm tracking-tight">{new Date(item.data).toLocaleDateString('pt-BR')}</span>
+                      <span className="font-black text-gray-900 text-sm tracking-wide">{new Date(item.data).toLocaleDateString('pt-BR')}</span>
                       <span className="text-[10px] text-gray-400 uppercase font-black tracking-widest mt-1 italic">{item.horario}</span>
                     </div>
                   </td>

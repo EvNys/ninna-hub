@@ -304,7 +304,7 @@ const Home = () => {
           {/* Part 2: Nossas Frentes */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
             <div className="max-w-2xl">
-              <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-[10px] font-black uppercase tracking-wider mb-4">
                 Nossas Frentes
               </div>
               <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-wide">
@@ -316,7 +316,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 tracking-wider md:grid-cols-3 gap-8">
             {pillars.map((pillar, index) => {
               // Custom details for each card to make them extremely striking and differentiated
               const customDetails = [
@@ -378,7 +378,7 @@ const Home = () => {
                     </span>
 
                     {/* Title */}
-                    <h3 className="text-3xl font-black mb-6 uppercase tracking-tight text-white group-hover:text-brand-teal transition-colors">
+                    <h3 className="text-3xl font-black mb-6 uppercase tracking-wide text-white group-hover:text-brand-teal transition-colors">
                       {pillar.title}
                     </h3>
 
@@ -594,7 +594,7 @@ const Home = () => {
           </div>
 
           {/* Info */}
-          <h3 className="text-xl font-black text-white uppercase tracking-tight mb-2 group-hover:text-[#0ae2b1] transition-colors">
+          <h3 className="text-xl font-black text-white uppercase tracking-wide mb-2 group-hover:text-[#0ae2b1] transition-colors">
             {award.titulo}
           </h3>
           <p className="text-sm text-white/50 font-semibold leading-relaxed max-w-[200px] lg:max-w-none group-hover:text-white/70 transition-colors">

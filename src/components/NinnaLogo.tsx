@@ -15,7 +15,7 @@ export default function NinnaHubLogo({ className = '', light = true, scale = 1 }
     <div className={`inline-flex flex-col select-none ${className}`} style={{ transform: `scale(${scale})`, transformOrigin: 'left center' }}>
       <div className="relative flex items-end">
         {/* The wordmark "NINNA" in Barlow Condensed Black, uppercase */}
-        <span className={`font-barlow-cond font-black tracking-tight text-3xl leading-none uppercase ${ninnaColor} relative`}>
+        <span className={`font-barlow-cond font-black tracking-wide text-3xl leading-none uppercase ${ninnaColor} relative`}>
           N
           {/* Letter I with the green square differentiator */}
           <span className="relative inline-block px-[0.05em]">
