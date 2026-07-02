@@ -20,7 +20,7 @@ const NAV_ITEMS = [
   { id: "bloco2", icon: Wrench,      label: "Quero estruturar minha inovação",   aria: "Estruturar"  },
   { id: "bloco3", icon: Rocket,      label: "Quero executar com parceiros",      aria: "Executar"    },
   { id: "bloco4", icon: Sprout,      label: "Quero ativar minha cultura",        aria: "Cultura"     },
-  { id: "bloco5", icon: Handshake,   label: "Quero me conectar ao ecossistema", aria: "Ecossistema" },
+  { id: "bloco5", icon: Handshake,   label: "Quero me conectar ao ecossistema",  aria: "Ecossistema" },
 ];
 
 const BLOCOS = [
@@ -52,7 +52,7 @@ const BLOCOS = [
     title: "Estruturar para Escalar",
     subtitle: "Para quem já sabe onde está e quer organizar a jornada",
     accent: "#00E676",
-    image: "/Imagens_NINNA/images.png",
+    image: "",
     cta: "Monte sua estratégia →",
     description: "Ter vontade de inovar não é suficiente — é preciso estrutura. Ajudamos sua empresa a construir os processos, governança e estratégias que transformam iniciativas isoladas em um sistema de inovação contínuo e escalável.",
     empresas: [
@@ -75,7 +75,7 @@ const BLOCOS = [
     title: "Executar com Tecnologia e Parceiros",
     subtitle: "Para quem quer colocar a mão na massa com parceiros e tecnologia",
     accent: "#7C6FF7",
-    image: "/Imagens_NINNA/images.png",
+    image: "",
     cta: "Encontre sua solução →",
     description: "Identificar a tecnologia certa e os parceiros ideais faz toda a diferença na execução. Conectamos sua empresa às melhores soluções do mercado e gerenciamos o processo de validação e aceleração de ponta a ponta.",
     empresas: [
@@ -98,7 +98,7 @@ const BLOCOS = [
     title: "Ativar Cultura e Pessoas",
     subtitle: "Para quem quer engajar times e criar cultura de inovação",
     accent: "#FF6B6B",
-    image: "/Imagens_NINNA/images.png",
+    image: "",
     cta: "Engaje seu time →",
     description: "Inovação começa nas pessoas. Desenvolvemos programas que transformam colaboradores em agentes de mudança — engajando times, formando líderes e criando uma cultura onde novas ideias encontram espaço para crescer.",
    empresas: [
@@ -124,7 +124,7 @@ const BLOCOS = [
     title: "Conectar ao Ecossistema",
     subtitle: "Para quem quer fazer parte de algo maior e se conectar com pares",
     accent: "#FFB800",
-    image: "../public /imagens_NINNA/images.png",
+    image: "",
     cta: "Faça parte do ecossistema →",
     description: "As melhores oportunidades surgem das conexões certas. Facilitamos o acesso ao ecossistema de inovação — aproximando sua empresa de startups, líderes, investidores e parceiros estratégicos que aceleram resultados reais.",
    empresas: [
@@ -545,42 +545,72 @@ function BlocoSection({ bloco, isOpen, onClose }) {
           </section>
 
           {/* CTA / Proposal */}
-           <section className="py-32 roun">                
-                  <div className="relative">
-                    <div className="absolute -inset-1 bg-[#00c9a7]/20 blur-2xl rounded-[40px]" />
-                    <div className="relative bg-[#fafafa] border border-gray-200 p-10 md:p-14 rounded-[40px] shadow-inner">
-                      <h3 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-wide">Solicite uma Proposta</h3>
-                      <form className="space-y-6">
-                        <div className="space-y-2">
-                          <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Nome Completo</label>
-                          <input type="text" placeholder="Seu nome" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
-                        </div>
-                        <div className="space-y-2">
-                          <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">E-mail Corporativo</label>
-                          <input type="email" placeholder="nome@empresa.com.br" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
-                        </div>
-                        <div className="space-y-2">
-                          <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Sua Empresa</label>
-                          <input type="text" placeholder="Nome da empresa" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
-                        </div>
-                        <div className="space-y-4 pt-2 mb-6">
-                          <label className="flex items-center space-x-3 cursor-pointer group">
-                            <div className="w-6 h-6 rounded border-2 border-gray-200 flex items-center justify-center group-hover:border-[#00c9a7] transition-all">
-                              {/* Visual Checkbox using a simple indicator */}
-                              <div className="w-full h-full p-1 opacity-100 bg-[#00c9a7]/0 group-hover:bg-[#00c9a7]/5">
-                                <Rocket className="w-full h-full text-[#00c9a7] opacity-0 group-hover:opacity-100 transition-opacity" />
+            <section className="py-32 border-b rounded-3xl mb-10 border-gray-100 bg-white shadow-sm">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="bg-white p-12 md:p-24 rounded-[60px] border border-gray-100 shadow-2xl relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-80 h-80 bg-[#00c9a7]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+                    <div>
+                      <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-wide leading-[0.85]">Por que ser uma <br /><span className="text-[#00c9a7]">Corporação?</span></h3>
+                      <div className="space-y-10 mt-12">
+                        {[
+                          { title: 'Acesso ao Dealflow', desc: 'Curadoria exclusiva de startups alinhadas aos seus desafios estratégicos.', color: 'text-[#00c9a7]' },
+                          { title: 'Networking C-Level', desc: 'Troca de experiências com outros executivos de grandes corporações nacionais.', color: 'text-brand-purple' },
+                          { title: 'Visibilidade de Marca', desc: 'Posicionamento como líder em inovação no cenário global corporativo.', color: 'text-brand-green' }
+                        ].map((item, i) => (
+                          <div key={i} className="flex items-start space-x-6">
+                            <div className="mt-1 flex-shrink-0">
+                              <div className="w-6 h-6 rounded-full border-2 border-[#00c9a7] flex items-center justify-center p-1">
+                                <div className="w-full h-full bg-[#00c9a7] rounded-full" />
                               </div>
                             </div>
-                            <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest group-hover:text-gray-900 transition-colors">Desejo conectar-me com soluções tecnológicas</span>
-                          </label>
-                        </div>
-                        <button className="w-full bg-gray-900 text-white py-5 rounded-2xl font-black uppercase text-sm tracking-widest shadow-xl hover:bg-[#00c9a7] transition-all">
-                          Enviar Solicitação
-                        </button>
-                      </form>
+                            <div>
+                              <h4 className="text-xl font-black text-gray-900 uppercase tracking-wide mb-2">{item.title}</h4>
+                              <p className="text-gray-500 font-medium leading-relaxed">{item.desc}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="relative">
+                      <div className="absolute -inset-1 bg-[#00c9a7]/20 blur-2xl rounded-[40px]" />
+                      <div className="relative bg-[#fafafa] border border-gray-200 p-10 md:p-14 rounded-[40px] shadow-inner">
+                        <h3 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-wide">Solicite uma Proposta</h3>
+                        <form className="space-y-6">
+                          <div className="space-y-2">
+                            <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Nome Completo</label>
+                            <input type="text" placeholder="Seu nome" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
+                          </div>
+                          <div className="space-y-2">
+                            <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">E-mail Corporativo</label>
+                            <input type="email" placeholder="nome@empresa.com.br" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
+                          </div>
+                          <div className="space-y-2">
+                            <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Sua Empresa</label>
+                            <input type="text" placeholder="Nome da empresa" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
+                          </div>
+                          <div className="space-y-4 pt-2 mb-6">
+                            <label className="flex items-center space-x-3 cursor-pointer group">
+                              <div className="w-6 h-6 rounded border-2 border-gray-200 flex items-center justify-center group-hover:border-[#00c9a7] transition-all">
+                                {/* Visual Checkbox using a simple indicator */}
+                                <div className="w-full h-full p-1 opacity-100 bg-[#00c9a7]/0 group-hover:bg-[#00c9a7]/5">
+                                  <Rocket className="w-full h-full text-[#00c9a7] opacity-0 group-hover:opacity-100 transition-opacity" />
+                                </div>
+                              </div>
+                              <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest group-hover:text-gray-900 transition-colors">Desejo conectar-me com soluções tecnológicas</span>
+                            </label>
+                          </div>
+                          <button className="w-full bg-gray-900 text-white py-5 rounded-2xl font-black uppercase text-sm tracking-widest shadow-xl hover:bg-[#00c9a7] transition-all">
+                            Enviar Solicitação
+                          </button>
+                        </form>
+                      </div>
                     </div>
                   </div>
-           </section>
+                </div>
+              </div>
+            </section>
        
           {/* CTA do bloco */}
           <button
@@ -687,9 +717,7 @@ export default function ServicosPage() {
      
     {/* Hero Section */}
     <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
-      {/* Invading Shapes */}
       
-
       <div className="absolute inset-0 z-0">
         
         <img 
@@ -731,16 +759,7 @@ export default function ServicosPage() {
           >
             Soluções &amp; Serviços
           </p>
-          <h1
-            style={{
-              margin: "0 0 24px",
-              fontSize: "clamp(40px, 8vw, 72px)",
-              fontWeight: 900,
-              lineHeight: 1.0,
-              letterSpacing: "-0.03em",
-              textTransform: "uppercase",
-            }}
-          >
+          <h1 className="text-7xl md:text-[100px] font-black tracking-wide leading-[0.85] mb-15 text-[#F5F5F5]">
             NOSSOS{" "}
             <span
               style={{
@@ -755,7 +774,7 @@ export default function ServicosPage() {
           <p
             style={{
               margin: "0 0 40px",
-              fontSize: "17px",
+              fontSize: "20px",
               color: "rgba(255,255,255,0.55)",
               lineHeight: 1.7,
               maxWidth: "560px",
