@@ -814,8 +814,8 @@ export default function ServicosPage() {
       <div
         ref={navRef}
         style={{
-          background: "#ffffff",
-          borderBottom: "1px solid #f3f4f6",
+          background: "linear-gradient(135deg, #0d1221 0%, #111827 100%)",
+          borderBottom: "1px solid #1f2937",
           padding: "48px 0",
           top: 0,
           zIndex: 10,
@@ -829,7 +829,7 @@ export default function ServicosPage() {
               fontWeight: 700,
               letterSpacing: "0.16em",
               textTransform: "uppercase",
-              color: "#9ca3af",
+              color: "#6b7280",
               marginBottom: "24px",
             }}
           >
@@ -852,11 +852,11 @@ export default function ServicosPage() {
                   aria-pressed={isActive}
                   onClick={() => toggleBloco(item.id)}
                   style={{
-                    background: isActive ? "#00c9a7" : "#f9fafb",
-                    border: `1px solid ${isActive ? "#00c9a7" : "#e5e7eb"}`,
+                    background: isActive ? "#00c9a7" : "rgba(255, 255, 255, 0.04)",
+                    border: `1px solid ${isActive ? "#00c9a7" : "rgba(255, 255, 255, 0.08)"}`,
                     borderRadius: "12px",
                     padding: "20px 16px",
-                    color: isActive ? "#0f1422" : "#1f2937",
+                    color: isActive ? "#0f1422" : "#e5e7eb",
                     fontSize: "13px",
                     fontWeight: 600,
                     lineHeight: 1.4,
@@ -870,15 +870,15 @@ export default function ServicosPage() {
                   }}
                   onMouseEnter={e => {
                     if (!isActive) {
-                      e.currentTarget.style.background = "#eef2f6";
+                      e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
                       e.currentTarget.style.borderColor = "#00c9a7";
                       e.currentTarget.style.transform = "translateY(-2px)";
                     }
                   }}
                   onMouseLeave={e => {
                     if (!isActive) {
-                      e.currentTarget.style.background = "#f9fafb";
-                      e.currentTarget.style.borderColor = "#e5e7eb";
+                      e.currentTarget.style.background = "rgba(255, 255, 255, 0.04)";
+                      e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.08)";
                       e.currentTarget.style.transform = "translateY(0)";
                     }
                   }}
