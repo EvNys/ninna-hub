@@ -172,7 +172,7 @@ const Sobre = () => {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -top-12 -right-12 w-48 h-48 bg-brand-teal/10 blur-3xl rounded-full -z-10" />
+              <div className="absolute top-12 -right-12 w-48 h-48 bg-brand-teal/10 blur-3xl rounded-full -z-10" />
             </motion.div>
           </div>
         </div>
