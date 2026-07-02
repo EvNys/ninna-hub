@@ -13,11 +13,10 @@ export interface NavLink {
 
 export const NAV_LINKS: NavLink[] = [
   { name: 'Home', path: '/' },
-  { name: 'Empresas', path: '/empresas' },
+  { name: 'Serviços', path: '/Servicos' },
   { name: 'Startups', path: '/startups' },
   { name: 'Ecossistema', path: '/ecossistema' },
   { name: 'Agenda', path: '/agenda' },
-  { name: 'Serviços', path: '/Servicos' },
   { name: 'Sobre nós', path: '/sobre' },
 ];
 
