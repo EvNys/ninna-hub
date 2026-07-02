@@ -778,7 +778,7 @@ export default function ServicosPage() {
               color: "rgba(255,255,255,0.55)",
               lineHeight: 1.7,
               maxWidth: "560px",
-              marginLeft: "auto",
+              marginLeft: "10px",
               marginRight: "auto",
             }}
           >

@@ -396,47 +396,48 @@ const showStartupsDropdown = () => {
             transition={{ duration: 0.2 }}
             onMouseEnter={showStartupsDropdown}
             onMouseLeave={hideStartupsDropdown}
-            className="absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-2xl z-40 hidden md:block"
+            className="absolute top-20 left-0 w-full border-b border-[#0a0a0a]/30 shadow-2xl z-40 hidden md:block"
+            style={{ backgroundColor: '#0a0a0a' }}
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-left">
               <div className="grid grid-cols-12 gap-8">
                 
                 {/* Programas */}
-                <div className="col-span-6 border-r border-gray-100 pr-8">
-                  <span className="text-[9px] font-black text-brand-teal uppercase tracking-[0.3em] block mb-4">Programas e Performance</span>
+                <div className="col-span-6 border-r border-white/10 pr-8">
+                  <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block mb-4">Programas e Performance</span>
                   <div className="flex flex-col gap-3">
                     <Link
                       to="/startups/ninna-4-startups"
                       onClick={() => setIsStartupsDropdownActive(false)}
-                      className="group flex items-center justify-between p-4 bg-gray-50 hover:bg-brand-teal/5 border border-transparent hover:border-brand-teal/20 rounded-2xl transition-all"
+                      className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-xl bg-[#00c9a7]/20 flex items-center justify-center text-[#00c9a7] group-hover:scale-110 transition-transform">
                           <Rocket className="w-5 h-5" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-gray-900 group-hover:text-brand-teal transition-colors">NINNA 4 Startups</h5>
-                          <p className="text-gray-400 text-xs font-semibold">Aceleração comercial, fomento e mentorias sob medida</p>
+                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">NINNA 4 Startups</h5>
+                          <p className="text-white/40 text-xs font-semibold">Aceleração comercial, fomento e mentorias sob medida</p>
                         </div>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-brand-teal group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
                     </Link>
 
                     <Link
                       to="/startups/portfolio"
                       onClick={() => setIsStartupsDropdownActive(false)}
-                      className="group flex items-center justify-between p-4 bg-gray-50 hover:bg-brand-teal/5 border border-transparent hover:border-brand-teal/20 rounded-2xl transition-all"
+                      className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-xl bg-[#00c9a7]/20 flex items-center justify-center text-[#00c9a7] group-hover:scale-110 transition-transform">
                           <Laptop className="w-5 h-5" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-gray-900 group-hover:text-brand-teal transition-colors">Portfólio de Startups</h5>
-                          <p className="text-gray-400 text-xs font-semibold">Conheça as soluções inovadoras do nosso ecossistema</p>
+                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Portfólio de Startups</h5>
+                          <p className="text-white/40 text-xs font-semibold">Conheça as soluções inovadoras do nosso ecossistema</p>
                         </div>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-brand-teal group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
                     </Link>
                   </div>
                 </div>
@@ -444,11 +445,11 @@ const showStartupsDropdown = () => {
                 {/* Parceria */}
                 <div className="col-span-6 pl-4 flex flex-col justify-between">
                   <div>
-                    <span className="text-[9px] font-black text-brand-teal uppercase tracking-[0.3em] block mb-4">Inscrição e Parcerias</span>
+                    <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block mb-4">Inscrição e Parcerias</span>
                     <Link
                       to="/empresas"
                       onClick={() => setIsStartupsDropdownActive(false)}
-                      className="group flex items-center justify-between p-6 bg-gray-900 hover:bg-brand-teal border border-transparent rounded-[24px] transition-all cursor-pointer"
+                      className="group flex items-center justify-between p-6 bg-white/10 hover:bg-[#00c9a7] border border-transparent rounded-[24px] transition-all cursor-pointer"
                     >
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
@@ -463,8 +464,8 @@ const showStartupsDropdown = () => {
                     </Link>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 pt-6 border-t border-gray-100/65">
-                    <p className="text-[9px] text-gray-400 font-bold uppercase tracking-wider italic">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 pt-6 border-t border-white/10">
+                    <p className="text-[9px] text-white/40 font-bold uppercase tracking-wider italic">
                       Conecte sua startup a dezenas de grandes corporações patrocinadoras do NINNA Hub.
                     </p>
                   </div>
