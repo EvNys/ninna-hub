@@ -78,7 +78,7 @@ const StartupsHub = () => {
                 Nosso Modo de Atuar
               </div>
               <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide leading-none">
-                COMO APOIAMOS STARTUPS MAIS DO QUE UM HUB,<br />
+                COMO APOIAMOS STARTUPS MAIS<br /> DO QUE UM HUB, <br/>
                 <span className="gradient-text"> UM ECOSSISTEMA DE OPORTUNIDADES</span>
               </h2>
             </div>
@@ -159,7 +159,7 @@ const StartupsHub = () => {
               Jornada de Parceria
             </div>
             <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide ">
-              PASSO A PASSO PARA SE TORNAR UM <span className="gradient-text font-black">PARCEIRO NINNA</span>
+              PASSO A PASSO PARA SE TORNAR UM <br/> <span className="gradient-text font-black">PARCEIRO NINNA</span>
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto font-semibold mt-4">
               Uma jornada transparente e estruturada para integrar sua startup ao ecossistema de inovação mais dinâmico da região.
@@ -377,7 +377,7 @@ const StartupsHub = () => {
                         <Target className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black uppercase text-white tracking-wide">O Desafio</h4>
+                        <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">O Desafio</h4>
                         <p className="text-xs text-white/50 font-semibold leading-relaxed">Atender com agilidade milhares de dúvidas cotidianas sobre lojas e entregas de forma escalável.</p>
                       </div>
                     </div>
@@ -386,7 +386,7 @@ const StartupsHub = () => {
                         <Rocket className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black uppercase text-white tracking-wide">A Solução</h4>
+                        <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">A Solução</h4>
                         <p className="text-xs text-white/50 font-semibold leading-relaxed">Integração do motor de inteligência conversacional da Suri.ai ao canal oficial de WhatsApp.</p>
                       </div>
                     </div>
@@ -460,7 +460,7 @@ const StartupsHub = () => {
                         <Target className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black uppercase text-white tracking-wide">O Desafio</h4>
+                        <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">O Desafio</h4>
                         <p className="text-xs text-white/50 font-semibold leading-relaxed">Equipes pequenas de forte base técnica sem tempo para burocracia de fomento contínuo e submissões densas.</p>
                       </div>
                     </div>
@@ -469,7 +469,7 @@ const StartupsHub = () => {
                         <TrendingUp className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black uppercase text-white tracking-wide">A Solução</h4>
+                        <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">A Solução</h4>
                         <p className="text-xs text-white/50 font-semibold leading-relaxed">Mapeamento expresso e curadoria de editais efetuada em menos de 1 mês de aceleração integrada no hub.</p>
                       </div>
                     </div>
@@ -688,7 +688,7 @@ const StartupsHub = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-8 border border-brand-teal/20">
-            CTA FINAL
+            CONECTE-SE
           </div>
 
           <h2 className="text-5xl md:text-7xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide leading-none mb-8">

@@ -620,7 +620,7 @@ const Home = () => {
       <section className="py-32 bg-[#fafafa] overflow-hidden border-t border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 id="empresas-parceiras-titulo" className="text-gray-400 uppercase text-[10px] font-black tracking-[0.3em] mb-4">empresas que acreditam no NINNA</h3>
+            <h3 id="empresas-parceiras-titulo" className="text-gray-400 uppercase text-[20px] font-black tracking-[0.3em] mb-4">empresas que acreditam no NINNA</h3>
             <div className="h-[2px] w-12 bg-brand-teal mx-auto" />
           </div>
           
