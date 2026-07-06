@@ -279,7 +279,7 @@ const AgendaEventos = () => {
             <span className="text-brand-teal text-[9px] font-black uppercase tracking-[0.4em] block">Sua marca no Hub</span>
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-wide ">QUER CO-REALIZAR OU PATROCINAR UM EVENTO?</h2>
             <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
-              Conecte sua корпорация ao ecossistema do NINNA de forma dinâmica. Fale conosco para agendar o Auditório Premium ou promover painéis temáticos.
+              Conecte sua corporação ao ecossistema do NINNA de forma dinâmica. Fale conosco para agendar o Auditório Premium ou promover painéis temáticos.
             </p>
             <div className="pt-6 flex flex-wrap justify-center gap-4">
               <Link

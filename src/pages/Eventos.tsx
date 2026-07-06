@@ -860,8 +860,8 @@ const Eventos = () => {
       <section className="py-20 bg-[#fafafa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">RECONHECIMENTO & AUTORIDADE</h4>
-            <h5 className="text-xl font-black text-gray-900 uppercase tracking-wide  mt-2">EMPRESAS QUE REALIZAM EVENTOS NO NINNA</h5>
+            <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest">RECONHECIMENTO & AUTORIDADE</h4>
+            <h5 className="text-xl font-black text-gray-900 uppercase tracking-wide mt-2">EMPRESAS QUE REALIZAM EVENTOS NO NINNA</h5>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5">
