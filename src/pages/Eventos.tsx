@@ -753,7 +753,7 @@ const Eventos = () => {
             >
               <div className="h-72 w-full relative overflow-hidden bg-gray-900">
                 <img 
-                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200" 
+                  src="/Imagens_espaco/Sala-oval.jpeg" 
                   alt="Sala Oval NINNA Hub" 
                   className="w-full h-full object-cover opacity-90"
                   referrerPolicy="no-referrer"

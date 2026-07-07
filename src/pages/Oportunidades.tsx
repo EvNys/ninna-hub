@@ -153,9 +153,12 @@ const Oportunidades = () => {
                 <p className="text-gray-500 text-lg font-medium mb-10 max-w-lg leading-relaxed">
                   Conectamos os desafios da sua corporação com as melhores soluções do mercado através de chamadas personalizadas e curadoria especializada.
                 </p>
-                <button className="flex items-center text-brand-teal font-black uppercase text-sm tracking-widest hover:underline group">
+                <a
+                  href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe"
+                  target="_blank"
+                  rel="noopener noreferrer" className="flex items-center text-brand-teal font-black uppercase text-sm tracking-widest hover:underline group">
                   Falar com nosso time de Inovação Aberta <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                </button>
+                </a>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-8 bg-gray-50 border border-gray-100 rounded-3xl">
