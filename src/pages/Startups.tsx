@@ -711,12 +711,14 @@ const StartupsHub = () => {
               Quero fazer parte do NINNA <Rocket className="w-5 h-5" />
             </Link>
 
-            <Link
-              to="/contato"
-              className="inline-flex items-center gap-3 bg-transparent hover:bg-gray-900/5 text-gray-900 px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all border border-gray-300 hover:border-gray-900/40 hover:scale-[1.03] active:scale-95 cursor-pointer"
-            >
-              Falar com nossa equipe <MessageCircle className="w-5 h-5" />
-            </Link>
+          <a
+            href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-transparent hover:bg-gray-900/5 text-gray-900 px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all border border-gray-300 hover:border-gray-900/40 hover:scale-[1.03] active:scale-95 cursor-pointer"
+          >
+            Falar com nossa equipe <MessageCircle className="w-5 h-5" />
+          </a>
           </div>
         </motion.div>
       </div>

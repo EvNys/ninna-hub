@@ -784,7 +784,10 @@ export default function ServicosPage() {
           >
             Soluções sob medida para transformar inovação e dados em resultado real.
           </p>
-          <button
+          <a
+          href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista"
+          target="_blank"
+          rel="noopener noreferrer"
             style={{
               background: "linear-gradient(90deg, #00D4D4, #00E676)",
               color: "#0B0E1A",
@@ -799,11 +802,12 @@ export default function ServicosPage() {
               transition: "opacity 0.2s",
               fontFamily: "inherit",
             }}
+            
             onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}
             onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
           >
             Fale com um especialista
-          </button>
+          </a>
         </div>
 
                </motion.div>
@@ -985,7 +989,10 @@ export default function ServicosPage() {
           >
             Quero um diagnóstico
           </button>
-          <button
+          <a
+          href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista"
+          target="_blank"
+          rel="noopener noreferrer"
             style={{
               background: "transparent",
               color: "#fff",
@@ -1004,7 +1011,7 @@ export default function ServicosPage() {
             onMouseLeave={e => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)")}
           >
             Quero falar com um expert
-          </button>
+          </a>
         </div>
       </div>
     </div>

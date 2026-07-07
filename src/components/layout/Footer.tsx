@@ -67,7 +67,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3 text-white/60">
                 <Phone className="w-5 h-5 text-[#00bcd4]" />
-                <span className="text-sm font-black italic">(85) 9 9999-9999</span>
+                <span className="text-sm font-black italic">(85) 3211-4201</span>
               </li>
               <li className="flex items-center space-x-3 text-white/60 uppercase text-[10px] font-black tracking-widest">
                 <MapPin className="w-5 h-5 text-[#00bcd4]" />

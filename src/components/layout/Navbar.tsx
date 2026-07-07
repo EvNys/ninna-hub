@@ -231,13 +231,6 @@ const showStartupsDropdown = () => {
                       • Agendar Evento (Auditório)
                     </Link>
                     <Link
-                      to="/ecossistema?action=booking&space=Sala%20Pregão"
-                      onClick={() => setIsOpen(false)}
-                      className="block py-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
-                    >
-                      • Solicitar Evento (Sala Pregão)
-                    </Link>
-                    <Link
                       to="/ecossistema?action=sponsor"
                       onClick={() => setIsOpen(false)}
                       className="block py-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
@@ -293,23 +286,6 @@ const showStartupsDropdown = () => {
                         <div className="text-left">
                           <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Agende seu Evento</h5>
                           <p className="text-white/40 text-xs font-semibold">Reserve o Auditório Premium do NINNA</p>
-                        </div>
-                      </div>
-                      <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
-                    </Link>
-
-                    <Link
-                      to="/ecossistema?action=booking&space=Sala%20Pregão"
-                      onClick={() => setIsDropdownActive(false)}
-                      className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
-                    >
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-[#00c9a7]/20 flex items-center justify-center text-[#00c9a7] group-hover:scale-110 transition-transform">
-                          <Laptop className="w-5 h-5" />
-                        </div>
-                        <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Solicite seu Evento</h5>
-                          <p className="text-white/40 text-xs font-semibold">Oficinas, workshops e hackathons modulares</p>
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
