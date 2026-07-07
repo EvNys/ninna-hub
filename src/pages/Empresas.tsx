@@ -131,9 +131,13 @@ const Empresas = () => {
                 Ajudamos grandes empresas a navegar na complexidade da inovação, gerando eficiência, novos modelos de negócio e impacto real.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                <button className="bg-[#00c9a7] text-white px-8 py-5 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-[#00c9a7]/20">
+                <a
+                  href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#00c9a7] text-white px-8 py-5 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-[#00c9a7]/20">
                   Falar com Especialista
-                </button>
+                </a>
                 <Link 
                   to="/cases"
                   className="px-8 py-5 rounded-2xl border-2 border-gray-900 bg-white hover:bg-gray-900 hover:text-white transition-all font-black uppercase text-sm tracking-widest text-gray-900 inline-block text-center hover:scale-105 active:scale-95 shadow-lg shadow-black/5"

@@ -274,11 +274,13 @@ const showStartupsDropdown = () => {
                 <div className="col-span-5 border-r border-white/10 pr-8">
                   <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block mb-4">Ações e Reservas</span>
                   <div className="flex flex-col gap-3">
-                    <Link
-                      to="/ecossistema?action=booking&space=Auditório"
-                      onClick={() => setIsDropdownActive(false)}
-                      className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
-                    >
+                    <a 
+                    href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20Audit%C3%B3rio%20Premium%20do%20NINNA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsDropdownActive(false)}
+                    className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
+                  >
                       <div className="flex items-center gap-4">
                         <div className="w-10 h-10 rounded-xl bg-[#00c9a7]/20 flex items-center justify-center text-[#00c9a7] group-hover:scale-110 transition-transform">
                           <Calendar className="w-5 h-5" />
@@ -289,7 +291,7 @@ const showStartupsDropdown = () => {
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
-                    </Link>
+                    </a>
 
                     <Link
                       to="/ecossistema?action=sponsor"
