@@ -221,9 +221,12 @@ const Eventos = () => {
               >
                 Quero Realizar meu Evento no NINNA
               </button>
-              <button 
-                onClick={openSponsorModal}
-                className="px-8 py-4 bg-gray-900 text-white font-black uppercase text-[10px] tracking-[0.2em] rounded-2xl hover:bg-gray-800 hover:scale-[1.02] transition-all cursor-pointer"
+              <button
+                onClick={() => {
+                  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=contato@ninnahub.com.br&su=${encodeURIComponent("Contato pelo site")}&body=${encodeURIComponent("Olá, gostaria de falar sobre...")}`;
+                  window.open(url, "_blank");
+                }}
+                 className="px-8 py-4 bg-gray-900 text-white font-black uppercase text-[10px] tracking-[0.2em] rounded-2xl hover:bg-gray-800 hover:scale-[1.02] transition-all cursor-pointer"
               >
                 Patrocinar um Evento
               </button>
