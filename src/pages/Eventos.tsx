@@ -567,7 +567,7 @@ const Eventos = () => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-brand-teal/15 to-brand-green/15 opacity-20 blur-2xl rounded-[44px] group-hover:opacity-30 transition-opacity duration-500" />
                   <div className="relative rounded-[40px] overflow-hidden border border-gray-100 shadow-2xl h-[340px] md:h-[420px] bg-gray-50">
                     <img 
-                      src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200" 
+                      src="Imagens_espaco/Li.cor.JPEG" 
                       alt="Licor Institucional Event" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
@@ -581,7 +581,7 @@ const Eventos = () => {
                   Institucional & Ecossistema
                 </div>
                 <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide  leading-none">
-                  Licor
+                  Li.Cor
                 </h4>
                 <p className="text-gray-500 font-medium text-base md:text-lg leading-relaxed">
                   Painéis e encontros institucionais estratégicos voltados para o fomento tecnológico regional e diálogo com o poder público. O NINNA atua como embaixador integrando a academia, indústrias setoriais de destaque e órgãos fomentadores para cocriar leis, infraestrutura, capitais de risco e caminhos de inovação produtiva regional.
