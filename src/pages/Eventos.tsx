@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { collection, getDocs, query, where, orderBy, addDoc } from 'firebase/firestore';
@@ -99,34 +100,45 @@ const Eventos = () => {
     setIsModalOpen(true);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    try {
-      // Persist requesting lead to Firestore!
-      await addDoc(collection(db, 'leads_eventos'), {
-        nome: formData.nome,
-        email: formData.email,
-        empresa: formData.empresa,
-        telefone: formData.telefone,
-        dataPretendida: formData.dataPretendida,
-        publicoEstimado: formData.publicoEstimado,
-        espaco: formData.espaco,
-        mensagem: formData.mensagem,
-        tipoPatrocinio: formData.tipoPatrocinio,
-        tipoInteresse: modalType, // 'booking' | 'sponsor'
-        createdAt: new Date().toISOString()
-      });
+  const EMAILJS_SERVICE_ID = 'service_87y7hwt';
+const EMAILJS_TEMPLATE_ID_SPONSOR = 'template_axbqw8p';
+const EMAILJS_PUBLIC_KEY = 'IitzdNZwwsoNY0blC';
 
-      setSubmitSuccess(true);
-      toast.success(modalType === 'booking' ? 'Sua solicitação de evento foi enviada!' : 'Seu interesse de patrocínio foi registrado!');
-    } catch (error: any) {
-      console.error("Erro salvando lead de evento:", error);
-      toast.error('Ocorreu um erro ao registrar sua solicitação. Tente novamente.');
-    } finally {
-      setSubmitting(false);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setSubmitting(true);
+
+  try {
+    // 2. Envia e-mail apenas se for patrocínio
+    if (modalType === 'sponsor') {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID_SPONSOR,
+        {
+          nome: formData.nome,
+          email: formData.email,
+          empresa: formData.empresa,
+          telefone: formData.telefone,
+          mensagem: formData.mensagem,
+          tipo_patrocinio: formData.tipoPatrocinio,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
     }
-  };
+
+    setSubmitSuccess(true);
+    toast.success(
+      modalType === 'booking'
+        ? 'Sua solicitação de evento foi enviada!'
+        : 'Seu interesse de patrocínio foi registrado!'
+    );
+  } catch (error: any) {
+    console.error("Erro ao processar solicitação:", error);
+    toast.error('Ocorreu um erro ao registrar sua solicitação. Tente novamente.');
+  } finally {
+    setSubmitting(false);
+  }
+};
 
   // Static list of prominent past clients/hosts for authority building
   const parceirosEventos = [
