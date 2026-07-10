@@ -51,6 +51,7 @@ const AdminSidebar = () => {
     { icon: Rocket, label: 'Startups', path: '/admin/startups' },
     { icon: Users, label: 'Mentores', path: '/admin/mentores' },
     { icon: UserRoundPlus, label: 'Inscrição Mentores', path: '/admin/InscricaoMentores' },
+    { icon: Briefcase, label: 'Patrocinadores', path: '/admin/Patrocinadores' },
     { icon: GraduationCap, label: 'Treinamentos', path: '/admin/treinamentos' },
     { icon: Gift, label: 'Benefícios', path: '/admin/beneficios' },
     { icon: FileText, label: 'Cases', path: '/admin/cases' },
