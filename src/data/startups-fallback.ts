@@ -18,21 +18,19 @@ export interface StartupVitrine {
 }
 
 export const NINNA_STARTUPS: StartupVitrine[] = [
-  { name: "Beanalytic", logo: "/Startups/Logo-Beanalytic.png", category: "Big Data & AI", website: "https://beanalytic.com.br/" },
-  { name: "Cirurgia Autorizada", logo: "/Startups/cirurgia-autorizada.jpeg", category: "HealthTech", website: "https://cirurgiaautorizada.com.br/" },
-  { name: "Clickmassa", logo: "/Startups/Clickmassa.jpg", category: "MarTech", website: "https://clickmassa.com.br/" },
-  { name: "In House", logo: "/Startups/FISICO-InHouse-Market.png", category: "SportsTech", website: "https://inhousemarket.com.br/" },
+  { name: "Suri", logo:"/Startups/suri-cbm-logo-blue.png", category: "", website: "https://www.suri.ai" },
   { name: "Flake", logo: "/Startups/thumbnail_flake2-scaled.png", category: "SaaS", website: "https://flake.com.br/" },
-  { name: "HealthDev", logo: "/Startups/HealthDev.jpg", category: "HealthTech", website: "https://healthdev.com.br/" },
-  { name: "Idun", logo: "/Startups/idun-logo-v2.png", category: "FinTech", website: "https://idun.co" },
-  { name: "Jetsales", logo: "/Startups/jetsales.jpg", category: "SalesTech", website: "https://jetsales.com.br/" },
+  { name: "Nexcode", logo: "/Startups/Nexcode.png", category: "SaaS", website: "https://www.nexcode.live" },
+  { name: "MoldIAX", logo:"/Startups/MoldIax.png", category: "", website: "https://moldiax.com/" },
+  { name: "Straloo", logo:"/Startups/straloo.png", category: "HealthTech", website: "https://straloo.com.br" },
   { name: "Lovel", logo: "/Startups/lovel.dev_.jpg", category: "HRTech", website: "https://lovel.dev/" },
   { name: "Medflow", logo: "/Startups/medflow.png", category: "HealthTech", website: "https://medflow.com.br/" },
   { name: "Pliq", logo: "/Startups/pliq.jpg", category: "Customer Exp.", website: "https://pliq.com.br/" },
   { name: "Resolvvi", logo: "/Startups/Resolvvi.jpg", category: "LegalTech", website: "https://resolvvi.com/" },
   { name: "RH Gestão", logo: "/Startups/RhGestao.jpeg", category: "HRTech", website: "https://rhgestao.com.br/" },
-  { name: "Sombank", logo: "/Startups/thumbnail_Logo-Sombank.png", category: "FinTech", website: "https://sombank.com.br/" },
-  { name: "Starlight", logo: "/Startups/starlight-logo-default-1.png", category: "Logistics", website: "https://starlight.sh/" },
-  { name: "Trilogo", logo: "/Startups/trilogo.jpg", category: "Facilities & IoT", website: "https://trilogo.com.br/" },
-  { name: "Urbis", logo: "/Startups/urbis.png", category: "Smart Cities", website: "https://urbis.cc/" }
+  { name: "Urbis", logo: "/Startups/urbis.png", category: "Smart Cities", website: "https://urbis.cc/" },
+  { name: "EdukDados", logo:"/Startups/edukdados.png", category: "", website: "https://www.edukdados.com.br" },
+  { name: "synapsystem", logo:"/Startups/synapsystem.png", category: "", website: "https://synapsystem.com" },
+  { name: "Leme", logo:"/Startups/Logo-Leme.jpeg", category: "", website: "https://lemeapp.com.br" },
+  { name: "4w Biotech", logo:"/Startups/4w Biotech.png", category: "", website: "https://www.4wbiotech.com/pt" },
 ];
