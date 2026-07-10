@@ -31,6 +31,7 @@ import AdminOportunidades from './pages/Admin/Oportunidades';
 import AdminEventos from './pages/Admin/Eventos';
 import AdminKPIs from './pages/Admin/KPIs';
 import AdminParceiros from './pages/Admin/Parceiros';
+import AdminPatrocinadores from './pages/Admin/Patrocinadores';
 import AdminUsuarios from './pages/Admin/Usuarios';
 import AdminEquipe from './pages/Admin/Equipe';
 import AdminCases from './pages/Admin/Cases';
@@ -107,6 +108,7 @@ function AppContent() {
           <Route path="/admin/eventos" element={<AdminProtectedRoute><AdminLayout><AdminEventos /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/kpis" element={<AdminProtectedRoute><AdminLayout><AdminKPIs /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/parceiros" element={<AdminProtectedRoute><AdminLayout><AdminParceiros /></AdminLayout></AdminProtectedRoute>} />
+          <Route path="/admin/patrocinadores" element={<AdminProtectedRoute><AdminLayout><AdminPatrocinadores /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/usuarios" element={<AdminProtectedRoute><AdminLayout><AdminUsuarios /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/equipe" element={<AdminProtectedRoute><AdminLayout><AdminEquipe /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/cases" element={<AdminProtectedRoute><AdminLayout><AdminCases /></AdminLayout></AdminProtectedRoute>} />

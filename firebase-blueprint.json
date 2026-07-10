@@ -59,6 +59,22 @@
       },
       "required": ["nome", "descricao", "data", "status"]
     },
+    "LeadEvento": {
+      "title": "LeadEvento",
+      "description": "Leads de patrocínio gerados pelo formulário do NINNA Hub",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nome": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "empresa": { "type": "string" },
+        "telefone": { "type": "string" },
+        "mensagem": { "type": "string" },
+        "tipoPatrocinio": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["nome", "email", "tipoPatrocinio", "createdAt"]
+    },
     "KPI": {
       "title": "KPI",
       "description": "Indicadores de impacto do Hub",
@@ -195,6 +211,7 @@
       },
       "required": ["nomeEmpresa", "logo", "status"]
     },
+    
     "InscricaoMentores": {
       "title": "InscricaoMentores",
       "description": "Inscrições para ser mentor do Hub",

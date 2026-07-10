@@ -35,9 +35,6 @@ const Eventos = () => {
     email: '',
     empresa: '',
     telefone: '',
-    dataPretendida: '',
-    publicoEstimado: 'Até 40 pessoas',
-    espaco: 'Auditório',
     mensagem: '',
     tipoPatrocinio: 'Patrocínio de Agenda Anual'
   });
@@ -45,88 +42,71 @@ const Eventos = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
+useEffect(() => {
+  const action = searchParams.get('action');
+  if (action === 'sponsor') {
+    openSponsorModal();
+    setSearchParams({}, { replace: true });
+  }
+}, [searchParams]);
 
-  useEffect(() => {
-    const action = searchParams.get('action');
-    const space = searchParams.get('space') || 'Auditório';
-    if (action === 'booking') {
-      openBookingModal(space);
-      setSearchParams({}, { replace: true });
-    } else if (action === 'sponsor') {
-      openSponsorModal();
-      setSearchParams({}, { replace: true });
-    }
-  }, [searchParams]);
-
-  useEffect(() => {
-    const fetchEventos = async () => {
-      try {
-        const q = query(
-          collection(db, 'eventos'), 
-          where('status', '==', 'ativo'),
-          orderBy('data', 'asc')
-        );
-        const querySnapshot = await getDocs(q);
-        setEventos(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-      } catch (error) {
-        console.error("Erro ao buscar eventos dinâmicos:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchEventos();
-  }, []);
-
-  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const openBookingModal = (spaceName: string = 'Auditório') => {
-    setSelectedSpace(spaceName);
-    setFormData(prev => ({ ...prev, espaco: spaceName }));
-    setModalType('booking');
-    setSubmitSuccess(false);
-    setIsModalOpen(true);
-  };
-
-  const openSponsorModal = () => {
-    setModalType('sponsor');
-    setSubmitSuccess(false);
-    setIsModalOpen(true);
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
+useEffect(() => {
+  const fetchEventos = async () => {
     try {
-      // Persist requesting lead to Firestore!
-      await addDoc(collection(db, 'leads_eventos'), {
-        nome: formData.nome,
-        email: formData.email,
-        empresa: formData.empresa,
-        telefone: formData.telefone,
-        dataPretendida: formData.dataPretendida,
-        publicoEstimado: formData.publicoEstimado,
-        espaco: formData.espaco,
-        mensagem: formData.mensagem,
-        tipoPatrocinio: formData.tipoPatrocinio,
-        tipoInteresse: modalType, // 'booking' | 'sponsor'
-        createdAt: new Date().toISOString()
-      });
-
-      setSubmitSuccess(true);
-      toast.success(modalType === 'booking' ? 'Sua solicitação de evento foi enviada!' : 'Seu interesse de patrocínio foi registrado!');
-    } catch (error: any) {
-      console.error("Erro salvando lead de evento:", error);
-      toast.error('Ocorreu um erro ao registrar sua solicitação. Tente novamente.');
+      const q = query(
+        collection(db, 'eventos'), 
+        where('status', '==', 'ativo'),
+        orderBy('data', 'asc')
+      );
+      const querySnapshot = await getDocs(q);
+      setEventos(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+    } catch (error) {
+      console.error("Erro ao buscar eventos dinâmicos:", error);
     } finally {
-      setSubmitting(false);
+      setLoading(false);
     }
   };
+
+  fetchEventos();
+}, []);
+
+const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+};
+
+const openSponsorModal = () => {
+  setSubmitSuccess(false);
+  setIsModalOpen(true);
+};
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setSubmitting(true);
+  try {
+    // Persist sponsor lead to Firestore!
+    await addDoc(collection(db, 'leads_eventos'), {
+      nome: formData.nome,
+      email: formData.email,
+      empresa: formData.empresa,
+      telefone: formData.telefone,
+      mensagem: formData.mensagem,
+      tipoPatrocinio: formData.tipoPatrocinio,
+      tipoInteresse: 'sponsor',
+      createdAt: new Date().toISOString()
+    });
+
+    setSubmitSuccess(true);
+    toast.success('Seu interesse de patrocínio foi registrado!');
+  } catch (error: any) {
+    console.error("Erro salvando lead de patrocínio:", error);
+    toast.error('Ocorreu um erro ao registrar sua solicitação. Tente novamente.');
+  } finally {
+    setSubmitting(false);
+  }
+};
 
   // Static list of prominent past clients/hosts for authority building
   const parceirosEventos = [
@@ -216,7 +196,6 @@ const Eventos = () => {
 
             <div className="mt-12 flex flex-wrap justify-center gap-4">
               <button 
-                onClick={() => openBookingModal('Auditório')}
                 className="px-8 py-4 bg-brand-teal text-white font-black uppercase text-[10px] tracking-[0.2em] rounded-2xl shadow-xl shadow-brand-teal/20 hover:bg-brand-teal/90 hover:scale-[1.02] transition-all cursor-pointer"
               >
                 Quero Realizar meu Evento no NINNA
@@ -955,7 +934,6 @@ const Eventos = () => {
 
                 <div className="space-y-4">
                   <button 
-                    onClick={() => openBookingModal('Auditório')}
                     className="w-full text-center py-5 bg-brand-teal text-white font-black uppercase text-[11px] tracking-[0.2em] rounded-2xl shadow-xl shadow-brand-teal/25 hover:bg-white hover:text-gray-950 transition-all cursor-pointer transform hover:-translate-y-0.5"
                   >
                     Solicitar Proposta Agora
@@ -1081,142 +1059,94 @@ const Eventos = () => {
                       : 'Posicione a marca em frente a startups, decisores e líderes de mercado cearense.'}
                   </p>
 
-                  <form onSubmit={handleSubmit} className="space-y-4 pt-4 text-left">
+                <form onSubmit={handleSubmit} className="space-y-4 pt-4 text-left">
+                  <div className="space-y-1">
+                    <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Seu Nome Integral</label>
+                    <input 
+                      type="text" 
+                      name="nome" 
+                      required 
+                      value={formData.nome} 
+                      onChange={handleFormChange}
+                      placeholder="Nome Sobrenome" 
+                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
-                      <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Seu Nome Integral</label>
+                      <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">E-mail Corporativo</label>
                       <input 
-                        type="text" 
-                        name="nome" 
+                        type="email" 
+                        name="email" 
                         required 
-                        value={formData.nome} 
+                        value={formData.email} 
                         onChange={handleFormChange}
-                        placeholder="Nome Sobrenome" 
+                        placeholder="nome@empresa.com" 
                         className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
                       />
                     </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="space-y-1">
-                        <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">E-mail Corporativo</label>
-                        <input 
-                          type="email" 
-                          name="email" 
-                          required 
-                          value={formData.email} 
-                          onChange={handleFormChange}
-                          placeholder="nome@empresa.com" 
-                          className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
-                        />
-                      </div>
-                      <div className="space-y-1">
-                        <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Telefone / WhatsApp</label>
-                        <input 
-                          type="tel" 
-                          name="telefone" 
-                          required 
-                          value={formData.telefone} 
-                          onChange={handleFormChange}
-                          placeholder="(85) 99999-9999" 
-                          className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
-                        />
-                      </div>
-                    </div>
-
                     <div className="space-y-1">
-                      <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Nome da Empresa ou Startup</label>
+                      <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Telefone / WhatsApp</label>
                       <input 
-                        type="text" 
-                        name="empresa" 
+                        type="tel" 
+                        name="telefone" 
                         required 
-                        value={formData.empresa} 
+                        value={formData.telefone} 
                         onChange={handleFormChange}
-                        placeholder="Nome Corporativo" 
+                        placeholder="(85) 99999-9999" 
                         className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
                       />
                     </div>
+                  </div>
 
-                    {modalType === 'booking' ? (
-                      <>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          <div className="space-y-1">
-                            <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Espaço Desejado</label>
-                            <select 
-                              name="espaco" 
-                              value={formData.espaco} 
-                              onChange={handleFormChange}
-                              className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
-                            >
-                              <option value="Auditório">Auditório NINNA (94 Pessoas)</option>
-                              <option value="Espaço Pregão">Espaço Pregão (30 Pessoas)</option>
-                              <option value="Sala Oval">Sala Oval (12 a 20 Pessoas)</option>
-                              <option value="Sala Sprint">Sala Sprint (8 a 10 Pessoas)</option>
-                              <option value="Ecosystem Coworking">Outros ambientes do Hub</option>
-                            </select>
-                          </div>
-                          
-                          <div className="space-y-1">
-                            <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Data Pretendida</label>
-                            <input 
-                              type="date" 
-                              name="dataPretendida" 
-                              required 
-                              value={formData.dataPretendida} 
-                              onChange={handleFormChange}
-                              className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
-                            />
-                          </div>
-                        </div>
+                  <div className="space-y-1">
+                    <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Nome da Empresa ou Startup</label>
+                    <input 
+                      type="text" 
+                      name="empresa" 
+                      required 
+                      value={formData.empresa} 
+                      onChange={handleFormChange}
+                      placeholder="Nome Corporativo" 
+                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
+                    />
+                  </div>
 
-                        <div className="space-y-1">
-                          <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Público Estimado</label>
-                          <select 
-                            name="publicoEstimado" 
-                            value={formData.publicoEstimado} 
-                            onChange={handleFormChange}
-                            className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
-                          >
-                            <option value="Até 40 pessoas">Até 40 pessoas (Modular)</option>
-                            <option value="40-98 pessoas">De 40 à 98 pessoas (Auditório completo)</option>
-                            <option value="Mais de 100 pessoas">Mais de 100 pessoas (Híbrido/Custom)</option>
-                          </select>
-                        </div>
-                      </>
-                    ) : (
-                      <div className="space-y-1">
-                        <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Categoria de Patrocínio Desejada</label>
-                        <select 
-                          name="tipoPatrocinio" 
-                          value={formData.tipoPatrocinio} 
-                          onChange={handleFormChange}
-                          className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
-                        >
-                          <option value="Patrocínio de Agenda Anual">Parceiro Estratégico Anual</option>
-                          <option value="Cotas para Evento Exclusivo">Cota de Apoio a Evento Exclusivo</option>
-                          <option value="Apoio de Happy Hour / Coffee">Apoiador Happy Hour & Networking</option>
-                        </select>
-                      </div>
-                    )}
-
-                    <div className="space-y-1">
-                      <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Ideia Preliminar ou Observações</label>
-                      <textarea 
-                        name="mensagem" 
-                        value={formData.mensagem} 
-                        onChange={handleFormChange}
-                        rows={3}
-                        placeholder="Escreva brevemente o tema ou tópicos que gostaria de abordar."
-                        className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
-                      />
-                    </div>
-
-                    <button 
-                      type="submit" 
-                      disabled={submitting}
-                      className="w-full mt-4 py-5 bg-brand-teal text-white font-black uppercase text-[10px] tracking-widest rounded-2xl hover:bg-brand-teal/90 shadow-xl shadow-brand-teal/15 transition-all text-center disabled:opacity-55 cursor-pointer"
+                  <div className="space-y-1">
+                    <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Categoria de Patrocínio Desejada</label>
+                    <select 
+                      name="tipoPatrocinio" 
+                      value={formData.tipoPatrocinio} 
+                      onChange={handleFormChange}
+                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
                     >
-                      {submitting ? 'Registrando Solicitação...' : 'Confirmar Envio e Contatar'}
-                    </button>
-                  </form>
+                      <option value="Patrocínio de Agenda Anual">Parceiro Estratégico Anual</option>
+                      <option value="Cotas para Evento Exclusivo">Cota de Apoio a Evento Exclusivo</option>
+                      <option value="Apoio de Happy Hour / Coffee">Apoiador Happy Hour & Networking</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Ideia Preliminar ou Observações</label>
+                    <textarea 
+                      name="mensagem" 
+                      value={formData.mensagem} 
+                      onChange={handleFormChange}
+                      rows={3}
+                      placeholder="Escreva brevemente o tema ou tópicos que gostaria de abordar."
+                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
+                    />
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    disabled={submitting}
+                    className="w-full mt-4 py-5 bg-brand-teal text-white font-black uppercase text-[10px] tracking-widest rounded-2xl hover:bg-brand-teal/90 shadow-xl shadow-brand-teal/15 transition-all text-center disabled:opacity-55 cursor-pointer"
+                  >
+                    {submitting ? 'Registrando Solicitação...' : 'Confirmar Envio e Contatar'}
+                  </button>
+                </form>
                 </div>
               )}
             </motion.div>

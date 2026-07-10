@@ -74,6 +74,24 @@ service cloud.firestore {
       allow update: if isAdmin() || (isAuthenticated() && request.auth.uid == userId);
       allow delete: if isAdmin();
     }
+    
+  match /databases/{database}/documents {
+  
+    match /leads_eventos/{document} {
+      allow create: if true;
+      allow read, update, delete: if false;
+    }
+
+    match /eventos/{document} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+
+    match /leads_eventos/{id} {
+      allow read, update: if request.auth != null && request.auth.token.admin == true;
+      allow create: if true; // formulário público continua podendo criar
+    }
 
     match /treinamentos/{treinamentoId} {
       allow read: if isAuthenticated();
