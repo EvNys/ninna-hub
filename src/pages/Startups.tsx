@@ -350,10 +350,12 @@ const StartupsHub = () => {
                       {/* Plus sign divider */}
                       <div className="text-white/40 font-black text-xl">+</div>
                       {/* Startup representation */}
-                      <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
-                        <MessageSquare className="w-5 h-5 text-[#0ae2b1] mb-0.5" />
-                        <span className="text-[8px] font-black text-[#0ae2b1] tracking-widest uppercase">SURI.AI</span>
-                      </div>
+                      <img 
+                        src="/Startups/suri-cbm-logo-blue.png" 
+                        alt="Suri.ai logo"
+                        className="max-h-16 max-w-16 object-contain"
+                        referrerPolicy="no-referrer"
+                        />
                     </div>
 
                     <span className="inline-block text-[8px] font-black tracking-widest text-red-400 bg-red-400/10 px-2.5 py-1 rounded-full border border-red-400/20 uppercase">
