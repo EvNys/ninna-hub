@@ -551,7 +551,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                   <div className="absolute top-0 right-0 w-80 h-80 bg-[#00c9a7]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
                     <div>
-                      <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-wide leading-[0.85]">Por que ser uma <br /><span className="text-[#00c9a7]">Corporação?</span></h3>
+                      <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-wide leading-[1]">Por que ser uma <br /><span className="text-[#00c9a7]">Corporação?</span></h3>
                       <div className="space-y-10 mt-12">
                         {[
                           { title: 'Acesso ao Dealflow', desc: 'Curadoria exclusiva de startups alinhadas aos seus desafios estratégicos.', color: 'text-[#00c9a7]' },
