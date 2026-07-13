@@ -22,7 +22,7 @@ import { NINNA_STARTUPS } from '../data/startups-fallback';
 
 const StartupsHub = () => {
   return (
-    <div className="pb-32">
+    <div>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 bg-[#1A1A2E]">
         <div className="absolute inset-0 z-0 opacity-20">
@@ -272,7 +272,7 @@ const StartupsHub = () => {
                 viewport={{ once: true }}
                 transition={{ delay: (idx % 6) * 0.08, duration: 0.4 }}
                 whileHover={{ y: -6, scale: 1.02 }}
-                className="group relative flex flex-col justify-between items-center p-5 bg-[#fafafa] border border-gray-100 rounded-[32px] hover:bg-white hover:border-brand-teal/20 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300 cursor-pointer text-current no-underline"
+                className="group relative flex flex-col justify-between items-center p-5 bg-[#fafafa] border border-gray-100 rounded-[32px] hover:bg-brand-teal hover:border-brand-teal/20 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300 cursor-pointer text-current no-underline"
               >
                 {/* Logo Area */}
                 <div className="w-full aspect-video flex items-center justify-center mb-3 overflow-hidden rounded-2xl bg-white p-3 border border-gray-50 transition-colors group-hover:border-gray-100 flex-shrink-0">

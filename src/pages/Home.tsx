@@ -219,11 +219,11 @@ const Home = () => {
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Inovação se dá pelo resultado</span>
             </motion.div>
             
-            <h1 className="text-7xl md:text-[100px] font-black tracking-wide leading-[0.85] mb-15 text-[#F5F5F5]">
-              CONECTANDO <br className='mb-15' /> PESSOAS<br className='mb-15'/>
-              <span className="gradient-text mb-10">NEGÓCIOS E</span><br />
-              <span className="inline-block px-6 py-2 md:px-10 md:py-4 bg-gradient-to-r from-brand-teal to-brand-green text-white rounded-3xl md:rounded-[48px] shadow-xl shadow-brand-teal/20 transform hover:scale-[1.02] transition-transform duration-300 mt-4">
-              INOVAÇÃO
+            <h1 className="text-7xl md:text-[100px] font-black tracking-wide leading-[1.00] mb-8 text-[#F5F5F5]">
+              CONECTANDO <br className='mb-6' /> PESSOAS<br className='mb-6'/>
+              <span className="gradient-text">NEGÓCIOS E </span>
+              <span className="inline-block px-6 py-2 md:px-10 md:py-4 bg-gradient-to-r from-brand-teal to-brand-green text-white rounded-3xl md:rounded-[48px] shadow-xl shadow-brand-teal/20 transform hover:scale-[1.02] transition-transform duration-300 align-middle">
+                INOVAÇÃO
               </span>
             </h1>
             
@@ -269,7 +269,7 @@ const Home = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6">
                 Referência em Inovação
               </div>
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-wide leading-[0.9]">
+              <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-wide leading-[1]">
                 O HUB QUE CONECTA <br />
                 <span className="text-brand-teal">INOVAÇÃO A RESULTADOS</span>
               </h2>

@@ -159,7 +159,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   const listToRender = eventos.length > 0 ? eventos : backupEcosystemEvents;
 
   return (
-    <div className="pb-32 bg-[#fafafa] min-h-screen">
+    <div className=" bg-[#fafafa] min-h-screen">
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 border-b border-gray-100">
@@ -201,10 +201,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 Quero Realizar meu Evento no NINNA
               </button>
               <button
-                onClick={() => {
-                  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=contato@ninnahub.com.br&su=${encodeURIComponent("Contato pelo site")}&body=${encodeURIComponent("Olá, gostaria de falar sobre...")}`;
-                  window.open(url, "_blank");
-                }}
+                 onClick={openSponsorModal}
                  className="px-8 py-4 bg-gray-900 text-white font-black uppercase text-[10px] tracking-[0.2em] rounded-2xl hover:bg-gray-800 hover:scale-[1.02] transition-all cursor-pointer"
               >
                 Patrocinar um Evento
