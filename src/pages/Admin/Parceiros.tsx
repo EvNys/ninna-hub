@@ -3,7 +3,7 @@ import { deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
 import { toast } from 'sonner';
 import { useFirestoreCollection } from '../../hooks/useFirestoreCollection';
-import type { Parceiro } from '../../types';
+import type { Parceiro } from '../../types/firestore';
 import { Edit2, Trash2, Building2, Globe, Image as ImageIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import {

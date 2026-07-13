@@ -20,10 +20,8 @@ export const PARCEIROS_FALLBACK: ParceiroFallback[] = [
   { id: 'bp-funcap', nome: 'Funcap', logo: '/Imagens_NINNA/funcap.png' },
   { id: 'bp-bnb', nome: 'Banco do Nordeste', logo: '/Imagens_NINNA/BancoNordeste.png' },
   { id: 'bp-paguemenos', nome: 'Pague Menos', logo: '/Imagens_NINNA/PagueMenos.png' },
-  { id: 'bp-fecomercio', nome: 'Fecomércio CE', logo: '/Imagens_NINNA/fecomercio-ce.png' },
+
   { id: 'bp-igc', nome: 'Instituto de Gestão e Cidadania', logo: '/Imagens_NINNA/IGCLogo.png' },
   { id: 'bp-acerloMittal', nome: 'arceloMittal', logo: '/Imagens_NINNA/arceloMittal.png' },
   { id: 'bp-hapvida', nome: 'Hapvida', logo: '/Imagens_NINNA/Hapvida.png' },
-  { id: "bp-ufc", nome: 'UFC', logo: '/Imagens_NINNA/UFC.png' },
-  { id: 'bp-uece', nome: 'UECE', logo: '/Imagens_NINNA/Uece.png' },
 ];

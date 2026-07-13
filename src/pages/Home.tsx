@@ -219,24 +219,26 @@ const Home = () => {
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Inovação se dá pelo resultado</span>
             </motion.div>
             
-            <h1 className="text-7xl md:text-[100px] font-black tracking-wide leading-[1.00] mb-8 text-[#F5F5F5]">
-              CONECTANDO <br className='mb-6' /> PESSOAS<br className='mb-6'/>
-              <span className="gradient-text">NEGÓCIOS E </span>
+            <h1 className="text-7xl md:text-[80px] font-black tracking-wide leading-[1.00] mb-8 text-[#F5F5F5]">
+              CONECTANDO PESSOAS<br className='mb-6'/>
+              <span className="gradient-text">NEGÓCIOS E</span>{' '}
               <span className="inline-block px-6 py-2 md:px-10 md:py-4 bg-gradient-to-r from-brand-teal to-brand-green text-white rounded-3xl md:rounded-[48px] shadow-xl shadow-brand-teal/20 transform hover:scale-[1.02] transition-transform duration-300 align-middle">
                 INOVAÇÃO
               </span>
             </h1>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
               <p className="text-xl text-[#F5F5F5] leading-relaxed border-l-2 border-brand-teal pl-8 font-medium">
-                No NINNA Hub, startups, empresas, investidores e instituições encontram o ambiente ideal para colaborar, desenvolver soluções e construir o futuro da inovação.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                <Link to="/startups" className="btn-primary flex items-center justify-center h-16 px-10 text-lg shadow-lg shadow-brand-teal/20">
-                  Fazer Parte <ArrowRight className="ml-2 w-6 h-6" />
+                No NINNA Hub, startups, empresas, investidores e instituições encontram o
+                ambiente ideal para colaborar, desenvolver soluções e construir juntos o futuro
+                da inovação.{" "}
+                <Link
+                  to="/startups"
+                  className="btn-primary inline-flex items-center gap-2 px-4 py-1.5 text-sm align-middle rounded-full shadow-md shadow-brand-teal/20"
+                >
+                  Faça Parte <ArrowRight className="w-4 h-4" />
                 </Link>
-              </div>
+              </p>
             </div>
           </motion.div>
         </div>
@@ -620,7 +622,7 @@ const Home = () => {
       <section className="py-32 bg-[#fafafa] overflow-hidden border-t border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 id="empresas-parceiras-titulo" className="text-gray-400 uppercase text-[20px] font-black tracking-[0.3em] mb-4">empresas que acreditam no NINNA</h3>
+            <h3 id="empresas-parceiras-titulo" className="text-gray-400 uppercase text-[20px] font-black tracking-[0.3em] mb-4">instituições que acreditam no NINNA</h3>
             <div className="h-[2px] w-12 bg-brand-teal mx-auto" />
           </div>
           
