@@ -222,7 +222,7 @@ const Home = () => {
             <h1 className="text-7xl md:text-[80px] font-black tracking-wide leading-[1.00] mb-8 text-[#F5F5F5]">
               CONECTANDO PESSOAS<br className='mb-6'/>
               <span className="gradient-text">NEGÓCIOS E</span>{' '}
-              <span className="inline-block px-6 py-2 md:px-10 md:py-4 bg-gradient-to-r from-brand-teal to-brand-green text-white rounded-3xl md:rounded-[48px] shadow-xl shadow-brand-teal/20 transform hover:scale-[1.02] transition-transform duration-300 align-middle">
+              <span className="inline-block px-6 py-2 md:px-5 md:py-4 bg-gradient-to-r from-brand-teal to-brand-green text-white rounded-3xl md:rounded-[48px] shadow-xl shadow-brand-teal/20 transform hover:scale-[1.02] transition-transform duration-300 align-middle">
                 INOVAÇÃO
               </span>
             </h1>
