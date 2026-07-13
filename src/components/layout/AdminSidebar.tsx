@@ -12,7 +12,7 @@ import {
   LogOut,
   ChevronLeft,
   ChevronRight,
-  Settings,
+  Building2,
   Award,
   Home,
   UserRoundPlus,
@@ -23,6 +23,7 @@ import { toast } from 'sonner';
 import { motion } from 'motion/react';
 import { useAuth } from '../../contexts/AuthContext';
 import { GraduationCap, Gift, UserCircle, Eye, ShieldCheck } from 'lucide-react';
+import { build } from 'vite';
 
 interface MenuItem {
   icon: any;
@@ -51,6 +52,7 @@ const AdminSidebar = () => {
     { icon: Rocket, label: 'Startups', path: '/admin/startups' },
     { icon: Users, label: 'Mentores', path: '/admin/mentores' },
     { icon: UserRoundPlus, label: 'Inscrição Mentores', path: '/admin/InscricaoMentores' },
+    { icon: Building2, label: 'Parceiros', path: '/admin/parceiros' },
     { icon: Briefcase, label: 'Patrocinadores', path: '/admin/Patrocinadores' },
     { icon: GraduationCap, label: 'Treinamentos', path: '/admin/treinamentos' },
     { icon: Gift, label: 'Benefícios', path: '/admin/beneficios' },
