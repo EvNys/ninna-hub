@@ -664,7 +664,7 @@ const StartupsHub = () => {
         </div>
       </section>
 
-          <section
+    <section
       className="py-32 bg-[#f4faf9] relative overflow-hidden border-t border-gray-100"
       id="cta-final"
     >
@@ -673,14 +673,7 @@ const StartupsHub = () => {
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-green/10 blur-[150px] rounded-full pointer-events-none" />
 
       {/* Grid sutil de fundo para reforçar a ideia de "rede de conexões" */}
-      <div
-        className="absolute inset-0 opacity-[0.05] pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(#0d1b1e 1px, transparent 1px), linear-gradient(90deg, #0d1b1e 1px, transparent 1px)",
-          backgroundSize: "56px 56px",
-        }}
-      />
+
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <motion.div
