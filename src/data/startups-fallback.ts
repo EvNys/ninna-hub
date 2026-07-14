@@ -32,5 +32,5 @@ export const NINNA_STARTUPS: StartupVitrine[] = [
   { name: "EdukDados", logo:"/Startups/edukdados.png", category: "", website: "https://www.edukdados.com.br" },
   { name: "synapsystem", logo:"/Startups/synapsystem.png", category: "", website: "https://synapsystem.com" },
   { name: "Leme", logo:"/Startups/Logo-Leme.jpeg", category: "", website: "https://lemeapp.com.br" },
-  { name: "4w Biotech", logo:"/Startups/4w Biotech.png", category: "", website: "https://www.4wbiotech.com/pt" },
+  { name: "Compliance Avant", logo:"/Startups/Compliance_avant_logo.png", category: "", website: "https://complianceavant.com" },
 ];

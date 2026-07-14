@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Rocket, History, Users, MapPin, Globe, ShieldCheck, Heart, ArrowRight, Target, Linkedin } from 'lucide-react';
+import { Rocket, History, Users, MapPin, Globe, ShieldCheck, Heart, ArrowRight, Target, Linkedin, Rotate3D} from 'lucide-react';
 import { collection, query, orderBy, getDocs } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 // Equipe padrão fica em src/data/equipe-fallback.ts (compartilhada com /admin/equipe).
@@ -51,25 +51,35 @@ const Sobre = () => {
   }, []);
   const values = [
     {
-      title: 'Foco em Resultado',
-      description: 'Inovação só faz sentido se gerar impacto mensurável e negócios reais.',
-      icon: <Target className="w-10 h-10" />
-    },
-    {
-      title: 'Colaboração',
-      description: 'Acreditamos na força do ecossistema e na construção coletiva.',
-      icon: <Users className="w-10 h-10" />
-    },
-    {
       title: 'Transparência',
-      description: 'Relações éticas e claras em todas as nossas conexões.',
+      description: 'Nós começamos com transparência, porque acreditamos que a clareza e a verdade em nossas ações e decisões criam confiança entre todos os envolvidos.',
       icon: <ShieldCheck className="w-10 h-10" />
     },
     {
-      title: 'Paixão por Inovar',
-      description: 'Energia constante para desafiar o status quo e criar o novo.',
+      title: 'Profissionalismo',
+      description: 'Reforça a seriedade, a ética e a excelência que o NINNA entrega no seu trabalho',
+      icon: <Users className="w-10 h-10" />
+    },
+    {
+      title: 'Engajamento',
+      description: 'O coração pulsante, representando a energia coletiva e a colaboração para atingir objetivos É o conecta nossa equipe, parceiros e clientes. ',
+      icon: <Target className="w-10 h-10" />
+    },
+    {
+      title: 'Ousadia',
+      description: 'A coragem de experimentar e desafiar o status quo. Nos inspira a ir além do esperado',
       icon: <Heart className="w-10 h-10" />
-    }
+    },
+    {
+      title: 'Inquietude',
+      description: 'O espírito de constante questionamento e evolução, essencial para manter a relevância em um mercado dinâmico',
+      icon: <Rocket className="w-10 h-10" />
+    },
+    {
+      title: 'Transformação',
+      description: 'O impacto que o NINNA busca gerar em seus parceiros, no mercado e no ecossistema de inovação é a essência do nosso propósito: transformar realidades, abrir novas possibilidades e promover conexões que impulsionem a inovação e a mudança',
+      icon: <Rotate3D className="w-10 h-10" />
+    },
   ];
 
   return (
@@ -368,9 +378,14 @@ const Sobre = () => {
                 <p className="text-gray-600 font-medium leading-relaxed ">
                   Nosso principal braço social. O Amontada Valley é um ecossistema de inovação social focado em transformar o interior do Ceará através da educação tecnológica, empreendedorismo e economia criativa.
                 </p>
-                <div className="mt-8 flex items-center text-[10px] font-black uppercase tracking-widest text-brand-teal group-hover:translate-x-2 transition-transform cursor-pointer">
+                <a
+                  href="https://www.amontadavalley.com.br"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 flex items-center text-[10px] font-black uppercase tracking-widest text-brand-teal group-hover:translate-x-2 transition-transform cursor-pointer"
+                >
                   Conhecer Iniciativa <ArrowRight className="ml-3 w-4 h-4" />
-                </div>
+                </a>
               </div>
             </motion.div>
 
@@ -382,9 +397,9 @@ const Sobre = () => {
             >
               <div className="grid grid-cols-2 gap-6 scale-90 md:scale-100 origin-center">
                 <div className="space-y-6 pt-12">
-                  <div className="rounded-[30px] overflow-hidden border border-gray-100 shadow-xl h-64 grayscale hover:grayscale-0 transition-all duration-700">
+                  <div className="rounded-[30px] overflow-hidden border border-gray-100 shadow-xl h-64">
                     <img 
-                      src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800" 
+                      src="/Imagens_espaco/AmontadaValley_1.png" 
                       alt="Social Impact 1" 
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
@@ -400,9 +415,9 @@ const Sobre = () => {
                     <div className="text-4xl font-black mb-2  tracking-wide">10+</div>
                     <div className="text-[10px] font-black uppercase tracking-widest opacity-80">Cidades Atendidas</div>
                   </div>
-                  <div className="rounded-[30px] overflow-hidden border border-gray-100 shadow-xl h-[320px] grayscale hover:grayscale-0 transition-all duration-700">
+                  <div className="rounded-[30px] overflow-hidden border border-gray-100 shadow-xl h-[320px]">
                     <img 
-                      src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&q=80&w=800" 
+                      src="/Imagens_espaco/AmontadaValley_2.png" 
                       alt="Social Impact 2" 
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
