@@ -176,7 +176,7 @@ const Sobre = () => {
             >
               <div className="p-4 relative z-10 rotate-3 hover:rotate-0 transition-all duration-700 rounded-[40px] overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-md shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" 
+                  src="/Imagens_espaco/Inovação.jpg" 
                   alt="NINNA Hub" 
                   className="rounded-[30px] w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
                   referrerPolicy="no-referrer"

@@ -201,21 +201,21 @@ const showStartupsDropdown = () => {
                     <Link
                       to="/startups/ninna-4-startups"
                       onClick={() => setIsOpen(false)}
-                      className="block py-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
+                      className="block py-1.5 text-[25px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
                     >
                       • NINNA 4 Startups
                     </Link>
                     <Link
                       to="/startups/portfolio"
                       onClick={() => setIsOpen(false)}
-                      className="block py-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
+                      className="block py-1.5 text-[25px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
                     >
                       • Portfólio NINNA
                     </Link>
                     <Link
                       to="/empresas"
                       onClick={() => setIsOpen(false)}
-                      className="block py-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
+                      className="block py-1.5 text-[25px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
                     >
                       • Inscrição para Parceria
                     </Link>

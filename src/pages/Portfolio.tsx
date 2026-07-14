@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
 import { db } from '../lib/firebase';
-import { Rocket, Search, MapPin, ExternalLink, Filter, X, Globe, Briefcase, Award } from 'lucide-react';
+import { Rocket, Search, MapPin, ExternalLink, Filter, X, ChevronDown, Briefcase, Award } from 'lucide-react';
 
 const Portfolio = () => {
   const [startups, setStartups] = useState<any[]>([]);
@@ -48,6 +48,8 @@ const Portfolio = () => {
     'SupplyChainTech', 'Cybersecurity (CyberTech)', 'DataTech', 
     'AI Tech', 'Blockchain / Web3 Tech', 'Outros'
   ];
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const maturityOptions = ['all', 'Ideação', 'Validação', 'Operação', 'Tração', 'Scale-up'];
   const businessTypeOptions = ['all', 'B2B', 'B2C', 'B2B2C', 'B2G', 'SaaS', 'Marketplace', 'Hardware', 'Outros'];
@@ -180,21 +182,40 @@ const Portfolio = () => {
                 <h4 className="text-[15px] font-black text-gray-900 uppercase tracking-[0.2em]  flex items-center gap-2">
                   <Filter className="w-3 h-3 text-brand-teal" /> Categorias
                 </h4>
-                <div className="flex flex-col gap-1 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
-                  {categories.map(cat => (
-                    <button
-                      key={cat}
-                      onClick={() => setSelectedCategory(cat)}
-                      className={`
-                        text-left px-4 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all
-                        ${selectedCategory === cat 
-                          ? 'bg-brand-teal text-white shadow-lg shadow-brand-teal/20 translate-x-1' 
-                          : 'text-gray-400 hover:text-gray-900 hover:bg-white hover:translate-x-1'}
-                      `}
-                    >
-                      {cat === 'all' ? 'Todas' : cat}
-                    </button>
-                  ))}
+                <div className="relative">
+                  {/* Botão gatilho */}
+                  <button
+                    onClick={() => setIsOpen(prev => !prev)}
+                    className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest bg-brand-teal text-white shadow-lg shadow-brand-teal/20"
+                  >
+                    <span>{selectedCategory === 'all' ? 'Todas' : selectedCategory}</span>
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+
+                  {/* Opções (aparecem só quando aberto) */}
+                  {isOpen && (
+                    <div className="flex flex-col gap-1 mt-1 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar rounded-xl border border-gray-100 bg-white p-1 shadow-lg">
+                      {categories.map(cat => (
+                        <button
+                          key={cat}
+                          onClick={() => {
+                            setSelectedCategory(cat);
+                            setIsOpen(false);
+                          }}
+                          className={`
+                            text-left px-4 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all
+                            ${selectedCategory === cat
+                              ? 'bg-brand-teal text-white shadow-lg shadow-brand-teal/20 translate-x-1'
+                              : 'text-gray-400 hover:text-gray-900 hover:bg-white hover:translate-x-1'}
+                          `}
+                        >
+                          {cat === 'all' ? 'Todas' : cat}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 
