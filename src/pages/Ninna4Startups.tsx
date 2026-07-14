@@ -87,7 +87,7 @@ const Ninna4Startups = () => {
   ];
 
   return (
-    <div className="pb-32 bg-white">
+    <div className="bg-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 bg-brand-darker">
         <div className="absolute inset-0 z-0 opacity-20">
@@ -462,13 +462,14 @@ const Ninna4Startups = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="bg-white border border-gray-150 rounded-[48px] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col justify-between"
-            >
-              <div>
+            >           
                 <div className="p-8 border-b border-gray-100 bg-gradient-to-r from-gray-50/50 to-white">
                   <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-center justify-between gap-4">
+                    {/* Logos & Connection */}
                     <div className="flex items-center gap-4">
-                      {/* Pague Menos Logo */}
-                      <div className="w-16 h-16 bg-red-500/[0.03] border border-red-100 rounded-2xl flex items-center justify-center p-3 shadow-sm shrink-0">
+                      {/* Corporativa Logo */}
+                      <div className="w-16 h-16 bg-red-500/[0.03] border border-red-500/20 rounded-2xl flex items-center justify-center p-3 shadow-sm bg-white shrink-0">
                         <img 
                           src="/Imagens_NINNA/PagueMenos.png" 
                           alt="Pague Menos logo" 
@@ -476,13 +477,16 @@ const Ninna4Startups = () => {
                           referrerPolicy="no-referrer"
                         />
                       </div>
-                      <div className="text-gray-400 font-black text-xl">+</div>
-                      {/* Suri Logo Visual representation */}
-                      <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/10 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
-                        <MessageSquare className="w-5 h-5 text-brand-teal mb-0.5" />
-                        <span className="text-[8px] font-black text-brand-teal tracking-widest uppercase">SURI.AI</span>
-                      </div>
-                    </div>
+                      {/* Plus sign divider */}
+                      <div className="text-white/40 font-black text-xl">+</div>
+                      {/* Startup representation */}
+                      <img 
+                        src="/Startups/suri-cbm-logo-blue.png" 
+                        alt="Suri.ai logo"
+                        className="max-h-16 max-w-16 object-contain"
+                        referrerPolicy="no-referrer"
+                        />
+                  </div>
                     <span className="text-[8px] font-black tracking-widest text-red-500 bg-red-50 px-2.5 py-1 rounded-full border border-red-100 uppercase">
                       Inovação Aberta
                     </span>
@@ -547,24 +551,28 @@ const Ninna4Startups = () => {
             >
               <div>
                 <div className="p-8 border-b border-gray-100 bg-gradient-to-r from-gray-50/50 to-white">
-                  <div className="flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-4">
-                      {/* Mold Iax Logo / Visual rep */}
-                      <div className="w-16 h-16 bg-purple-500/[0.04] border border-purple-100 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
-                        <Cpu className="w-5 h-5 text-purple-500 mb-0.5" />
-                        <span className="text-[8px] font-black text-purple-500 tracking-widest uppercase text-center leading-none">MOLD IAX</span>
+                  <div className="flex items-center gap-4">
+                      {/* NINNA Logo */}
+                      <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
+                        <img 
+                        src="/Imagens_NINNA/NinnaHub_footer.png" 
+                        alt="Suri.ai logo"
+                        className="max-h-16 max-w-16 object-contain"
+                        referrerPolicy="no-referrer"
+                        />
                       </div>
-                      <div className="text-gray-400 font-black text-xl">+</div>
-                      {/* NINNA Indicator */}
-                      <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/10 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
-                        <Sparkles className="w-5 h-5 text-brand-teal mb-0.5" />
-                        <span className="text-[8px] font-black text-brand-teal tracking-widest uppercase">NINNA</span>
+                      {/* Plus sign divider */}
+                      <div className="text-white/40 font-black text-xl">+</div>
+                      {/* MOLD IAX Logo */}
+                      <div className="w-16 h-16 bg-purple-500/[0.04] border border-purple-100 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0 bg-white">
+                        <img 
+                        src="/Startups/MoldIax.png" 
+                        alt="Suri.ai logo"
+                        className="max-h-16 max-w-16 object-contain"
+                        referrerPolicy="no-referrer"
+                        />
                       </div>
                     </div>
-                    <span className="text-[8px] font-black tracking-widest text-[#9333ea] bg-purple-50 px-2.5 py-1 rounded-full border border-purple-100 uppercase">
-                      Fomento & Captação
-                    </span>
-                  </div>
                 </div>
 
                 <div className="p-8 md:p-10">

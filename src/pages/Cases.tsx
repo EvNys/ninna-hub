@@ -63,11 +63,11 @@ const Cases = () => {
               <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6">
                 Success Stories
               </div>
-              <h1 className="text-6xl md:text-8xl font-black mb-0 uppercase tracking-wide leading-[0.85] text-gray-900 italic">
+              <h1 className="text-6xl md:text-8xl font-black mb-0 uppercase tracking-wide leading-[0.85] text-gray-900 ">
                 HISTÓRIAS DE <br /><span className="gradient-text">SUCESSO</span>
               </h1>
             </div>
-            <p className="text-xl text-gray-500 max-w-md font-medium leading-relaxed italic">
+            <p className="text-xl text-gray-500 max-w-md font-medium leading-relaxed ">
               Resultados reais gerados através da conexão entre grandes empresas e startups no ecossistema NINNA.
             </p>
           </div>
@@ -86,7 +86,7 @@ const Cases = () => {
           ) : cases.length === 0 ? (
             <div className="text-center py-32 bg-white rounded-[60px] border border-gray-100 shadow-2xl">
               <FileText className="w-16 h-16 text-gray-200 mx-auto mb-6" />
-              <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide italic">Nenhuma história registrada ainda</h3>
+              <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide ">Nenhuma história registrada ainda</h3>
               <p className="text-gray-500 mt-2 font-medium">Estamos preparando grandes novidades para você.</p>
             </div>
           ) : (
@@ -110,16 +110,16 @@ const Cases = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-60" />
                     <div className="absolute top-6 left-6">
-                      <div className="px-3 py-1 bg-brand-teal text-white text-[8px] font-black uppercase tracking-widest rounded shadow-lg italic">
+                      <div className="px-3 py-1 bg-brand-teal text-white text-[8px] font-black uppercase tracking-widest rounded shadow-lg ">
                         {item.cliente}
                       </div>
                     </div>
                   </div>
                   <div className="p-10">
-                    <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide italic leading-none mb-4 group-hover:text-brand-teal transition-colors">
+                    <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
                       {item.titulo}
                     </h3>
-                    <p className="text-gray-500 font-medium line-clamp-3 mb-8 italic">
+                    <p className="text-gray-500 font-medium line-clamp-3 mb-8 ">
                       {item.resumo}
                     </p>
                     <div className="flex items-center text-[10px] font-black uppercase tracking-widest text-brand-teal group-hover:translate-x-2 transition-transform">
@@ -169,17 +169,17 @@ const Cases = () => {
 
               <div className="p-10 md:p-16 flex-grow overflow-y-auto">
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-teal italic">{selectedCase.cliente}</span>
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-teal ">{selectedCase.cliente}</span>
                   <span className="w-1 h-1 rounded-full bg-gray-200" />
-                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 italic">Case de Sucesso</span>
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ">Case de Sucesso</span>
                 </div>
                 
-                <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-wide italic leading-[0.9] mb-10">
+                <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-wide  leading-[0.9] mb-10">
                   {selectedCase.titulo}
                 </h2>
 
                 <div className="prose prose-gray max-w-none mb-12">
-                  <p className="text-xl text-gray-600 font-medium italic border-l-4 border-brand-teal pl-8 mb-10 leading-relaxed">
+                  <p className="text-xl text-gray-600 font-medium  border-l-4 border-brand-teal pl-8 mb-10 leading-relaxed">
                     {selectedCase.resumo}
                   </p>
                   <div className="text-gray-500 font-medium leading-relaxed whitespace-pre-wrap">

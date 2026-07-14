@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 import { Rocket, Search, MapPin, ExternalLink, Filter, X, Globe, Briefcase, Award } from 'lucide-react';
@@ -144,9 +145,12 @@ const Portfolio = () => {
             <div className="relative z-10">
               <h3 className="text-4xl font-black text-white mb-4 leading-tight uppercase tracking-wide ">NINNA 4 <br />Startup</h3>
               <p className="text-white/70 mb-8 font-medium max-w-sm">O programa de fomento definitivo para startups que buscam escala, mentorias e networking estratégico.</p>
-              <button className="bg-brand-teal text-white px-8 py-4 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg">
+              <Link 
+                to="/startups/ninna-4-startups"
+                className="bg-brand-teal text-white px-8 py-4 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg"
+              >
                 Clique Aqui
-              </button>
+              </Link>
             </div>
             <Award className="absolute -bottom-10 -right-10 w-64 h-64 text-white/5 -rotate-12 group-hover:rotate-0 transition-transform duration-700" />
           </motion.div>
@@ -173,7 +177,7 @@ const Portfolio = () => {
 
               {/* Categorias List */}
               <div className="space-y-4">
-                <h4 className="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em]  flex items-center gap-2">
+                <h4 className="text-[15px] font-black text-gray-900 uppercase tracking-[0.2em]  flex items-center gap-2">
                   <Filter className="w-3 h-3 text-brand-teal" /> Categorias
                 </h4>
                 <div className="flex flex-col gap-1 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
@@ -196,7 +200,7 @@ const Portfolio = () => {
 
               {/* Maturidade List */}
               <div className="space-y-4">
-                <h4 className="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em]  flex items-center gap-2">
+                <h4 className="text-[15px] font-black text-gray-900 uppercase tracking-[0.2em]  flex items-center gap-2">
                   <Award className="w-3 h-3 text-brand-teal" /> Maturidade
                 </h4>
                 <div className="flex flex-col gap-1">
@@ -219,7 +223,7 @@ const Portfolio = () => {
 
               {/* Negócio List */}
               <div className="space-y-4">
-                <h4 className="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em]  flex items-center gap-2">
+                <h4 className="text-[15px] font-black text-gray-900 uppercase tracking-[0.2em]  flex items-center gap-2">
                   <Briefcase className="w-3 h-3 text-brand-teal" /> Tipo de Negócio
                 </h4>
                 <div className="flex flex-col gap-1">
