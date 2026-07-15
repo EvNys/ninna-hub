@@ -332,11 +332,11 @@ const Sobre = () => {
               </div>
 
               <div className="relative">
-                <div className="h-[500px] rounded-[40px] overflow-hidden grayscale border border-white/10 relative z-10 shadow-2xl">
+                <div className="h-[500px] rounded-[40px] overflow-hidden border border-white/10 relative z-10 shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
+                    src="/Imagens_espaco/NINNA_Geral.jpg" 
                     alt="Espaço NINNA Hub" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
                 </div>
