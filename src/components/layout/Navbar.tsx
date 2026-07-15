@@ -286,7 +286,7 @@ const showStartupsDropdown = () => {
                           <Calendar className="w-5 h-5" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Agende seu Evento</h5>
+                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Agende seu Evento</h5>
                           <p className="text-white/40 text-xs font-semibold">Reserve o Auditório Premium do NINNA</p>
                         </div>
                       </div>
@@ -303,7 +303,7 @@ const showStartupsDropdown = () => {
                           <Sparkles className="w-5 h-5 text-amber-300" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-white">Seja um Parceiro</h5>
+                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white">Seja um Parceiro</h5>
                           <p className="text-white/60 text-xs font-semibold">Impulsione a sua marca no ecossistema</p>
                         </div>
                       </div>
@@ -330,11 +330,11 @@ const showStartupsDropdown = () => {
                       {ninnaEvents.map((ev) => (
                         <div key={ev.nome} className="bg-white/5 border border-white/10 p-5 rounded-2xl flex flex-col justify-between hover:shadow-md transition-shadow group">
                           <div className="space-y-1">
-                            <h6 className="font-extrabold uppercase text-[10px] tracking-wide leading-normal text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">
+                            <h6 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest leading-normal text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">
                               {ev.nome}
                             </h6>
                           </div>
-                          <div className="flex items-center gap-1.5 text-white/40 text-[9px] font-bold uppercase tracking-wider mt-4">
+                          <div className="flex items-center gap-1.5 text-white/40 text-[9px] font-bold uppercase tracking-widest mt-4">
                             <MapPin className="w-3.5 h-3.5 text-[#00c9a7] shrink-0" />
                             <span className="truncate">{ev.local}</span>
                           </div>
@@ -352,7 +352,7 @@ const showStartupsDropdown = () => {
                       <span>Abertura de Oportunidades</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
-                    <p className="text-[9px] text-white/40 font-bold uppercase tracking-wider italic text-right">
+                    <p className="text-[9px] text-white/40 font-bold uppercase tracking-widest italic text-right">
                       Nossa equipe está pronta para integrar sua marca e comunidade.
                     </p>
                   </div>
@@ -394,7 +394,7 @@ const showStartupsDropdown = () => {
                           <Rocket className="w-5 h-5" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">NINNA 4 Startups</h5>
+                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">NINNA 4 Startups</h5>
                           <p className="text-white/40 text-xs font-semibold">Aceleração comercial, fomento e mentorias sob medida</p>
                         </div>
                       </div>
@@ -411,7 +411,7 @@ const showStartupsDropdown = () => {
                           <Laptop className="w-5 h-5" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[10px] tracking-wider text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Portfólio de Startups</h5>
+                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Portfólio de Startups</h5>
                           <p className="text-white/40 text-xs font-semibold">Conheça as soluções inovadoras do nosso ecossistema</p>
                         </div>
                       </div>
@@ -434,7 +434,7 @@ const showStartupsDropdown = () => {
                           <Sparkles className="w-6 h-6 text-amber-300" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-extrabold uppercase text-[11px] tracking-wider text-white">Faça parte do NINNA 4 Startups</h5>
+                          <h5 className="font-barlowCondensed-Black uppercase text-[11px] tracking-widest text-white">Faça parte do NINNA 4 Startups</h5>
                           <p className="text-white/70 text-xs font-semibold mt-1">Inscreva sua startup no portal para parceria estratégica com o NINNA</p>
                         </div>
                       </div>
@@ -443,7 +443,7 @@ const showStartupsDropdown = () => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 pt-6 border-t border-white/10">
-                    <p className="text-[9px] text-white/40 font-bold uppercase tracking-wider italic">
+                    <p className="text-[9px] text-white/40 font-bold uppercase tracking-widest italic">
                       Conecte sua startup a dezenas de grandes corporações patrocinadoras do NINNA Hub.
                     </p>
                   </div>
