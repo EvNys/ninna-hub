@@ -282,12 +282,14 @@ const AgendaEventos = () => {
               Conecte sua corporação ao ecossistema do NINNA de forma dinâmica. Fale conosco para agendar o Auditório Premium ou promover painéis temáticos.
             </p>
             <div className="pt-6 flex flex-wrap justify-center gap-4">
-              <Link
-                to="/ecossistema?action=booking"
+              <a 
+                href="https://wa.me/558532114201?text=Ol%C3%A1%2C+gostaria+de+realizar+um+evento+no+NINNA."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-brand-teal text-white font-black uppercase text-[10px] tracking-widest rounded-xl hover:bg-brand-teal/90 transition-all cursor-pointer shadow-lg shadow-brand-teal/10 hover:scale-[1.02]"
               >
                 Reservar um Espaço
-              </Link>
+              </a>
               <Link
                 to="/ecossistema?action=sponsor"
                 className="px-8 py-4 bg-white/10 text-white border border-white/10 font-black uppercase text-[10px] tracking-widest rounded-xl hover:bg-white/20 transition-all cursor-pointer hover:scale-[1.02]"

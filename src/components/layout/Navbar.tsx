@@ -287,7 +287,7 @@ const showStartupsDropdown = () => {
                         </div>
                         <div className="text-left">
                           <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Agende seu Evento</h5>
-                          <p className="text-white/40 text-xs font-semibold">Reserve o Auditório Premium do NINNA</p>
+                          <p className="text-white/40 text-xs font-inter">Reserve o Auditório Premium do NINNA</p>
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
@@ -304,7 +304,7 @@ const showStartupsDropdown = () => {
                         </div>
                         <div className="text-left">
                           <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white">Seja um Parceiro</h5>
-                          <p className="text-white/60 text-xs font-semibold">Impulsione a sua marca no ecossistema</p>
+                          <p className="text-white/60 text-xs font-inter">Impulsione a sua marca no ecossistema</p>
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all" />
@@ -395,7 +395,7 @@ const showStartupsDropdown = () => {
                         </div>
                         <div className="text-left">
                           <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">NINNA 4 Startups</h5>
-                          <p className="text-white/40 text-xs font-semibold">Aceleração comercial, fomento e mentorias sob medida</p>
+                          <p className="text-white/40 text-xs font-inter">Aceleração comercial, fomento e mentorias sob medida</p>
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
@@ -412,7 +412,7 @@ const showStartupsDropdown = () => {
                         </div>
                         <div className="text-left">
                           <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Portfólio de Startups</h5>
-                          <p className="text-white/40 text-xs font-semibold">Conheça as soluções inovadoras do nosso ecossistema</p>
+                          <p className="text-white/40 text-xs font-inter">Conheça as soluções inovadoras do nosso ecossistema</p>
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
@@ -435,7 +435,7 @@ const showStartupsDropdown = () => {
                         </div>
                         <div className="text-left">
                           <h5 className="font-barlowCondensed-Black uppercase text-[11px] tracking-widest text-white">Faça parte do NINNA 4 Startups</h5>
-                          <p className="text-white/70 text-xs font-semibold mt-1">Inscreva sua startup no portal para parceria estratégica com o NINNA</p>
+                          <p className="text-white/70 text-xs font-inter mt-1">Inscreva sua startup no portal para parceria estratégica com o NINNA</p>
                         </div>
                       </div>
                       <ArrowRight className="w-5 h-5 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all" />

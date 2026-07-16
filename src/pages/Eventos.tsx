@@ -195,11 +195,14 @@ const handleSubmit = async (e: React.FormEvent) => {
             </p>
 
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <button 
+              <a 
+                href="https://wa.me/558532114201?text=Ol%C3%A1%2C+gostaria+de+realizar+um+evento+no+NINNA."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-brand-teal text-white font-black uppercase text-[10px] tracking-[0.2em] rounded-2xl shadow-xl shadow-brand-teal/20 hover:bg-brand-teal/90 hover:scale-[1.02] transition-all cursor-pointer"
               >
                 Quero Realizar meu Evento no NINNA
-              </button>
+              </a>
               <button
                  onClick={openSponsorModal}
                  className="px-8 py-4 bg-gray-900 text-white font-black uppercase text-[10px] tracking-[0.2em] rounded-2xl hover:bg-gray-800 hover:scale-[1.02] transition-all cursor-pointer"
@@ -220,10 +223,10 @@ const handleSubmit = async (e: React.FormEvent) => {
               <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-wide  leading-none">
                 ECOSSISTEMAS QUE <span className="gradient-text">GERAM</span> IMPACTO
               </h2>
-              <p className="text-white/60 text-lg leading-relaxed font-semibold">
+              <p className="text-white/60 text-lg leading-relaxed font-barlow">
                 No NINNA, nós não cedemos apenas espaço físico. Nós apoiaremos a sua marca na ponte com o ecossistema tecnológico, ajudando na atração de startups, corporações e decisores do mercado local.
               </p>
-              <p className="text-white/60 text-lg leading-relaxed font-semibold">
+              <p className="text-white/60 text-lg leading-relaxed font-barlow">
                 Conecte-se com nosso hub e usufrua de uma comunidade vibrante ativa de mentores, investidores, líderes institucionais e parceiros estratégicos.
               </p>
               <div className="pt-6 font-inter">
@@ -261,7 +264,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <Users className="w-10 h-10 text-brand-teal" />
                 <h3 className="text-xl font-black  uppercase text-white">Conexões</h3>
                 <p className="text-white/50 text-sm font-semibold leading-relaxed">
-                  Proximidade direta com mais de 100+ startups em tecnologia e dezenas de corporações parceiras de inovação aberta.
+                  Proximidade direta com mais de 100 startups em tecnologia e dezenas de corporações parceiras de inovação aberta.
                 </p>
               </div>
 
@@ -269,7 +272,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <Building2 className="w-10 h-10 text-brand-teal" />
                 <h3 className="text-xl font-black  uppercase text-white">Oportunidades</h3>
                 <p className="text-white/50 text-sm font-semibold leading-relaxed">
-                  Equipamentos audiovisuais de ponta, internet dedicada corporativa de alto desempenho e equipe de suporte operacional local.
+                  Um ambiente preparado para grandes conexões: equipamentos audiovisuais de ponta, internet dedicada corporativa de alto desempenho e equipe de suporte operacional local.
                 </p>
               </div>
 
@@ -307,7 +310,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Ecossistema Ativo</span>
                   <h3 className="text-3xl font-black text-white uppercase tracking-wide  leading-none">Conhecer Oportunidades</h3>
                   <p className="text-white/60 font-semibold text-sm sm:text-base leading-relaxed">
-                    Aproximação direta com o mercado inovador cearense. Explore projetos abertos, vagas em tecnologia, desafios de inovação corporativa corporativa e programas dedicados a acelerar marcas.
+                    Aproximação direta com o mercado inovador cearense. Explore projetos abertos, vagas em tecnologia, desafios de inovação corporativa e programas dedicados a acelerar marcas.
                   </p>
                 </div>
               </div>
@@ -383,19 +386,19 @@ const handleSubmit = async (e: React.FormEvent) => {
                   O ponto de encontro definitivo entre grandes corporações e as melhores startups em ascensão. Com sessões focadas de pitches e dinâmicas de conexão assistidas, apresentamos as soluções mais disruptivas do mercado estadual aos decisores, diretores e patrocinadores estratégicos.
                 </p>
                 <ul className="space-y-3 pt-2">
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
                     <span>Pitching qualificado de startups em tração</span>
                   </li>
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
                     <span>Comitivas de inovação corporativa presencial</span>
                   </li>
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
@@ -456,19 +459,19 @@ const handleSubmit = async (e: React.FormEvent) => {
                   O happy hour indispensável pós-trabalho que une a melhor comunidade de negócios cearense. Reunimos fundadores, gestores, conselheiros e investidores em bate-papos acolhedores e descontraídos para trocar aprendizados, debater novas teses de mercado e celebrar novas parcerias comerciais sustentáveis.
                 </p>
                 <ul className="space-y-3 pt-2">
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
                     <span>Networking de alta proximidade sem burocracias</span>
                   </li>
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
                     <span>Partilha espontânea de insights e lições práticas</span>
                   </li>
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
@@ -501,19 +504,19 @@ const handleSubmit = async (e: React.FormEvent) => {
                   Sessões de mentoria coletiva e masterclasses altamente técnicas. Formatos desenhados para que especialistas sêniores, diretores de tecnologia e empresários voluntários de renome ofereçam deep-dives práticos direcionados à superação de desafios técnicos operacionais, produto e capital de risco.
                 </p>
                 <ul className="space-y-3 pt-2">
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
-                    <span>Encontros intensificados em squads reducionistas</span>
+                    <span>Encontros intensificados em grupos pequenos e focados</span>
                   </li>
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
                     <span>Workshops focados puramente em soluções reais</span>
                   </li>
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
@@ -557,25 +560,25 @@ const handleSubmit = async (e: React.FormEvent) => {
                   Institucional & Ecossistema
                 </div>
                 <h4 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide  leading-none">
-                  Li.Cor
+                  L.I.Cor
                 </h4>
                 <p className="text-gray-500 font-medium text-base md:text-lg leading-relaxed">
                   Painéis e encontros institucionais estratégicos voltados para o fomento tecnológico regional e diálogo com o poder público. O NINNA atua como embaixador integrando a academia, indústrias setoriais de destaque e órgãos fomentadores para cocriar leis, infraestrutura, capitais de risco e caminhos de inovação produtiva regional.
                 </p>
                 <ul className="space-y-3 pt-2">
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
                     <span>Integração entre Estado, Universidades e Empresas</span>
                   </li>
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green shrink-0">
                       <Check className="w-3 h-3" />
                     </div>
                     <span>Planejamento de atração de capital estratégico</span>
                   </li>
-                  <li className="flex items-center gap-3 text-sm text-gray-600 font-semibold">
+                  <li className="flex items-center gap-3 text-sm text-gray-600 font-inter">
                     <div className="w-5 h-5 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green shrink-0">
                       <Check className="w-3 h-3" />
                     </div>

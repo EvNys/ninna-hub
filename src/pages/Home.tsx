@@ -141,7 +141,7 @@ const Home = () => {
       title: 'Corporate',
       description: 'Apoiamos empresas na construção de estratégias de inovação, conectando desafios reais às melhores soluções do ecossistema por meio de programas, conexões e experiências que geram resultados.',
       icon: <Target className="w-12 h-12" />,
-      link: '/empresas'
+      link: '/Servicos'
     },
     {
       title: 'Startups',
@@ -171,7 +171,7 @@ const Home = () => {
     nome: 'Lucas Melo',
     cargo: 'Fundador e Diretor Médico',
     empresa: 'Straloo',
-    texto: 'O que me chamou a atenção foram os eventos.Sempre tem alguns eventos legais que a gente acaba participando. Teve uma palestra do Deusmar que foi bem bacana, super aberto falando de tudo, foi bem legal.',
+    texto: 'O que me chamou a atenção foram os eventos. Sempre tem alguns eventos legais que a gente acaba participando. Teve uma palestra do Deusmar que foi bem bacana, super aberto falando de tudo, foi bem legal.',
     avatar: '',
   },
   {
@@ -505,7 +505,7 @@ const Home = () => {
             </div>
             <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
             <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-              {kpis?.kpi3_label || 'Negócios em Milhões'}
+              {kpis?.kpi3_label || 'Em Negócios Gerados'}
             </div>
           </motion.div>
 
@@ -765,7 +765,7 @@ const Home = () => {
                 to="/empresas" 
                 className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-white hover:bg-white/95 text-gray-950 font-black uppercase text-[11px] tracking-widest hover:scale-105 active:scale-95 shadow-xl shadow-white/5 transition-all text-center"
               >
-                Transformar minha Empresa
+                Quero inovar minha Empresa
               </Link>
             </div>
           </motion.div>

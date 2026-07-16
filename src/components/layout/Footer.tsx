@@ -25,11 +25,12 @@ const Footer = () => {
               O NINNA é um hub de inovação focado em gerar conexões estratégicas entre empresas, startups e o ecossistema, com foco em resultados reais.
             </p>
             <div className="flex space-x-6">
-              {[Instagram, Linkedin, Twitter].map((Icon, i) => (
-                <a key={i} href="#" className="text-white/40 hover:text-[#00bcd4] transition-colors">
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
+              <a href="https://www.instagram.com/ninna.hub/" className="text-white/40 hover:text-[#00bcd4] transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://www.linkedin.com/company/ninnahub/" className="text-white/40 hover:text-[#00bcd4] transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
             </div>
 
             <div className="mt-6">
@@ -49,9 +50,9 @@ const Footer = () => {
           <div>
             <h3 className="text-[#00bcd4] font-black uppercase text-[10px] tracking-widest mb-8">Navegação</h3>
             <ul className="space-y-4">
-              <li><Link to="/empresas" className="text-white/60 hover:text-white transition-all font-medium">Empresas</Link></li>
+              <li><Link to="/Servicos" className="text-white/60 hover:text-white transition-all font-medium">Empresas</Link></li>
               <li><Link to="/startups" className="text-white/60 hover:text-white transition-all font-medium">Startups</Link></li>
-              <li><Link to="/ecossistema" className="text-white/60 hover:text-white transition-all font-medium">Ecossistema</Link></li>
+              <li><Link to="/Ecossistema" className="text-white/60 hover:text-white transition-all font-medium">Ecossistema</Link></li>
               <li><Link to="/oportunidades" className="text-white/60 hover:text-white transition-all font-medium">Oportunidades</Link></li>
               <li><Link to="/sobre" className="text-white/60 hover:text-white transition-all font-medium">Sobre Nós</Link></li>
             </ul>

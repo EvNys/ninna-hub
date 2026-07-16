@@ -57,27 +57,27 @@ const Sobre = () => {
     },
     {
       title: 'Profissionalismo',
-      description: 'Reforça a seriedade, a ética e a excelência que o NINNA entrega no seu trabalho',
+      description: 'Reforça a seriedade, a ética e a excelência que o NINNA entrega no seu trabalho.',
       icon: <Users className="w-10 h-10" />
     },
     {
       title: 'Engajamento',
-      description: 'O coração pulsante, representando a energia coletiva e a colaboração para atingir objetivos É o conecta nossa equipe, parceiros e clientes. ',
+      description: 'O coração pulsante, representando a energia coletiva e a colaboração para atingir objetivos é o que conecta nossa equipe, parceiros e clientes. ',
       icon: <Target className="w-10 h-10" />
     },
     {
       title: 'Ousadia',
-      description: 'A coragem de experimentar e desafiar o status quo. Nos inspira a ir além do esperado',
+      description: 'A coragem de experimentar e desafiar o status quo. Nos inspira a ir além do esperado.',
       icon: <Heart className="w-10 h-10" />
     },
     {
       title: 'Inquietude',
-      description: 'O espírito de constante questionamento e evolução, essencial para manter a relevância em um mercado dinâmico',
+      description: 'O espírito de constante questionamento e evolução, essencial para manter a relevância em um mercado dinâmico.',
       icon: <Rocket className="w-10 h-10" />
     },
     {
       title: 'Transformação',
-      description: 'O impacto que o NINNA busca gerar em seus parceiros, no mercado e no ecossistema de inovação é a essência do nosso propósito: transformar realidades, abrir novas possibilidades e promover conexões que impulsionem a inovação e a mudança',
+      description: 'O impacto que o NINNA busca gerar em seus parceiros, no mercado e no ecossistema de inovação é a essência do nosso propósito: transformar realidades, abrir novas possibilidades e promover conexões que impulsionem a inovação e a mudança.',
       icon: <Rotate3D className="w-10 h-10" />
     },
   ];
@@ -155,7 +155,7 @@ const Sobre = () => {
                   Desde a nossa fundação, temos pavimentado o caminho para a transformação cultural e tecnológica das maiores marcas e indústrias do Nordeste, liderando iniciativas de inovação corporativa com metodologia focada no desenvolvimento sustentável e na aceleração de novos canais de faturamento.
                 </p>
                 <p className="pl-8 text-white/70">
-                  Com o avanço da inteligência artificial e a necessidade pulsante de digitalização ágil, o NINNA consolidou-se como o porto seguro de fomento, mentorias e validação rápida de MVPs, conectando empreendedores de vanguarda com tomadores de decisão corporativos de forma madura, séria e unificada.
+                  Com o avanço da inteligência artificial e a necessidade pulsante de digitalização ágil, o NINNA consolidou-se como o referência em fomento, mentorias e validação rápida de MVPs, aproximando empreendedores de decisores corporativos com agilidade e método.
                 </p>
                 <div className="p-8 rounded-[30px] bg-white/[0.03] border border-white/10 mt-12 group hover:border-[#0ae2b1]/30 hover:bg-white/[0.05] transition-all duration-500">
                   <h4 className="text-[10px] font-black text-[#0ae2b1] uppercase tracking-widest mb-3  flex items-center gap-2">

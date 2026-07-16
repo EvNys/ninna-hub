@@ -98,7 +98,7 @@ const StartupsHub = () => {
               },
               {
                 icon: Users,
-                title: "Mentoria e Especialista",
+                title: "Mentoria e Especialistas",
                 desc: "Nossa rede reúne empreendedores, executivos e especialistas que compartilham experiências práticas para apoiar decisões estratégicas e o desenvolvimento do negócio.",
               },
               {
@@ -528,7 +528,7 @@ const StartupsHub = () => {
                 <span className="text-brand-teal">NINNA?</span>
               </h2>
               <p className="text-gray-500 font-semibold text-lg leading-relaxed mb-12">
-                azer parte do NINNA significa integrar um dos ecossistemas de inovação mais relevantes do Nordeste, ampliando sua rede de relacionamento, acesso ao mercado e oportunidades de crescimento.
+                Fazer parte do NINNA significa integrar um dos ecossistemas de inovação mais relevantes do Nordeste, ampliando sua rede de relacionamento, acesso ao mercado e oportunidades de crescimento.
               </p>
               
               <Link
