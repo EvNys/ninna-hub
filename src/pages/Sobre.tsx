@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Rocket, History, Users, MapPin, Globe, ShieldCheck, Heart, ArrowRight, Target, Linkedin, Rotate3D} from 'lucide-react';
+import { Rocket, History, Users, MapPin, Globe, ShieldCheck, Heart, ArrowRight, Target, Linkedin, FolderOpen, Rotate3D} from 'lucide-react';
 import { collection, query, orderBy, getDocs } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 // Equipe padrão fica em src/data/equipe-fallback.ts (compartilhada com /admin/equipe).
@@ -61,6 +61,11 @@ const Sobre = () => {
       icon: <Users className="w-10 h-10" />
     },
     {
+      title: 'Organização',
+      description: 'É o que transforma ideias em resultados, permitindo que nossos processos sejam consistentes e alinhados.',
+      icon: <FolderOpen className="w-10 h-10" />
+    },
+    {
       title: 'Engajamento',
       description: 'O coração pulsante, representando a energia coletiva e a colaboração para atingir objetivos é o que conecta nossa equipe, parceiros e clientes. ',
       icon: <Target className="w-10 h-10" />
@@ -77,7 +82,7 @@ const Sobre = () => {
     },
     {
       title: 'Transformação',
-      description: 'O impacto que o NINNA busca gerar em seus parceiros, no mercado e no ecossistema de inovação é a essência do nosso propósito: transformar realidades, abrir novas possibilidades e promover conexões que impulsionem a inovação e a mudança.',
+      description: 'O impacto que o NINNA busca gerar em seus parceiros, no mercado e no ecossistema de inovação é a essência do nosso propósito.',
       icon: <Rotate3D className="w-10 h-10" />
     },
   ];
@@ -145,27 +150,26 @@ const Sobre = () => {
               <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] text-white uppercase tracking-wide ">
                 INOVAÇÃO COM <br /><span className="text-[#0ae2b1] underline decoration-white/20">DNA CEARENSE</span>
               </h2>
-              <div className="space-y-8 text-white/75 text-lg leading-relaxed font-semibold">
+              <div className="space-y-4 text-white/75 text-lg leading-relaxed font-barlow">
                 <p className="border-l-2 border-[#0ae2b1] pl-8">
-                  O <strong>NINNA Hub</strong> foi idealizado como uma plataforma robusta de conexões, criada para encurtar a distância entre grandes corporações e o vibrante ecossistema de startups nacionais e locais.
+                  O <strong>NINNA Hub</strong> é um centro de inovação que conecta empresas, startups, investidores e instituições estratégicas para impulsionar a transformação dos negócios por meio da inovação aberta, da tecnologia e do empreendedorismo.
                 </p>
                 <p className="pl-8 text-white/70">
-                  Nossa sede em Fortaleza não é apenas um prédio físico, mas um organismo vivo onde a inovação aberta é praticada diariamente, transformando desafios tradicionais de mercado em soluções de alto impacto real.
+                Com sede em Fortaleza, atuamos como um ambiente de colaboração que aproxima desafios corporativos de soluções inovadoras, promovendo programas, conexões e iniciativas voltadas à geração de valor, competitividade e crescimento sustentável para organizações de diferentes setores.
                 </p>
                 <p className="pl-8 text-white/70">
-                  Desde a nossa fundação, temos pavimentado o caminho para a transformação cultural e tecnológica das maiores marcas e indústrias do Nordeste, liderando iniciativas de inovação corporativa com metodologia focada no desenvolvimento sustentável e na aceleração de novos canais de faturamento.
+                Reconhecido como uma das principais referências em inovação do Nordeste, o NINNA Hub fortalece o ecossistema regional ao acelerar a adoção de novas tecnologias, fomentar a cultura de inovação e criar oportunidades que geram impacto econômico e social.
                 </p>
-                <p className="pl-8 text-white/70">
-                  Com o avanço da inteligência artificial e a necessidade pulsante de digitalização ágil, o NINNA consolidou-se como o referência em fomento, mentorias e validação rápida de MVPs, aproximando empreendedores de decisores corporativos com agilidade e método.
-                </p>
-                <div className="p-8 rounded-[30px] bg-white/[0.03] border border-white/10 mt-12 group hover:border-[#0ae2b1]/30 hover:bg-white/[0.05] transition-all duration-500">
+
+                {/* <div className="p-8 rounded-[30px] bg-white/[0.03] border border-white/10 mt-12 group hover:border-[#0ae2b1]/30 hover:bg-white/[0.05] transition-all duration-500">
                   <h4 className="text-[10px] font-black text-[#0ae2b1] uppercase tracking-widest mb-3  flex items-center gap-2">
                     <Heart className="w-4 h-4 text-[#0ae2b1]" /> Impacto Social
                   </h4>
                   <p className="text-sm text-white/80  font-semibold">
                     Orgulhosamente apoiamos o projeto social <strong>Amontada Valley</strong>, uma iniciativa pioneira e transformadora que leva capacitação tecnológica de qualidade e excelentes oportunidades profissionais para o interior do Ceará, provando que a inovação de impacto não possui barreiras geográficas.
                   </p>
-                </div>
+                </div> */}
+
               </div>
             </motion.div>
 
@@ -179,7 +183,7 @@ const Sobre = () => {
                 <img 
                   src="/Fotos do Time NINNA/Time_NINNA.webp" 
                   alt="NINNA Hub" 
-                  className="rounded-[30px] w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                  className="rounded-[30px] w-full h-auto "
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -303,7 +307,7 @@ const Sobre = () => {
                     </div>
                     <div>
                       <span className="text-xs font-black text-white/40 uppercase tracking-widest block mb-1">Localização Principal</span>
-                      <span className="text-xl text-white font-bold">Fortaleza, Ceará - Brasil</span>
+                      <span className="text-xl text-white font-bold">Av. Dom Manuel, 1020 - Centro, Fortaleza - CE</span>
                     </div>
                   </div>
                   <div className="flex items-center space-x-6 group">
