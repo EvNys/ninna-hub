@@ -113,12 +113,12 @@ const Ninna4Startups = () => {
               </p>
 
               <div className="flex flex-wrap justify-center gap-6">
-                <Link
+                {/* <Link
                   to="/empresas"
                   className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20 flex items-center gap-3"
                 >
                   Faça Parte do NINNA <Rocket className="w-5 h-5" />
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           </div>

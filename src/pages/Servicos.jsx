@@ -738,15 +738,6 @@ export default function ServicosPage() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-4xl"
         >
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5 }}
-            className="inline-flex items-center space-x-3 px-4 py-2 rounded-full bg-brand-teal/5 border border-brand-teal/10 mb-10 backdrop-blur-sm"
-          >
-            <div className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Inovação se dá pelo resultado</span>
-          </motion.div>
           
           <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 24px" }}>
           <p

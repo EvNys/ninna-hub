@@ -138,7 +138,7 @@ const Home = () => {
 
   const pillars = [
     {
-      title: 'Corporate',
+      title: 'Empresas',
       description: 'Apoiamos empresas na construção de estratégias de inovação, conectando desafios reais às melhores soluções do ecossistema por meio de programas, conexões e experiências que geram resultados.',
       icon: <Target className="w-12 h-12" />,
       link: '/Servicos'
@@ -164,7 +164,7 @@ const Home = () => {
     cargo: 'CEO e Fundador',
     empresa: 'SURI',
     texto: 'O Ninna é um local de muitas trocas, onde existem grandes empresas que podem impulsionar as startups. A Suri, estava procurando exatamente esse tipo de local que pudesse impulsionar dentro das ideias do que a gente já vinha trabalhando.',
-    avatar: '',
+    avatar: 'Fotos do Time NINNA/TiagoAmarante.webp',
   },
   {
     id: 2,
@@ -172,7 +172,7 @@ const Home = () => {
     cargo: 'Fundador e Diretor Médico',
     empresa: 'Straloo',
     texto: 'O que me chamou a atenção foram os eventos. Sempre tem alguns eventos legais que a gente acaba participando. Teve uma palestra do Deusmar que foi bem bacana, super aberto falando de tudo, foi bem legal.',
-    avatar: '',
+    avatar: 'Fotos do Time NINNA/LucasMelo.webp',
   },
   {
     id: 3,
@@ -180,7 +180,7 @@ const Home = () => {
     cargo: 'Fundador',
     empresa: 'Lovel',
     texto: 'Conheci o NINNA através de um evento de inovação e o espaço me atraiu muito. O grande diferencial é estar em contato com quem está na mesma jornada que você.',
-    avatar: '',
+    avatar: 'Fotos do Time NINNA/PauloPelaez.webp',
   },
 ];
 
@@ -229,18 +229,15 @@ const Home = () => {
               </span>
             </h1>
             
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
-              <p className="text-xl text-[#F5F5F5] leading-relaxed border-l-2 border-brand-teal pl-8 font-medium">
-                No NINNA Hub, startups, empresas, investidores e instituições encontram o
-                ambiente ideal para colaborar, desenvolver soluções e construir juntos o futuro
-                da inovação.{" "}
-                <Link
-                  to="/startups"
-                  className="btn-primary inline-flex items-center gap-2 px-4 py-1.5 text-sm align-middle rounded-full shadow-md shadow-brand-teal/20"
-                >
-                  Faça Parte <ArrowRight className="w-4 h-4" />
-                </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
+              <p className="text-xl text-[#F5F5F5] leading-relaxed border-l-2 border-brand-teal pl-8 md:col-span-2 font-medium">
+                No NINNA Hub, startups, empresas, investidores e instituições encontram o ambiente ideal para colaborar, desenvolver soluções e construir o futuro da inovação.
               </p>
+            </div>
+            <div className="flex flex-col sm:flex-row space-y-4 pt-7 sm:space-y-0 sm:space-x-6">
+                <Link to="/startups" className="btn-primary flex items-center justify-center h-16 px-10 text-lg shadow-lg shadow-brand-teal/20">
+                  Fazer Parte <ArrowRight className="ml-2 w-6 h-6" />
+                </Link>
             </div>
           </motion.div>
         </div>
