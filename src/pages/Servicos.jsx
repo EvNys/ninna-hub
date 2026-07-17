@@ -164,6 +164,7 @@ const CSS = `
 
 function Card({ title, desc, accent }) {
   return (
+    
     <div
       style={{
         background: "#141827",
@@ -185,6 +186,7 @@ function Card({ title, desc, accent }) {
         e.currentTarget.style.transform = "translateY(0)";
       }}
     >
+      <meta name="description" content="Página de empresas do NINNA Hub, que apresenta os serviços do Hub e empresas que se beneficiam dele." />
       <h4 style={{ margin: 0, fontSize: "15px", fontWeight: 700, color: "#fff", lineHeight: 1.4 }}>
         {title}
       </h4>

@@ -93,7 +93,9 @@ const AgendaEventos = () => {
 
   return (
     <div className="pb-32 bg-[#fafafa] min-h-screen">
-      {/* Page Header */}
+      {/* Page Header */}   
+      <meta name="description" content="Acompanhe a agenda de eventos do NINNA Hub, incluindo workshops, painéis e encontros estratégicos do ecossistema de inovação." />
+
       <section className="relative overflow-hidden py-24 border-b border-gray-100 bg-white">
         <div className="absolute top-1/2 left-0 w-32 h-[400px] bg-brand-teal/5 -translate-y-1/2 -skew-x-12 z-10 pointer-events-none" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-teal/5 blur-[120px] rounded-full -mr-40 -mt-40 z-10 pointer-events-none" />

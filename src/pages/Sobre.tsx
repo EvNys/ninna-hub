@@ -84,6 +84,7 @@ const Sobre = () => {
 
   return (
     <div className="bg-[#fafafa] min-h-screen overflow-hidden">
+      <meta name="description" content="Conheça a história, os valores do NINNA Hub e a Equipe do espaço de inovação e conexão entre startups, empresas e profissionais." />
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden border-b border-gray-100">
         <div className="absolute top-1/2 left-0 w-32 h-[400px] bg-brand-teal/5 -translate-y-1/2 -skew-x-12 z-10 pointer-events-none" />

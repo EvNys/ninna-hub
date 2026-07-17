@@ -34,6 +34,8 @@ const Cases = () => {
 
   return (
     <div className="pb-32 bg-[#fafafa] min-h-screen">
+      <meta name="description" content="Explore histórias, cases e exits de sucesso de empresas que colaboraram com startups no ecossistema NINNA." />
+
       {/* Header */}
       <section className="relative py-24 overflow-hidden border-b border-gray-100">
         <div className="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 bg-brand-teal/5 blur-[120px] rounded-full z-10 pointer-events-none" />

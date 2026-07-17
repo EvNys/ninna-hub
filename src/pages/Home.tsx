@@ -186,6 +186,8 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden bg-[#fafafa]">
+        <meta name="description" content="Landing page do NINNA Hub, o espaço de inovação e conexão entre startups, empresas e profissionais." />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
         {/* Invading Shapes */}

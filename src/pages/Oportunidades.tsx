@@ -39,6 +39,7 @@ const Oportunidades = () => {
 
   return (
     <div className="pb-32 bg-[#fafafa] min-h-screen overflow-hidden">
+      <meta name="description" content="Página de oportunidades para startups no ecossistema NINNA, com acesso a editais e investimentos." />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 border-b border-gray-100">
         <div className="absolute top-1/2 left-0 w-32 h-[400px] bg-brand-teal/5 -translate-y-1/2 -skew-x-12 z-10 pointer-events-none" />

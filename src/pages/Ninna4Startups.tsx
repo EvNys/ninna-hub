@@ -88,6 +88,7 @@ const Ninna4Startups = () => {
 
   return (
     <div className="bg-white">
+      <meta name="description" content="Programa do NINNA de apoio a startups, com foco em aceleração, desenvolvimento e crescimento" />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 bg-brand-darker">
         <div className="absolute inset-0 z-0 opacity-20">

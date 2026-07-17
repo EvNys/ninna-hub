@@ -160,6 +160,8 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   return (
     <div className=" bg-[#fafafa] min-h-screen">
+      <meta name="description" content="Conheça o Ecossistema NINNA e veja como as startups, empresas e nossa equipe interajem entre si" />
+
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 border-b border-gray-100">

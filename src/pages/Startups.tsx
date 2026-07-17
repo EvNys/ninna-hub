@@ -23,6 +23,7 @@ import { NINNA_STARTUPS } from '../data/startups-fallback';
 const StartupsHub = () => {
   return (
     <div>
+      <meta name="description" content="Página das startups do NINNA Hub, apresentando as Startups que se beneficiam do ecossistema de inovação." />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 bg-[#1A1A2E]">
         <div className="absolute inset-0 z-0 opacity-20">

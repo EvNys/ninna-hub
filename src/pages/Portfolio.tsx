@@ -65,6 +65,7 @@ const Portfolio = () => {
 
   return (
     <div className="pb-32 relative overflow-hidden bg-[#fafafa]">
+      <meta name="description" content="Explore o portfólio de startups do ecossistema NINNA, incluindo empresas em diferentes etapas de desenvolvimento e categorias." />
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <motion.div 
