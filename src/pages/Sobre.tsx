@@ -211,71 +211,52 @@ const Sobre = () => {
             <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
           </div>
 
-          {/* Zigzag Timeline Layout */}
-          <div className="relative space-y-20 md:space-y-32">
-            {/* Visual dashed vertical line connecting the steps on desktop */}
-            <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-brand-teal/10 via-brand-teal/30 to-brand-green/10 -translate-x-1/2 z-0" />
+         {/* Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white border border-gray-150 p-8 md:p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col gap-6 relative overflow-hidden"
+              >
+                {/* Subtle background glow */}
+                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-teal/[0.02] rounded-full blur-xl pointer-events-none" />
 
-            {values.map((value, index) => {
-              const isEven = index % 2 === 0;
-
-              return (
-                <div 
-                  key={value.title}
-                  className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 items-center relative z-10"
-                >
-                  {/* Column 1: Info Card */}
-                  <div className={`w-full flex ${isEven ? 'justify-start md:justify-end md:order-1' : 'justify-start md:order-2'}`}>
-                    <motion.div
-                      initial={{ opacity: 0, x: isEven ? -45 : 45 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: 0.1 }}
-                      viewport={{ once: true }}
-                      className="bg-white border border-gray-150 p-8 md:p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex items-center gap-6 max-w-lg w-full relative overflow-hidden"
-                    >
-                      {/* Subtle background glow */}
-                      <div className="absolute top-0 right-0 w-24 h-24 bg-brand-teal/[0.02] rounded-full blur-xl pointer-events-none" />
-
-                      <div className="relative shrink-0">
-                        <div className="absolute inset-0 bg-brand-teal/10 blur-xl rounded-full scale-125 group-hover:scale-130 transition-transform duration-500" />
-                        <div className="relative z-10 w-16 h-16 bg-brand-teal/5 border border-brand-teal/10 rounded-2xl flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-500">
-                          {value.icon}
-                        </div>
-                      </div>
-
-                      <div className="space-y-1 w-full">
-                        <div className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em]">VALOR {String(index + 1).padStart(2, '0')}</div>
-                        <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide  leading-none group-hover:text-brand-teal transition-colors">
-                          {value.title}
-                        </h3>
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  {/* Column 2: Small Description */}
-                  <div className={`w-full max-w-lg md:max-w-none ${isEven ? 'md:order-2 md:pl-10 text-left' : 'md:order-1 md:pr-10 text-left md:text-right'}`}>
-                    <motion.div
-                      initial={{ opacity: 0, x: isEven ? 45 : -45 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
-                      viewport={{ once: true }}
-                      className="space-y-4"
-                    >
-                      <div className={`flex items-center gap-3 ${isEven ? 'justify-start' : 'justify-start md:justify-end'}`}>
-                        <span className="w-10 h-[2px] bg-brand-teal" />
-                        <span className="text-xs font-black uppercase text-brand-teal tracking-[0.2em]">CULTURA • IMPACTO</span>
-                      </div>
-                      <h4 className="text-2xl font-black text-gray-900 uppercase tracking-wide ">
-                        {value.title}
-                      </h4>
-                      <p className="text-gray-500 font-semibold text-base leading-relaxed max-w-md md:max-w-xl lg:max-w-md inline-block">
-                        {value.description}
-                      </p>
-                    </motion.div>
+                {/* Icon */}
+                <div className="relative shrink-0 w-fit">
+                  <div className="absolute inset-0 bg-brand-teal/10 blur-xl rounded-full scale-125 group-hover:scale-130 transition-transform duration-500" />
+                  <div className="relative z-10 w-16 h-16 bg-brand-teal/5 border border-brand-teal/10 rounded-2xl flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-500">
+                    {value.icon}
                   </div>
                 </div>
-              );
-            })}
+
+                {/* Label */}
+                <div className="space-y-1">
+                  <div className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em]">
+                    VALOR {String(index + 1).padStart(2, '0')}
+                  </div>
+                  <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide leading-none group-hover:text-brand-teal transition-colors">
+                    {value.title}
+                  </h3>
+                </div>
+
+                {/* Divider + tag */}
+                <div className="flex items-center gap-3">
+                  <span className="w-10 h-[2px] bg-brand-teal" />
+                  <span className="text-xs font-black uppercase text-brand-teal tracking-[0.2em]">
+                    CULTURA • IMPACTO
+                  </span>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-500 font-semibold text-base leading-relaxed">
+                  {value.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
