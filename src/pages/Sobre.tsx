@@ -211,50 +211,51 @@ const Sobre = () => {
             <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
           </div>
 
-         {/* Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* List Layout */}
+          <div className="max-w-4xl mx-auto space-y-4">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
                 viewport={{ once: true }}
-                className="bg-white border border-gray-150 p-8 md:p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col gap-6 relative overflow-hidden"
+                className="flex items-center justify-between gap-6 p-6 md:p-8 bg-white rounded-[28px] border-l-4 border-l-brand-teal border border-gray-150 shadow-lg hover:shadow-2xl hover:translate-x-1 transition-all duration-500 group relative overflow-hidden cursor-pointer"
               >
                 {/* Subtle background glow */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-brand-teal/[0.02] rounded-full blur-xl pointer-events-none" />
 
-                {/* Icon */}
-                <div className="relative shrink-0 w-fit">
-                  <div className="absolute inset-0 bg-brand-teal/10 blur-xl rounded-full scale-125 group-hover:scale-130 transition-transform duration-500" />
-                  <div className="relative z-10 w-16 h-16 bg-brand-teal/5 border border-brand-teal/10 rounded-2xl flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-500">
-                    {value.icon}
+                {/* Left: Icon + Text */}
+                <div className="flex items-center gap-5 relative z-10 min-w-0">
+                  {/* Icon */}
+                  <div className="relative shrink-0 w-fit">
+                    <div className="absolute inset-0 bg-brand-teal/10 blur-xl rounded-full scale-125 group-hover:scale-130 transition-transform duration-500" />
+                    <div className="relative z-10 w-14 h-14 md:w-16 md:h-16 bg-brand-teal/5 border border-brand-teal/10 rounded-2xl flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-500 shrink-0">
+                      {value.icon}
+                    </div>
+                  </div>
+
+                  {/* Label + Description */}
+                  <div className="min-w-0">
+                    <div className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em] mb-1">
+                      VALOR {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <h3 className="text-lg md:text-xl font-black text-gray-900 uppercase tracking-wide leading-none group-hover:text-brand-teal transition-colors">
+                      {value.title}
+                    </h3>
+                    <p className="text-gray-500 font-barlow text-sm leading-relaxed mt-1.5">
+                      {value.description}
+                    </p>
                   </div>
                 </div>
 
-                {/* Label */}
-                <div className="space-y-1">
-                  <div className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em]">
-                    VALOR {String(index + 1).padStart(2, '0')}
-                  </div>
-                  <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide leading-none group-hover:text-brand-teal transition-colors">
-                    {value.title}
-                  </h3>
-                </div>
-
-                {/* Divider + tag */}
-                <div className="flex items-center gap-3">
-                  <span className="w-10 h-[2px] bg-brand-teal" />
-                  <span className="text-xs font-black uppercase text-brand-teal tracking-[0.2em]">
-                    CULTURA • IMPACTO
+                {/* Right: Tag */}
+                {/* <div className="text-right shrink-0 relative z-10 hidden sm:block">
+                  <span className="text-xs font-black uppercase text-brand-teal tracking-[0.2em] block">
+                    CULTURA
                   </span>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-500 font-semibold text-base leading-relaxed">
-                  {value.description}
-                </p>
+                  <span className="text-[10px] text-brand-green font-medium">Impacto real</span>
+                </div> */}
               </motion.div>
             ))}
           </div>
