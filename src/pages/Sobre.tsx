@@ -152,7 +152,7 @@ const Sobre = () => {
               </h2>
               <div className="space-y-4 text-white/75 text-lg leading-relaxed font-barlow">
                 <p className="border-l-2 border-[#0ae2b1] pl-8">
-                  O <strong>NINNA Hub</strong> é um centro de inovação que conecta empresas, startups, investidores e instituições estratégicas para impulsionar a transformação dos negócios por meio da inovação aberta, da tecnologia e do empreendedorismo.
+                  O <strong>NINNA Hub</strong> é um hub de inovação que conecta empresas, startups, investidores e instituições estratégicas para impulsionar a transformação dos negócios por meio da inovação aberta, da tecnologia e do empreendedorismo.
                 </p>
                 <p className="pl-8 text-white/70">
                 Com sede em Fortaleza, atuamos como um ambiente de colaboração que aproxima desafios corporativos de soluções inovadoras, promovendo programas, conexões e iniciativas voltadas à geração de valor, competitividade e crescimento sustentável para organizações de diferentes setores.

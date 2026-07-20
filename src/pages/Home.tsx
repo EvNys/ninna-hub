@@ -122,7 +122,7 @@ const Home = () => {
 
         setParceiros(finalPartners);
 
-        const awardsQuery = query(collection(db, 'premiacoes'), where('status', '==', 'ativo'), limit(4));
+        const awardsQuery = query(collection(db, 'premiacoes'), where('status', '==', 'ativo'));
         const awardsSnap = await getDocs(awardsQuery);
         setAwards(awardsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() })));
       } catch (error) {
@@ -533,86 +533,115 @@ const Home = () => {
 </section>
       
       
-{/*Antigo Awards Section */}
-<section className="py-32 bg-[#050911] relative overflow-hidden border-t border-gray-100" id="premiacoes-section">
-    <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-teal/5 -skew-x-12 translate-x-1/4 pointer-events-none" />
-  <div className="absolute top-1/3 left-0 w-96 h-96 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
-  <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
+      {/*Antigo Awards Section */}
+      <section className="py-32 bg-[#050911] relative overflow-hidden border-t border-gray-100" id="premiacoes-section">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-teal/5 -skew-x-12 translate-x-1/4 pointer-events-none" />
+        <div className="absolute top-1/3 left-0 w-96 h-96 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
 
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div className="text-center mb-24 space-y-4">
-      <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block">
-        Reconhecimento & Impacto
-      </span>
-      <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-wide">
-        NOSSAS <span className="text-brand-teal">CONQUISTAS</span>
-      </h2>
-      <p className="text-gray-500 font-barlow text-lg max-w-2xl mx-auto">
-        O trabalho desenvolvido pelo NINNA Hub é reconhecido nacionalmente por fortalecer o ecossistema de inovação, impulsionar a inovação aberta e criar conexões que transformam organizações e pessoas.
-      </p>
-      <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
-    </div>
-
-    {/* Awards Timeline Grid */}
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-4 relative">
-      {/* Horizontal Line Connector for Desktop */}
-      <div className="hidden lg:block absolute top-[4.5rem] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-brand-teal/20 via-[#0ae2b1] to-brand-green/20 z-0" />
-
-      {(awards.length > 0 ? awards : [
-        { id: 'aw-default-1', titulo: 'Hub Referência',         ano: '2026', organizacao: 'Prêmio Nordeste Inovação',       imagem: '' },
-        { id: 'aw-default-2', titulo: 'Hub Referência',         ano: '2025', organizacao: 'Startup Awards Brasil',          imagem: '' },
-        { id: 'aw-default-3', titulo: 'Melhor Hub de Inovação', ano: '2024', organizacao: 'Associação Cearense de Startups', imagem: '' },
-        { id: 'aw-default-4', titulo: 'Inovação Aberta',        ano: '2023', organizacao: 'Prêmio Eco Inovar',              imagem: '' },
-      ]).map((award, idx) => (
-        <motion.div
-          key={award.id || idx}
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: idx * 0.15, duration: 0.5 }}
-          className="relative z-10 flex flex-col items-center text-center px-4 group"
-        >
-          {/* Icon / Image badge */}
-          <div className="relative mb-6">
-            <div className="absolute inset-0 bg-brand-teal/10 blur-xl rounded-full scale-125 group-hover:scale-130 transition-transform duration-500" />
-            {award.imagem ? (
-              <img
-                src={award.imagem}
-                alt={award.titulo}
-                className="relative z-10 w-20 h-20 object-contain bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[28px] shadow-lg p-3 group-hover:border-[#0ae2b1]/40 group-hover:scale-110 transition-all duration-300"
-                referrerPolicy="no-referrer"
-              />
-            ) : (
-              <div className="relative z-10 w-20 h-20 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[28px] shadow-lg flex items-center justify-center group-hover:border-[#0ae2b1]/40 group-hover:scale-110 transition-all duration-300">
-                <Award className="w-8 h-8 text-[#0ae2b1]" />
-              </div>
-            )}
-
-            {/* Year Badge */}
-            <div className="absolute -top-2 -right-2 z-20 px-2.5 h-7 bg-[#0ae2b1] text-gray-950 text-[11px] font-black rounded-full flex items-center justify-center shadow-lg border-2 border-[#050911]">
-              {award.ano}
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-24 space-y-4">
+            <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block">
+              Reconhecimento & Impacto
+            </span>
+            <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-wide">
+              NOSSAS <span className="text-brand-teal">CONQUISTAS</span>
+            </h2>
+            <p className="text-gray-500 font-barlow text-lg max-w-2xl mx-auto">
+              O trabalho desenvolvido pelo NINNA Hub é reconhecido nacionalmente por fortalecer o ecossistema de inovação, impulsionar a inovação aberta e criar conexões que transformam organizações e pessoas.
+            </p>
+            <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
           </div>
 
-          {/* Info */}
-          <h3 className="text-xl font-black text-white uppercase tracking-wide mb-2 group-hover:text-[#0ae2b1] transition-colors">
-            {award.titulo}
-          </h3>
-          <p className="text-sm text-white/50 font-barlow leading-relaxed max-w-[200px] lg:max-w-none group-hover:text-white/70 transition-colors">
-            {award.organizacao}
-          </p>
+          {(() => {
+            // Fallback default list (mesmo conteúdo original)
+            const defaultAwards = [
+              { id: 'aw-default-1', titulo: 'Hub Referência',         ano: '2026', organizacao: 'Prêmio Nordeste Inovação',        imagem: '' },
+              { id: 'aw-default-2', titulo: 'Hub Referência',         ano: '2025', organizacao: 'Startup Awards Brasil',           imagem: '' },
+              { id: 'aw-default-3', titulo: 'Melhor Hub de Inovação', ano: '2024', organizacao: 'Associação Cearense de Startups', imagem: '' },
+              { id: 'aw-default-4', titulo: 'Inovação Aberta',        ano: '2023', organizacao: 'Prêmio Eco Inovar',               imagem: '' },
+            ];
 
-          {/* Mobile Connector Arrow */}
-          {idx < (awards.length > 0 ? awards.length - 1 : 3) && (
-            <div className="block lg:hidden my-4 text-[#0ae2b1]/60 animate-pulse text-lg font-black font-mono">
-              ↓
-            </div>
-          )}
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+            const baseList = awards.length > 0 ? awards : defaultAwards;
+
+            // Ordena por ano, do menor para o maior
+            const sortedAwards = [...baseList]
+              .sort((a, b) => parseInt(a.ano, 10) - parseInt(b.ano, 10));
+
+            // Quebra a lista em grupos de 5 (uma timeline por grupo)
+            const ITEMS_PER_ROW = 4;
+            const rows = [];
+            for (let i = 0; i < sortedAwards.length; i += ITEMS_PER_ROW) {
+              rows.push(sortedAwards.slice(i, i + ITEMS_PER_ROW));
+            }
+
+            const renderRow = (list: any[]) => (
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-4 relative">
+                {/* Horizontal Line Connector for Desktop */}
+                <div className="hidden lg:block absolute top-[4.5rem] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-brand-teal/20 via-[#0ae2b1] to-brand-green/20 z-0" />
+
+                {list.map((award, idx) => (
+                  <motion.div
+                    key={award.id || idx}
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.15, duration: 0.5 }}
+                    className="relative z-10 flex flex-col items-center text-center px-4 group"
+                  >
+                    {/* Icon / Image badge */}
+                    <div className="relative mb-6">
+                      <div className="absolute inset-0 bg-brand-teal/10 blur-xl rounded-full scale-125 group-hover:scale-130 transition-transform duration-500" />
+                      {award.imagem ? (
+                        <img
+                          src={award.imagem}
+                          alt={award.titulo}
+                          className="relative z-10 w-20 h-20 object-contain bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[28px] shadow-lg p-3 group-hover:border-[#0ae2b1]/40 group-hover:scale-110 transition-all duration-300"
+                          referrerPolicy="no-referrer"
+                        />
+                      ) : (
+                        <div className="relative z-10 w-20 h-20 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[28px] shadow-lg flex items-center justify-center group-hover:border-[#0ae2b1]/40 group-hover:scale-110 transition-all duration-300">
+                          <Award className="w-8 h-8 text-[#0ae2b1]" />
+                        </div>
+                      )}
+
+                      {/* Year Badge */}
+                      <div className="absolute -top-2 -right-2 z-20 px-2.5 h-7 bg-[#0ae2b1] text-gray-950 text-[11px] font-black rounded-full flex items-center justify-center shadow-lg border-2 border-[#050911]">
+                        {award.ano}
+                      </div>
+                    </div>
+
+                    {/* Info */}
+                    <h3 className="text-xl font-black text-white uppercase tracking-wide mb-2 group-hover:text-[#0ae2b1] transition-colors">
+                      {award.titulo}
+                    </h3>
+                    <p className="text-sm text-white/50 font-barlow leading-relaxed max-w-[200px] lg:max-w-none group-hover:text-white/70 transition-colors">
+                      {award.organizacao}
+                    </p>
+
+                    {/* Mobile Connector Arrow */}
+                    {idx < list.length - 1 && (
+                      <div className="block lg:hidden my-4 text-[#0ae2b1]/60 animate-pulse text-lg font-black font-mono">
+                        ↓
+                      </div>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            );
+
+            return (
+              <>
+                {rows.map((row, rowIdx) => (
+                  <div key={rowIdx} className={rowIdx > 0 ? 'mt-16' : ''}>
+                    {renderRow(row)}
+                  </div>
+                ))}
+              </>
+            );
+          })()}
+        </div>
+      </section>
 
       {/* Innovation Reference Section */}
     

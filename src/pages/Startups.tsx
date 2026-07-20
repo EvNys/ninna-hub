@@ -17,10 +17,47 @@ import {
   MessageCircle
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 // Lista da vitrine fica em src/data/startups-fallback.ts (editável sem mexer no código).
 import { NINNA_STARTUPS } from '../data/startups-fallback';
+import { collection, getDocs, query, where, orderBy } from "firebase/firestore";
+import { db } from "../lib/firebase"; 
+interface Startup {
+  id: string;
+  nome: string;
+  logo: string;
+  site: string;
+}
 
-const StartupsHub = () => {
+export default function PortfolioStartupsShowcase() {
+  const [startups, setStartups] = useState<Startup[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchStartups = async () => {
+      try {
+        const q = query(
+          collection(db, "startups"),
+          where("status", "==", "ativo"),
+          orderBy("createdAt", "desc")
+        );
+        const querySnapshot = await getDocs(q);
+        setStartups(
+          querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          })) as Startup[]
+        );
+      } catch (error) {
+        console.error("Erro ao buscar startups do Firestore:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStartups();
+  }, []);
+
   return (
     <div>
       <meta name="description" content="Página das startups do NINNA Hub, apresentando as Startups que se beneficiam do ecossistema de inovação." />
@@ -248,26 +285,41 @@ const StartupsHub = () => {
 
       {/* Portfolio Startups Showcase */}
       <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal/5 blur-[160px] rounded-full pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-brand-teal/20">
-              Membros do Ecossistema
-            </div>
-            <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide ">
-              <span className="gradient-text">MERCADOS</span>
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
-              Conheça algumas das startups que fazem parte do ecossistema NINNA e desenvolvem soluções inovadoras para diferentes setores da economia.
-            </p>
-          </div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal/5 blur-[160px] rounded-full pointer-events-none" />
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-brand-teal/20">
+            Membros do Ecossistema
+          </div>
+          <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide">
+            <span className="gradient-text">MERCADOS</span>
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
+            Conheça algumas das startups que fazem parte do ecossistema NINNA e
+            desenvolvem soluções inovadoras para diferentes setores da economia.
+          </p>
+        </div>
+
+        {/* Estado de carregamento */}
+        {loading && (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {NINNA_STARTUPS.map((startup, idx) => (
-              <motion.a
+            {Array.from({ length: 10 }).map((_, idx) => (
+              <div
                 key={idx}
-                href={startup.website}
+                className="animate-pulse aspect-video bg-gray-100 rounded-[32px]"
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Grid de logos */}
+        {!loading && startups.length > 0 && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {startups.map((startup, idx) => (
+              <motion.a
+                key={startup.id}
+                href={startup.site}
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
@@ -277,33 +329,38 @@ const StartupsHub = () => {
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="group relative flex flex-col justify-between items-center p-5 bg-[#fafafa] border border-gray-100 rounded-[32px] hover:bg-brand-teal hover:border-brand-teal/20 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300 cursor-pointer text-current no-underline"
               >
-                {/* Logo Area */}
                 <div className="w-full aspect-video flex items-center justify-center mb-3 overflow-hidden rounded-2xl bg-white p-3 border border-gray-50 transition-colors group-hover:border-gray-100 flex-shrink-0">
                   <img
                     src={startup.logo}
-                    alt={`${startup.name} logo`}
+                    alt={`${startup.nome} logo`}
                     className="max-h-12 max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
-                      // fallback for broken images
-                      (e.target as HTMLElement).style.display = 'none';
+                      (e.target as HTMLElement).style.display = "none";
                       const parent = (e.target as HTMLElement).parentElement;
                       if (parent) {
-                        const fallback = parent.querySelector('.logo-fallback');
-                        if (fallback) fallback.classList.remove('hidden');
+                        const fallback = parent.querySelector(".logo-fallback");
+                        if (fallback) fallback.classList.remove("hidden");
                       }
                     }}
                   />
-                  {/* Fallback Display */}
-                  <div className="logo-fallback hidden font-black text-xs text-gray-400 font-mono tracking-wide uppercase  text-center">
-                    {startup.name}
+                  <div className="logo-fallback hidden font-black text-xs text-gray-400 font-mono tracking-wide uppercase text-center">
+                    {startup.nome}
                   </div>
                 </div>
               </motion.a>
             ))}
           </div>
-        </div>
-      </section>
+        )}
+
+        {/* Estado vazio */}
+        {!loading && startups.length === 0 && (
+          <p className="text-center text-gray-400 font-medium">
+            Nenhuma startup ativa encontrada no momento.
+          </p>
+        )}
+      </div>
+    </section>
 
       {/* Cases de Sucesso (NINNA Cases) */}
       <section className="py-32 bg-[#050911] relative overflow-hidden border-t border-b border-white/5 text-white" id="ninna-cases-section">
@@ -734,4 +791,3 @@ const StartupsHub = () => {
   );
 };
 
-export default StartupsHub;
