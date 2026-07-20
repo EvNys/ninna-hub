@@ -257,7 +257,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <div className="p-8 bg-white/[0.03] backdrop-blur-md rounded-[30px] border border-white/10 space-y-4">
                 <Sparkles className="w-10 h-10 text-brand-teal" />
                 <h3 className="text-xl font-black  uppercase text-white">Transformação</h3>
-                <p className="text-white/50 text-sm font-semibold leading-relaxed">
+                <p className="text-white/50 text-sm font-barlow leading-relaxed">
                   Espaço favorável para compartilhar descobertas, cases corporativos e estratégias práticas de mercado.
                 </p>
               </div>
@@ -265,7 +265,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <div className="p-8 bg-white/[0.03] backdrop-blur-md rounded-[30px] border border-white/10 space-y-4 sm:translate-y-6">
                 <Users className="w-10 h-10 text-brand-teal" />
                 <h3 className="text-xl font-black  uppercase text-white">Conexões</h3>
-                <p className="text-white/50 text-sm font-semibold leading-relaxed">
+                <p className="text-white/50 text-sm font-barlow leading-relaxed">
                   Proximidade direta com mais de 100 startups em tecnologia e dezenas de corporações parceiras de inovação aberta.
                 </p>
               </div>
@@ -273,7 +273,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <div className="p-8 bg-white/[0.03] backdrop-blur-md rounded-[30px] border border-white/10 space-y-4">
                 <Building2 className="w-10 h-10 text-brand-teal" />
                 <h3 className="text-xl font-black  uppercase text-white">Oportunidades</h3>
-                <p className="text-white/50 text-sm font-semibold leading-relaxed">
+                <p className="text-white/50 text-sm font-barlow leading-relaxed">
                   Um ambiente preparado para grandes conexões: equipamentos audiovisuais de ponta, internet dedicada corporativa de alto desempenho e equipe de suporte operacional local.
                 </p>
               </div>
@@ -281,7 +281,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <div className="p-8 bg-white/[0.03] backdrop-blur-md rounded-[30px] border border-white/10 space-y-4 sm:translate-y-6">
                 <Laptop className="w-10 h-10 text-brand-teal" />
                 <h3 className="text-xl font-black  uppercase text-white">Eventos</h3>
-                <p className="text-white/50 text-sm font-semibold leading-relaxed">
+                <p className="text-white/50 text-sm font-barlow leading-relaxed">
                   Ambiente acolhedor e dinâmico, focado na cultura ágil de feedback, cocriação e colaboração.
                 </p>
               </div>
@@ -311,7 +311,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <div className="space-y-2">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Ecossistema Ativo</span>
                   <h3 className="text-3xl font-black text-white uppercase tracking-wide  leading-none">Conhecer Oportunidades</h3>
-                  <p className="text-white/60 font-semibold text-sm sm:text-base leading-relaxed">
+                  <p className="text-white/60 font-barlow text-sm sm:text-base leading-relaxed">
                     Aproximação direta com o mercado inovador cearense. Explore projetos abertos, vagas em tecnologia, desafios de inovação corporativa e programas dedicados a acelerar marcas.
                   </p>
                 </div>
@@ -337,7 +337,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <div className="space-y-2">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">Programações Oficiais</span>
                   <h3 className="text-3xl font-black text-white uppercase tracking-wide  leading-none">Ver Agenda de Eventos</h3>
-                  <p className="text-white/60 font-semibold text-sm sm:text-base leading-relaxed">
+                  <p className="text-white/60 font-barlow text-sm sm:text-base leading-relaxed">
                     Participe de sessões de networking e treinamentos enriquecedores e happy hours. Fique por dentro de todos os encontros de startups e palestras promovidas no hub.
                   </p>
                 </div>
@@ -601,7 +601,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           <div className="text-center mb-16">
             <h2 className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em] mb-4">Estrutura de Alto Nível</h2>
             <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-wide ">NOSSOS <span className="gradient-text">ESPAÇOS</span></h3>
-            <p className="text-white/60 max-w-xl mx-auto font-semibold mt-4">
+            <p className="text-white/60 max-w-xl mx-auto font-barlow mt-4">
               Equipados com o melhor em tecnologia para garantir que seu treinamento, convenção ou pitch day seja impecável.
             </p>
           </div>
@@ -630,42 +630,42 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <h4 className="text-2xl font-black text-white uppercase tracking-wide ">AUDITÓRIO NINNA</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 94 Pessoas</span>
                   </div>
-                  <p className="text-white/60 font-semibold leading-relaxed mb-6">
+                  <p className="text-white/60 font-barlow leading-relaxed mb-6">
                     O palco principal de nossos maiores anúncios. O Auditório do NINNA é ideal para grandes palestras, eventos híbridos, lançamentos corporativos de novos produtos, conferências de investidores e painéis de lideranças nacionais.
                   </p>
                   
                   <div className="border-t border-white/10 pt-6 space-y-4">
                     <span className="text-[9px] font-black text-white/40 uppercase tracking-widest block">ESTRUTURA COMPLETA:</span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Equipamentos de Audiovisual</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>1 Tela de Projeção</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>1 Projetor</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>2 Microfones sem fio</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Caixas de Som</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Passador de Slides</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Internet Wi-Fi</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Água e Café</span>
                       </div>
@@ -697,30 +697,30 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <h4 className="text-2xl font-black text-white uppercase tracking-wide ">ESPAÇO PREGÃO</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 30 Pessoas</span>
                   </div>
-                  <p className="text-white/60 font-semibold leading-relaxed mb-6">
+                  <p className="text-white/60 font-barlow leading-relaxed mb-6">
                     Um ambiente dinâmico focado em metodologias ágeis de cocriação, workshops focados em desenvolvimento e hackathons empresariais. Projetado com layout modular que se adapta instantaneamente às dinâmicas de equipes.
                   </p>
                   
                   <div className="border-t border-white/10 pt-6 space-y-4">
                     <span className="text-[9px] font-black text-white/40 uppercase tracking-widest block">ESTRUTURA COMPLETA:</span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>TV Móvel de 65"</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Disposição Adaptável</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Material para Brainstorming</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Mesa para Coffee</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Internet Wi-Fi</span>
                       </div>
@@ -752,30 +752,30 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <h4 className="text-2xl font-black text-white uppercase tracking-wide ">SALA OVAL</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 12 a 20 Pessoas</span>
                   </div>
-                  <p className="text-white/60 font-semibold leading-relaxed mb-6">
+                  <p className="text-white/60 font-barlow leading-relaxed mb-6">
                     Um ambiente sofisticado e reservado, projetado para encontros bilaterais, reuniões de conselho de alta liderança, comitês executivos e apresentações exclusivas para investidores de alta notoriedade.
                   </p>
                   
                   <div className="border-t border-white/10 pt-6 space-y-4">
                     <span className="text-[9px] font-black text-white/40 uppercase tracking-widest block">ESTRUTURA COMPLETA:</span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>TV de 65"</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Câmera para Videoconferência</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Material para Brainstorming</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Mesa para Coffee</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Internet Wi-Fi</span>
                       </div>
@@ -807,26 +807,26 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <h4 className="text-2xl font-black text-white uppercase tracking-wide ">SALA SPRINT</h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 8 a 10 Pessoas</span>
                   </div>
-                  <p className="text-white/60 font-semibold leading-relaxed mb-6">
+                  <p className="text-white/60 font-barlow leading-relaxed mb-6">
                     O espaço perfeito para desbloquear a criatividade e impulsionar projetos ágeis. Ideal para sessões de cocriação, workshops focados em inovação rápida, design thinking e sprints acelerados de produto.
                   </p>
                   
                   <div className="border-t border-white/10 pt-6 space-y-4">
                     <span className="text-[9px] font-black text-white/40 uppercase tracking-widest block">ESTRUTURA COMPLETA:</span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>TV Móvel de 65"</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Mesa de Apoio</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Material para Brainstorming</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-white/70 font-semibold">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
                         <span>Internet Wi-Fi</span>
                       </div>
@@ -972,11 +972,11 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                   <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                     <h5 className="font-black uppercase text-sm text-gray-900  mb-2">Visibilidade Exclusiva</h5>
-                    <p className="text-gray-500 text-xs font-semibold">Exposição em banners físicos, mídias digitais e painéis de palestras.</p>
+                    <p className="text-gray-500 text-xs font-barlow">Exposição em banners físicos, mídias digitais e painéis de palestras.</p>
                   </div>
                   <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                     <h5 className="font-black uppercase text-sm text-gray-900  mb-2">Pitch e Networking</h5>
-                    <p className="text-gray-500 text-xs font-semibold">Slots dedicados para pitch e lista exclusiva de leads cadastrados.</p>
+                    <p className="text-gray-500 text-xs font-barlow">Slots dedicados para pitch e lista exclusiva de leads cadastrados.</p>
                   </div>
                 </div>
               </div>

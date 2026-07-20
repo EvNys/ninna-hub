@@ -52,7 +52,7 @@ export default function AdminLogin({ onLoginSuccess, onClose }: AdminLoginProps)
         <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between bg-slate-50/80">
           <button
             onClick={onClose}
-            className="flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-slate-800 transition"
+            className="flex items-center gap-1 text-xs font-barlow text-slate-500 hover:text-slate-800 transition"
           >
             <ChevronLeft className="w-4 h-4" />
             <span>Voltar ao Site</span>
@@ -79,7 +79,7 @@ export default function AdminLogin({ onLoginSuccess, onClose }: AdminLoginProps)
 
           <form onSubmit={handleSubmit} className="space-y-4">
             {errorMsg && (
-              <div className="p-3.5 bg-red-50 border border-red-200 text-red-700 text-xs rounded-lg text-center font-semibold">
+              <div className="p-3.5 bg-red-50 border border-red-200 text-red-700 text-xs rounded-lg text-center font-barlow">
                 {errorMsg}
               </div>
             )}

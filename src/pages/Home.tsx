@@ -311,7 +311,7 @@ const Home = () => {
               <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-wide">
                 UM ECOSSISTEMA. <span className="gradient-text font-black">MÚLTIPLAS FORMAS DE GERAR IMPACTO</span>
               </h2>
-              <p className="text-white/60 text-xl leading-relaxed font-semibold">
+              <p className="text-white/60 text-xl leading-relaxed font-barlow">
                 Criamos conexões estratégicas entre empresas, startups e comunidade para acelerar a inovação aberta, desenvolver novos negócios e fortalecer o ecossistema de inovação do Nordeste.
               </p>
             </div>
@@ -384,7 +384,7 @@ const Home = () => {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-white/50 mb-12 leading-relaxed text-base font-semibold group-hover:text-white/70 transition-colors">
+                    <p className="text-white/50 mb-12 leading-relaxed text-base font-barlow group-hover:text-white/70 transition-colors">
                       {pillar.description}
                     </p>
                   </div>
@@ -447,7 +447,7 @@ const Home = () => {
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-wide">
             O IMPACTO DO <br/><span className="text-brand-teal">NINNA HUB</span>
           </h2>
-          <p className="text-gray-500 font-semibold text-lg leading-relaxed">
+          <p className="text-gray-500 font-barlow text-lg leading-relaxed">
            Mais do que indicadores, estes números representam empresas transformadas, startups fortalecidas e conexões que geraram novos negócios para o ecossistema.
           </p>
           <div className="h-[2px] w-20 bg-brand-teal mt-4" />
@@ -547,7 +547,7 @@ const Home = () => {
       <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-wide">
         NOSSAS <span className="text-brand-teal">CONQUISTAS</span>
       </h2>
-      <p className="text-gray-500 font-semibold text-lg max-w-2xl mx-auto">
+      <p className="text-gray-500 font-barlow text-lg max-w-2xl mx-auto">
         O trabalho desenvolvido pelo NINNA Hub é reconhecido nacionalmente por fortalecer o ecossistema de inovação, impulsionar a inovação aberta e criar conexões que transformam organizações e pessoas.
       </p>
       <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
@@ -598,7 +598,7 @@ const Home = () => {
           <h3 className="text-xl font-black text-white uppercase tracking-wide mb-2 group-hover:text-[#0ae2b1] transition-colors">
             {award.titulo}
           </h3>
-          <p className="text-sm text-white/50 font-semibold leading-relaxed max-w-[200px] lg:max-w-none group-hover:text-white/70 transition-colors">
+          <p className="text-sm text-white/50 font-barlow leading-relaxed max-w-[200px] lg:max-w-none group-hover:text-white/70 transition-colors">
             {award.organizacao}
           </p>
 

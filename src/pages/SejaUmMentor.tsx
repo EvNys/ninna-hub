@@ -472,7 +472,7 @@ const areasAtuacaoOptions = [
                 <h3 className="text-lg font-black text-gray-900 uppercase tracking-wide  mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-500 font-semibold text-xs leading-relaxed">
+                <p className="text-gray-500 font-barlow text-xs leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -545,7 +545,7 @@ const areasAtuacaoOptions = [
                 <h2 className="text-3xl font-black text-gray-900 uppercase tracking-wide  mb-2">
                   Ficha de Inscrição
                 </h2>
-                <p className="text-gray-500 font-semibold text-xs leading-relaxed">
+                <p className="text-gray-500 font-barlow text-xs leading-relaxed">
                   Preencha os campos abaixo com atenção para que possamos entender sua vivência profissional e combiná-la com as mentiras ideais.
                 </p>
               </div>
@@ -565,7 +565,7 @@ const areasAtuacaoOptions = [
                     value={formData.nome}
                     onChange={handleInputChange}
                     placeholder="Ex: Roberto Silva"
-                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow placeholder:text-gray-300"
                   />
                 </div>
 
@@ -584,7 +584,7 @@ const areasAtuacaoOptions = [
                       value={formData.telefone}
                       onChange={handleInputChange}
                       placeholder="(DD) 99999-9999"
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow placeholder:text-gray-300"
                     />
                   </div>
 
@@ -601,7 +601,7 @@ const areasAtuacaoOptions = [
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="roberto.silva@suaempresa.com"
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow placeholder:text-gray-300"
                     />
                   </div>
                 </div>
@@ -623,7 +623,7 @@ const areasAtuacaoOptions = [
                         value={formData.pais}
                         onChange={handleInputChange}
                         placeholder="Ex: Brasil"
-                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow placeholder:text-gray-300"
                       />
                     </div>
 
@@ -638,7 +638,7 @@ const areasAtuacaoOptions = [
                         required
                         value={formData.estado}
                         onChange={handleInputChange}
-                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold appearance-none cursor-pointer"
+                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow appearance-none cursor-pointer"
                       >
                         <option value="" disabled>Selecione o estado</option>
                         <option value="AC">Acre</option>
@@ -685,7 +685,7 @@ const areasAtuacaoOptions = [
                         value={formData.cidade}
                         onChange={handleInputChange}
                         placeholder="Ex: Fortaleza, CE"
-                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow placeholder:text-gray-300"
                       />
                     </div>
                   </div>
@@ -704,7 +704,7 @@ const areasAtuacaoOptions = [
                         required
                         value={formData.empresa}
                         onChange={handleInputChange}
-                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow placeholder:text-gray-300"
                       />
                     </div>
 
@@ -721,7 +721,7 @@ const areasAtuacaoOptions = [
                         value={formData.cargo}
                         onChange={handleInputChange}
                         placeholder="Ex: Gerente Comercial"
-                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                        className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow placeholder:text-gray-300"
                       />
                     </div>
                   </div>
@@ -750,7 +750,7 @@ const areasAtuacaoOptions = [
                           setFormData(prev => ({ ...prev, areaAtuacao: "" }));
                         }}
                         placeholder="Buscar área de atuação..."
-                        className="bg-transparent w-full focus:outline-none text-gray-900 font-semibold placeholder:text-gray-300"
+                        className="bg-transparent w-full focus:outline-none text-gray-900 font-barlow placeholder:text-gray-300"
                       />
                       <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ${areaAtuacaoOpen ? "rotate-180" : ""}`} />
                     </div>
@@ -776,7 +776,7 @@ const areasAtuacaoOptions = [
                                     setAreaAtuacaoSearch(opt);
                                     setAreaAtuacaoOpen(false);
                                   }}
-                                  className={`px-6 py-3.5 cursor-pointer text-sm font-semibold transition-colors
+                                  className={`px-6 py-3.5 cursor-pointer text-sm font-barlow transition-colors
                                     ${formData.areaAtuacao === opt
                                       ? "bg-[#f0fdf9] text-[#00c9a7]"
                                       : "text-gray-700 hover:bg-gray-50"
@@ -789,7 +789,7 @@ const areasAtuacaoOptions = [
                             {areasAtuacaoOptions.filter(opt =>
                               opt.toLowerCase().includes(areaAtuacaoSearch.toLowerCase())
                             ).length === 0 && (
-                              <li className="px-6 py-4 text-sm text-gray-400 font-semibold text-center">
+                              <li className="px-6 py-4 text-sm text-gray-400 font-barlow text-center">
                                 Nenhuma área encontrada
                               </li>
                             )}
@@ -813,7 +813,7 @@ const areasAtuacaoOptions = [
                       required
                       value={formData.areaMentoria}
                       onChange={handleInputChange}
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold"
+                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow"
                     >
                       <option value="" disabled>Selecione uma área...</option>
                       {areasMentoriaOptions.map((opt, i) => (
@@ -836,7 +836,7 @@ const areasAtuacaoOptions = [
                     value={formData.comoConheceu}
                     onChange={handleInputChange}
                     placeholder="Ex: Redes sociais, indicação de parceiro, imprensa..."
-                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300"
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow placeholder:text-gray-300"
                   />
                 </div>
 
@@ -853,7 +853,7 @@ const areasAtuacaoOptions = [
                     value={formData.motivoInscricao}
                     onChange={handleInputChange}
                     placeholder="Escreva brevemente seu propósito ao doar mentores, interesses e quais especialidades deseja trabalhar..."
-                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-semibold placeholder:text-gray-300 resize-none"
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] transition-all text-gray-900 shadow-sm font-barlow placeholder:text-gray-300 resize-none"
                   />
                 </div>
 
@@ -940,7 +940,7 @@ const areasAtuacaoOptions = [
                 Inscrição Enviada!
               </h2>
 
-              <p className="text-gray-500 font-semibold text-sm max-w-md mx-auto leading-relaxed">
+              <p className="text-gray-500 font-barlow text-sm max-w-md mx-auto leading-relaxed">
                 Muito obrigado por manifestar interesse em apoiar o ecossistema do <strong>NINNA HUB</strong>. 
                 Nossa equipe avaliará suas informações profissionais e entrará em contato em breve através do e-mail ou telefone informado.
               </p>

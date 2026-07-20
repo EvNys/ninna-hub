@@ -185,7 +185,7 @@ const Ninna4Startups = () => {
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-wide ">
               NOSSOS NÚMEROS NO <span className="text-brand-teal">ECOSSISTEMA</span>
             </h2>
-            <p className="text-gray-400 font-semibold text-base leading-relaxed">
+            <p className="text-gray-400 font-barlow text-base leading-relaxed">
               Evidências reais do nosso compromisso de viabilizar conexões, atrair investimentos e impulsionar caminhos de sucesso.
             </p>
           </div>

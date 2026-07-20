@@ -164,7 +164,7 @@ const StartupsHub = () => {
             <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide ">
               PASSO A PASSO PARA SE TORNAR UM <br/> <span className="gradient-text font-black">PARCEIRO NINNA</span>
             </h2>
-            <p className="text-white/60 max-w-2xl mx-auto font-semibold mt-4">
+            <p className="text-white/60 max-w-2xl mx-auto font-barlow mt-4">
               Uma jornada transparente e estruturada para integrar sua startup ao ecossistema de inovação mais dinâmico da região.
             </p>
           </div>
@@ -230,7 +230,7 @@ const StartupsHub = () => {
                 <h3 className="text-xl font-black text-white uppercase tracking-wide  mb-2 group-hover:text-[#0ae2b1] transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-sm text-white/50 font-semibold leading-relaxed max-w-[200px] lg:max-w-none group-hover:text-white/70 transition-colors">
+                <p className="text-sm text-white/50 font-barlow leading-relaxed max-w-[200px] lg:max-w-none group-hover:text-white/70 transition-colors">
                   {item.desc}
                 </p>
                 
@@ -321,7 +321,7 @@ const StartupsHub = () => {
             <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide ">
               CONEXÕES QUE GERAM <span className="gradient-text font-black">NEGÓCIOS</span>
             </h2>
-            <p className="text-white/60 max-w-2xl mx-auto font-semibold mt-4">
+            <p className="text-white/60 max-w-2xl mx-auto font-barlow mt-4">
               O maior diferencial do NINNA é conectar startups às oportunidades certas. Conheça histórias em que essas conexões se transformaram em inovação aberta, novos negócios e resultados concretos.
             </p>
           </div>
@@ -372,7 +372,7 @@ const StartupsHub = () => {
                   <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
                     Aceleração de Atendimento com IA Conversacional
                   </h3>
-                  <p className="text-white/60 font-semibold text-sm leading-relaxed mb-8">
+                  <p className="text-white/60 font-barlow text-sm leading-relaxed mb-8">
                     Como uma das maiores redes de varejo farmacêutico do Brasil se uniu à Suri.ai, startup de inteligência artificial do ecossistema NINNA, para digitalizar e otimizar canais de atendimento e engajamento via WhatsApp nacionalmente.
                   </p>
 
@@ -383,7 +383,7 @@ const StartupsHub = () => {
                       </div>
                       <div>
                         <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">O Desafio</h4>
-                        <p className="text-xs text-white/50 font-semibold leading-relaxed">Atender com agilidade milhares de dúvidas cotidianas sobre lojas e entregas de forma escalável.</p>
+                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Atender com agilidade milhares de dúvidas cotidianas sobre lojas e entregas de forma escalável.</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
@@ -392,7 +392,7 @@ const StartupsHub = () => {
                       </div>
                       <div>
                         <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">A Solução</h4>
-                        <p className="text-xs text-white/50 font-semibold leading-relaxed">Integração do motor de inteligência conversacional da Suri.ai ao canal oficial de WhatsApp.</p>
+                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Integração do motor de inteligência conversacional da Suri.ai ao canal oficial de WhatsApp.</p>
                       </div>
                     </div>
                   </div>
@@ -463,7 +463,7 @@ const StartupsHub = () => {
                   <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
                     Acesso Expresso a Recursos Estaduais e Federais
                   </h3>
-                  <p className="text-white/60 font-semibold text-sm leading-relaxed mb-8">
+                  <p className="text-white/60 font-barlow text-sm leading-relaxed mb-8">
                     Como a startup do nosso ecossistema focada em inteligência de hardware e processos industriais obteve acesso a recursos de inovação acelerado com fôlego e curadoria consultiva pelo time do NINNA Hub.
                   </p>
 
@@ -474,7 +474,7 @@ const StartupsHub = () => {
                       </div>
                       <div>
                         <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">O Desafio</h4>
-                        <p className="text-xs text-white/50 font-semibold leading-relaxed">Equipes pequenas de forte base técnica sem tempo para burocracia de fomento contínuo e submissões densas.</p>
+                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Equipes pequenas de forte base técnica sem tempo para burocracia de fomento contínuo e submissões densas.</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
@@ -483,7 +483,7 @@ const StartupsHub = () => {
                       </div>
                       <div>
                         <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">A Solução</h4>
-                        <p className="text-xs text-white/50 font-semibold leading-relaxed">Mapeamento expresso e curadoria de editais efetuada em menos de 1 mês de aceleração integrada no hub.</p>
+                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Mapeamento expresso e curadoria de editais efetuada em menos de 1 mês de aceleração integrada no hub.</p>
                       </div>
                     </div>
                   </div>
@@ -498,7 +498,7 @@ const StartupsHub = () => {
                 </div>
                 <div className="border-l border-r border-white/10">
                   <span className="block text-2xl font-black text-white tracking-wide ">&lt; 1 mês</span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-semibold">Estudo / Acesso</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-barlow">Estudo / Acesso</span>
                 </div>
                 <div>
                   <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">100%</span>
@@ -528,7 +528,7 @@ const StartupsHub = () => {
                 POR QUE FAZER PARTE DO <br />
                 <span className="text-brand-teal">NINNA?</span>
               </h2>
-              <p className="text-gray-500 font-semibold text-lg leading-relaxed mb-12">
+              <p className="text-gray-500 font-barlow text-lg leading-relaxed mb-12">
                 Fazer parte do NINNA significa integrar um dos ecossistemas de inovação mais relevantes do Nordeste, ampliando sua rede de relacionamento, acesso ao mercado e oportunidades de crescimento.
               </p>
               
@@ -593,7 +593,7 @@ const StartupsHub = () => {
                   <h3 className="text-xl font-black text-gray-900 uppercase tracking-wide  mb-3 group-hover:text-brand-teal transition-colors">
                     {reason.title}
                   </h3>
-                  <p className="text-sm text-gray-500 font-semibold leading-relaxed">
+                  <p className="text-sm text-gray-500 font-barlow leading-relaxed">
                     {reason.desc}
                   </p>
                 </motion.div>
@@ -635,10 +635,10 @@ const StartupsHub = () => {
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide leading-[0.95]">
                 PARA QUEM É O <span className="gradient-text font-black">NINNA?</span>
               </h2>
-              <p className="text-white/60 font-semibold mt-6 text-lg leading-relaxed">
+              <p className="text-white/60 font-barlow mt-6 text-lg leading-relaxed">
                 O NINNA é o ambiente ideal para startups que desejam crescer por meio de conexões estratégicas e inovação colaborativa.
               </p>
-              <p className="text-white/40 font-semibold mt-4 text-sm uppercase tracking-wider">
+              <p className="text-white/40 font-barlow mt-4 text-sm uppercase tracking-wider">
                 O ecossistema é indicado para startups que:
               </p>
             </motion.div>
@@ -664,7 +664,7 @@ const StartupsHub = () => {
                   <div className="flex-shrink-0 w-9 h-9 rounded-full bg-[#0ae2b1]/10 border border-[#0ae2b1]/30 flex items-center justify-center group-hover:bg-[#0ae2b1] group-hover:scale-110 transition-all duration-300">
                     <CheckCircle className="w-5 h-5 text-[#0ae2b1] group-hover:text-gray-950 transition-colors" />
                   </div>
-                  <p className="text-sm md:text-base text-white/70 font-semibold leading-relaxed group-hover:text-white transition-colors">
+                  <p className="text-sm md:text-base text-white/70 font-barlow leading-relaxed group-hover:text-white transition-colors">
                     {text}
                   </p>
                 </motion.div>
@@ -702,7 +702,7 @@ const StartupsHub = () => {
             <span className="text-brand-teal">CONEXÃO COMEÇA AQUI</span>
           </h2>
 
-          <p className="text-gray-500 font-semibold text-lg leading-relaxed max-w-2xl mx-auto mb-12">
+          <p className="text-gray-500 font-barlow text-lg leading-relaxed max-w-2xl mx-auto mb-12">
             Grandes oportunidades surgem quando as conexões certas acontecem.
             Faça parte do ecossistema NINNA e conecte sua startup a empresas,
             especialistas, investidores e parceiros que podem impulsionar o

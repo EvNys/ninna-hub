@@ -256,7 +256,7 @@ export default function AdminInscricoesMentores() {
           placeholder="Buscar por nome, e-mail, área predominante ou cidade..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl pl-12 pr-6 py-3.5 focus:outline-none focus:border-brand-teal transition-all text-sm font-semibold text-gray-800 placeholder:text-gray-400"
+          className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl pl-12 pr-6 py-3.5 focus:outline-none focus:border-brand-teal transition-all text-sm font-barlow text-gray-800 placeholder:text-gray-400"
         />
       </div>
 
@@ -331,17 +331,17 @@ export default function AdminInscricoesMentores() {
                       <td className="py-4.5 px-6">
                         <div className="flex flex-col">
                           <span className="font-extrabold text-[13px] text-gray-900 uppercase tracking-wide truncate max-w-[180px]">{item.nome}</span>
-                          <span className="text-xs text-gray-400 font-semibold tracking-wide">{item.email}</span>
+                          <span className="text-xs text-gray-400 font-barlow tracking-wide">{item.email}</span>
                           <span className="text-[10px] text-gray-400 font-medium tracking-wide mt-0.5">{item.telefone}</span>
                         </div>
                       </td>
                       <td className="py-4.5 px-6">
                         <div className="flex flex-col">
                           <span className="text-[11px] font-bold text-gray-800 tracking-wide line-clamp-1">{item.areaMentoria}</span>
-                          <span className="text-[10px] text-gray-400 font-semibold">{item.cidade}</span>
+                          <span className="text-[10px] text-gray-400 font-barlow">{item.cidade}</span>
                         </div>
                       </td>
-                      <td className="py-4.5 px-6 text-[11px] font-semibold text-gray-400 whitespace-nowrap">
+                      <td className="py-4.5 px-6 text-[11px] font-barlow text-gray-400 whitespace-nowrap">
                         {formatDate(item.createdAt)}
                       </td>
                       <td className="py-4.5 px-6">
@@ -354,7 +354,7 @@ export default function AdminInscricoesMentores() {
             </table>
           </div>
           
-          <div className="p-4 bg-[#fafafa] border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 font-semibold">
+          <div className="p-4 bg-[#fafafa] border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 font-barlow">
             <span>Listando {filteredInscricoes.length} de {inscricoes.length} inscrições registradas</span>
           </div>
         </div>
@@ -376,7 +376,7 @@ export default function AdminInscricoesMentores() {
                   <div className="min-w-0">
                     <span className="text-[9px] font-black text-brand-teal uppercase tracking-widest block mb-1">Candidato Escolhido</span>
                     <h3 className="font-extrabold uppercase text-lg text-gray-900 tracking-wide leading-snug break-words">{selectedInscricao.nome}</h3>
-                    <p className="text-gray-400 text-xs font-semibold truncate mt-0.5">{selectedInscricao.email}</p>
+                    <p className="text-gray-400 text-xs font-barlow truncate mt-0.5">{selectedInscricao.email}</p>
                   </div>
                 </div>
 
@@ -429,7 +429,7 @@ export default function AdminInscricoesMentores() {
                   {/* Contact Info */}
                   <div className="space-y-1.5">
                     <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block">Informações de contato</span>
-                    <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100/50 text-xs text-gray-500 font-semibold space-y-2">
+                    <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100/50 text-xs text-gray-500 font-barlow space-y-2">
                       <div className="flex items-center gap-2.5"><Phone className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.telefone}</div>
                       <div className="flex items-center gap-2.5"><Mail className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.email}</div>
                       <div className="flex items-center gap-2.5"><MapPinned className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.pais}</div>
@@ -442,7 +442,7 @@ export default function AdminInscricoesMentores() {
                   {/* Segment of mentorship area */}
                   <div className="space-y-1.5">
                     <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block">Informações de mentoria</span>
-                    <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100/50 text-xs text-gray-500 font-semibold space-y-2">                     
+                    <div className="p-4 bg-gray-50 rounded-2xl border border-gray-100/50 text-xs text-gray-500 font-barlow space-y-2">                     
                       <div className="flex items-center gap-2.5"><Building2 className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.empresa}</div>
                       <div className="flex items-center gap-2.5"><Briefcase className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.cargo}</div>
                       <div className="flex items-center gap-2.5"><Target className="w-4 h-4 text-brand-teal shrink-0" /> {selectedInscricao.areaMentoria}</div>
@@ -455,7 +455,7 @@ export default function AdminInscricoesMentores() {
                     <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block flex items-center gap-1.5">
                       <HelpCircle className="w-3.5 h-3.5 text-brand-teal" /> Como Conheceu o HUB
                     </span>
-                    <p className="text-gray-600 font-semibold text-xs leading-normal">{selectedInscricao.comoConheceu}</p>
+                    <p className="text-gray-600 font-barlow text-xs leading-normal">{selectedInscricao.comoConheceu}</p>
                   </div>
 
                   {/* Why they want to be a mentor */}

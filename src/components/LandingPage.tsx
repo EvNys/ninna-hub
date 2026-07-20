@@ -152,7 +152,7 @@ export default function LandingPage({ onAddApplication, onOpenLogin }: LandingPa
           <div className="flex items-center gap-4 font-sans">
             <button 
               onClick={onOpenLogin}
-              className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition px-3 py-2 rounded-lg hover:bg-white/5"
+              className="flex items-center gap-2 text-xs sm:text-sm font-barlow text-slate-300 hover:text-white transition px-3 py-2 rounded-lg hover:bg-white/5"
               id="btn-portal-coordenador"
             >
               <Lock className="w-3.5 h-3.5 text-[#31c891]" />
@@ -190,7 +190,7 @@ export default function LandingPage({ onAddApplication, onOpenLogin }: LandingPa
               
               <p className="text-slate-350 text-normal sm:text-lg leading-relaxed max-w-2xl font-barlow">
                 Você é líder, cientista, empresário de tecnologia ou especialista consagrado? Organize seu conhecimento, compartilhe sua trajetória prática e guie startups promissoras do Ceará e do Brasil. 
-                Faça parte de uma <strong className="text-white font-semibold">rede de aprendizado mútuo e trocas de alto impacto</strong> com outros mentores de ponta.
+                Faça parte de uma <strong className="text-white font-barlow">rede de aprendizado mútuo e trocas de alto impacto</strong> com outros mentores de ponta.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4 font-sans">
@@ -282,19 +282,19 @@ export default function LandingPage({ onAddApplication, onOpenLogin }: LandingPa
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-white/5">
             <div className="text-center p-4">
               <p className="text-4xl font-extrabold text-[#31c891] font-barlow">8</p>
-              <p className="text-xs font-semibold text-slate-400 mt-2 uppercase tracking-wider font-sans">Módulos de Formação</p>
+              <p className="text-xs font-barlow text-slate-400 mt-2 uppercase tracking-wider font-sans">Módulos de Formação</p>
             </div>
             <div className="text-center pt-8 md:pt-4 p-4">
               <p className="text-4xl font-extrabold text-[#31c891] font-barlow">4h</p>
-              <p className="text-xs font-semibold text-slate-400 mt-2 uppercase tracking-wider font-sans">Mínimo Mensal Flexível</p>
+              <p className="text-xs font-barlow text-slate-400 mt-2 uppercase tracking-wider font-sans">Mínimo Mensal Flexível</p>
             </div>
             <div className="text-center pt-8 md:pt-4 p-4">
               <p className="text-4xl font-extrabold text-[#31c891] font-barlow">12 meses</p>
-              <p className="text-xs font-semibold text-slate-400 mt-2 uppercase tracking-wider font-sans">Prazo para Certificação</p>
+              <p className="text-xs font-barlow text-slate-400 mt-2 uppercase tracking-wider font-sans">Prazo para Certificação</p>
             </div>
             <div className="text-center pt-8 md:pt-4 p-4">
               <p className="text-4xl font-extrabold text-[#31c891] font-barlow">M2M</p>
-              <p className="text-xs font-semibold text-slate-400 mt-2 uppercase tracking-wider font-sans">Desenvolvimento Inteligente</p>
+              <p className="text-xs font-barlow text-slate-400 mt-2 uppercase tracking-wider font-sans">Desenvolvimento Inteligente</p>
             </div>
           </div>
         </div>
@@ -306,7 +306,7 @@ export default function LandingPage({ onAddApplication, onOpenLogin }: LandingPa
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             <div className="space-y-6">
-              <span className="text-[#31c891] font-semibold uppercase tracking-[0.15em] text-xs bg-[#31c891]/10 rounded-full px-3.5 py-1 border border-[#31c891]/20 font-sans">
+              <span className="text-[#31c891] font-barlow uppercase tracking-[0.15em] text-xs bg-[#31c891]/10 rounded-full px-3.5 py-1 border border-[#31c891]/20 font-sans">
                 Pilar NINNA Hub
               </span>
               

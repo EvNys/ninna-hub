@@ -276,7 +276,7 @@ const Empresas = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-wide group-hover:text-[#00c9a7] transition-colors">{service.title}</h3>
-                    <p className="text-white/60 leading-relaxed mb-8 font-semibold group-hover:text-white/80 transition-colors">
+                    <p className="text-white/60 leading-relaxed mb-8 font-barlow group-hover:text-white/80 transition-colors">
                       {service.description}
                     </p>
                     <button className="text-xs font-black text-[#00c9a7] flex items-center hover:translate-x-2 transition-transform uppercase tracking-[0.2em] cursor-pointer">

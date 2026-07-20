@@ -174,7 +174,7 @@ const AdminEquipe = () => {
           <div className="col-span-full py-32 text-center text-gray-400 flex flex-col items-center bg-white rounded-[40px] border border-gray-100 shadow-xl">
             <Users className="w-16 h-16 mb-6 opacity-20 text-brand-teal" />
             <span className="font-black uppercase tracking-widest text-sm italic mb-2">Nenhum membro cadastrado</span>
-            <p className="text-gray-400 max-w-sm text-xs font-semibold leading-relaxed mb-6">Comece inserindo manualmente ou importe a equipe padrão do NINNA.</p>
+            <p className="text-gray-400 max-w-sm text-xs font-barlow leading-relaxed mb-6">Comece inserindo manualmente ou importe a equipe padrão do NINNA.</p>
             <button
               onClick={handleImportDefaultMembros}
               disabled={importing}

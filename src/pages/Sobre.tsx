@@ -165,7 +165,7 @@ const Sobre = () => {
                   <h4 className="text-[10px] font-black text-[#0ae2b1] uppercase tracking-widest mb-3  flex items-center gap-2">
                     <Heart className="w-4 h-4 text-[#0ae2b1]" /> Impacto Social
                   </h4>
-                  <p className="text-sm text-white/80  font-semibold">
+                  <p className="text-sm text-white/80  font-barlow">
                     Orgulhosamente apoiamos o projeto social <strong>Amontada Valley</strong>, uma iniciativa pioneira e transformadora que leva capacitação tecnológica de qualidade e excelentes oportunidades profissionais para o interior do Ceará, provando que a inovação de impacto não possui barreiras geográficas.
                   </p>
                 </div> */}
@@ -205,7 +205,7 @@ const Sobre = () => {
             <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-wide ">
               NOSSOS <span className="text-brand-teal underline decoration-gray-200">VALORES</span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto font-semibold text-lg">
+            <p className="text-gray-600 max-w-2xl mx-auto font-barlow text-lg">
               O que nos guia todos os dias na busca por resultados extraordinários e impacto real no ecossistema.
             </p>
             <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
@@ -303,7 +303,7 @@ const Sobre = () => {
                   </div>
                 </div>
                 
-                <p className="text-white/70 text-lg leading-relaxed mb-10 font-semibold max-w-md">
+                <p className="text-white/70 text-lg leading-relaxed mb-10 font-barlow max-w-md">
                   Nosso espaço físico é projetado para fomentar a criatividade e o networking de alto impacto. Venha conhecer o futuro da inovação.
                 </p>
                 
@@ -430,7 +430,7 @@ const Sobre = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-24">
             <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-wide text-white ">TIME <span className="text-[#0ae2b1] underline decoration-white/20">NINNA</span></h2>
-            <p className="text-white/60 max-w-2xl mx-auto font-semibold text-lg  uppercase tracking-widest">Gente que acredita e faz acontecer.</p>
+            <p className="text-white/60 max-w-2xl mx-auto font-barlow text-lg  uppercase tracking-widest">Gente que acredita e faz acontecer.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">

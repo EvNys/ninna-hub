@@ -367,7 +367,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                 <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide ">
                   CONEXÕES QUE GERAM <span className="gradient-text font-black">NEGÓCIOS</span>
                 </h2>
-                <p className="text-white/60 max-w-2xl mx-auto font-semibold mt-4">
+                <p className="text-white/60 max-w-2xl mx-auto font-barlow mt-4">
                   O maior diferencial do NINNA é conectar startups às oportunidades certas. Conheça histórias em que essas conexões se transformaram em inovação aberta, novos negócios e resultados concretos.
                 </p>
               </div>
@@ -416,7 +416,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                       <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
                         Aceleração de Atendimento com IA Conversacional
                       </h3>
-                      <p className="text-white/60 font-semibold text-sm leading-relaxed mb-8">
+                      <p className="text-white/60 font-barlow text-sm leading-relaxed mb-8">
                         Como uma das maiores redes de varejo farmacêutico do Brasil se uniu à Suri.ai, startup de inteligência artificial do ecossistema NINNA, para digitalizar e otimizar canais de atendimento e engajamento via WhatsApp nacionalmente.
                       </p>
     
@@ -427,7 +427,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                           </div>
                           <div>
                             <h4 className="text-[10px] font-black uppercase text-white tracking-wide">O Desafio</h4>
-                            <p className="text-xs text-white/50 font-semibold leading-relaxed">Atender com agilidade milhares de dúvidas cotidianas sobre lojas e entregas de forma escalável.</p>
+                            <p className="text-xs text-white/50 font-barlow leading-relaxed">Atender com agilidade milhares de dúvidas cotidianas sobre lojas e entregas de forma escalável.</p>
                           </div>
                         </div>
                         <div className="flex gap-3">
@@ -436,7 +436,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                           </div>
                           <div>
                             <h4 className="text-[10px] font-black uppercase text-white tracking-wide">A Solução</h4>
-                            <p className="text-xs text-white/50 font-semibold leading-relaxed">Integração do motor de inteligência conversacional da Suri.ai ao canal oficial de WhatsApp.</p>
+                            <p className="text-xs text-white/50 font-barlow leading-relaxed">Integração do motor de inteligência conversacional da Suri.ai ao canal oficial de WhatsApp.</p>
                           </div>
                         </div>
                       </div>
@@ -499,7 +499,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                       <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
                         Acesso Expresso a Recursos Estaduais e Federais
                       </h3>
-                      <p className="text-white/60 font-semibold text-sm leading-relaxed mb-8">
+                      <p className="text-white/60 font-barlow text-sm leading-relaxed mb-8">
                         Como a startup do nosso ecossistema focada em inteligência de hardware e processos industriais obteve acesso a recursos de inovação acelerado com fôlego e curadoria consultiva pelo time do NINNA Hub.
                       </p>
     
@@ -510,7 +510,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                           </div>
                           <div>
                             <h4 className="text-[10px] font-black uppercase text-white tracking-wide">O Desafio</h4>
-                            <p className="text-xs text-white/50 font-semibold leading-relaxed">Equipes pequenas de forte base técnica sem tempo para burocracia de fomento contínuo e submissões densas.</p>
+                            <p className="text-xs text-white/50 font-barlow leading-relaxed">Equipes pequenas de forte base técnica sem tempo para burocracia de fomento contínuo e submissões densas.</p>
                           </div>
                         </div>
                         <div className="flex gap-3">
@@ -519,7 +519,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                           </div>
                           <div>
                             <h4 className="text-[10px] font-black uppercase text-white tracking-wide">A Solução</h4>
-                            <p className="text-xs text-white/50 font-semibold leading-relaxed">Mapeamento expresso e curadoria de editais efetuada em menos de 1 mês de aceleração integrada no hub.</p>
+                            <p className="text-xs text-white/50 font-barlow leading-relaxed">Mapeamento expresso e curadoria de editais efetuada em menos de 1 mês de aceleração integrada no hub.</p>
                           </div>
                         </div>
                       </div>
@@ -534,7 +534,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                     </div>
                     <div className="border-l border-r border-white/10">
                       <span className="block text-2xl font-black text-white tracking-wide ">&lt; 1 mês</span>
-                      <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-semibold">Estudo / Acesso</span>
+                      <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-barlow">Estudo / Acesso</span>
                     </div>
                     <div>
                       <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">100%</span>
