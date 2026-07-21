@@ -310,7 +310,7 @@ const Sobre = () => {
               <div className="relative">
                 <div className="h-[500px] rounded-[40px] overflow-hidden border border-white/10 relative z-10 shadow-2xl">
                   <img 
-                    src="/Imagens_espaco/Foto_Faixada.webp" 
+                    src="/Imagens_espaco/Faixada2.webp" 
                     alt="Espaço NINNA Hub" 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
