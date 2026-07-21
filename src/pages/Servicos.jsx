@@ -753,7 +753,6 @@ export default function ServicosPage() {
             Soluções &amp; Serviços
           </p>
           <h1 className="text-7xl md:text-[100px] font-black tracking-wide leading-[0.85] mb-15 text-[#F5F5F5]">
-            NOSSOS{" "}
             <span
               style={{
                 background: "linear-gradient(90deg, #00D4D4, #00E676)",
@@ -761,7 +760,7 @@ export default function ServicosPage() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              SERVIÇOS
+              EMPRESAS
             </span>
           </h1>
           <p

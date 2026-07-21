@@ -141,7 +141,7 @@ const Home = () => {
       title: 'Empresas',
       description: 'Apoiamos empresas na construção de estratégias de inovação, conectando desafios reais às melhores soluções do ecossistema por meio de programas, conexões e experiências que geram resultados.',
       icon: <Target className="w-12 h-12" />,
-      link: '/Servicos'
+      link: '/Empresas'
     },
     {
       title: 'Startups',

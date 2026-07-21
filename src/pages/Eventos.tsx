@@ -935,14 +935,14 @@ const handleSubmit = async (e: React.FormEvent) => {
                 </div>
 
                 <div className="space-y-4">
-                  <button 
+                  <a 
+                    href="https://wa.me/558532114201?text=Ol%C3%A1%2C+gostaria+de+realizar+um+evento+no+NINNA."
+                    target="_blank"
+                    rel="noopener noreferrer" 
                     className="w-full text-center py-5 bg-brand-teal text-white font-black uppercase text-[11px] tracking-[0.2em] rounded-2xl shadow-xl shadow-brand-teal/25 hover:bg-white hover:text-gray-950 transition-all cursor-pointer transform hover:-translate-y-0.5"
                   >
                     Solicitar Proposta Agora
-                  </button>
-                  <p className="text-[9px] text-gray-500 font-black uppercase tracking-widest text-center">
-                    Resposta oficial em até 24 Horas Úteis
-                  </p>
+                  </a>
                 </div>
               </motion.div>
             </div>

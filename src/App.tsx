@@ -9,7 +9,6 @@ import Footer from './components/layout/Footer';
 
 // Public Pages
 import Home from './pages/Home';
-import Empresas from './pages/Empresas';
 import Startups from './pages/Startups';
 import Portfolio from './pages/Portfolio';
 import Eventos from './pages/Eventos';
@@ -83,7 +82,6 @@ function AppContent() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
-          <Route path="/empresas" element={<Empresas />} />
           <Route path="/startups" element={<Startups />} />
           <Route path="/startups/portfolio" element={<Portfolio />} />
           <Route path="/startups/ninna-4-startups" element={<Ninna4Startups />} />
@@ -93,7 +91,7 @@ function AppContent() {
           <Route path="/oportunidades" element={<Oportunidades />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/cases" element={<Cases />} />
-          <Route path="/servicos" element={<Servicos />} />
+          <Route path="/empresas" element={<Servicos />} />
           <Route path="/seja-um-mentor" element={<SejaUmMentor />} />
           {/* Admin & Member Auth */}
           <Route path="/admin/login" element={<AdminLogin />} />

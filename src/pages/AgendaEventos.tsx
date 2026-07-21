@@ -8,36 +8,15 @@ import { Calendar, MapPin, Clock, Ticket, Users, Sparkles, SlidersHorizontal, Se
 const AgendaEventos = () => {
   const [eventos, setEventos] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [erro, setErro] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterType, setFilterType] = useState<'todos' | 'destaque' | 'regular'>('todos');
 
-  const backupEcosystemEvents = [
-    {
-      id: 'backup_1',
-      nome: 'NINNA Connection Day: Startups & Corporates',
-      descricao: 'O maior fórum de conexões estratégicas de Fortaleza. Pitch sessions de startups pré-selecionadas com diretores de inovação corporativa de grandes marcas regionais.',
-      data: '2026-06-18',
-      horario: '14:00 às 18:00',
-      local: 'Auditório Principal NINNA',
-      linkInscricao: 'https://wa.me/5585989844779',
-      destaque: true,
-      imagem: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600'
-    },
-    {
-      id: 'backup_2',
-      nome: 'Workshop: Inteligência Artificial no Corporate Venture Capital',
-      descricao: 'Painel interativo focado na implementação prática de ferramentas preditivas e LLMs para avaliação de teses tecnológicas em portfólios corporativos.',
-      data: '2026-07-02',
-      horario: '09:00 às 11:30',
-      local: 'Sala Pregão NINNA',
-      linkInscricao: 'https://wa.me/5585989844779',
-      destaque: false,
-      imagem: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=600'
-    }
-  ];
-
   useEffect(() => {
     const fetchEventos = async () => {
+      setLoading(true);
+      setErro(null);
+
       try {
         const q = query(
           collection(db, 'eventos'),
@@ -46,28 +25,18 @@ const AgendaEventos = () => {
         );
         const querySnapshot = await getDocs(q);
         const dbEvents = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as any));
-        
-        // Merge page specific events (all that have a valid date)
-        const combined = [...dbEvents] as any[];
-        
-        // Add backup events if they aren't already represented (by name/id matching)
-        backupEcosystemEvents.forEach(b => {
-          if (!combined.some(c => c.nome?.toLowerCase() === b.nome.toLowerCase())) {
-            combined.push(b);
-          }
-        });
 
-        // Ensure we filter to only those that have a marked date
-        const eventsWithDates = combined.filter((ev: any) => ev.data);
+        // Filtra apenas eventos com data válida
+        const eventsWithDates = dbEvents.filter((ev: any) => ev.data);
 
-        // Sort by date ascending
+        // Ordena por data ascendente
         eventsWithDates.sort((a: any, b: any) => new Date(a.data).getTime() - new Date(b.data).getTime());
 
         setEventos(eventsWithDates);
       } catch (error) {
         console.error("Erro ao carregar agenda de eventos:", error);
-        // Fallback to backup if Firebase fails
-        setEventos(backupEcosystemEvents);
+        setEventos([]);
+        setErro('Não foi possível carregar a agenda de eventos no momento. Tente novamente mais tarde.');
       } finally {
         setLoading(false);
       }
@@ -75,7 +44,6 @@ const AgendaEventos = () => {
 
     fetchEventos();
   }, []);
-
   // Filter & Search Logic
   const filteredEvents = eventos.filter(ev => {
     const matchesSearch = ev.nome?.toLowerCase().includes(searchTerm.toLowerCase()) || 
