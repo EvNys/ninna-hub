@@ -16,7 +16,6 @@
         "cidade": { "type": "string" },
         "estado": { "type": "string" },
         "tags": { "type": "array", "items": { "type": "string" } },
-        "ordem": { "type": "number" },
         "status": { "type": "string", "enum": ["ativo", "inativo"] },
         "createdAt": { "type": "string", "format": "date-time" },
         "updatedAt": { "type": "string", "format": "date-time" }

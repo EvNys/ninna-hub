@@ -195,61 +195,72 @@ const Sobre = () => {
 
       {/* Values Section */}
       <section className="py-32 bg-gray-50 border-y border-gray-100" id="nossos-valores-section">
-      {/* Subtle decorative shadows */}
-      <div className="absolute top-1/4 left-10 w-80 h-80 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
+        {/* Subtle decorative shadows */}
+        <div className="absolute top-1/4 left-10 w-80 h-80 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-24 space-y-4">
-          <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block">Nossos Pilares</span>
-          <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-wide ">
-            NOSSOS <span className="text-brand-teal underline decoration-gray-200">VALORES</span>
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto font-barlow text-lg">
-            O que nos guia todos os dias na busca por resultados extraordinários e impacto real no ecossistema.
-          </p>
-          <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
-        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-24 space-y-4">
+            <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block">Nossos Pilares</span>
+            <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-wide ">
+              NOSSOS <span className="text-brand-teal underline decoration-gray-200">VALORES</span>
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto font-barlow text-lg">
+              O que nos guia todos os dias na busca por resultados extraordinários e impacto real no ecossistema.
+            </p>
+            <div className="h-[2px] w-20 bg-brand-teal mx-auto mt-4" />
+          </div>
 
-        {/* Grid Layout — cards verticais */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {values.map((value, index) => (
-            <motion.div
-              key={value.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-start gap-4 p-6 md:p-8 bg-white rounded-[28px] border-t-4 border-t-brand-teal border border-gray-150 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden cursor-pointer h-full"
-            >
-              {/* Subtle background glow */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-brand-teal/[0.02] rounded-full blur-xl pointer-events-none" />
+          {/* List Layout */}
+          <div className="max-w-4xl mx-auto space-y-4">
+            {values.map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className="flex items-center justify-between gap-6 p-6 md:p-8 bg-white rounded-[28px] border-l-4 border-l-brand-teal border border-gray-150 shadow-lg hover:shadow-2xl hover:translate-x-1 transition-all duration-500 group relative overflow-hidden cursor-pointer"
+              >
+                {/* Subtle background glow */}
+                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-teal/[0.02] rounded-full blur-xl pointer-events-none" />
 
-              {/* Icon */}
-              <div className="relative shrink-0 w-fit">
-                <div className="absolute inset-0 bg-brand-teal/10 blur-xl rounded-full scale-125 group-hover:scale-130 transition-transform duration-500" />
-                <div className="relative z-10 w-14 h-14 md:w-16 md:h-16 bg-brand-teal/5 border border-brand-teal/10 rounded-2xl flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-500 shrink-0">
-                  {value.icon}
+                {/* Left: Icon + Text */}
+                <div className="flex items-center gap-5 relative z-10 min-w-0">
+                  {/* Icon */}
+                  <div className="relative shrink-0 w-fit">
+                    <div className="absolute inset-0 bg-brand-teal/10 blur-xl rounded-full scale-125 group-hover:scale-130 transition-transform duration-500" />
+                    <div className="relative z-10 w-14 h-14 md:w-16 md:h-16 bg-brand-teal/5 border border-brand-teal/10 rounded-2xl flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-500 shrink-0">
+                      {value.icon}
+                    </div>
+                  </div>
+
+                  {/* Label + Description */}
+                  <div className="min-w-0">
+                    <div className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em] mb-1">
+                      VALOR {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <h3 className="text-lg md:text-xl font-black text-gray-900 uppercase tracking-wide leading-none group-hover:text-brand-teal transition-colors">
+                      {value.title}
+                    </h3>
+                    <p className="text-gray-500 font-barlow text-sm leading-relaxed mt-1.5">
+                      {value.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              {/* Label + Text */}
-              <div className="relative z-10">
-                <div className="text-[10px] font-black text-brand-teal uppercase tracking-[0.25em] mb-1">
-                  VALOR {String(index + 1).padStart(2, '0')}
-                </div>
-                <h3 className="text-lg md:text-xl font-black text-gray-900 uppercase tracking-wide leading-tight group-hover:text-brand-teal transition-colors">
-                  {value.title}
-                </h3>
-                <p className="text-gray-500 font-barlow text-sm leading-relaxed mt-2">
-                  {value.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+                {/* Right: Tag */}
+                {/* <div className="text-right shrink-0 relative z-10 hidden sm:block">
+                  <span className="text-xs font-black uppercase text-brand-teal tracking-[0.2em] block">
+                    CULTURA
+                  </span>
+                  <span className="text-[10px] text-brand-green font-medium">Impacto real</span>
+                </div> */}
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Pillars Section Refined for "Sobre" */}
       <section className="py-32 bg-[#050911] relative overflow-hidden border-t border-b border-white/5 text-white" id="onde-acontece-section">
