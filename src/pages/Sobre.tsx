@@ -310,7 +310,7 @@ const Sobre = () => {
               <div className="relative">
                 <div className="h-[500px] rounded-[40px] overflow-hidden border border-white/10 relative z-10 shadow-2xl">
                   <img 
-                    src="/Imagens_espaco/NINNA_Geral.jpg" 
+                    src="/Imagens_espaco/Foto_Faixada.webp" 
                     alt="Espaço NINNA Hub" 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
@@ -422,7 +422,7 @@ const Sobre = () => {
             <p className="text-white/60 max-w-2xl mx-auto font-barlow text-lg  uppercase tracking-widest">Gente que acredita e faz acontecer.</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
             {loadingEquipe ? (
               Array.from({ length: 4 }).map((_, i) => (
                 <div key={i} className="bg-white/[0.03] h-96 w-full animate-pulse border border-white/10 rounded-[40px]" />
@@ -441,25 +441,25 @@ const Sobre = () => {
                     <img 
                       src={member.foto || "https://picsum.photos/seed/profile/400/500"} 
                       alt={member.nome}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                      className="w-full h-full object-cover  group-hover:scale-110"
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/15 to-transparent opacity-70 group-hover:opacity-55 transition-opacity" />
                     
-                    <div className="absolute bottom-10 left-10 right-10 z-10">
-                      <h4 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-1 font-sans">
+                    <div className="absolute bottom-16 left-10 right-10 z-10">
+                      <h4 className="text-3x1 font-black text-white uppercase tracking-wide leading-none mb-1 font-sans">
                         {member.nome}
                       </h4>
-                      <p className="text-[10px] font-black text-[#0ae2b1] uppercase tracking-[0.2em] mb-4">
+                      <p className="text-[10px] font-black text-[#0ae2b1] uppercase tracking-[0.2em]">
                         {member.cargo}
                       </p>
-                      
+
                       {member.linkedin && (
                         <a 
                           href={member.linkedin} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-teal text-white hover:bg-white hover:text-brand-teal transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"
+                          className="absolute top-full left-0 mt-4 inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-teal text-white hover:bg-white hover:text-brand-teal transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"
                         >
                           <Linkedin className="w-5 h-5" />
                         </a>
