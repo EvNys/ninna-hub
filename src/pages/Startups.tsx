@@ -122,7 +122,7 @@ export default function PortfolioStartupsShowcase() {
             </div>
             <p className="text-gray-500 font-medium text-lg leading-relaxed max-w-xl lg:mt-6">
               Cada startup enfrenta desafios diferentes, em momentos diferentes, com necessidades que mudam a cada etapa do seu crescimento. Por isso, não acreditamos em soluções únicas ou fórmulas prontas.
-              Atuamos como um hub de conexões, aproximando empreendedores das pessoas certas, das organizações certas e das oportunidades certas — aquelas que realmente fazem a diferença em cada fase do negócio.
+              Atuamos como um hub de conexões, aproximando empreendedores das pessoas certas, das organizações certas e das oportunidades certas, aquelas que realmente fazem a diferença em cada fase do negócio.
               Conectamos quem empreende a mentores, investidores, parceiros estratégicos e uma rede de contatos que acelera a geração de negócios, abre portas e fortalece o crescimento sustentável de cada startup que passa por aqui.
             </p>
           </div>
