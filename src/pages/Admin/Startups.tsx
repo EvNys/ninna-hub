@@ -16,7 +16,7 @@ import {
 const AdminStartups = () => {
   const { items: startups, loading, create, update, remove } = useFirestoreCollection<Startup>({
     collectionName: 'startups',
-    orderByField: 'createdAt',
+    orderByField: 'ordem',
     orderDirection: 'desc',
     successLabels: {
       create: 'Startup cadastrada com sucesso',
@@ -40,6 +40,7 @@ const AdminStartups = () => {
     site: '',
     cidade: '',
     estado: '',
+    ordem: 0,
     status: 'ativo'
   });
 
@@ -69,6 +70,7 @@ const AdminStartups = () => {
       tipoNegocio: startup.tipoNegocio || 'B2B',
       logo: startup.logo || '',
       site: startup.site || '',
+      ordem: startup.ordem || 0,
       cidade: startup.cidade || '',
       estado: startup.estado || '',
       status: startup.status
@@ -87,6 +89,7 @@ const AdminStartups = () => {
       tipoNegocio: 'B2B',
       logo: '',
       site: '',
+      ordem: 0,
       cidade: '',
       estado: '',
       status: 'ativo'
@@ -184,6 +187,13 @@ const AdminStartups = () => {
                 <option value="SaaS">SaaS</option><option value="Marketplace">Marketplace</option>
                 <option value="Hardware">Hardware</option><option value="Outros">Outros</option>
               </select>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">Ordem de Exibição</label>
+              <input type="number" placeholder="Ordem de exibição" required value={formData.ordem}
+                onChange={e => setFormData({...formData, ordem: parseInt(e.target.value) || 0})}
+                className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm" />
             </div>
 
             <div className="space-y-2 col-span-2">
