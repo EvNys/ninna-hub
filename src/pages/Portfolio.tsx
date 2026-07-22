@@ -304,7 +304,7 @@ const Portfolio = () => {
                 <p className="text-gray-500 font-medium text-xs uppercase tracking-widest mt-2">Tente ajustar seus filtros de busca.</p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {filteredStartups.map((startup, index) => (
                   <motion.div
                     key={startup.id}
@@ -438,7 +438,7 @@ const Portfolio = () => {
                 {/* Modal Content */}
                 <div className="md:col-span-3 p-10 md:p-16">
                   <h4 className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] mb-6">Sobre a Startup</h4>
-                  <p className="text-gray-900 text-2xl font-black leading-relaxed mb-8  uppercase tracking-wide">
+                  <p className="text-gray-500 leading-loose text-lg mb-12 font-medium">
                     "{selectedStartup.descricaoCurta}"
                   </p>
                   
