@@ -87,6 +87,34 @@ const Sobre = () => {
     },
   ];
 
+  const supporters = [
+  {
+    id: 1,
+    nome: "Pague Menos",
+    logo: "/Imagens_NINNA/PagueMenos.png",
+    site: "https://www.paguemenos.com.br/",
+  },
+  {
+    id: 2,
+    nome: "IGC",
+    logo: "/Imagens_NINNA/IGCLogo.png",
+    site: "https://igcbrasil.org.br/",
+  },
+  {
+    id: 3,
+    nome: "L'auto",
+    logo: "/Imagens_NINNA/l'auto.png",
+    site: "https://lautocargo.com.br/",
+  },
+  {
+    id: 4,
+    nome: "Performa IT",
+    logo: "/Imagens_NINNA/Performa-IT.webp",
+    site: "https://performait.com/",
+  },
+
+];
+
   return (
     <div className="bg-[#fafafa] min-h-screen overflow-hidden">
       <meta name="description" content="Conheça a história, os valores do NINNA Hub e a Equipe do espaço de inovação e conexão entre startups, empresas e profissionais." />
@@ -250,6 +278,63 @@ const Sobre = () => {
         </div>
       </div>
     </section>
+
+    {/* Nossos Apoiadores */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal/5 blur-[160px] rounded-full pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-brand-teal/20">
+              Parceiros e Patrocinadores
+            </div>
+            <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide">
+              <span className="gradient-text">NOSSOS APOIADORES</span>
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
+              Empresas e instituições que acreditam no ecossistema NINNA e apoiam o
+              desenvolvimento de novas soluções e negócios inovadores.
+            </p>
+          </div>
+
+          {/* Grid de apoiadores */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+            {supporters.map((supporter, idx) => (
+              <motion.a
+                key={supporter.id}
+                href={supporter.site}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (idx % 6) * 0.08, duration: 0.4 }}
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="group relative flex flex-col justify-center items-center p-8 bg-[#fafafa] border border-gray-100 rounded-[32px] hover:bg-brand-teal hover:border-brand-teal/20 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300 cursor-pointer text-current no-underline"
+              >
+                <div className="w-full aspect-[3/2] flex items-center justify-center overflow-hidden rounded-2xl bg-white p-6 border border-gray-50 transition-colors group-hover:border-gray-100">
+                  <img
+                    src={supporter.logo}
+                    alt={`${supporter.nome} logo`}
+                    className="max-h-20 max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    onError={(e) => {
+                      (e.target as HTMLElement).style.display = "none";
+                      const parent = (e.target as HTMLElement).parentElement;
+                      if (parent) {
+                        const fallback = parent.querySelector(".logo-fallback");
+                        if (fallback) fallback.classList.remove("hidden");
+                      }
+                    }}
+                  />
+                  <div className="logo-fallback hidden font-black text-sm text-gray-400 font-mono tracking-wide uppercase text-center">
+                    {supporter.nome}
+                  </div>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Pillars Section Refined for "Sobre" */}
       <section className="py-32 bg-[#050911] relative overflow-hidden border-t border-b border-white/5 text-white" id="onde-acontece-section">

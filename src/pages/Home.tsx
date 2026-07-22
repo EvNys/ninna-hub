@@ -694,46 +694,46 @@ const Home = () => {
             )}
 
             <div className="col-span-full mt-20">
-  {/* Header */}
-  <div className="text-center mb-12">
-    <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block mb-4">
-      O que dizem sobre nós
-    </span>
-    <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide">
-      QUEM ACREDITA <span className="text-brand-teal">FALA</span>
-    </h2>
-  </div>
-
-  {/* Grid */}
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {TESTIMONIALS.map((t, index) => (
-      <motion.div
-        key={t.id}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.08 }}
-        viewport={{ once: true }}
-        className="bg-white border border-gray-100 rounded-[32px] p-8 shadow-md hover:shadow-xl hover:border-brand-teal/20 transition-all duration-300 flex flex-col gap-4"
-      >
-        <span className="text-brand-teal text-4xl font-black leading-none select-none">"</span>
-        <p className="text-gray-600 font-medium text-base leading-relaxed flex-1">{t.texto}</p>
-        <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-          {t.avatar ? (
-            <img src={t.avatar} alt={t.nome} className="w-10 h-10 rounded-full object-cover shrink-0" />
-          ) : (
-            <div className="w-10 h-10 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal font-black text-sm shrink-0">
-              {t.nome.charAt(0)}
+            {/* Header */}
+            <div className="text-center mb-12">
+              <span className="text-brand-teal font-black uppercase text-[10px] tracking-[0.3em] bg-brand-teal/5 border border-brand-teal/10 px-4 py-1.5 rounded-full inline-block mb-4">
+                O que dizem sobre nós
+              </span>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide">
+                QUEM ACREDITA <span className="text-brand-teal">FALA</span>
+              </h2>
             </div>
-          )}
-          <div>
-            <p className="font-black text-gray-900 text-sm">{t.nome}</p>
-            <p className="text-gray-400 text-xs">{t.cargo} · {t.empresa}</p>
+
+            {/* Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {TESTIMONIALS.map((t, index) => (
+                <motion.div
+                  key={t.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  viewport={{ once: true }}
+                  className="bg-white border border-gray-100 rounded-[32px] p-8 shadow-md hover:shadow-xl hover:border-brand-teal/20 transition-all duration-300 flex flex-col gap-4"
+                >
+                  <span className="text-brand-teal text-4xl font-black leading-none select-none">"</span>
+                  <p className="text-gray-600 font-medium text-base leading-relaxed flex-1">{t.texto}</p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                    {t.avatar ? (
+                      <img src={t.avatar} alt={t.nome} className="w-10 h-10 rounded-full object-cover shrink-0" />
+                    ) : (
+                      <div className="w-10 h-10 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal font-black text-sm shrink-0">
+                        {t.nome.charAt(0)}
+                      </div>
+                    )}
+                    <div>
+                      <p className="font-black text-gray-900 text-sm">{t.nome}</p>
+                      <p className="text-gray-400 text-xs">{t.cargo} · {t.empresa}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </motion.div>
-    ))}
-  </div>
-</div>
 
           </div>
         </div>
