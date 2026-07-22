@@ -196,7 +196,7 @@ export default function PortfolioStartupsShowcase() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-[#0ae2b1] text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-[#0ae2b1]/20">
-              Jornada
+              Jornada para o sucesso
             </div>
             <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-white uppercase tracking-wide ">
               PASSO A PASSO PARA SE TORNAR UMA <br/> <span className="gradient-text font-black">STARTUP NINNA</span>
