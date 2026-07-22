@@ -297,7 +297,7 @@ const Sobre = () => {
                 </p>
                 
                 <a 
-                  href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20Audit%C3%B3rio%20Premium%20do%20NINNA"
+                  href="https://wa.me/558532114201?text=Ol%C3%A1%2C+Gostaria+de+conhecer+o+Ninna+Hub%21"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#0ae2b1] text-black hover:bg-[#0ae2b1]/90 px-8 py-4 rounded-xl font-black text-[10px] uppercase tracking-widest flex items-center group shadow-lg shadow-[#0ae2b1]/20 transition-all cursor-pointer inline-flex"

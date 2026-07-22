@@ -92,7 +92,7 @@ const showStartupsDropdown = () => {
               <img
                 src="/Imagens_NINNA/NINNA.png"
                 alt="NinnaHub Logo"
-                className="h-20 w-auto"
+                className="h-15 w-auto"
               />
             </Link>
           </div>
