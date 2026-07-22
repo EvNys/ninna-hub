@@ -285,15 +285,12 @@ const Sobre = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-brand-teal/20">
-              Parceiros e Patrocinadores
-            </div>
             <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide">
               <span className="gradient-text">NOSSOS APOIADORES</span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
-              Empresas e instituições que acreditam no ecossistema NINNA e apoiam o
-              desenvolvimento de novas soluções e negócios inovadores.
+              Empresas e instituições que acreditam no ecossistema NINNA,
+              apoiam o desenvolvimento de novas soluções e negócios inovadores.
             </p>
           </div>
 
