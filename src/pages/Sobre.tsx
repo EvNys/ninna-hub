@@ -109,7 +109,7 @@ const Sobre = () => {
   {
     id: 4,
     nome: "Performa IT",
-    logo: "/Imagens_NINNA/Performa-IT.webp",
+    logo: "/Imagens_NINNA/Performa-IT (1).webp",
     site: "https://performait.com/",
   },
 
