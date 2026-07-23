@@ -249,7 +249,7 @@ const AdminStartups = () => {
               <AdminCheckbox
                 checked={formData.statusVitrine === 'ativo'}
                 onToggle={() => setFormData({...formData, statusVitrine: formData.statusVitrine === 'ativo' ? 'inativo' : 'ativo'})}
-                label="Startup Ativa no Portfólio"
+                label="Startup Ativa na Vitrine"
               />
             </div>
           </div>
