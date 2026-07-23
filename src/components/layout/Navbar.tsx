@@ -10,7 +10,10 @@ import {
   Sparkles,
   ArrowRight,
   MapPin,
-  ChevronDown
+  ChevronDown,
+  Monitor,
+  CalendarClock,
+  Handshake
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
@@ -180,72 +183,123 @@ const showStartupsDropdown = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white border-b border-gray-100"
+          className="md:hidden relative bg-[#0a0e1a] border-b border-white/10"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-3 pt-3 pb-4 space-y-2">
             {navLinks.map((link) => (
               <div key={link.name} className="space-y-1">
                 <Link
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-xs font-black uppercase tracking-widest transition-colors ${
+                  className={`block px-3 py-2.5 rounded-lg text-xs font-black uppercase tracking-widest transition-colors ${
                     location.pathname === link.path
-                      ? 'text-brand-teal bg-brand-teal/5'
-                      : 'text-gray-500 hover:text-brand-teal hover:bg-gray-50'
+                      ? 'text-brand-teal bg-brand-teal/10'
+                      : 'text-gray-300 hover:text-brand-teal hover:bg-white/5'
                   }`}
                 >
                   {link.name}
                 </Link>
+
                 {link.name === 'Startups' && (
-                  <div className="pl-6 pr-3 py-1 space-y-1 bg-gray-50/50 rounded-lg mt-1 border-l border-brand-teal/20 ml-3">
+                  <div className="pl-2 pr-1 py-1 space-y-2">
                     <Link
                       to="/startups/ninna-4-startups"
                       onClick={() => setIsOpen(false)}
-                      className="block py-1.5 text-[25px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
+                      className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
                     >
-                      • NINNA 4 Startups
+                      <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-brand-teal/15 text-brand-teal shrink-0">
+                        <Rocket className="w-4 h-4" />
+                      </span>
+                      <span className="flex-1 min-w-0">
+                        <span className="block text-[11px] font-black uppercase tracking-wide text-white">
+                          NINNA 4 Startups
+                        </span>
+                        <span className="block text-[11px] text-gray-400 normal-case font-normal truncate">
+                          Aceleração comercial e mentorias
+                        </span>
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
                     </Link>
+
                     <Link
                       to="/startups/portfolio"
                       onClick={() => setIsOpen(false)}
-                      className="block py-1.5 text-[25px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
+                      className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
                     >
-                      • Portfólio NINNA
+                      <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-brand-teal/15 text-brand-teal shrink-0">
+                        <Monitor className="w-4 h-4" />
+                      </span>
+                      <span className="flex-1 min-w-0">
+                        <span className="block text-[11px] font-black uppercase tracking-wide text-white">
+                          Portfólio NINNA
+                        </span>
+                        <span className="block text-[11px] text-gray-400 normal-case font-normal truncate">
+                          Soluções do ecossistema
+                        </span>
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
                     </Link>
+
                     <Link
                       to="/empresas"
                       onClick={() => setIsOpen(false)}
-                      className="block py-1.5 text-[25px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
+                      className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
                     >
-                      • Inscrição para Parceria
+                      <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-brand-teal/15 text-brand-teal shrink-0">
+                        <Sparkles className="w-4 h-4" />
+                      </span>
+                      <span className="flex-1 min-w-0">
+                        <span className="block text-[11px] font-black uppercase tracking-wide text-white">
+                          Inscrição para Parceria
+                        </span>
+                        <span className="block text-[11px] text-gray-400 normal-case font-normal truncate">
+                          Conecte sua startup ao NINNA
+                        </span>
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
                     </Link>
                   </div>
                 )}
+
                 {link.name === 'Ecossistema' && (
-                  <div className="pl-6 pr-3 py-1 space-y-1 bg-gray-50/50 rounded-lg mt-1 border-l border-brand-teal/20 ml-3">
+                  <div className="pl-2 pr-1 py-1 space-y-2">
                     <Link
                       to="/ecossistema?action=booking&space=Auditório"
                       onClick={() => setIsOpen(false)}
-                      className="block py-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
+                      className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
                     >
-                      • Agendar Evento (Auditório)
+                      <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-brand-teal/15 text-brand-teal shrink-0">
+                        <CalendarClock className="w-4 h-4" />
+                      </span>
+                      <span className="flex-1 min-w-0 text-[11px] font-black uppercase tracking-wide text-white">
+                        Agendar Evento (Auditório)
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
                     </Link>
+
                     <Link
                       to="/ecossistema?action=sponsor"
                       onClick={() => setIsOpen(false)}
-                      className="block py-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-teal transition-colors"
+                      className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
                     >
-                      • Seja um Parceiro
+                      <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-brand-teal/15 text-brand-teal shrink-0">
+                        <Handshake className="w-4 h-4" />
+                      </span>
+                      <span className="flex-1 min-w-0 text-[11px] font-black uppercase tracking-wide text-white">
+                        Seja um Parceiro
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
                     </Link>
                   </div>
                 )}
               </div>
             ))}
+
             {user && (
               <Link
                 to={isAdmin || isEditor ? "/admin" : "/dashboard/comunidade"}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 rounded-md text-xs font-black uppercase tracking-widest text-brand-teal hover:bg-gray-50"
+                className="block px-3 py-2.5 mt-1 rounded-lg text-xs font-black uppercase tracking-widest text-brand-teal hover:bg-white/5"
               >
                 {isAdmin || isEditor ? 'Painel Administrativo' : 'Portal do Membro'}
               </Link>

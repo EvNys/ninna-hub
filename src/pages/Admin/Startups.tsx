@@ -40,6 +40,7 @@ const AdminStartups = () => {
     site: '',
     cidade: '',
     estado: '',
+    statusVitrine: 'ativo',
     status: 'ativo'
   });
 
@@ -71,6 +72,7 @@ const AdminStartups = () => {
       site: startup.site || '',
       cidade: startup.cidade || '',
       estado: startup.estado || '',
+      statusVitrine: startup.statusVitrine || '',
       status: startup.status
     });
     setIsDialogOpen(true);
@@ -89,6 +91,7 @@ const AdminStartups = () => {
       site: '',
       cidade: '',
       estado: '',
+      statusVitrine: '',
       status: 'ativo'
     });
   };
@@ -238,6 +241,14 @@ const AdminStartups = () => {
               <AdminCheckbox
                 checked={formData.status === 'ativo'}
                 onToggle={() => setFormData({...formData, status: formData.status === 'ativo' ? 'inativo' : 'ativo'})}
+                label="Startup Ativa no Portfólio"
+              />
+            </div>
+
+            <div className="flex items-center space-x-6 col-span-2 p-2">
+              <AdminCheckbox
+                checked={formData.statusVitrine === 'ativo'}
+                onToggle={() => setFormData({...formData, statusVitrine: formData.statusVitrine === 'ativo' ? 'inativo' : 'ativo'})}
                 label="Startup Ativa no Portfólio"
               />
             </div>

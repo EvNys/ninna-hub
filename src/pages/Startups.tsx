@@ -38,7 +38,7 @@ export default function PortfolioStartupsShowcase() {
       try {
         const q = query(
           collection(db, "startups"),
-          where("status", "==", "ativo"),
+          where("statusVitrine", "==", "ativo"),
           orderBy("createdAt", "desc")
         );
         const querySnapshot = await getDocs(q);
@@ -279,6 +279,14 @@ export default function PortfolioStartupsShowcase() {
                 )}
               </motion.div>
             ))}
+          </div>
+           <div className="flex justify-center mt-20 relative z-20">
+            <Link
+              to="/startups/ninna-4-startups"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-[#0ae2b1] text-gray-950 font-black uppercase tracking-wide text-sm rounded-full hover:scale-105 hover:shadow-[0_0_30px_rgba(10,226,177,0.4)] transition-all duration-300"
+            >
+              Faça parte do NINNA
+            </Link>
           </div>
         </div>
       </section>
@@ -786,7 +794,7 @@ export default function PortfolioStartupsShowcase() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              to="/empresas"
+              to="/startups/ninna-4-startups"
               className="inline-flex items-center gap-3 bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20 hover:scale-[1.03] active:scale-95 cursor-pointer"
             >
               Quero fazer parte do NINNA <Rocket className="w-5 h-5" />

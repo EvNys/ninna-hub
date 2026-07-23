@@ -113,12 +113,12 @@ const Ninna4Startups = () => {
               </p>
 
               <div className="flex flex-wrap justify-center gap-6">
-                {/* <Link
+                <Link
                   to="/empresas"
                   className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20 flex items-center gap-3"
                 >
                   Faça Parte do NINNA <Rocket className="w-5 h-5" />
-                </Link> */}
+                </Link> 
               </div>
             </motion.div>
           </div>
@@ -219,7 +219,7 @@ const Ninna4Startups = () => {
               className="bg-white/5 border border-white/10 p-10 rounded-[40px] backdrop-blur-sm hover:border-brand-teal/30 hover:bg-white/[0.07] transition-all duration-300"
             >
               <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-wide  mb-4">
-                +3 Milhões
+                +3 MM
               </span>
               <h3 className="text-lg font-black text-white uppercase tracking-wide  mb-2">
                 Em Investimentos
@@ -295,8 +295,7 @@ const Ninna4Startups = () => {
       </section>
 
       {/* Mentoring Section */}
-      <section id="mentorias" className="py-32 bg-gray-950 text-white relative overflow-hidden">
-        {/* Background Image with 60% opacity and dark overlay */}
+      {/* <section id="mentorias" className="py-32 bg-gray-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=2000" 
@@ -364,7 +363,7 @@ const Ninna4Startups = () => {
             )}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits Section */}
       <section className="py-32 bg-white">
