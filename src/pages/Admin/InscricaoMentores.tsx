@@ -202,7 +202,7 @@ export default function AdminInscricoesMentores() {
 
   const exportToCSV = (data: any[]) => {
   const headers = [
-    'Nome', 'Email', 'Telefone', 'Cidade', 'Área de Mentoria',
+    'Nome', 'Email', 'Telefone', 'Cidade' ,'Empresa', 'Cargo', 'Área de Atuação', 'Área de Mentoria',
     'Status', 'Data de Inscrição'
   ];
 
@@ -211,6 +211,9 @@ export default function AdminInscricoesMentores() {
     item.email ?? '',
     item.telefone ?? '',
     item.cidade ?? '',
+    item.empresa ?? '',
+    item.cargo ?? '',
+    item.areaAtuacao ?? '',
     item.areaMentoria ?? '',
     item.status ?? 'pendente',
     formatDate(item.createdAt)
