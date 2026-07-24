@@ -117,7 +117,7 @@ const Ninna4Startups = () => {
                   to="/empresas"
                   className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20 flex items-center gap-3"
                 >
-                  Faça Parte do NINNA <Rocket className="w-5 h-5" />
+                  Submeter sua STARTUP <Rocket className="w-5 h-5" />
                 </Link> 
               </div>
             </motion.div>
@@ -200,10 +200,10 @@ const Ninna4Startups = () => {
               className="bg-white/5 border border-white/10 p-10 rounded-[40px] backdrop-blur-sm hover:border-brand-teal/30 hover:bg-white/[0.07] transition-all duration-300"
             >
               <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-wide  mb-4">
-                +500
+                1200
               </span>
               <h3 className="text-lg font-black text-white uppercase tracking-wide  mb-2">
-                Conexões com Mercado
+                Startups conectadas
               </h3>
               <p className="text-sm text-gray-400 font-medium leading-relaxed">
                 Pontes comerciais de alto impacto abertas diretamente com grandes corporações e líderes de mercado.
@@ -219,13 +219,13 @@ const Ninna4Startups = () => {
               className="bg-white/5 border border-white/10 p-10 rounded-[40px] backdrop-blur-sm hover:border-brand-teal/30 hover:bg-white/[0.07] transition-all duration-300"
             >
               <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-wide  mb-4">
-                +3 MM
+                +89MM
               </span>
               <h3 className="text-lg font-black text-white uppercase tracking-wide  mb-2">
-                Em Investimentos
+                  Faturados nos Últimos 3 anos
               </h3>
               <p className="text-sm text-gray-400 font-medium leading-relaxed">
-                Recursos financeiros relevantes captados e estruturados nos últimos 2 anos de atuação direta.
+                Recursos financeiros relevantes captados e estruturados nos últimos 3 anos de atuação direta.
               </p>
             </motion.div>
 
@@ -238,13 +238,13 @@ const Ninna4Startups = () => {
               className="bg-white/5 border border-white/10 p-10 rounded-[40px] backdrop-blur-sm hover:border-brand-teal/30 hover:bg-white/[0.07] transition-all duration-300"
             >
               <span className="block text-6xl md:text-7xl font-black text-brand-teal tracking-wide  mb-4">
-                3
+                +14MM
               </span>
               <h3 className="text-lg font-black text-white uppercase tracking-wide  mb-2">
-                Startups Top 3 Nacionais
+                Investimento Captado
               </h3>
               <p className="text-sm text-gray-400 font-medium leading-relaxed">
-                Soluções aceleradas pelo NINNA chanceladas e posicionadas no pódio das metodologias e premiações nacionais mais exigentes.
+                Soluções aceleradas pelo NINNA chanceladas
               </p>
             </motion.div>
           </div>
@@ -647,7 +647,7 @@ const Ninna4Startups = () => {
             to="/empresas"
             className="inline-flex items-center gap-3 bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/30 hover:scale-[1.03] active:scale-95"
           >
-            Faça parte do NINNA Hub! <ArrowRight className="w-5 h-5" />
+              Submeter sua STARTUP<ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
