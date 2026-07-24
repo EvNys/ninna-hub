@@ -58,6 +58,15 @@ const Ninna4Startups = () => {
     fetchData();
   }, []);
 
+  const [visibleCount, setVisibleCount] = useState(6);
+
+const beneficiosVisiveis = beneficios.slice(0, visibleCount);
+const temMais = visibleCount < beneficios.length;
+
+const handleVerMais = () => {
+  setVisibleCount((prev) => prev + 6);
+};
+
   const pilares = [
     {
       icon: Handshake,
@@ -367,74 +376,83 @@ const Ninna4Startups = () => {
 
       {/* Benefits Section */}
       <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
-              Vantagens Exclusivas
-            </div>
-            <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-wide  leading-none mb-8">
-              CLUBE DE <span className="gradient-text">BENEFÍCIOS</span>
-            </h2>
-            <p className="text-gray-500 font-medium text-xl max-w-2xl mx-auto">
-              Temos parcerias estratégicas com as ferramentas que sua startup precisa para crescer com custo reduzido.
-            </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
+            Vantagens Exclusivas
           </div>
+          <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-wide  leading-none mb-8">
+            CLUBE DE <span className="gradient-text">BENEFÍCIOS</span>
+          </h2>
+          <p className="text-gray-500 font-medium text-xl max-w-2xl mx-auto">
+            Temos parcerias estratégicas com as ferramentas que sua startup precisa para crescer com custo reduzido.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {loadingBeneficios ? (
-              Array(6).fill(0).map((_, i) => (
-                <div key={i} className="h-32 bg-gray-50 animate-pulse rounded-3xl" />
-              ))
-            ) : (
-              beneficios.map((beneficio, i) => {
-                const isAsaas = beneficio.nomeEmpresa?.toLowerCase() === 'asaas' || beneficio.logo?.toLowerCase().includes('asaas');
-                const logoSrc = isAsaas ? '/Imagens_NINNA/Asaas.png' : beneficio.logo;
-                const imgClass = isAsaas 
-                  ? "max-h-[64px] w-auto max-w-[90%] object-contain scale-110 transition-transform group-hover:scale-125" 
-                  : "max-h-12 w-auto object-contain transition-transform group-hover:scale-110";
+        <div className="grid grid-cols-6 gap-6">
+          {loadingBeneficios ? (
+            Array(6).fill(0).map((_, i) => (
+              <div key={i} className="h-32 bg-gray-50 animate-pulse rounded-3xl" />
+            ))
+          ) : (
+            beneficiosVisiveis.map((beneficio, i) => {
+              const isAsaas = beneficio.nomeEmpresa?.toLowerCase() === 'asaas' || beneficio.logo?.toLowerCase().includes('asaas');
+              const logoSrc = isAsaas ? '/Imagens_NINNA/Asaas.png' : beneficio.logo;
+              const imgClass = isAsaas 
+                ? "max-h-[64px] w-auto max-w-[90%] object-contain scale-110 transition-transform group-hover:scale-125" 
+                : "max-h-12 w-auto object-contain transition-transform group-hover:scale-110";
 
-                return (
-                  <motion.div
-                    key={beneficio.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
-                    className="bg-white border border-gray-100 p-6 rounded-3xl flex items-center justify-center grayscale hover:grayscale-0 hover:shadow-xl transition-all group relative overflow-hidden h-32"
-                  >
-                    <img 
-                      src={logoSrc} 
-                      alt={beneficio.nomeEmpresa} 
-                      className={imgClass}
-                      referrerPolicy="no-referrer"
-                    />
-                    {/* Tooltip on hover */}
-                    <div className="absolute inset-0 bg-brand-teal/95 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                      <span className="text-white font-black uppercase text-[10px] tracking-wide leading-none">{beneficio.nomeEmpresa}</span>
-                    </div>
-                  </motion.div>
-                );
-              })
-            )}
+              return (
+                <motion.div
+                  key={beneficio.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: (i % 6) * 0.05 }}
+                  className="bg-white border border-gray-100 p-6 rounded-3xl flex items-center justify-center grayscale hover:grayscale-0 hover:shadow-xl transition-all group relative overflow-hidden h-32"
+                >
+                  <img 
+                    src={logoSrc} 
+                    alt={beneficio.nomeEmpresa} 
+                    className={imgClass}
+                    referrerPolicy="no-referrer"
+                  />
+                  {/* Tooltip on hover */}
+
+                </motion.div>
+              );
+            })
+          )}
+        </div>
+
+        {!loadingBeneficios && temMais && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={handleVerMais}
+              className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest transition-all"
+            >
+              Ver Mais
+            </button>
           </div>
-          
-          <div className="mt-20 p-12 rounded-[40px] bg-brand-dark overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-teal/10 blur-[100px] -translate-y-1/2 translate-x-1/2" />
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="max-w-xl">
-                <h3 className="text-3xl font-black text-white uppercase tracking-wide  mb-4">Sua empresa quer oferecer benefícios?</h3>
-                <p className="text-gray-400 font-medium">Junte-se ao nosso ecossistema e conecte sua solução com centenas de startups inovadoras.</p>
-              </div>
-              <Link 
-                to="/empresas"
-                className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20"
-              >
-                Seja um Parceiro
-              </Link>
+        )}
+
+        <div className="mt-20 p-12 rounded-[40px] bg-brand-dark overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-brand-teal/10 blur-[100px] -translate-y-1/2 translate-x-1/2" />
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="max-w-xl">
+              <h3 className="text-3xl font-black text-white uppercase tracking-wide  mb-4">Sua empresa quer oferecer benefícios?</h3>
+              <p className="text-gray-400 font-medium">Junte-se ao nosso ecossistema e conecte sua solução com centenas de startups inovadoras.</p>
             </div>
+            <Link 
+              to="/empresas"
+              className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20"
+            >
+              Seja um Parceiro
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Cases Section */}
       <section className="py-32 bg-[#fafafa] relative overflow-hidden border-t border-gray-100">

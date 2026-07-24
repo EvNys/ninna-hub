@@ -186,6 +186,27 @@ const Portfolio = () => {
               </div>
 
               {/* Categorias Dropdown */}
+              
+
+              {/* Clear */}
+              {(selectedCategory !== 'all' || selectedMaturity !== 'all' || selectedBusinessType !== 'all' || searchTerm !== '') && (
+                <button
+                  onClick={() => {
+                    setSelectedCategory('all');
+                    setSelectedMaturity('all');
+                    setSelectedBusinessType('all');
+                    setSearchTerm('');
+                  }}
+                  className="shrink-0 px-5 py-3 border border-dashed border-gray-200 rounded-xl text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-red-500 hover:border-red-200 transition-all flex items-center justify-center gap-2"
+                >
+                  <X className="w-3 h-3" /> Limpar Filtros
+                </button>
+              )}
+            </div>
+
+            {/* Linha 2: todas as categorias + Tipo de Negócio */}
+            <div className="flex flex-col md:flex-row gap-6 pt-6 border-t border-gray-100">
+              {/* todas as categorias */}
               <div className="relative w-full md:w-64 shrink-0">
                 <button
                   onClick={() => setIsOpen(prev => !prev)}
@@ -223,46 +244,6 @@ const Portfolio = () => {
                 )}
               </div>
 
-              {/* Clear */}
-              {(selectedCategory !== 'all' || selectedMaturity !== 'all' || selectedBusinessType !== 'all' || searchTerm !== '') && (
-                <button
-                  onClick={() => {
-                    setSelectedCategory('all');
-                    setSelectedMaturity('all');
-                    setSelectedBusinessType('all');
-                    setSearchTerm('');
-                  }}
-                  className="shrink-0 px-5 py-3 border border-dashed border-gray-200 rounded-xl text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-red-500 hover:border-red-200 transition-all flex items-center justify-center gap-2"
-                >
-                  <X className="w-3 h-3" /> Limpar Filtros
-                </button>
-              )}
-            </div>
-
-            {/* Linha 2: Maturidade + Tipo de Negócio */}
-            <div className="flex flex-col md:flex-row gap-6 pt-6 border-t border-gray-100">
-              {/* Maturidade */}
-              <div className="space-y-3 flex-1">
-                <h4 className="text-[11px] font-black text-gray-900 uppercase tracking-[0.2em] flex items-center gap-2">
-                  <Award className="w-3 h-3 text-brand-teal" /> Maturidade
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {maturityOptions.map(opt => (
-                    <button
-                      key={opt}
-                      onClick={() => setSelectedMaturity(opt)}
-                      className={`
-                        px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all
-                        ${selectedMaturity === opt
-                          ? 'bg-gray-900 text-white shadow-lg'
-                          : 'bg-gray-50 text-gray-400 hover:text-gray-900 hover:bg-gray-100'}
-                      `}
-                    >
-                      {opt === 'all' ? 'Qualquer estágio' : opt}
-                    </button>
-                  ))}
-                </div>
-              </div>
 
               {/* Negócio */}
               <div className="space-y-3 flex-1">
@@ -340,9 +321,7 @@ const Portfolio = () => {
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="flex gap-2">
-                          <div className="px-3 py-1 rounded-full bg-gray-50 text-gray-400 text-[10px] font-black uppercase tracking-widest border border-gray-100">
-                            {startup.estagio}
-                          </div>
+
                           {startup.tipoNegocio && (
                             <div className="px-3 py-1 rounded-full bg-gray-900/5 text-gray-600 text-[10px] font-black uppercase tracking-widest border border-gray-100">
                               {startup.tipoNegocio}
@@ -443,10 +422,6 @@ const Portfolio = () => {
                   </p>
                   
                   <div className="prose max-w-none">
-                    <h5 className="text-gray-900 font-black uppercase text-xs tracking-widest mb-4">Solução e Impacto</h5>
-                    <p className="text-gray-500 leading-loose text-lg mb-12 font-medium">
-                      {selectedStartup.descricaoCompleta || selectedStartup.descricaoCurta}
-                    </p>
 
                     {selectedStartup.tags && selectedStartup.tags.length > 0 && (
                       <div>

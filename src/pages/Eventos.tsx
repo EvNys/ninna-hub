@@ -837,6 +837,19 @@ const handleSubmit = async (e: React.FormEvent) => {
             </motion.div>
 
           </div>
+
+          {/* CTA: Reservar Espaço */}
+          <div className="mt-16 w-full flex justify-center">
+            <a
+              href="https://wa.me/558532114201?text=Ol%C3%A1!%20Quero%20reservar%20um%20espa%C3%A7o%20no%20NINNA%20Hub."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-teal inline-block hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20"
+            >
+              Quero Reservar um Espaço
+            </a>
+          </div>
+
         </div>
       </section>
 
