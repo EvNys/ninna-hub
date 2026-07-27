@@ -760,7 +760,7 @@ export default function ServicosPage() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              EMPRESAS
+              Página em construção
             </span>
           </h1>
           <p
@@ -774,7 +774,8 @@ export default function ServicosPage() {
               marginRight: "auto",
             }}
           >
-            Soluções sob medida para transformar inovação e dados em resultado real.
+            esta página atualmente se encontra em construção e estará disponível completamente em breve
+            {/* Soluções sob medida para transformar inovação e dados em resultado real. */}
           </p>
           <a
           href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista"

@@ -101,8 +101,8 @@ const showStartupsDropdown = () => {
           </div>
 
           {/* Desktop Links */}
-          <div className="hidden md:block h-full">
-            <div className="ml-10 flex items-center space-x-8 h-full">
+          <div className="hidden lg:block h-full">
+            <div className="ml-10 flex items-center space-x-4 lg:space-x-6 xl:space-x-8 h-full">
               
               {navLinks.map((link) => (
                 <Link
@@ -167,7 +167,7 @@ const showStartupsDropdown = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-brand-teal hover:bg-gray-100 focus:outline-none transition-colors"
@@ -183,7 +183,7 @@ const showStartupsDropdown = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden relative bg-[#0a0e1a] border-b border-white/10"
+          className="lg:hidden relative bg-[#0a0e1a] border-b border-white/10"
         >
           <div className="px-3 pt-2 pb-3 space-y-0.5">
             {navLinks.map((link) => (
