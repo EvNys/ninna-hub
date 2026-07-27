@@ -836,6 +836,61 @@ const handleSubmit = async (e: React.FormEvent) => {
               </div>
             </motion.div>
 
+            {/* estação de trabalho Space details & Photo */}
+            <motion.div 
+              whileHover={{ y: -6 }}
+              className="bg-white/[0.03] backdrop-blur-md rounded-[40px] overflow-hidden border border-white/10 shadow-2xl flex flex-col h-full"
+            >
+              <div className="h-72 w-full relative overflow-hidden bg-gray-900">
+                <img 
+                  src="/Imagens_espaco/Coworking.webp" 
+                  alt="Estações de Trabalho NINNA Hub" 
+                  className="w-full h-full object-cover opacity-90"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute top-6 right-6 bg-brand-teal text-white font-black uppercase text-[9px] tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                  Espaço de trabalho
+                </div>
+              </div>
+              <div className="p-8 flex-grow flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="text-2xl font-black text-white uppercase tracking-wide ">ESTAÇÕES DE TRABALHO</h4>
+                    <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 12 a 20 Pessoas</span>
+                  </div>
+                  <p className="text-white/60 font-barlow leading-relaxed mb-6">
+                    Um ambiente próprio para trabalho e projetos pessoais 
+                  </p>
+                  
+                  <div className="border-t border-white/10 pt-6 space-y-4">
+                    <span className="text-[9px] font-black text-white/40 uppercase tracking-widest block">ESTRUTURA COMPLETA:</span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
+                        <Check className="w-4 h-4 text-brand-teal shrink-0" />
+                        <span>Internet Wi-Fi</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
+                        <Check className="w-4 h-4 text-brand-teal shrink-0" />
+                        <span>Tomadas Individuais</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
+                        <Check className="w-4 h-4 text-brand-teal shrink-0" />
+                        <span>Cabines individuais (rotativas)</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
+                        <Check className="w-4 h-4 text-brand-teal shrink-0" />
+                        <span>Àgua e Café</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
+                        <Check className="w-4 h-4 text-brand-teal shrink-0" />
+                        <span>Armários individuais</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
           </div>
 
           {/* CTA: Reservar Espaço */}
