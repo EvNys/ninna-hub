@@ -856,7 +856,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-2xl font-black text-white uppercase tracking-wide ">ESTAÇÕES DE TRABALHO</h4>
-                    <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 12 a 20 Pessoas</span>
+                    <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">Capacidade: 1 pessoa por cabine</span>
                   </div>
                   <p className="text-white/60 font-barlow leading-relaxed mb-6">
                     Um ambiente próprio para trabalho e projetos pessoais 
