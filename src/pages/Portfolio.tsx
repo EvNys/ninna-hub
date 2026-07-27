@@ -12,6 +12,7 @@ const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedMaturity, setSelectedMaturity] = useState('all');
   const [selectedBusinessType, setSelectedBusinessType] = useState('all');
+  const [isBusinessTypeOpen, setIsBusinessTypeOpen] = useState(false);
   const [selectedStartup, setSelectedStartup] = useState<any>(null);
 
   useEffect(() => {
@@ -207,7 +208,7 @@ const Portfolio = () => {
             {/* Linha 2: todas as categorias + Tipo de Negócio */}
             <div className="flex flex-col md:flex-row gap-6 pt-6 border-t border-gray-100">
               {/* todas as categorias */}
-              <div className="relative w-full md:w-64 shrink-0">
+              <div className="pt-5 relative w-full md:w-64 shrink-0">
                 <button
                   onClick={() => setIsOpen(prev => !prev)}
                   className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest bg-brand-teal text-white shadow-lg shadow-brand-teal/20"
@@ -246,26 +247,44 @@ const Portfolio = () => {
 
 
               {/* Negócio */}
-              <div className="space-y-3 flex-1">
+              <div className="space-y-3 flex-1 relative">
                 <h4 className="text-[11px] font-black text-gray-900 uppercase tracking-[0.2em] flex items-center gap-2">
                   <Briefcase className="w-3 h-3 text-brand-teal" /> Tipo de Negócio
                 </h4>
-                <div className="flex flex-wrap gap-2">
-                  {businessTypeOptions.map(opt => (
-                    <button
-                      key={opt}
-                      onClick={() => setSelectedBusinessType(opt)}
-                      className={`
-                        px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all
-                        ${selectedBusinessType === opt
-                          ? 'bg-gray-900 text-white shadow-lg'
-                          : 'bg-gray-50 text-gray-400 hover:text-gray-900 hover:bg-gray-100'}
-                      `}
-                    >
-                      {opt === 'all' ? 'Todos os modelos' : opt}
-                    </button>
-                  ))}
-                </div>
+
+                <button
+                  onClick={() => setIsBusinessTypeOpen(prev => !prev)}
+                  className="inline-flex items-center justify-between px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest bg-gray-900 text-white shadow-lg"
+                >
+                  <span>
+                    {selectedBusinessType === 'all' ? 'Todos os modelos' : selectedBusinessType}
+                  </span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${isBusinessTypeOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
+
+                {isBusinessTypeOpen && (
+                  <div className="absolute z-20 flex flex-col gap-1 mt-1 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar rounded-xl border border-gray-100 bg-white p-1 shadow-lg w-full">
+                    {businessTypeOptions.map(opt => (
+                      <button
+                        key={opt}
+                        onClick={() => {
+                          setSelectedBusinessType(opt);
+                          setIsBusinessTypeOpen(false);
+                        }}
+                        className={`
+                          text-left px-4 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all
+                          ${selectedBusinessType === opt
+                            ? 'bg-gray-900 text-white shadow-lg translate-x-1'
+                            : 'text-gray-400 hover:text-gray-900 hover:bg-gray-50 hover:translate-x-1'}
+                        `}
+                      >
+                        {opt === 'all' ? 'Todos os modelos' : opt}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
