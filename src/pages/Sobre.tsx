@@ -519,7 +519,7 @@ const Sobre = () => {
                   viewport={{ once: true }}
                   className="group relative"
                 >
-                  <div className="relative h-[380px] rounded-[40px] overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-md transition-all duration-700 group-hover:translate-y-[-10px] shadow-xl hover:shadow-2xl">
+                  <div className="relative aspect-[4/5] rounded-[40px] overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-md transition-all duration-700 group-hover:translate-y-[-10px] shadow-xl hover:shadow-2xl">
                     <img 
                       src={member.foto || "https://picsum.photos/seed/profile/400/500"} 
                       alt={member.nome}
