@@ -389,18 +389,18 @@ const handleVerMais = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
           {loadingBeneficios ? (
             Array(6).fill(0).map((_, i) => (
-              <div key={i} className="h-32 bg-gray-50 animate-pulse rounded-3xl" />
+              <div key={i} className="h-24 sm:h-28 md:h-32 bg-gray-50 animate-pulse rounded-2xl md:rounded-3xl" />
             ))
           ) : (
             beneficiosVisiveis.map((beneficio, i) => {
               const isAsaas = beneficio.nomeEmpresa?.toLowerCase() === 'asaas' || beneficio.logo?.toLowerCase().includes('asaas');
               const logoSrc = isAsaas ? '/Imagens_NINNA/Asaas.png' : beneficio.logo;
               const imgClass = isAsaas 
-                ? "max-h-[64px] w-auto max-w-[90%] object-contain scale-110 transition-transform group-hover:scale-125" 
-                : "max-h-12 w-auto object-contain transition-transform group-hover:scale-110";
+                ? "max-h-10 sm:max-h-12 md:max-h-[64px] w-auto max-w-[90%] object-contain scale-110 transition-transform group-hover:scale-125" 
+                : "max-h-8 sm:max-h-10 md:max-h-12 w-auto object-contain transition-transform group-hover:scale-110";
 
               return (
                 <motion.div
@@ -409,7 +409,7 @@ const handleVerMais = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: (i % 6) * 0.05 }}
-                  className="bg-white border border-gray-100 p-6 rounded-3xl flex items-center justify-center grayscale hover:grayscale-0 hover:shadow-xl transition-all group relative overflow-hidden h-32"
+                  className="bg-white border border-gray-100 p-3 sm:p-4 md:p-6 rounded-2xl md:rounded-3xl flex items-center justify-center grayscale hover:grayscale-0 hover:shadow-xl transition-all group relative overflow-hidden h-24 sm:h-28 md:h-32"
                 >
                   <img 
                     src={logoSrc} 
@@ -417,8 +417,6 @@ const handleVerMais = () => {
                     className={imgClass}
                     referrerPolicy="no-referrer"
                   />
-                  {/* Tooltip on hover */}
-
                 </motion.div>
               );
             })
