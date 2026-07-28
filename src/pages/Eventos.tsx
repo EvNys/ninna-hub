@@ -1007,7 +1007,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     href="https://wa.me/558532114201?text=Ol%C3%A1%2C+gostaria+de+realizar+um+evento+no+NINNA."
                     target="_blank"
                     rel="noopener noreferrer" 
-                    className="w-full text-center py-5 bg-brand-teal text-white font-black uppercase text-[11px] tracking-[0.2em] rounded-2xl shadow-xl shadow-brand-teal/25 hover:bg-white hover:text-gray-950 transition-all cursor-pointer transform hover:-translate-y-0.5"
+                    className="inline-block px-12 py-5 whitespace-nowrap bg-brand-teal text-white font-black uppercase text-[10px] tracking-[0.15em] rounded-2xl shadow-xl shadow-brand-teal/20 hover:bg-brand-teal/90 hover:scale-[1.02] transition-all cursor-pointer"
                   >
                     Solicitar Proposta Agora
                   </a>

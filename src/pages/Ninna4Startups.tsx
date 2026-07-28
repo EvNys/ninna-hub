@@ -443,12 +443,19 @@ const handleVerMais = () => {
               <h3 className="text-3xl font-black text-white uppercase tracking-wide  mb-4">Sua empresa quer oferecer benefícios?</h3>
               <p className="text-gray-400 font-medium">Junte-se ao nosso ecossistema e conecte sua solução com centenas de startups inovadoras.</p>
             </div>
-            <Link 
-              to="/empresas"
+            <img 
+                src="/Imagens_NINNA/qrcodePatrocinador.webp" 
+                alt="Qr code para patrocinadores"
+                className="w-40 h-40 object-contain"
+              />
+            <a 
+              href="https://forms.cloud.microsoft/r/J0brY9ucZF?origin=lprLink"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20"
             >
               Seja um Parceiro
-            </Link>
+            </a>
           </div>
         </div>
       </div>
