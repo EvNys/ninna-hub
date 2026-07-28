@@ -59,6 +59,11 @@ const AgendaEventos = () => {
     return matchesSearch;
   });
 
+  function parseDataLocal(dataString: string) {
+  const [ano, mes, dia] = dataString.split('-').map(Number);
+  return new Date(ano, mes - 1, dia); // mês é 0-indexed
+}
+
   return (
     <div className="pb-32 bg-[#fafafa] min-h-screen">
       {/* Page Header */}   
@@ -204,7 +209,7 @@ const AgendaEventos = () => {
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="flex items-center text-brand-teal font-black text-[9px] uppercase tracking-widest bg-brand-teal/5 px-3 py-1.5 rounded-xl border border-brand-teal/10">
                       <Calendar className="w-3.5 h-3.5 mr-1.5" />
-                      {new Date(evento.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' })}
+                      {parseDataLocal(evento.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' })}
                     </span>
                     {evento.horario && (
                       <span className="flex items-center text-gray-500 font-bold text-[9px] uppercase tracking-widest border border-gray-100 px-3 py-1.5 rounded-xl">
