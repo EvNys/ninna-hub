@@ -205,12 +205,14 @@ const handleSubmit = async (e: React.FormEvent) => {
               >
                 Quero Realizar meu Evento no NINNA
               </a>
-              <button
-                 onClick={openSponsorModal}
-                 className="px-8 py-4 bg-gray-900 text-white font-black uppercase text-[10px] tracking-[0.2em] rounded-2xl hover:bg-gray-800 hover:scale-[1.02] transition-all cursor-pointer"
+              <a 
+                href="https://forms.cloud.microsoft/r/J0brY9ucZF?origin=lprLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-gray-900 text-white font-black uppercase text-[10px] tracking-[0.2em] rounded-2xl hover:bg-gray-800 hover:scale-[1.02] transition-all cursor-pointer"
               >
                 Patrocinar um Evento
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -1059,19 +1061,23 @@ const handleSubmit = async (e: React.FormEvent) => {
                 </div>
 
                 <div className="space-y-4">
-                  <button 
-                    onClick={openSponsorModal}
-                    className="w-full text-center py-5 bg-brand-teal text-white font-black uppercase text-[10px] tracking-[0.2em] rounded-2xl shadow-xl shadow-brand-teal/20 hover:bg-brand-teal/90 transition-all cursor-pointer"
+                  <a 
+                    href="https://forms.cloud.microsoft/r/J0brY9ucZF?origin=lprLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center py-5 px-6 bg-brand-teal text-white font-black uppercase text-[10px] tracking-[0.2em] rounded-2xl shadow-xl shadow-brand-teal/20 hover:bg-brand-teal/90 transition-all cursor-pointer"
                   >
-                    Ver Pacotes de Patrocínio
-                  </button>
+                    Inscreva-se para ser um patrocinador
+                  </a>
+                </div>  
+                <div className="space-y-4">
                   <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest  text-center">
                     Ou agende uma reunião com nossa secretaria corporativa
                   </p>
+                  
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
