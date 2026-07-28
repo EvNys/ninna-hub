@@ -182,7 +182,7 @@ const AgendaEventos = () => {
                     <img 
                       src={evento.imagem} 
                       alt={evento.nome} 
-                      className="w-full h-full object-cover object-center"
+                      className="w-full h-full object-contain object-bottom"
                       referrerPolicy="no-referrer"
                     />
                   ) : (
