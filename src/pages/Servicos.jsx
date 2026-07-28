@@ -743,7 +743,7 @@ export default function ServicosPage() {
           <p
             style={{
               margin: "0 0 16px",
-              fontSize: "11px",
+              fontSize: "clamp(9px, 2vw, 11px)",
               fontWeight: 700,
               letterSpacing: "0.2em",
               textTransform: "uppercase",
@@ -752,12 +752,14 @@ export default function ServicosPage() {
           >
             Soluções &amp; Serviços
           </p>
-          <h1 className="text-7xl md:text-[100px] font-black tracking-wide leading-[0.85] mb-15 text-[#F5F5F5]">
+          <h1 className="font-black tracking-wide leading-[0.95] sm:leading-[0.9] md:leading-[0.85] mb-15 text-[#F5F5F5]">
             <span
               style={{
                 background: "linear-gradient(90deg, #00D4D4, #00E676)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
+                fontSize: "clamp(3.0rem, 8vw, 100px)",
+                display: "inline-block",
               }}
             >
               Página em construção
@@ -766,7 +768,7 @@ export default function ServicosPage() {
           <p
             style={{
               margin: "0 0 40px",
-              fontSize: "20px",
+              fontSize: "clamp(14px, 3.5vw, 20px)",
               color: "rgba(255,255,255,0.55)",
               lineHeight: 1.7,
               maxWidth: "560px",
@@ -777,6 +779,7 @@ export default function ServicosPage() {
             esta página atualmente se encontra em construção e estará disponível completamente em breve
             {/* Soluções sob medida para transformar inovação e dados em resultado real. */}
           </p>
+          
           <a
           href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista"
           target="_blank"
@@ -787,13 +790,14 @@ export default function ServicosPage() {
               border: "none",
               borderRadius: "100px",
               padding: "16px 36px",
-              fontSize: "14px",
+              fontSize: "clamp(12px, 2.5vw, 14px)",
               fontWeight: 800,
               letterSpacing: "0.06em",
               textTransform: "uppercase",
               cursor: "pointer",
               transition: "opacity 0.2s",
               fontFamily: "inherit",
+              display: "inline-block",
             }}
             
             onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}

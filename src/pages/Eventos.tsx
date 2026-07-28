@@ -1129,7 +1129,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                       : 'Posicione a marca em frente a startups, decisores e líderes de mercado cearense.'}
                   </p>
 
-                <form onSubmit={handleSubmit} className="space-y-4 pt-4 text-left">
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 pt-4 text-left">
                   <div className="space-y-1">
                     <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Seu Nome Integral</label>
                     <input 
@@ -1139,11 +1139,11 @@ const handleSubmit = async (e: React.FormEvent) => {
                       value={formData.nome} 
                       onChange={handleFormChange}
                       placeholder="Nome Sobrenome" 
-                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
+                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
                     />
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="space-y-1">
                       <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest">E-mail Corporativo</label>
                       <input 
@@ -1153,7 +1153,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         value={formData.email} 
                         onChange={handleFormChange}
                         placeholder="nome@empresa.com" 
-                        className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
+                        className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
                       />
                     </div>
                     <div className="space-y-1">
@@ -1165,7 +1165,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         value={formData.telefone} 
                         onChange={handleFormChange}
                         placeholder="(85) 99999-9999" 
-                        className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
+                        className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
                       />
                     </div>
                   </div>
@@ -1179,7 +1179,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                       value={formData.empresa} 
                       onChange={handleFormChange}
                       placeholder="Nome Corporativo" 
-                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
+                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
                     />
                   </div>
 
@@ -1189,7 +1189,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                       name="tipoPatrocinio" 
                       value={formData.tipoPatrocinio} 
                       onChange={handleFormChange}
-                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
+                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
                     >
                       <option value="Patrocínio de Agenda Anual">Parceiro Estratégico Anual</option>
                       <option value="Cotas para Evento Exclusivo">Cota de Apoio a Evento Exclusivo</option>
@@ -1205,14 +1205,14 @@ const handleSubmit = async (e: React.FormEvent) => {
                       onChange={handleFormChange}
                       rows={3}
                       placeholder="Escreva brevemente o tema ou tópicos que gostaria de abordar."
-                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-6 py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm"
+                      className="w-full bg-[#fafafa] border border-gray-100 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 text-gray-900 focus:outline-none focus:border-brand-teal text-sm shadow-sm resize-none"
                     />
                   </div>
 
                   <button 
                     type="submit" 
                     disabled={submitting}
-                    className="w-full mt-4 py-5 bg-brand-teal text-white font-black uppercase text-[10px] tracking-widest rounded-2xl hover:bg-brand-teal/90 shadow-xl shadow-brand-teal/15 transition-all text-center disabled:opacity-55 cursor-pointer"
+                    className="w-full mt-4 py-4 sm:py-5 bg-brand-teal text-white font-black uppercase text-[10px] tracking-widest rounded-2xl hover:bg-brand-teal/90 shadow-xl shadow-brand-teal/15 transition-all text-center disabled:opacity-55 cursor-pointer"
                   >
                     {submitting ? 'Registrando Solicitação...' : 'Confirmar Envio e Contatar'}
                   </button>

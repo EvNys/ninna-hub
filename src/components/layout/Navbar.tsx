@@ -263,8 +263,10 @@ const showStartupsDropdown = () => {
 
                 {link.name === 'Ecossistema' && (
                   <div className="pl-2 pr-1 py-0.5 space-y-1">
-                    <Link
-                      to="/ecossistema?action=booking&space=Auditório"
+                    <a
+                    href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20Audit%C3%B3rio%20para%20um%20evento"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={() => setIsOpen(false)}
                       className="flex items-center gap-2.5 p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
                     >
@@ -275,7 +277,7 @@ const showStartupsDropdown = () => {
                         Agendar Evento (Auditório)
                       </span>
                       <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
-                    </Link>
+                    </a>
 
                     <Link
                       to="/ecossistema?action=sponsor"
