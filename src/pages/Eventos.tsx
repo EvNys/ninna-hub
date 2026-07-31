@@ -141,7 +141,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       local: 'Auditório Principal NINNA',
       linkInscricao: 'https://wa.me/5585989844779',
       destaque: true,
-      imagem: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600'
+      imagem: '/Imagens_espaco/NINNA_connection.webp'
     },
     {
       id: 'backup_2',
@@ -426,7 +426,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-brand-teal to-brand-green opacity-20 blur-2xl rounded-[44px] group-hover:opacity-30 transition-opacity duration-500" />
                   <div className="relative rounded-[40px] overflow-hidden border border-gray-100 shadow-2xl h-[340px] md:h-[420px] bg-gray-50">
                     <img 
-                      src="/Imagens_espaco/pregao_evento.jpeg" 
+                      src="/Imagens_espaco/NINNA_connection.webp" 
                       alt="NINNA Connection Event" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
@@ -443,7 +443,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-brand-teal/15 to-brand-green/15 opacity-20 blur-2xl rounded-[44px] group-hover:opacity-30 transition-opacity duration-500" />
                   <div className="relative rounded-[40px] overflow-hidden border border-gray-100 shadow-2xl h-[340px] md:h-[420px] bg-gray-50">
                     <img 
-                      src="/Imagens_espaco/Auditorio_evento.jpg" 
+                      src="/Imagens_espaco/Terceiro_Tempo.webp" 
                       alt="Terceiro Tempo Event" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"

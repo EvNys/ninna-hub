@@ -265,12 +265,14 @@ const AgendaEventos = () => {
               >
                 Reservar um Espaço
               </a>
-              <Link
-                to="/ecossistema?action=sponsor"
+              <a
+                href="https://forms.cloud.microsoft/r/J0brY9ucZF?origin=lprLink"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-white/10 text-white border border-white/10 font-black uppercase text-[10px] tracking-widest rounded-xl hover:bg-white/20 transition-all cursor-pointer hover:scale-[1.02]"
               >
                 Seja Patrocinador
-              </Link>
+              </a>
             </div>
           </div>
         </div>
