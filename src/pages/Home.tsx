@@ -408,129 +408,129 @@ const Home = () => {
       </section>
 
 
-  {/* Números do NINNA */}
+      {/* Números do NINNA */}
       <section className="py-32 bg-[#fafafa] relative overflow-hidden border-y border-gray-100" id="numeros-do-ninna">
-  {/* Subtle Decorative background glows */}
-  <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
-  <div className="absolute top-12 right-12 w-[400px] h-[400px] bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
+        {/* Subtle Decorative background glows */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-brand-teal/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-12 right-12 w-[400px] h-[400px] bg-brand-green/5 blur-[120px] rounded-full pointer-events-none" />
 
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-gray-900">
 
-    {/* Grid principal: imagem à esquerda (altura total) + título e KPIs à direita */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Grid principal: imagem à esquerda (altura total) + título e KPIs à direita */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-      {/* Coluna Esquerda - Imagem (fica ao lado do título + cards) */}
-      <motion.div
-        initial={{ opacity: 0, x: -30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="relative"
-      >
-        <div className="aspect-[5/5] w-full rounded-[40px] overflow-hidden bg-gray-200 border border-gray-100 shadow-lg">
-          <img
-            src="../Imagens_NINNA/eco-scaled.jpg"
-            alt="NINNA"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </motion.div>
+            {/* Coluna Esquerda - Imagem (fica ao lado do título + cards) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="aspect-[5/5] w-full rounded-[40px] overflow-hidden bg-gray-200 border border-gray-100 shadow-lg">
+                <img
+                  src="../Imagens_NINNA/eco-scaled.jpg"
+                  alt="NINNA"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
 
-      {/* Coluna Direita - Título + Grade de KPIs */}
-      <div>
+            {/* Coluna Direita - Título + Grade de KPIs */}
+            <div>
 
-        {/* Título fica apenas em cima dos cards, não centralizado no topo da seção */}
-        <div className="mb-12 space-y-4">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/5 border border-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em]">
-            Números
+              {/* Título fica apenas em cima dos cards, não centralizado no topo da seção */}
+              <div className="mb-12 space-y-4">
+                <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/5 border border-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em]">
+                  Números
+                </div>
+                <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-wide">
+                  O IMPACTO DO <br/><span className="text-brand-teal">NINNA HUB</span>
+                </h2>
+                <p className="text-gray-500 font-barlow text-lg leading-relaxed">
+                Mais do que indicadores, estes números representam empresas transformadas, startups fortalecidas e conexões que geraram novos negócios para o ecossistema.
+                </p>
+                <div className="h-[2px] w-20 bg-brand-teal mt-4" />
+              </div>
+
+              <div className="grid grid-cols-2 gap-8">
+                {/* KPI 1 - Eventos Realizados */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
+                  id="marco-kpi-1"
+                >
+                  <div className="text-6xl font-black text-gray-900 tabular-nums">
+                    {kpis?.kpi1_value || '100'}
+                  </div>
+                  <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+                  <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                    {kpis?.kpi1_label || 'Eventos Realizados'}
+                  </div>
+                </motion.div>
+
+                {/* KPI 2 - Conexões com Negócios */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
+                  id="marco-kpi-2"
+                >
+                  <div className="text-6xl font-black text-gray-900 tabular-nums">
+                    {kpis?.kpi2_value || '200'}
+                  </div>
+                  <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+                  <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                    {kpis?.kpi2_label || 'Conexões com Negócios'}
+                  </div>
+                </motion.div>
+
+                {/* KPI 3 - Negócios em Milhões */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
+                  id="marco-kpi-3"
+                >
+                  <div className="text-6xl font-black text-gray-900 tabular-nums">
+                    {kpis?.kpi3_value || '35'}
+                  </div>
+                  <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+                  <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                    {kpis?.kpi3_label || 'Em Negócios Gerados'}
+                  </div>
+                </motion.div>
+
+                {/* KPI 4 - Startups Impactadas */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
+                  id="marco-kpi-4"
+                >
+                  <div className="text-6xl font-black text-gray-900 tabular-nums">
+                    {kpis?.kpi4_value || '1400'}
+                  </div>
+                  <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
+                  <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                    {kpis?.kpi4_label || 'Startups Impactadas'}
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+
           </div>
-          <h2 className="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-wide">
-            O IMPACTO DO <br/><span className="text-brand-teal">NINNA HUB</span>
-          </h2>
-          <p className="text-gray-500 font-barlow text-lg leading-relaxed">
-           Mais do que indicadores, estes números representam empresas transformadas, startups fortalecidas e conexões que geraram novos negócios para o ecossistema.
-          </p>
-          <div className="h-[2px] w-20 bg-brand-teal mt-4" />
         </div>
-
-        <div className="grid grid-cols-2 gap-8">
-          {/* KPI 1 - Eventos Realizados */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
-            id="marco-kpi-1"
-          >
-            <div className="text-6xl font-black text-gray-900 tabular-nums">
-              {kpis?.kpi1_value || '100'}
-            </div>
-            <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-            <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-              {kpis?.kpi1_label || 'Eventos Realizados'}
-            </div>
-          </motion.div>
-
-          {/* KPI 2 - Conexões com Negócios */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
-            id="marco-kpi-2"
-          >
-            <div className="text-6xl font-black text-gray-900 tabular-nums">
-              {kpis?.kpi2_value || '200'}
-            </div>
-            <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-            <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-              {kpis?.kpi2_label || 'Conexões com Negócios'}
-            </div>
-          </motion.div>
-
-          {/* KPI 3 - Negócios em Milhões */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
-            id="marco-kpi-3"
-          >
-            <div className="text-6xl font-black text-gray-900 tabular-nums">
-              {kpis?.kpi3_value || '35'}
-            </div>
-            <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-            <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-              {kpis?.kpi3_label || 'Em Negócios Gerados'}
-            </div>
-          </motion.div>
-
-          {/* KPI 4 - Startups Impactadas */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
-            id="marco-kpi-4"
-          >
-            <div className="text-6xl font-black text-gray-900 tabular-nums">
-              {kpis?.kpi4_value || '1400'}
-            </div>
-            <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-            <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
-              {kpis?.kpi4_label || 'Startups Impactadas'}
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
       
       
       {/*Antigo Awards Section */}

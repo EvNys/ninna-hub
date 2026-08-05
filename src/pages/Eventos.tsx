@@ -4,19 +4,15 @@ import { motion, AnimatePresence } from 'motion/react';
 import { collection, getDocs, query, where, orderBy, addDoc } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 import { 
-  Calendar, 
-  MapPin, 
+  Calendar,  
   ArrowRight, 
   Users, 
-  Monitor, 
-  Coffee, 
+  Monitor,  
   Laptop, 
   Sparkles, 
-  Building2, 
-  Send, 
+  Building2,  
   Check, 
   X, 
-  FileText 
 } from 'lucide-react';
 import { toast } from 'sonner';
 
