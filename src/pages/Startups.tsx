@@ -301,7 +301,7 @@ export default function PortfolioStartupsShowcase() {
             Membros do Ecossistema
           </div>
           <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide">
-            <span className="gradient-text">STARTUPS</span>
+            ALGUMAS DAS NOSSAS <span className="gradient-text">STARTUPS</span>
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
             Conheça algumas das startups que fazem parte do ecossistema NINNA e
