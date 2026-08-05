@@ -8,15 +8,10 @@ import {
   Trophy, 
   Coins, 
   ArrowRight, 
-  CheckCircle2, 
   ShieldAlert,
   HeartPlus,
-  Linkedin,
-  MessageSquare,
   Target,
   TrendingUp,
-  Cpu,
-  Sparkles
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
