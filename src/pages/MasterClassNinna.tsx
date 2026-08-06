@@ -185,13 +185,10 @@ const areasAtuacaoOptions = [
               </div>
 
               <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-                <div
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] mb-6 uppercase tracking-widest">
-                  <img
-                      src="/Imagens_NINNA/NINNA.png"
-                      alt="NinnaHub Logo"
-                      className="h-20 w-auto"
-                    />
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] mb-6 uppercase tracking-widest">
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-[#00c9a7]/10 text-[#00c9a7] text-[10px] font-black uppercase tracking-[0.3em] mb-2 border border-[#00c9a7]/20">
+                    MASTERCLASS GRATUITA · AO VIVO · 17/08 ÀS 19H30 
+                  </span>
                 </div>
 
                 {/* Título Hero → Barlow Condensed Black, weight 900, uppercase, size 48–80px */}
@@ -202,8 +199,8 @@ const areasAtuacaoOptions = [
                   className="text-[48px] md:text-[72px] text-white uppercase leading-[1.0] mb-6"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, letterSpacing: '-0.5px' }}
                 >
-                  Guie as startups do amanhã. <br className="hidden md:inline" />
-                  Compartilhe seu <span className="text-[#00c9a7]">Legado</span>.
+                  A VERDADE INVISÍVEL SOBRE A IA NOS <span className="text-[#00c9a7]">NEGÓCIOS</span>.
+                  
                 </motion.h1>
 
                 {/* Subtítulo → Barlow Condensed Bold, weight 700, size 24–36px, leading 1.2 */}
@@ -211,11 +208,11 @@ const areasAtuacaoOptions = [
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-gray-400 text-[20px] md:text-[28px] max-w-2xl mx-auto mb-10"
-                  style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, lineHeight: 1.2 }}
+                  className="text-gray-400 text-[20px] md:text-[20px] max-w-2xl mx-auto mb-10"
+                  style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 500, lineHeight: 1.2 }}
                 >
-                  O NINNA Hub é o epicentro da inovação corporativa e do fomento ao empreendedorismo.
-                  Como mentor, você será a peça fundamental para acelerar o crescimento de startups brilhantes.
+                  95% dos projetos de IA não geram retorno financeiro, segundo um relatório do MIT.
+                  Na Masterclass gratuita do NINNA Hub, você vai entender por que isso acontece e como estruturar a base da sua empresa (estratégia, dados, processos e cultura) para transformar IA em ROI de verdade. 
                 </motion.p>
 
                 <motion.div
@@ -230,7 +227,7 @@ const areasAtuacaoOptions = [
                     className="w-full sm:w-auto bg-[#00c9a7] hover:bg-[#00c9a7]/90 text-white rounded-2xl py-4 px-10 uppercase transition-all shadow-xl shadow-[#00c9a7]/20 text-[13px]"
                     style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: '3px' }}
                   >
-                    Quero ser mentor
+                    QUERO GARANTIR MINHA VAGA 
                   </button>
 
                   <button
@@ -238,7 +235,7 @@ const areasAtuacaoOptions = [
                     className="w-full sm:w-auto border border-gray-800 bg-transparent hover:bg-gray-900 text-white rounded-2xl py-4 px-10 uppercase transition-all text-[13px]"
                     style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: '3px' }}
                   >
-                    Leia o Regulamento
+                    SAIBA MAIS SOBRE A MASTERCLASS 
                   </button>
                 </motion.div>
               </div>
@@ -250,15 +247,15 @@ const areasAtuacaoOptions = [
                   
                   <div className="space-y-6">
                     <span className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.25em] bg-[#00c9a7]/10 rounded-full px-3.5 py-1 border border-[#00c9a7]/20">
-                      Pilar NINNA Hub
+                      Participe da Master Class
                     </span>
                     
                     <h2 className="text-3xl sm:text-5xl font-black text-gray-900 uppercase tracking-wide  leading-tight">
-                      Liderança Ativa que Constrói o Futuro de Fortaleza para o Mundo
+                        A CONTA QUE NÃO FECHA NO CORPORATIVO 
                     </h2>
                     
                     <p className="text-gray-500 font-medium leading-relaxed text-sm sm:text-base">
-                      O programa de mentoria é planejado para quem deseja compartilhar sua sabedoria mercadológica e estrutural de maneira coordenada. Como mentor voluntário do NINNA Hub (sob a diretriz legal da Lei de Voluntariado nº 9.608/1998), seu tempo será focado das demandas de tração operacional, tecnologia e governança estratégica.
+                      Segundo um relatório do MIT (NANDA), 95% do valor investido em projetos de IA para negócios não está gerando retorno. Não é falta de tecnologia — é falta de base. A maioria das empresas investe no topo do iceberg (o uso visível da IA) e ignora a estrutura que sustenta resultado: estratégia, dados, processos e cultura. 
                     </p>
                     <p className="text-gray-500 font-medium leading-relaxed text-sm sm:text-base">
                       Aqui investimos em quem ajuda: oferecemos uma jornada educacional moderna em parceria com formadores de renome, além de incluí-lo imediatamente na rede M2M interligada de CEOs, investidores anjos e diretores inovadores.
@@ -318,16 +315,14 @@ const areasAtuacaoOptions = [
 
             {/* Esquerda: texto */}
             <div className="space-y-6">
-              <span className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.25em] bg-[#00c9a7]/10 rounded-full px-3.5 py-1 border border-[#00c9a7]/20">
-                Investimento na Formação
-              </span>
+
 
               <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-wide leading-tight">
-                Trilha de Mentoria<br />de Alto Impacto
+                A VERDADE INVISÍVEL SOBRE <br />A IA NOS NEGÓCIOS
               </h2>
 
               <p className="text-gray-500 font-medium leading-relaxed text-sm sm:text-base">
-                Formação completa para quem deseja mentorar com método, profundidade e impacto real no ecossistema inovador de Fortaleza e do Brasil.
+                Masterclass ao vivo e gratuita para quem quer estruturar a base de IA da empresa e gerar ROI de verdade. 
               </p>
 
               <div className="flex items-center gap-4">
@@ -337,32 +332,17 @@ const areasAtuacaoOptions = [
                   <div className="w-10 h-10 rounded-full border-2 border-white bg-[#E63946] flex items-center justify-center font-black text-xs text-white">SC</div>
                 </div>
                 <p className="text-xs text-gray-500 font-medium">
-                  Mentores integrados de diversas regiões e setores estratégicos.
+                   
                 </p>
               </div>
             </div>
 
             {/* Direita: card */}
             <div className="border-2 border-[#00c9a7] rounded-2xl p-6 sm:p-8">
-              <span className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.2em] bg-[#00c9a7]/10 rounded-full px-3 py-1 border border-[#00c9a7]/25">
-                Formação Completa
-              </span>
-
-              <h3 className="mt-4 text-xl font-barlow-cond font-black uppercase tracking-wide text-white">
-                Formação de mentoria em negócios inovadores
-              </h3>
-              <p className="mt-1 text-xs text-gray-400 font-medium leading-relaxed">
-                Todos os 8 módulos da trilha técnica, do papel do mentor à governança ética.
-              </p>
 
               <div className="mt-4 flex items-center gap-4">
-                <p className="text-4xl font-barlow-cond font-black text-[#00c9a7] line-through"
-                style={{ textDecorationColor: '#e8171e', textDecorationThickness: '1.5px' }}>
-                  <span className="text-base font-bold text-[#00c9a7] align-top mt-2 inline-block">R$</span> 2.457
-                </p>
-                <span className="text-gray-200 font-black text-3xl">→</span>
                 <p className="text-4xl font-barlow-cond font-black text-white">
-                  <span className="text-base font-bold text-white align-top mt-2 inline-block">R$</span> 0
+                 Gratuito
                 </p>
               </div>
               <p className="text-[11px] text-gray-400 font-medium mt-1">acesso completo à trilha · 12 meses</p>
@@ -388,10 +368,10 @@ const areasAtuacaoOptions = [
               <div className="bg-[#00c9a7]/7 border border-[#00c9a7]/20 rounded-xl p-3 flex gap-2">
                 <div>
                   <p className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.1em] mb-0.5">
-                    Gratuito para mentores selecionados
+                    Master Class de inteligência artificial aplicada a negócios
                   </p>
                   <span className="text-[11px] text-gray-400 font-medium leading-relaxed">
-                    Mentores selecionados pela equipe NINNA têm acesso integral à formação sem nenhum custo
+                    Masterclass ao vivo, sem custo. As vagas são limitadas para garantir qualidade na interação — garanta a sua inscrevendo-se abaixo.
                   </span>
                 </div>
               </div>
