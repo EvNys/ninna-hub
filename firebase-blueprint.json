@@ -238,6 +238,23 @@
       "required": ["nome", "telefone", "email", "cidade", "areaMentoria", "comoConheceu", "motivoInscricao", "cienteRegulamento"]
     }
   },
+
+    "MasterClass": {
+      "title": "MasterClass",
+      "description": "Inscrições para a Master Class do Hub",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nome": { "type": "string" },
+        "telefone": { "type": "string" },
+        "email": { "type": "string" },
+        "empresa": {"type": "string"},
+        "cargo": {"type": "string"},
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["nome", "telefone", "email", "cidade", "areaMentoria", "comoConheceu", "motivoInscricao", "cienteRegulamento"]
+    },
+
   "firestore": {
     "/users/{userId}": {
       "schema": "User",

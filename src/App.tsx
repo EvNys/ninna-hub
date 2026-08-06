@@ -64,6 +64,7 @@ const AdminProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 
 import AdminLayout from './components/layout/AdminLayout';
 import SejaUmMentor from './pages/SejaUmMentor';
+import MasterClassNinna from './pages/MasterClassNinna';
 
 function AppContent() {
   const { user } = useAuth();
@@ -93,6 +94,7 @@ function AppContent() {
           <Route path="/cases" element={<Cases />} />
           <Route path="/empresas" element={<Servicos />} />
           <Route path="/seja-um-mentor" element={<SejaUmMentor />} />
+          <Route path="/master-class-ninna" element={<MasterClassNinna />} />
           {/* Admin & Member Auth */}
           <Route path="/admin/login" element={<AdminLogin />} />
           
