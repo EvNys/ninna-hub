@@ -618,7 +618,7 @@ const areasAtuacaoOptions = [
                   disabled={loading}
                   className="w-full bg-[#00c9a7] hover:bg-[#00c9a7]/90 text-white rounded-2xl py-4.5 font-black uppercase text-[11px] tracking-[0.2em] transition-all shadow-xl shadow-[#00c9a7]/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                 >
-                  {loading ? 'Processando envio...' : 'Enviar Inscrição de Mentor'}
+                  {loading ? 'Processando envio...' : 'Enviar Inscrição para Master Class NINNA'}
                   <ChevronRight className="w-4 h-4" />
                 </button>
               </form>
