@@ -611,32 +611,7 @@ const areasAtuacaoOptions = [
                       />
                     </div>
                   </div>
-                 
-
-                    {/* Input de busca / valor selecionado */}
-                    <div
-                      className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 flex items-center justify-between cursor-pointer focus-within:border-[#00c9a7] transition-all shadow-sm"
-                      onClick={() => setAreaAtuacaoOpen(prev => !prev)}
-                    >
-                      <input
-                        id="areaAtuacao"
-                        name="areaAtuacao"
-                        type="text"
-                        autoComplete="off"
-                        value={areaAtuacaoSearch}
-                        onChange={e => {
-                          setAreaAtuacaoSearch(e.target.value);
-                          setAreaAtuacaoOpen(true);
-                          // limpa seleção ao digitar novamente
-                          setFormData(prev => ({ ...prev, areaAtuacao: "" }));
-                        }}
-                        placeholder="Buscar área de atuação..."
-                        className="bg-transparent w-full focus:outline-none text-gray-900 font-barlow placeholder:text-gray-300"
-                      />
-                      <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ${areaAtuacaoOpen ? "rotate-180" : ""}`} />
-                    </div>                                           
-                                
-
+                                                                                           
                 {/* Submit Button */}
                 <button
                   type="submit"
