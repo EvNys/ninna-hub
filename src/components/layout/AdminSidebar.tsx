@@ -53,7 +53,7 @@ const AdminSidebar = () => {
     { icon: Rocket, label: 'Startups', path: '/admin/startups' },
     { icon: Users, label: 'Mentores', path: '/admin/mentores' },
     { icon: UserRoundPlus, label: 'Inscrição Mentores', path: '/admin/InscricaoMentores' },
-    { icon: School, label: 'Master Class', path: '/admin/master-class' },
+    { icon: School, label: 'Master Class', path: '/admin/InscricaoMasterClass' },
     { icon: Building2, label: 'Parceiros', path: '/admin/parceiros' },
     { icon: Briefcase, label: 'Patrocinadores', path: '/admin/Patrocinadores' },
     { icon: GraduationCap, label: 'Treinamentos', path: '/admin/treinamentos' },
