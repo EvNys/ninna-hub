@@ -105,33 +105,33 @@ export default function SejaUmMentor() {
 
   const benefits = [
     {
-      title: 'Networking de Alto Impacto',
-      description: 'Conecte-se e troque experiências diretamente com outros mentores, executivos, investidores e fundadores do ecossistema nacional.',
+      title: 'Clareza Estratégica',
+      description: 'entenda exatamente quais são as 4 camadas que sustentam retorno em projetos de IA — e pare de investir só no topo do iceberg.',
       icon: <Users className="w-8 h-8 text-[#00c9a7]" />
     },
     {
-      title: 'Contato com Novas Tecnologias',
-      description: 'Acompanhe de perto as ideias mais inovadoras, as tecnologias emergentes e os novos modelos de negócios escaláveis do mercado.',
+      title: 'Diagnóstico Imediato',
+      description: 'identifique, ao vivo, em qual camada (estratégia, dados, processos ou cultura) sua empresa está travando hoje. ',
       icon: <Sparkles className="w-8 h-8 text-[#00c9a7]" />
     },
     {
-      title: 'Fomento e Impacto Real',
-      description: 'Gere impacto real ao apoiar a criação e a consolidação de novas startups, fomentando inovação e gerando oportunidades regionais.',
+      title: 'Dados de Mercado',
+      description: 'entenda o que o relatório do MIT/NANDA revela sobre os 95% dos projetos de IA que não geram retorno — e o que os 5% fazem diferente.',
       icon: <Target className="w-8 h-8 text-[#00c9a7]" />
     },
     {
-      title: 'Destaque e Visibilidade do Perfil',
-      description: 'Apareça como mentor referência nas páginas exclusivas do NINNA Hub, em publicações do ecossistema e eventos parceiros.',
+      title: 'Framework Prático',
+      description: 'leve um roteiro replicável para conectar IA aos OKRs e à geração de receita da sua empresa. ',
       icon: <Award className="w-8 h-8 text-[#00c9a7]" />
     },
     {
-      title: 'Aprimoramento de Liderança',
-      description: 'Aconselhar fundadores em diferentes estágios ajuda a calibrar suas próprias capacidades de liderança, escuta e análise crítica.',
+      title: 'Interação ao Vivo',
+      description: 'tire suas dúvidas em tempo real com o time do NINNA Hub — nada de conteúdo gravado. ',
       icon: <Heart className="w-8 h-8 text-[#00c9a7]" />
     },
     {
-      title: 'Encontros Exclusivos',
-      description: 'Participe de jantares, meetups exclusivos de mentores, rituais de happy hour e receba convites especiais para eventos de inovação do Hub.',
+      title: 'Vagas Limitadas',
+      description: 'por ser uma masterclass ao vivo, o grupo é reduzido para manter a qualidade da troca — garanta a sua.',
       icon: <Clock className="w-8 h-8 text-[#00c9a7]" />
     }
   ];
@@ -395,12 +395,12 @@ const areasAtuacaoOptions = [
       {/* Benefits Grid (Por que ser mentor?) */}
       <section id="beneficios" className="py-24 max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.25em] block mb-2">Ecossistema de Alto Impacto</span>
+          <span className="text-[10px] font-black text-[#00c9a7] uppercase tracking-[0.25em] block mb-2">Resultados da Master Class</span>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide ">
-            Benefícios de ser um Mentor NINNA
+            O QUE VOCÊ VAI LEVAR DESSA MASTERCLASS 
           </h2>
           <p className="text-gray-500 font-medium max-w-xl mx-auto mt-3 text-sm">
-            Além de fazer parte de uma comunidade exclusiva, confira o valor que a mentoria voluntária agrega à sua carreira e trajetória profissional:
+            Além de conteúdo direto ao ponto, você sai com clareza sobre o que realmente sustenta ROI em IA: 
           </p>
         </div>
 
@@ -439,17 +439,17 @@ const areasAtuacaoOptions = [
           <div className="max-w-2xl mx-auto text-center space-y-4 ">
             {/* Atualizado para a badge padrão em dark mode */}
             <span className="inline-block px-4 py-1.5 rounded-full bg-[#00c9a7]/10 text-[#00c9a7] text-[10px] font-black uppercase tracking-[0.3em] mb-2 border border-[#00c9a7]/20">
-              Compromisso Ético
+              COMO FUNCIONA 
             </span>
             
             {/* Atualizado para combinar com o estilo dos H1s anteriores */}
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-wide text-white leading-none">
-              Qual a nossa expectativa mútua?
+              O QUE ESPERAR DA MASTERCLASS AO VIVO 
             </h2>
             
             {/* Alterado para text-gray-400 para manter a consistência da descrição */}
             <p className="text-gray-400 text-base font-medium max-w-xl mx-auto leading-relaxed">
-              Trabalhamos sobre uma governança séria com regras bem estipuladas para garantir a entrega de extremo valor para os fundadores de startups.
+              Uma sessão direta ao ponto, pensada para quem decide — não para quem só quer "testar mais uma ferramenta de IA". 
             </p>
           </div>
 
@@ -457,23 +457,23 @@ const areasAtuacaoOptions = [
             {/* CARD 1 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
               {/* Substituído pelo text-[#00c9a7] do seu ecossistema */}
-              <span className="text-5xl text-[#00c9a7] font-black tracking-wide block mb-2">4h</span>
-              <h4 className="text-sm font-black uppercase tracking-wider text-white">Disponibilidade Mensal</h4>
-              <p className="text-xs text-gray-400 mt-2 leading-relaxed">Sessões individuais ou workshops de grupo previamente acordados.</p>
+              <span className="text-5xl text-[#00c9a7] font-black tracking-wide block mb-2">60 Min</span>
+              <h4 className="text-sm font-black uppercase tracking-wider text-white">CONTEÚDO DIRETO AO PONTO</h4>
+              <p className="text-xs text-gray-400 mt-2 leading-relaxed">sem enrolação: as 4 camadas do ROI em IA explicadas de forma prática, com exemplos reais.</p>
             </div>
             
             {/* CARD 2 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
-              <span className="text-5xl text-[#00c9a7] font-black tracking-wide block mb-2">50%+</span>
-              <h4 className="text-sm font-black uppercase tracking-wider text-white">Taxa de Resposta</h4>
-              <p className="text-xs text-gray-400 mt-2 leading-relaxed">Compromisso em responder solicitações de mentoria alinhadas ao seu perfil.</p>
+              <span className="text-5xl text-[#00c9a7] font-black tracking-wide block mb-2">100%</span>
+              <h4 className="text-sm font-black uppercase tracking-wider text-white">Ao vivo e gratuita</h4>
+              <p className="text-xs text-gray-400 mt-2 leading-relaxed">sem custo, sem pegadinha. Você só precisa se inscrever e aparecer.</p>
             </div>
             
             {/* CARD 3 */}
             <div className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl text-center hover:bg-white/[0.04] transition-all duration-300">
-              <span className="text-5xl text-[#00c9a7] font-black tracking-wide block mb-2">12m</span>
-              <h4 className="text-sm font-black uppercase tracking-wider text-white">Conclusão dos Módulos</h4>
-              <p className="text-xs text-gray-400 mt-2 leading-relaxed">Conclusão de toda a trilha no período máximo de 1 ano letivo.</p>
+              <span className="text-5xl text-[#00c9a7] font-black tracking-wide block mb-2">17/08</span>
+              <h4 className="text-sm font-black uppercase tracking-wider text-white">Data da Master Class</h4>
+              <p className="text-xs text-gray-400 mt-2 leading-relaxed">às 19h30, online, com sessão de perguntas e respostas ao final.</p>
             </div>
           </div>
         </div>
@@ -492,7 +492,7 @@ const areasAtuacaoOptions = [
             >
               <div className="text-center md:text-left mb-10 border-b border-gray-100 pb-8">
                 <h2 className="text-3xl font-black text-gray-900 uppercase tracking-wide  mb-2">
-                  Ficha de Inscrição
+                  GARANTA SUA VAGA NA MASTERCLASS
                 </h2>
                 <p className="text-gray-500 font-barlow text-xs leading-relaxed">
                   Preencha os campos abaixo com atenção para que possamos entender sua vivência profissional e combiná-la com as mentiras ideais.
