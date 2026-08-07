@@ -13,7 +13,8 @@ import {
   ChevronDown,
   Monitor,
   CalendarClock,
-  Handshake
+  Handshake,
+  LogIn,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
@@ -296,6 +297,30 @@ const showStartupsDropdown = () => {
                 )}
               </div>
             ))}
+
+            {user ? (
+            <Link
+              to={isAdmin || isEditor ? "/admin" : "/dashboard/comunidade"}
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 mt-0.5 rounded-lg text-xs font-black uppercase tracking-widest text-brand-teal hover:bg-white/5"
+            >
+              {isAdmin || isEditor ? 'Painel Administrativo' : 'Portal do Membro'}
+            </Link>
+          ) : (
+            <Link
+              to="/admin/login"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-2.5 mt-0.5 p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] transition-colors group border border-brand-teal/20"
+            >
+              <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
+                <LogIn className="w-3.5 h-3.5" />
+              </span>
+              <span className="flex-1 min-w-0 text-[10px] font-black uppercase tracking-wide text-brand-teal">
+                Login
+              </span>
+              <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
+            </Link>
+          )}
 
             {user && (
               <Link
