@@ -351,12 +351,12 @@ const areasAtuacaoOptions = [
 
               <ul className="space-y-2 mb-5">
                 {[
-                  '8 módulos completos da trilha',
-                  'Acesso à rede M2M de CEOs e investidores',
-                  'Jornada educacional com formadores de renome',
-                  'Sessões práticas com casos reais',
-                  'Frameworks e ferramentas para mentoria',
-                  'Certificado de mentor credenciado NINNA Hub',
+                  'As 4 camadas do ROI em IA: estratégia, dados, processos e cultura',
+                  'Dado exclusivo do MIT sobre por que 95% dos projetos de IA falham',
+                  'Framework prático para diagnosticar sua empresa em tempo real',
+                  'Sessão de perguntas e respostas ao vivo com o time NINNA Hub',
+                  'Conteúdo 100% aplicável, sem enrolação',
+                  'Certificado de participação NINNA Hub'
                 ].map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-xs text-gray-500 font-medium">
                     <CircleCheck className="w-4 h-4 text-[#00c9a7] flex-shrink-0 mt-0.5" />
@@ -379,14 +379,6 @@ const areasAtuacaoOptions = [
 
           </div>
 
-          {/* Disclaimer */}
-          <div className="mt-8 bg-[#1a1a2e] border border-white/5 rounded-2xl px-5 py-4">
-            <p className="text-xs text-white/50 font-medium leading-relaxed">
-              Este card é apenas informativo.{' '}
-              <span className="text-[#00c9a7] font-bold">Nenhuma compra é realizada aqui.</span>{' '}
-              Os preços apresentados são de referência para o mercado. Mentores voluntários selecionados pelo NINNA Hub têm acesso integral à formação de forma completamente gratuita
-            </p>
-          </div>
 
         </div>
       </section>
