@@ -345,7 +345,7 @@ const areasAtuacaoOptions = [
                  Gratuito
                 </p>
               </div>
-              <p className="text-[11px] text-gray-400 font-medium mt-1">acesso completo à trilha · 12 meses</p>
+              <p className="text-[11px] text-gray-400 font-medium mt-1">AO VIVO   ·   GRATUITA   ·   17/08 — 19H30 </p>
 
               <hr className="my-4 border-gray-100" />
 
