@@ -25,6 +25,7 @@ import AdminDashboard from './pages/Admin/Dashboard';
 import AdminStartups from './pages/Admin/Startups';
 import AdminMentores from './pages/Admin/Mentores';
 import AdminInscricoesMentores from './pages/Admin/InscricaoMentores';
+import AdminInscricaoMasterClass from './pages/Admin/InscricaoMasterClass';
 import AdminBeneficios from './pages/Admin/Beneficios';
 import AdminOportunidades from './pages/Admin/Oportunidades';
 import AdminEventos from './pages/Admin/Eventos';
@@ -103,6 +104,7 @@ function AppContent() {
           <Route path="/admin/startups" element={<AdminProtectedRoute><AdminLayout><AdminStartups /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/mentores" element={<AdminProtectedRoute><AdminLayout><AdminMentores /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/InscricaoMentores" element={<AdminProtectedRoute><AdminLayout><AdminInscricoesMentores /></AdminLayout></AdminProtectedRoute>} />
+          <Route path="/admin/InscricaoMasterClass" element={<AdminProtectedRoute><AdminLayout><AdminInscricaoMasterClass /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/beneficios" element={<AdminProtectedRoute><AdminLayout><AdminBeneficios /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/oportunidades" element={<AdminProtectedRoute><AdminLayout><AdminOportunidades /></AdminLayout></AdminProtectedRoute>} />
           <Route path="/admin/eventos" element={<AdminProtectedRoute><AdminLayout><AdminEventos /></AdminLayout></AdminProtectedRoute>} />
