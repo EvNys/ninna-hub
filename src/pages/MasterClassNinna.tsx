@@ -278,14 +278,14 @@ const areasAtuacaoOptions = [
                     <h3 className="text-xl font-barlow-cond font-bold uppercase tracking-wider text-white mb-6">Trilha de Formação Técnica</h3>
                     <div className="space-y-4">
                       {[
-                        { id: '01', title: 'Papel do Mentor', desc: 'Compreenda a atuação estratégica do mentor, desenvolvendo escuta ativa, perguntas poderosas e geração de valor.' },
-                        { id: '02', title: 'Relação Mentor x Empreendedor', desc: 'Construa relações de confiança com alinhamento de expectativas e acompanhamento de evolução.' },
-                        { id: '03', title: 'Mentalidade Startup & Incerteza', desc: 'Entenda como startups validam hipóteses, aprendem rapidamente e crescem em cenários dinâmicos.' },
-                        { id: '04', title: 'Diagnóstico Estratégico', desc: 'Identifique maturidade, gargalos e oportunidades para orientar decisões e acelerar resultados.' },
-                        { id: '05', title: "Validações e Decisões Baseadas em Dados", desc: "Apoie empreendedores na redução de riscos por meio de experimentação e evidências."},
-                        { id: '06', title: 'Prática de mentoria & condução de sessões', desc: 'Aplique técnicas em simulações, casos reais e roteiros estruturados de mentoria.' },
-                        { id: '07', title: 'Ferramentas Para Mentorias de Alto Impacto', desc: 'Utilize frameworks e modelos para acompanhar evolução e apoiar a tomada de decisão.' },
-                        { id: '08', title: 'Ètica, Limites & Governança', desc: 'Atue com responsabilidade, boas práticas e critérios que fortalecem o ecossistema.' },
+                        { id: '01', title: 'A verdade Invisível sobre a IA', desc: 'por que 95% dos projetos de IA não geram retorno (dado do MIT) e o que isso revela sobre como as empresas estão investindo hoje.' },
+                        { id: '02', title: 'O Iceberg da IA Nos Negócios', desc: 'a diferença entre "usar IA" (a ponta visível, fácil de fazer) e "estruturar IA" (a base que realmente sustenta resultado).' },
+                        { id: '03', title: 'Camada 1 · Estratégia', desc: 'como conectar IA diretamente aos OKRs e à geração de receita, saindo do teste isolado para o resultado de negócio.' },
+                        { id: '04', title: 'Camada 2 · Dados', desc: 'governança, limpeza e segurança da informação — o pré-requisito que a maioria das empresas pula.' },
+                        { id: '05', title: 'Camada 3 · Processos', desc: 'por que redesenhar o fluxo de trabalho antes de aplicar a tecnologia separa quem escala de quem trava.'},
+                        { id: '06', title: 'Camada 4 · Cultura', desc: 'capacitação contínua e gestão de mudança para vencer a resistência interna e fazer a IA pegar na prática.' },
+                        { id: '07', title: 'Portfólio de IA Escalável ', desc: 'o passo a passo para transformar as 4 camadas em um portfólio de iniciativas de IA que gera ROI real.' },
+                        { id: '08', title: 'Como Estar Nos 5%', desc: 'um framework prático para sair do grupo que investe só no topo do iceberg e entrar no grupo que gera resultado.' },
 
                       ].map((item, i) => (
                         <div key={i} className="flex gap-4 items-start font-barlow">
