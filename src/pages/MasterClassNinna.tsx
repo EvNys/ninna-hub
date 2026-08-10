@@ -230,13 +230,7 @@ const areasAtuacaoOptions = [
                     QUERO GARANTIR MINHA VAGA 
                   </button>
 
-                  <button
-                    onClick={() => window.open('/docs/RegulamentoMentores.pdf', '_blank')}
-                    className="w-full sm:w-auto border border-gray-800 bg-transparent hover:bg-gray-900 text-white rounded-2xl py-4 px-10 uppercase transition-all text-[13px]"
-                    style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: '3px' }}
-                  >
-                    SAIBA MAIS SOBRE A MASTERCLASS 
-                  </button>
+                  
                 </motion.div>
               </div>
             </section>
@@ -274,31 +268,10 @@ const areasAtuacaoOptions = [
                   </div>
 
                   {/* Visual Box mapping timeline steps */}
-                  <div className="bg-[#1a1a2e] border border-white/5 rounded-2xl p-6 sm:p-8 relative">
-                    <h3 className="text-xl font-barlow-cond font-bold uppercase tracking-wider text-white mb-6">Trilha de Formação Técnica</h3>
-                    <div className="space-y-4">
-                      {[
-                        { id: '01', title: 'A verdade Invisível sobre a IA', desc: 'por que 95% dos projetos de IA não geram retorno (dado do MIT) e o que isso revela sobre como as empresas estão investindo hoje.' },
-                        { id: '02', title: 'O Iceberg da IA Nos Negócios', desc: 'a diferença entre "usar IA" (a ponta visível, fácil de fazer) e "estruturar IA" (a base que realmente sustenta resultado).' },
-                        { id: '03', title: 'Camada 1 · Estratégia', desc: 'como conectar IA diretamente aos OKRs e à geração de receita, saindo do teste isolado para o resultado de negócio.' },
-                        { id: '04', title: 'Camada 2 · Dados', desc: 'governança, limpeza e segurança da informação — o pré-requisito que a maioria das empresas pula.' },
-                        { id: '05', title: 'Camada 3 · Processos', desc: 'por que redesenhar o fluxo de trabalho antes de aplicar a tecnologia separa quem escala de quem trava.'},
-                        { id: '06', title: 'Camada 4 · Cultura', desc: 'capacitação contínua e gestão de mudança para vencer a resistência interna e fazer a IA pegar na prática.' },
-                        { id: '07', title: 'Portfólio de IA Escalável ', desc: 'o passo a passo para transformar as 4 camadas em um portfólio de iniciativas de IA que gera ROI real.' },
-                        { id: '08', title: 'Como Estar Nos 5%', desc: 'um framework prático para sair do grupo que investe só no topo do iceberg e entrar no grupo que gera resultado.' },
 
-                      ].map((item, i) => (
-                        <div key={i} className="flex gap-4 items-start font-barlow">
-                          <span className="text-[#00c9a7] font-black text-xs p-1.5 px-2 bg-[#31c891]/10 rounded-lg font-mono leading-none">
-                            {item.id}
-                          </span>
-                          <div>
-                            <h4 className="text-sm font-bold text-slate-200">{item.title}</h4>
-                            <p className="text-xs text-slate-400 mt-0.5">{item.desc}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                    
+                    <div className="space-y-4">
+                      <img src="/Imagens_NINNA/Master_class_noBG.png" alt="Master Class" className="w-full h-full object-cover" />
                   </div>
 
                 </div>
@@ -350,7 +323,7 @@ const areasAtuacaoOptions = [
               <hr className="my-4 border-gray-100" />
 
               <ul className="space-y-2 mb-5">
-                {[
+                {/* {[
                   'As 4 camadas do ROI em IA: estratégia, dados, processos e cultura',
                   'Dado exclusivo do MIT sobre por que 95% dos projetos de IA falham',
                   'Framework prático para diagnosticar sua empresa em tempo real',
@@ -362,7 +335,7 @@ const areasAtuacaoOptions = [
                     <CircleCheck className="w-4 h-4 text-[#00c9a7] flex-shrink-0 mt-0.5" />
                     {f}
                   </li>
-                ))}
+                ))} */}
               </ul>
 
               <div className="bg-[#00c9a7]/7 border border-[#00c9a7]/20 rounded-xl p-3 flex gap-2">
