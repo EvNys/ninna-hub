@@ -29,7 +29,7 @@ const AdminLogin = () => {
     const role = userDoc.data()?.role
 
     if (role === 'admin') {
-      navigate('/dashboard')
+      navigate('/admin')
     } else {
       navigate('/')
     }
