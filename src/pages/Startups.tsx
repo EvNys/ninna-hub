@@ -453,10 +453,10 @@ export default function PortfolioStartupsShowcase() {
                 {/* Core Content */}
                 <div className="p-8 md:p-10">
                   <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
-                    Aceleração de Atendimento com IA Conversacional
+                    EFICIÊNCIA NO CANAL DE VENDAS VIA WHATSAPP
                   </h3>
                   <p className="text-white/60 font-barlow text-sm leading-relaxed mb-8">
-                    Como uma das maiores redes de varejo farmacêutico do Brasil se uniu à Suri.ai, startup de inteligência artificial do ecossistema NINNA, para digitalizar e otimizar canais de atendimento e engajamento via WhatsApp nacionalmente.
+                  Uma das maiores redes de farmácias do Brasil, a Pague Menos uniu-se à Suri para digitalizar a jornada de compra e pagamento via WhatsApp nacionalmente.
                   </p>
 
                   <div className="space-y-4 mb-8">
@@ -466,7 +466,7 @@ export default function PortfolioStartupsShowcase() {
                       </div>
                       <div>
                         <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">O Desafio</h4>
-                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Atender com agilidade milhares de dúvidas cotidianas sobre lojas e entregas de forma escalável.</p>
+                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Simplificar a etapa de pagamento no WhatsApp, reduzindo abandono de carrinho e a dependência de atendimento humano.</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
@@ -475,7 +475,7 @@ export default function PortfolioStartupsShowcase() {
                       </div>
                       <div>
                         <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">A Solução</h4>
-                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Integração do motor de inteligência conversacional da Suri.ai ao canal oficial de WhatsApp.</p>
+                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Integração da Suri Shop ao WhatsApp Pay, unindo catálogo, pagamento via Pix e recuperação automatizada de carrinho.</p>
                       </div>
                     </div>
                   </div>
@@ -485,16 +485,16 @@ export default function PortfolioStartupsShowcase() {
               {/* Metrics Block */}
               <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">+80%</span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Média Automação</span>
+                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">+15%</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Transações via Pix</span>
                 </div>
                 <div className="border-l border-r border-white/10">
-                  <span className="block text-2xl font-black text-white tracking-wide ">24/7</span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Respostas Real</span>
+                  <span className="block text-2xl font-black text-white tracking-wide ">75%</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Vendas Automatizadas</span>
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">-70%</span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Tempo Espera</span>
+                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">-80%</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Suporte Humano</span>
                 </div>
               </div>
             </motion.div>

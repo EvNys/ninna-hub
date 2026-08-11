@@ -407,10 +407,6 @@ const Portfolio = () => {
                         {selectedStartup.cidade}, {selectedStartup.estado}
                       </p>
                     </div>
-                    <div className="p-4 rounded-2xl bg-white border border-gray-100 shadow-sm">
-                      <span className="text-gray-400 text-[10px] uppercase font-black tracking-widest block mb-1">Estágio Atual</span>
-                      <p className="text-gray-900 flex items-center font-black uppercase tracking-widest">{selectedStartup.estagio}</p>
-                    </div>
                     {selectedStartup.tipoNegocio && (
                       <div className="p-4 rounded-2xl bg-white border border-gray-100 shadow-sm">
                         <span className="text-gray-400 text-[10px] uppercase font-black tracking-widest block mb-1">Tipo de Negócio</span>

@@ -12,6 +12,7 @@ import {
   HeartPlus,
   Target,
   TrendingUp,
+  PenLine
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
@@ -87,6 +88,11 @@ const handleVerMais = () => {
       icon: Coins,
       title: "Acesso a Fundo e Investimentos",
       desc: "Proximidade contínua com redes de investidores anjo qualificados, syndicates e fundos de venture capital parceiros. Orientação técnica no pitch deck e modelagem para rodadas pre-seed e seed."
+    },
+    {
+      icon: PenLine,
+      title: "Captação via Editais de Fomento",
+      desc: "Mapeamento e curadoria de editais como Smart Factory, Tecnova, FINEP e outros, com suporte na submissão para viabilizar o acesso a recursos não reembolsáveis."
     }
   ];
 
@@ -513,10 +519,10 @@ const handleVerMais = () => {
 
                 <div className="p-8 md:p-10">
                   <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide  leading-none mb-4">
-                    Aceleração de Atendimento com IA Conversacional
+                    EFICIÊNCIA NO CANAL DE VENDAS VIA WHATSAPP
                   </h3>
                   <p className="text-gray-500 font-medium text-sm leading-relaxed mb-8">
-                    Como uma das maiores redes de varejo farmacêutico do Brasil se uniu à Suri.ai para digitalizar e otimizar canais de atendimento e engajamento via WhatsApp nacionalmente.
+                    Uma das maiores redes de farmácias do Brasil, a Pague Menos uniu-se à Suri para digitalizar a jornada de compra e pagamento via WhatsApp nacionalmente.
                   </p>
 
                   <div className="space-y-4 mb-8">
@@ -526,7 +532,7 @@ const handleVerMais = () => {
                       </div>
                       <div>
                         <h4 className="text-[10px] font-black uppercase text-gray-800 tracking-wide">O Desafio</h4>
-                        <p className="text-xs text-gray-500 font-medium">Atender com agilidade milhares de dúvidas cotidianas sobre lojas de forma escalável.</p>
+                        <p className="text-xs text-gray-500 font-medium">Simplificar a etapa de pagamento no WhatsApp, reduzindo abandono de carrinho e a dependência de atendimento humano.</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
@@ -535,7 +541,7 @@ const handleVerMais = () => {
                       </div>
                       <div>
                         <h4 className="text-[10px] font-black uppercase text-gray-800 tracking-wide">A Solução</h4>
-                        <p className="text-xs text-gray-500 font-medium">Integração do motor de inteligência artificial da Suri.ai na conta oficial do WhatsApp.</p>
+                        <p className="text-xs text-gray-500 font-medium">Integração da Suri Shop ao WhatsApp Pay, unindo catálogo, pagamento via Pix e recuperação automatizada de carrinho.</p>
                       </div>
                     </div>
                   </div>
@@ -545,16 +551,16 @@ const handleVerMais = () => {
               {/* Metrics block */}
               <div className="p-8 bg-gray-50 border-t border-gray-100 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">+80%</span>
-                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Altas de Automação</span>
+                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">+15%</span>
+                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Transações via Pix</span>
                 </div>
                 <div className="border-l border-r border-gray-200">
-                  <span className="block text-2xl font-black text-gray-900 tracking-wide ">24/7</span>
-                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Disponibilidade</span>
+                  <span className="block text-2xl font-black text-gray-900 tracking-wide ">75%</span>
+                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Vendas Automatizadas</span>
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">-70%</span>
-                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Tempo Espera</span>
+                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">-80%</span>
+                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Suporte Humano</span>
                 </div>
               </div>
             </motion.div>
