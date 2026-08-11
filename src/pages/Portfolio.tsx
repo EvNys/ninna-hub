@@ -131,9 +131,12 @@ const Portfolio = () => {
             <div className="relative z-10">
               <h3 className="text-4xl font-black text-white mb-4 leading-tight uppercase tracking-wide ">quero me conectar com as <br />soluções do NINNA hub</h3>
               <p className="text-white/80 mb-8 font-medium max-w-sm">Conecte sua startup a grandes corporações e acelere seu crescimento no maior hub de inovação do Ceará.</p>
-              <button className="bg-white text-brand-teal px-8 py-4 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg">
+              <Link 
+                to="/empresas"
+                className="bg-white text-brand-teal px-8 py-4 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg"
+              >
                 Clique Aqui
-              </button>
+              </Link>
             </div>
             <Rocket className="absolute -bottom-10 -right-10 w-64 h-64 text-white/5 -rotate-12 group-hover:rotate-0 transition-transform duration-700" />
           </motion.div>
