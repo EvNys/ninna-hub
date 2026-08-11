@@ -21,6 +21,7 @@ const AdminLogin = () => {
   const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
     try {
     const { user } = await signInWithEmailAndPassword(auth, email, password)
     
