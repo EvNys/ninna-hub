@@ -779,7 +779,7 @@ const Home = () => {
             
             {/* Beautiful Heading */}
             <h2 className="text-5xl md:text-6xl font-black mb-8 uppercase tracking-wide leading-[0.9] text-white">
-              FAÇA PARTE DO <br /> FUTURO DA &nbsp;
+              FAÇA PARTE DO <br /> FUTURO DA&nbsp;
               <span className="gradient-text font-black">INOVAÇÃO</span>
             </h2>
             
