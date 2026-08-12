@@ -34,7 +34,8 @@ const AdminPremiacoes = () => {
     organizacao: '',
     ano: '',
     imagem: '',
-    status: 'ativo'
+    status: 'ativo',
+    destaque: false
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -65,7 +66,8 @@ const AdminPremiacoes = () => {
       organizacao: item.organizacao,
       ano: item.ano || '',
       imagem: item.imagem || '',
-      status: item.status || 'ativo'
+      status: item.status || 'ativo',
+      destaque: item.destaque || false
     });
     setIsDialogOpen(true);
   };
@@ -77,7 +79,8 @@ const AdminPremiacoes = () => {
       organizacao: '',
       ano: new Date().getFullYear().toString(),
       imagem: '',
-      status: 'ativo'
+      status: 'ativo',
+      destaque: false
     });
   };
 
@@ -124,6 +127,15 @@ const AdminPremiacoes = () => {
                 className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm">
                 <option value="ativo">Ativo</option>
                 <option value="inativo">Inativo</option>
+              </select>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">Destaque</label>
+              <select value={formData.destaque} onChange={e => setFormData({...formData, destaque: e.target.value})}
+                className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm">
+                <option value={false}>Não</option>
+                <option value={true}>Sim</option>
               </select>
             </div>
           </div>

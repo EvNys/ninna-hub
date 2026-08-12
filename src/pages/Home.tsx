@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { Rocket, Users, Globe, ArrowRight, Zap, Target, TrendingUp, Award, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Rocket, Users, Globe, ArrowRight, Zap, Target, TrendingUp, Award, ChevronLeft, ChevronRight, Star} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { collection, doc, getDoc, getDocs, query, where, limit } from 'firebase/firestore';
@@ -564,9 +564,9 @@ const Home = () => {
 
             const baseList = awards.length > 0 ? awards : defaultAwards;
 
-            // Ordena por ano, do menor para o maior
+            // Ordena por ano, do maior para o menor
             const sortedAwards = [...baseList]
-              .sort((a, b) => parseInt(a.ano, 10) - parseInt(b.ano, 10));
+            .sort((a, b) => parseInt(b.ano, 10) - parseInt(a.ano, 10));
 
             // Quebra a lista em grupos de 5 (uma timeline por grupo)
             const ITEMS_PER_ROW = 4;
@@ -602,6 +602,13 @@ const Home = () => {
                       ) : (
                         <div className="relative z-10 w-20 h-20 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[28px] shadow-lg flex items-center justify-center group-hover:border-[#0ae2b1]/40 group-hover:scale-110 transition-all duration-300">
                           <Award className="w-8 h-8 text-[#0ae2b1]" />
+                        </div>
+                      )}
+
+                      {/* Destaque Badge (estrela) */}
+                      {(award.destaque === true || award.destaque === 'true') && (
+                        <div className="absolute -top-2 -left-2 z-20 w-7 h-7 bg-yellow-400 text-gray-950 rounded-full flex items-center justify-center shadow-lg border-2 border-[#050911]">
+                          <Star className="w-3.5 h-3.5 fill-gray-950" />
                         </div>
                       )}
 
