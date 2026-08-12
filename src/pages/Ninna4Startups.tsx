@@ -378,7 +378,7 @@ const handleVerMais = () => {
       {/* Benefits Section */}
       <section className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
+        <div className="text-center mb-10">
           <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
             Vantagens Exclusivas
           </div>
@@ -388,6 +388,18 @@ const handleVerMais = () => {
           <p className="text-gray-500 font-medium text-xl max-w-2xl mx-auto">
             Temos parcerias estratégicas com as ferramentas que sua startup precisa para crescer com custo reduzido.
           </p>
+        </div>
+
+        {/* NOVO: stat de prova social */}
+        <div className="flex items-center justify-center gap-4 pb-12">
+          <span className="text-6xl md:text-7xl font-black gradient-text leading-none">
+            +70
+          </span>
+          <div className="text-left">
+            <p className="text-gray-500 font-medium text-xl max-w-2xl mx-auto">
+              Benefícios<br/>Exclusivos
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
