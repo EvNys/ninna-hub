@@ -39,7 +39,7 @@ export default function PortfolioStartupsShowcase() {
         const q = query(
           collection(db, "startups"),
           where("statusVitrine", "==", "ativo"),
-          orderBy("updatedAt", "desc")
+          orderBy("order", "desc")
         );
         const querySnapshot = await getDocs(q);
         setStartups(

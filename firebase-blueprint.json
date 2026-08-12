@@ -18,10 +18,11 @@
         "tags": { "type": "array", "items": { "type": "string" } },
         "statusVitrine": { "type": "string", "enum": ["ativo", "inativo"] },
         "status": { "type": "string", "enum": ["ativo", "inativo"] },
+        "order": { "type": "number" },
         "createdAt": { "type": "string", "format": "date-time" },
         "updatedAt": { "type": "string", "format": "date-time" }
       },
-      "required": ["nome", "descricaoCurta", "categoria", "estagio", "status"]
+      "required": ["nome", "descricaoCurta", "categoria", "estagio", "status", "order"]
     },
     "Oportunidade": {
       "title": "Oportunidade",

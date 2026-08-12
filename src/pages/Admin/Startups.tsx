@@ -40,6 +40,7 @@ const AdminStartups = () => {
     site: '',
     cidade: '',
     estado: '',
+    order: 0,
     statusVitrine: 'ativo',
     status: 'ativo'
   });
@@ -72,6 +73,7 @@ const AdminStartups = () => {
       site: startup.site || '',
       cidade: startup.cidade || '',
       estado: startup.estado || '',
+      order: startup.order || 0,
       statusVitrine: startup.statusVitrine || '',
       status: startup.status
     });
@@ -91,6 +93,7 @@ const AdminStartups = () => {
       site: '',
       cidade: '',
       estado: '',
+      order: 0,
       statusVitrine: '',
       status: 'ativo'
     });
@@ -234,6 +237,13 @@ const AdminStartups = () => {
               <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">Estado</label>
               <input type="text" placeholder="CE" value={formData.estado}
                 onChange={e => setFormData({...formData, estado: e.target.value})}
+                className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm" />
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">Order</label>
+              <input type="number" placeholder="0" value={formData.order}
+                onChange={e => setFormData({...formData, order: parseInt(e.target.value) || 0})}
                 className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-teal transition-all text-gray-900 shadow-sm" />
             </div>
 
