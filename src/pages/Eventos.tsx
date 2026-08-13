@@ -406,7 +406,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   </li>
                   <div className="pt-2">
                         <a
-                        href="https://ninna-connect-hub.lovable.app/"
+                        href="https://ninna-connection.vercel.app"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-teal text-white text-sm font-black uppercase tracking-widest hover:bg-brand-teal/90 hover:gap-3 transition-all duration-300 shadow-md hover:shadow-lg"
