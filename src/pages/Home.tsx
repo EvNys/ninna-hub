@@ -677,7 +677,7 @@ const Home = () => {
                     <img 
                       src={p.logo} 
                       alt={p.nome} 
-                      className="max-h-full max-w-[85%] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 scale-95 group-hover:scale-100"
+                      className="max-h-full max-w-[85%] object-contain filter scale-95 group-hover:scale-100"
                       referrerPolicy="no-referrer"
                     />
                   </div>

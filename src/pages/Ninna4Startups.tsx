@@ -422,7 +422,7 @@ const handleVerMais = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: (i % 6) * 0.05 }}
-                  className="bg-white border border-gray-100 p-3 sm:p-4 md:p-6 rounded-2xl md:rounded-3xl flex items-center justify-center grayscale hover:grayscale-0 hover:shadow-xl transition-all group relative overflow-hidden h-24 sm:h-28 md:h-32"
+                  className="bg-white border border-gray-100 p-3 sm:p-4 md:p-6 rounded-2xl md:rounded-3xl flex items-center justify-center hover:shadow-xl transition-all group relative overflow-hidden h-24 sm:h-28 md:h-32"
                 >
                   <img 
                     src={logoSrc} 
