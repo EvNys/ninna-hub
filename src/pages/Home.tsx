@@ -463,11 +463,11 @@ const Home = () => {
                   className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
                   id="marco-kpi-1"
                 >
-                  <div className="text-6xl font-black text-gray-900 tabular-nums">
+                  <div className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-900 tabular-nums">
                     {kpis?.kpi1_value || '100'}
                   </div>
                   <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-                  <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                  <div className="text-brand-teal uppercase text-[9px] sm:text-[10px] font-black tracking-[0.2em]">
                     {kpis?.kpi1_label || 'Eventos Realizados'}
                   </div>
                 </motion.div>
@@ -481,11 +481,11 @@ const Home = () => {
                   className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
                   id="marco-kpi-2"
                 >
-                  <div className="text-6xl font-black text-gray-900 tabular-nums">
+                  <div className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-900 tabular-nums">
                     {kpis?.kpi2_value || '200'}
                   </div>
                   <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-                  <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                  <div className="text-brand-teal uppercase text-[9px] sm:text-[10px] font-black tracking-[0.2em]">
                     {kpis?.kpi2_label || 'Conexões com Negócios'}
                   </div>
                 </motion.div>
@@ -499,11 +499,11 @@ const Home = () => {
                   className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
                   id="marco-kpi-3"
                 >
-                  <div className="text-6xl font-black text-gray-900 tabular-nums">
+                  <div className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-900 tabular-nums">
                     {kpis?.kpi3_value || '35'}
                   </div>
                   <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-                  <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                  <div className="text-brand-teal uppercase text-[9px] sm:text-[10px] font-black tracking-[0.2em]">
                     {kpis?.kpi3_label || 'Em Negócios Gerados'}
                   </div>
                 </motion.div>
@@ -517,11 +517,11 @@ const Home = () => {
                   className="bg-white border border-gray-100 p-10 rounded-[40px] shadow-lg hover:shadow-2xl hover:border-brand-teal/20 transition-all duration-500 group flex flex-col items-center text-center gap-4"
                   id="marco-kpi-4"
                 >
-                  <div className="text-6xl font-black text-gray-900 tabular-nums">
+                  <div className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-900 tabular-nums">
                     {kpis?.kpi4_value || '1400'}
                   </div>
                   <div className="w-10 h-[2px] bg-brand-teal/30 rounded-full" />
-                  <div className="text-brand-teal uppercase text-[10px] font-black tracking-[0.2em]">
+                  <div className="text-brand-teal uppercase text-[9px] sm:text-[10px] font-black tracking-[0.2em]">
                     {kpis?.kpi4_label || 'Startups Impactadas'}
                   </div>
                 </motion.div>
