@@ -685,7 +685,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
           /*}
 
           {/* CTA / Proposal */}
-            <section className="py-32 border-b rounded-3xl mb-10 mt-10 border-gray-100 bg-white shadow-sm">
+            <section className="py-32 border-b rounded-3xl mb-10 mt-10 border-gray-100 bg-[#f3f4f6] shadow-sm">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-white p-12 md:p-24 rounded-[60px] border border-gray-100 shadow-2xl relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-80 h-80 bg-[#00c9a7]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
@@ -961,20 +961,51 @@ export default function ServicosPage() {
         }}
       >
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
-          <p
+          <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", textAlign: "center", marginBottom: "64px" }}>
+          <div
             style={{
-              textAlign: "center",
-              fontSize: "12px",
-              fontWeight: 700,
-              letterSpacing: "0.16em",
+              display: "inline-block",
+              padding: "6px 16px",
+              borderRadius: "9999px",
+              background: "rgba(0, 212, 212, 0.1)",
+              color: "#00D4D4",
+              fontSize: "10px",
+              fontWeight: 900,
               textTransform: "uppercase",
-              color: "#111827",
-              marginBottom: "24px",
+              letterSpacing: "0.3em",
+              marginBottom: "16px",
+              border: "1px solid rgba(0, 212, 212, 0.2)",
             }}
           >
-            O que você quer alcançar? <br/>
+            Escolha seu caminho
+          </div>
+
+          <h2
+            style={{
+              fontSize: "clamp(32px, 5vw, 56px)",
+              fontWeight: 900,
+              color: "#111827",
+              textTransform: "uppercase",
+              letterSpacing: "0.02em",
+              margin: 0,
+            }}
+          >
+            O QUE VOCÊ QUER ALCANÇAR?
+          </h2>
+
+          <p
+            style={{
+              color: "#6B7280",
+              maxWidth: "640px",
+              margin: "16px auto 0",
+              fontWeight: 500,
+              fontSize: "16px",
+              lineHeight: 1.6,
+            }}
+          >
             Clique em uma das opções abaixo para conhecer o serviço ideal para a sua empresa.
           </p>
+        </div>
           <div
             style={{
               display: "grid",
