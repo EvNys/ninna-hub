@@ -855,7 +855,7 @@ export default function ServicosPage() {
       }}
     >
      
-    {/* Hero Section */}
+    {/* Hero Section
     <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
       
       <div className="absolute inset-0 z-0">
@@ -915,7 +915,7 @@ export default function ServicosPage() {
             }}
           >
             esta página atualmente se encontra em construção e estará disponível completamente em breve
-            {/* Soluções sob medida para transformar inovação e dados em resultado real. */}
+            {/* Soluções sob medida para transformar inovação e dados em resultado real. 
           </p>
           
           <a
@@ -947,7 +947,7 @@ export default function ServicosPage() {
 
         </motion.div>
         </div>
-    </section>
+    </section> */}
 
       {/* ── NAVIGATOR — O que você quer alcançar? ── */}
       <div
