@@ -9,7 +9,7 @@ import { SearchCheck,
     ChevronUp,
     Building2,
     MessageSquare,
-    ArrowRight,
+    CheckCircle,
     Target,
     TrendingUp,
     Cpu, 
@@ -28,8 +28,12 @@ const BLOCOS = [
     id: "bloco1",
     title: "Diagnosticar para Decidir",
     subtitle: "Para quem quer clareza antes de agir",
+    title2: "AAAAA",
+    subtitle2: "aaaaa",
+    desc2: "aaaaaaaa",
     accent: "#00D4D4",
-    image: "",
+    image: "/Fotos do Time NINNA/Rafael Alves.jpg",
+    image2: "a",
     cta: "Comece com um diagnóstico →",
     description: "Antes de inovar, é preciso saber onde você está. Nossos diagnósticos combinam metodologias globais com uma leitura precisa da realidade da sua empresa — entregando clareza, prioridades e um ponto de partida sólido para qualquer jornada de transformação.",
     empresas: [
@@ -37,22 +41,34 @@ const BLOCOS = [
       { nome: "Empresa B", logo: "/Imagens_NINNA/Extrafarma.png" },
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
+    checklist: [
+      "Entender o nível atual de maturidade da organização em inovação, transformação digital e uso de dados.",
+      "Mapear comportamentos, capacidades, cultura e formas de trabalho que influenciam a inovação e a tomada de decisão.",
+      "Revelar gargalos, lacunas, riscos e barreiras culturais, tecnológicas e organizacionais.",
+      "Construir cenários, identificar oportunidades e definir caminhos para preparar a organização para os próximos movimentos.",
+    ],
     cases: [
       { company: "Empresa A", result: "Identificou gaps críticos de maturidade e reduziu o tempo de decisão estratégica em 40%." },
       { company: "Empresa B", result: "Mapeou barreiras culturais invisíveis que travavam projetos de inovação há 2 anos." },
     ],
-    cards: [ { title: "Diagnóstico de Maturidade em Inovação",  desc: "Metodologia ISO + McKinsey + H1/H2/H3 para mapear onde sua empresa está na jornada da inovação." },
-      { title: "Diagnóstico de Perfil de Uso de Dados",  desc: "4 dimensões: Ler, Trabalhar, Raciocinar e Comunicar — entenda como sua organização usa dados hoje." },
-      { title: "Diagnóstico de Cultura e Inovação",      desc: "ISO 56000 + barreiras culturais. Identifique os bloqueios reais que impedem a inovação de acontecer." },
-      { title: "Diagnóstico de Transformação Digital",   desc: "Avalie o grau de digitalização dos processos e a prontidão da sua empresa para a transformação." },
-      { title: "Análise de Cenários Futuros",            desc: "Roadmaps tecnológicos e tendências para antecipar movimentos e tomar decisões estratégicas com mais segurança." }, ],
+    cards: [
+      { title: "Diagnóstico de Maturidade em Inovação",  icon: Target, desc: "Identifique o estágio de maturidade da sua empresa em inovação, suas principais lacunas e os caminhos para evoluir." },
+      { title: "Diagnóstico de Perfil de Uso de Dados",  icon: Target, desc: "Entenda como sua organização usa dados, identifique lacunas de competência e encontre potenciais embaixadores da cultura data-driven." },
+      { title: "Diagnóstico de Cultura e Inovação",       icon: Target, desc: "a" },
+      { title: "Diagnóstico de Transformação Digital",    icon: Target, desc: "Identifique o estágio de digitalização da sua empresa e os principais gargalos e oportunidades para avançar." },
+      { title: "Análise de Cenários Futuros",             icon: Target, desc: "Antecipe tendências e movimentos de mercado para construir cenários e preparar sua empresa para diferentes futuros." },
+    ],
   },
   {
     id: "bloco2",
     title: "Estruturar para Escalar",
     subtitle: "Para quem já sabe onde está e quer organizar a jornada",
+    title2: "a",
+    subtitle2: "a",
+    desc2: "aaaaaaaa",
     accent: "#00E676",
-    image: "",
+    image: "a",
+    image2: "a",
     cta: "Monte sua estratégia →",
     description: "Ter vontade de inovar não é suficiente — é preciso estrutura. Ajudamos sua empresa a construir os processos, governança e estratégias que transformam iniciativas isoladas em um sistema de inovação contínuo e escalável.",
     empresas: [
@@ -60,22 +76,34 @@ const BLOCOS = [
       { nome: "Empresa B", logo: "/Imagens_NINNA/logo-b.png" },
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
+    checklist: [
+      "Sente que sua empresa está isolada das melhores referências do mercado de inovação.",
+      "Quer trocar experiências com outros líderes que enfrentam desafios parecidos.",
+      "Busca acesso qualificado a startups, investidores e parceiros estratégicos.",
+      "Já pensou em imersões técnicas, mas não sabe por onde nem com quem começar.",
+      "Quer participar de eventos e comunidades que gerem oportunidades reais de negócio.",
+    ],
     cases: [
       { company: "Empresa C", result: "Implantou funil de inovação e gerou pipeline de 30 projetos qualificados no primeiro trimestre." },
       { company: "Empresa D", result: "Estruturou comitê de inovação com KPIs claros, conectando estratégia ao dia a dia dos times." },
     ],
-    cards: [ { title: "Mapeamento da Jornada do Cliente Inovador", desc: "Identifica dores e oportunidades ao longo da jornada, propondo soluções alinhadas à realidade do negócio." },
-      { title: "Construção de Estratégias Inovadoras",      desc: "Planejamento estratégico sob medida para posicionar a inovação como vantagem competitiva real." },
-      { title: "Implantação de Funil de Inovação",          desc: "Pipeline estruturado de ideias e projetos — do desafio à solução escalada, com critérios claros de seleção." },
-      { title: "Sistema de Gestão da Inovação",             desc: "Governança, KPIs, comitês e métricas para sustentar e acelerar a inovação no longo prazo." },
- ],
+    cards: [
+      { title: "Mapeamento da Jornada do Cliente Inovador", icon: Target, desc: "Identifica dores, pontos de atrito e oportunidades ao longo da experiência do consumidor. Propõe soluções priorizadas por impacto com base em evidências, gerando um roteiro claro de transformação." },
+      { title: "Construção de Estratégias Inovadoras",      icon: Target, desc: "Processo colaborativo que traduz a visão de futuro em um plano de ação factível. Entrega um portfólio de iniciativas para curto, médio e longo prazo, com métricas claras de sucesso e governança." },
+      { title: "Implantação de Funil de Inovação",          icon: Target, desc: "Estrutura a captura, seleção, desenvolvimento e implementação de ideias. Garante um pipeline transparente e mensurável, com papéis e critérios definidos para um fluxo contínuo de iniciativas." },
+      { title: "Sistema de Gestão da Inovação",             icon: Target, desc: "Estrutura de governança (comitês, KPIs, ritos e financiamento) inspirada na ISO 56000. Integra a inovação à operação diária, assegurando medição e melhoria contínua a longo prazo." },
+    ],
   },
   {
     id: "bloco3",
     title: "Executar com Tecnologia e Parceiros",
     subtitle: "Para quem quer colocar a mão na massa com parceiros e tecnologia",
+    title2: "a",
+    subtitle2: "a",
+    desc2: "aaaaaaaa",
     accent: "#7C6FF7",
-    image: "",
+    image: "a",
+    image2: "a",
     cta: "Encontre sua solução →",
     description: "Identificar a tecnologia certa e os parceiros ideais faz toda a diferença na execução. Conectamos sua empresa às melhores soluções do mercado e gerenciamos o processo de validação e aceleração de ponta a ponta.",
     empresas: [
@@ -83,22 +111,35 @@ const BLOCOS = [
       { nome: "Empresa B", logo: "/Imagens_NINNA/logo-b.png" },
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
+    checklist: [
+      "Sente que sua empresa está isolada das melhores referências do mercado de inovação.",
+      "Quer trocar experiências com outros líderes que enfrentam desafios parecidos.",
+      "Busca acesso qualificado a startups, investidores e parceiros estratégicos.",
+      "Já pensou em imersões técnicas, mas não sabe por onde nem com quem começar.",
+      "Quer participar de eventos e comunidades que gerem oportunidades reais de negócio.",
+    ],
     cases: [
       { company: "Empresa E", result: "Conduziu PoC com 3 startups simultaneamente e implementou solução em produção em 90 dias." },
       { company: "Empresa F", result: "Recebeu 80+ inscrições qualificadas em chamada de startups focada em logística." },
     ],
-    cards: [ { title: "Hunting de Soluções Tecnológicas",   desc: "Curadoria ativa de tecnologias e fornecedores alinhados ao desafio específico da sua empresa." },
-      { title: "Gestão de Prova de Conceito (PoC)",  desc: "Estruturação, execução e avaliação de PoCs para validar soluções antes de escalar investimentos." },
-      { title: "Aceleração Corporativa de Soluções", desc: "Programa intensivo para co-criar e acelerar soluções entre sua empresa e startups selecionadas." },
-      { title: "Programa de Chamadas de Startups",   desc: "Atração qualificada de startups para responder a desafios reais do seu negócio com método e critério." },
-      { title: "Programa de Inovação Aberta",        desc: "Metodologia proprietária de conexão com startups para criar valor mútuo e acelerar resultados." }, ],
+    cards: [
+      { title: "Hunting de Soluções Tecnológicas",   icon: Target, desc: "Prospecção ativa e sob demanda de startups e tecnologias no Brasil e exterior. Entrega análises comparativas para decisões ágeis e baseadas em dados." },
+      { title: "Gestão de Prova de Conceito (PoC)",  icon: Target, desc: "Validação de soluções em ambiente controlado com escopo, métricas e governança definidos. Garante decisões seguras para avançar, pivotar ou descontinuar." },
+      { title: "Aceleração Corporativa de Soluções", icon: Target, desc: "Estruturação de squads e planos estratégicos para desenvolver tecnologias escaláveis. Facilita a integração na operação para gerar impacto real e rápido." },
+      { title: "Programa de Chamadas de Startups",   icon: Target, desc: "Atração inbound de soluções via edital público e seleção estruturada. Conecta startups ao seu desafio para gerar PoCs, parcerias comerciais ou investimentos." },
+      { title: "Programa de Inovação Aberta",        icon: Target, desc: "Plataforma contínua de conexão e cocriação com startups, universidades e centros de pesquisa. Constrói um canal permanente com o ecossistema de inovação." },
+    ],
   },
   {
     id: "bloco4",
     title: "Ativar Cultura e Pessoas",
     subtitle: "Para quem quer engajar times e criar cultura de inovação",
+    title2: "a",
+    subtitle2: "a",
+    desc2: "aaaaaaaa",
     accent: "#FF6B6B",
-    image: "",
+    image: "a",
+    image2: "a",
     cta: "Engaje seu time →",
     description: "Inovação começa nas pessoas. Desenvolvemos programas que transformam colaboradores em agentes de mudança — engajando times, formando líderes e criando uma cultura onde novas ideias encontram espaço para crescer.",
    empresas: [
@@ -106,25 +147,38 @@ const BLOCOS = [
       { nome: "Empresa B", logo: "/Imagens_NINNA/logo-b.png" },
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
+    checklist: [
+      "Sente que sua empresa está isolada das melhores referências do mercado de inovação.",
+      "Quer trocar experiências com outros líderes que enfrentam desafios parecidos.",
+      "Busca acesso qualificado a startups, investidores e parceiros estratégicos.",
+      "Já pensou em imersões técnicas, mas não sabe por onde nem com quem começar.",
+      "Quer participar de eventos e comunidades que gerem oportunidades reais de negócio.",
+    ],
     cases: [
       { company: "Empresa G", result: "Formou 120 embaixadores de inovação espalhados por 8 unidades de negócio em 6 meses." },
       { company: "Empresa H", result: "Hackathon corporativo gerou 3 projetos que viraram iniciativas oficiais da empresa." },
     ],
-    cards: [ { title: "Programa de Embaixadores",     desc: "Forme líderes internos que disseminam a cultura de inovação de dentro para fora da organização." },
-      { title: "Programa de Mentores",                desc: "Conecte talentos internos com mentores especializados para acelerar o desenvolvimento em inovação." },
-      { title: "Hackathons Corporativos",             desc: "Eventos de alta energia para resolver desafios reais do negócio com equipes multidisciplinares." },
-      { title: "Programa de Ideias",                  desc: "Canal estruturado para capturar, avaliar e premiar as melhores ideias de toda a organização." },
-      { title: "Formação Executiva em Inovação",      desc: "Trilhas práticas para líderes que precisam tomar decisões mais ágeis e orientadas à inovação." },
-      { title: "Formação em Transformação Digital",   desc: "Capacitação estruturada para preparar gestores e times para operar no ambiente digital." },
-      { title: "Workshops Estratégicos para Lideranças", desc: "Sessões de imersão para alinhar visão, prioridades e metodologia com alta liderança." },
-      { title: "Trilhas Customizadas para Times",     desc: "Jornadas de aprendizado adaptadas ao contexto, maturidade e objetivos de cada equipe." }, ],
+    cards: [
+      { title: "Programa de Embaixadores",                icon: Target, desc: "Forme líderes internos que disseminam a cultura de inovação de dentro para fora da organização." },
+      { title: "Programa de Mentores",                    icon: Target, desc: "Conecte talentos internos com mentores especializados para acelerar o desenvolvimento em inovação." },
+      { title: "Hackathons Corporativos",                 icon: Target, desc: "Eventos de alta energia para resolver desafios reais do negócio com equipes multidisciplinares." },
+      { title: "Programa de Ideias",                      icon: Target, desc: "Canal estruturado para capturar, avaliar e premiar as melhores ideias de toda a organização." },
+      { title: "Formação Executiva em Inovação",          icon: Target, desc: "Trilhas práticas para líderes que precisam tomar decisões mais ágeis e orientadas à inovação." },
+      { title: "Formação em Transformação Digital",       icon: Target, desc: "Capacitação estruturada para preparar gestores e times para operar no ambiente digital." },
+      { title: "Workshops Estratégicos para Lideranças",  icon: Target, desc: "Sessões de imersão para alinhar visão, prioridades e metodologia com alta liderança." },
+      { title: "Trilhas Customizadas para Times",         icon: Target, desc: "Jornadas de aprendizado adaptadas ao contexto, maturidade e objetivos de cada equipe." },
+    ],
   },
   {
     id: "bloco5",
     title: "Conectar ao Ecossistema",
     subtitle: "Para quem quer fazer parte de algo maior e se conectar com pares",
+    title2: "a",
+    subtitle2: "a",
+    desc2: "aaaaaaaa",
     accent: "#FFB800",
-    image: "",
+    image: "a",
+    image2: "a",
     cta: "Faça parte do ecossistema →",
     description: "As melhores oportunidades surgem das conexões certas. Facilitamos o acesso ao ecossistema de inovação — aproximando sua empresa de startups, líderes, investidores e parceiros estratégicos que aceleram resultados reais.",
    empresas: [
@@ -132,15 +186,22 @@ const BLOCOS = [
       { nome: "Empresa B", logo: "/Imagens_NINNA/logo-b.png" },
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
+    checklist: [
+      "Sente que sua empresa está isolada das melhores referências do mercado de inovação.",
+      "Quer trocar experiências com outros líderes que enfrentam desafios parecidos.",
+      "Busca acesso qualificado a startups, investidores e parceiros estratégicos.",
+      "Já pensou em imersões técnicas, mas não sabe por onde nem com quem começar.",
+      "Quer participar de eventos e comunidades que gerem oportunidades reais de negócio.",
+    ],
     cases: [
       { company: "Empresa I", result: "Participou do LICOR e fechou parceria estratégica com outra corporação no mesmo evento." },
       { company: "Empresa J", result: "Imersão técnica no Vale do Silício redefiniu o roadmap de tecnologia para os próximos 3 anos." },
     ],
-    cards: [ { title: "LICOR",                        desc: "Encontro exclusivo de líderes de inovação corporativa para troca de experiências e geração de oportunidades." },
-      { title: "Conexão com Ecossistema",             desc: "Curadoria de conexões relevantes com startups, aceleradoras, investidores e parceiros estratégicos." },
-      { title: "Eventos para Comunidade de Inovação", desc: "Agenda de eventos abertos e fechados para fortalecer sua presença e influência no ecossistema." },
-      { title: "Imersões Técnicas",                   desc: "Visitas e imersões em hubs de inovação, universidades e centros de tecnologia de referência." },
-      { title: "Eventos de Conexões Estratégicas",    desc: "Encontros customizados para gerar negócios, parcerias e colaborações de alto impacto entre empresas." }, ],
+    cards: [ { title: "LICOR",                        icon: Target, desc: "Encontro exclusivo de líderes de inovação corporativa para troca de experiências e geração de oportunidades." },
+      { title: "Conexão com Ecossistema",             icon: Target, desc: "Curadoria de conexões relevantes com startups, aceleradoras, investidores e parceiros estratégicos." },
+      { title: "Eventos para Comunidade de Inovação", icon: Target, desc: "Agenda de eventos abertos e fechados para fortalecer sua presença e influência no ecossistema." },
+      { title: "Imersões Técnicas",                   icon: Target, desc: "Visitas e imersões em hubs de inovação, universidades e centros de tecnologia de referência." },
+      { title: "Eventos de Conexões Estratégicas",    icon: Target, desc: "Encontros customizados para gerar negócios, parcerias e colaborações de alto impacto entre empresas." }, ],
   },
 ];
 
@@ -162,12 +223,12 @@ const CSS = `
   }
 `;
 
-function Card({ title, desc, accent }) {
+function Card({ title, desc, accent, icon: Icon }) {
   return (
     
     <div
       style={{
-        background: "#141827",
+        background: "#f3f4f6",
         border: "1px solid rgba(255,255,255,0.07)",
         borderRadius: "12px",
         padding: "28px 24px",
@@ -187,104 +248,120 @@ function Card({ title, desc, accent }) {
       }}
     >
       <meta name="description" content="Página de empresas do NINNA Hub, que apresenta os serviços do Hub e empresas que se beneficiam dele." />
-      <h4 style={{ margin: 0, fontSize: "15px", fontWeight: 700, color: "#fff", lineHeight: 1.4 }}>
+      {Icon && <Icon size={20} color={accent} />}
+      <h4 style={{ margin: 0, fontSize: "15px", fontWeight: 700, color: "#101828", lineHeight: 1.4 }}>
         {title}
       </h4>
-      <p style={{ margin: 0, fontSize: "13px", color: "rgba(255,255,255,0.5)", lineHeight: 1.65 }}>
+      <p style={{ margin: 0, fontSize: "13px", color: "#6a7282", lineHeight: 1.65 }}>
         {desc}
       </p>
-      <button
-        style={{
-          marginTop: "auto",
-          paddingTop: "14px",
-          background: "none",
-          border: "none",
-          color: accent,
-          fontSize: "12px",
-          fontWeight: 700,
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-          cursor: "pointer",
-          textAlign: "left",
-          padding: 0,
-          fontFamily: "inherit",
-        }}
-      >
-        Saiba mais →
-      </button>
     </div>
   );
 }
 
 function BlocoSection({ bloco, isOpen, onClose }) {
   return (
-    <div style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+    <div style={{ borderBottom: "1px solid #f3f4f6" }}> 
       {/* conteúdo expansível */}
       <div className={`bloco-content ${isOpen ? "open" : "closed"}`}>
         <div style={{ padding: "60px 0 40px" }}>
-          {/* badge */}
-          <span
-            style={{
-              display: "inline-block",
-              background: bloco.accent + "18",
-              border: `1px solid ${bloco.accent}40`,
-              color: bloco.accent,
-              fontSize: "11px",
-              fontWeight: 700,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              padding: "5px 14px",
-              borderRadius: "100px",
-            }}
-          >
-            {bloco.subtitle}
-          </span>
-
-          {/* título */}
-          <h2
-            style={{
-              margin: "14px 0 40px",
-              fontSize: "clamp(26px, 4vw, 38px)",
-              fontWeight: 900,
-              color: "#fff",
-              textTransform: "uppercase",
-              letterSpacing: "-0.01em",
-            }}
-          >
-            <span style={{ color: bloco.accent }}>{bloco.title.split(" ")[0]} </span>
-            {bloco.title.split(" ").slice(1).join(" ")}
-          </h2>
-
-          {/* descrição do bloco */}
+          {/* linha com imagem à esquerda e conteúdo à direita */}
           <div style={{
             display: "flex",
-            alignItems: "flex-start",
+            alignItems: "center",
             gap: "48px",
             marginBottom: "48px",
           }}>
-          <p style={{
-            fontSize: "15px",
-            color: "rgba(255,255,255,0.55)",
-            lineHeight: 1.75,
-            maxWidth: "680px",
-            margin: "0 0 48px",
-          }}>
-            {bloco.description}
-          </p>
 
           {bloco.image && (
               <img
                 src={bloco.image}
                 alt={bloco.title}
                 style={{
-                  width: "260px",
+                  width: "500px",
                   flexShrink: 0,
                   borderRadius: "12px",
                   objectFit: "cover",
-                  opacity: 0.9,
+                  opacity: 1,
+                  border: "1px solid #f3f4f6",
                 }}
               />
             )}
+
+          {/* coluna de conteúdo: badge + título + texto, alinhados à direita */}
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-end",
+            textAlign: "right",
+            flex: 1,
+          }}>
+            {/* badge */}
+            <span
+              style={{
+                display: "inline-block",
+                background: bloco.accent + "18",
+                border: `1px solid ${bloco.accent}40`,
+                color: bloco.accent,
+                fontSize: "11px",
+                fontWeight: 700,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                padding: "5px 14px",
+                borderRadius: "100px",
+              }}
+            >
+              {bloco.subtitle}
+            </span>
+
+            {/* título */}
+            <h2
+              style={{
+                margin: "14px 0 24px",
+                fontSize: "clamp(26px, 4vw, 38px)",
+                fontWeight: 900,
+                color: "#111827",
+                textTransform: "uppercase",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              <span style={{ color: bloco.accent }}>{bloco.title.split(" ")[0]} </span>
+              {bloco.title.split(" ").slice(1).join(" ")}
+            </h2>
+
+            {/* descrição do bloco */}
+            <p style={{
+              fontSize: "15px",
+              color: "#4b5563",
+              lineHeight: 1.75,
+              maxWidth: "680px",
+              margin: 0,
+            }}>
+              {bloco.description}
+            </p>
+          </div>
+          </div>
+
+          <div key={bloco.id} className="text-center mb-16">
+            <div
+              className="inline-block px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-4 border"
+              style={{
+                backgroundColor: `${bloco.accent}1A`, // ~10% de opacidade
+                color: bloco.accent,
+                borderColor: `${bloco.accent}33`,     // ~20% de opacidade
+              }}
+            >
+              {bloco.subtitle2}
+            </div>
+
+            <h2 className="text-4xl md:text-6xl font-barlowCondensed-Black font-black text-gray-900 uppercase tracking-wide">
+              {bloco.title2}
+            </h2>
+            
+             <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
+               {bloco.desc2}
+             </p>
+
           </div>
 
           {/* cards */}
@@ -301,9 +378,10 @@ function BlocoSection({ bloco, isOpen, onClose }) {
               <Card key={i} {...c} accent={bloco.accent} />
             ))}
           </div>
-
+        
+          
           {/* empresas atendidas */}
-          <section className="py-32 border-b rounded-3xl mb-10 border-gray-100 bg-white shadow-sm">
+          <section className="py-32 rounded-3xl mb-10 bg-[#f3f4f6]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-wide">
@@ -350,10 +428,69 @@ function BlocoSection({ bloco, isOpen, onClose }) {
               </div>
             </div>
           </section>
+
+        {/* Checklist Section - Com imagem à esquerda */}
+       
+          <div className="w-full max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Coluna da imagem */}
+            <div className="flex justify-center lg:justify-start">
+              {bloco.image ? (
+                <div className="w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                  <img
+                    src={bloco.image2}
+                    alt={bloco.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : (
+                <div
+                  className="w-full max-w-md aspect-[4/5] rounded-3xl border-2 border-dashed flex items-center justify-center"
+                  style={{ borderColor: `${bloco.accent}4D` }}
+                >
+                  <span className="text-sm text-gray-400 font-barlow">
+                    Imagem em breve
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* Coluna do checklist */}
+            <div className="w-full flex flex-col gap-4">
+              {bloco.checklist.map((text, idx) => (
+                <motion.div
+                  key={`${bloco.id}-${idx}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, duration: 0.5 }}
+                  className="group flex items-center gap-4 p-5 backdrop-blur-md rounded-2xl "
+                >
+                  <div
+                    className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300"
+                    style={{
+                      backgroundColor: `${bloco.accent}1A`,
+                      border: `1px solid ${bloco.accent}4D`,
+                    }}
+                  >
+                    <CheckCircle
+                      className="w-5 h-5 transition-colors"
+                      style={{ color: bloco.accent }}
+                    />
+                  </div>
+                  <p className="text-sm md:text-base text-gray-700 font-barlow leading-relaxed group-hover:text-gray-900 transition-colors">
+                    {text}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+          </div>
+
         
-          {/* cases */}
-          <section className="py-32 bg-[#050911] relative overflow-hidden rounded-3xl mb-10 border-t border-b border-white/5 text-white" id="ninna-cases-section">
-            {/* Dark Background Overlay details */}
+          {/* cases */}{/*
+          <section className="py-32 bg-[#050911] relative overflow-hidden rounded-3xl mb-10 mt-10 border-t border-b border-white/5 text-white" id="ninna-cases-section">
+            {/* Dark Background Overlay details 
             <div className="absolute inset-0 z-0">
               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-teal/5 blur-[140px] rounded-full pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-green/5 blur-[140px] rounded-full pointer-events-none" />
@@ -373,7 +510,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
               </div>
     
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                {/* Case 1: Pague Menos + Suri.ai */}
+                {/* Case 1: Pague Menos + Suri.ai 
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -382,12 +519,12 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                   className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[48px] overflow-hidden shadow-2xl hover:border-brand-teal/30 transition-all duration-500 flex flex-col justify-between"
                 >
                   <div>
-                    {/* Header inside Card */}
+                    {/* Header inside Card 
                     <div className="p-8 border-b border-white/10 bg-gradient-to-r from-white/[0.02] to-transparent">
                       <div className="flex items-center justify-between gap-4">
-                        {/* Logos & Connection */}
+                        {/* Logos & Connection 
                         <div className="flex items-center gap-4">
-                          {/* Corporativa Logo */}
+                          {/* Corporativa Logo 
                           <div className="w-16 h-16 bg-red-500/[0.03] border border-red-500/20 rounded-2xl flex items-center justify-center p-3 shadow-sm bg-white shrink-0">
                             <img 
                               src="/Imagens_NINNA/PagueMenos.png" 
@@ -396,9 +533,9 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                               referrerPolicy="no-referrer"
                             />
                           </div>
-                          {/* Plus sign divider */}
+                          {/* Plus sign divider 
                           <div className="text-white/40 font-black text-xl">+</div>
-                          {/* Startup representation */}
+                          {/* Startup representation 
                           <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
                             <MessageSquare className="w-5 h-5 text-[#0ae2b1] mb-0.5" />
                             <span className="text-[8px] font-black text-[#0ae2b1] tracking-widest uppercase">SURI.AI</span>
@@ -411,7 +548,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                       </div>
                     </div>
     
-                    {/* Core Content */}
+                    {/* Core Content 
                     <div className="p-8 md:p-10">
                       <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
                         Aceleração de Atendimento com IA Conversacional
@@ -443,7 +580,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                     </div>
                   </div>
     
-                  {/* Metrics Block */}
+                  {/* Metrics Block 
                   <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                     <div>
                       <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">+80%</span>
@@ -460,7 +597,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                   </div>
                 </motion.div>
     
-                {/* Case 2: Mold IAX */}
+                {/* Case 2: Mold IAX 
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -469,19 +606,19 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                   className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[48px] overflow-hidden shadow-2xl hover:border-brand-teal/30 transition-all duration-500 flex flex-col justify-between"
                 >
                   <div>
-                    {/* Header inside Card */}
+                    {/* Header inside Card 
                     <div className="p-8 border-b border-white/10 bg-gradient-to-r from-white/[0.02] to-transparent">
                       <div className="flex items-center justify-between gap-4">
-                        {/* Logos & Connection */}
+                        {/* Logos & Connection 
                         <div className="flex items-center gap-4">
-                          {/* Startup Logo/Representation */}
+                          {/* Startup Logo/Representation 
                           <div className="w-16 h-16 bg-purple-500/[0.04] border border-purple-100 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0 bg-white">
                             <Cpu className="w-5 h-5 text-purple-600 mb-0.5" />
                             <span className="text-[8px] font-black text-purple-600 tracking-widest uppercase text-center leading-none">MOLD IAX</span>
                           </div>
-                          {/* Plus sign divider */}
+                          {/* Plus sign divider 
                           <div className="text-white/40 font-black text-xl">+</div>
-                          {/* NINNA Indicator */}
+                          {/* NINNA Indicator 
                           <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
                             <Zap className="w-5 h-5 text-[#0ae2b1] mb-0.5" />
                             <span className="text-[8px] font-black text-[#0ae2b1] tracking-widest uppercase">NINNA</span>
@@ -494,7 +631,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                       </div>
                     </div>
     
-                    {/* Core Content */}
+                    {/* Core Content 
                     <div className="p-8 md:p-10">
                       <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
                         Acesso Expresso a Recursos Estaduais e Federais
@@ -526,7 +663,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                     </div>
                   </div>
     
-                  {/* Metrics Block */}
+                  {/* Metrics Block 
                   <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                     <div>
                       <span className="block text-2xl font-black text-purple-400 tracking-wide ">R$ 800K</span>
@@ -545,9 +682,10 @@ function BlocoSection({ bloco, isOpen, onClose }) {
               </div>
             </div>
           </section>
+          /*}
 
           {/* CTA / Proposal */}
-            <section className="py-32 border-b rounded-3xl mb-10 border-gray-100 bg-white shadow-sm">
+            <section className="py-32 border-b rounded-3xl mb-10 mt-10 border-gray-100 bg-white shadow-sm">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-white p-12 md:p-24 rounded-[60px] border border-gray-100 shadow-2xl relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-80 h-80 bg-[#00c9a7]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
@@ -710,7 +848,7 @@ export default function ServicosPage() {
   return (
     <div
       style={{
-        background: "#0B0E1A",
+        background: "#f3f4f6",
         minHeight: "100vh",
         fontFamily: "'Geist Variable', 'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif",
         color: "#fff",
@@ -815,7 +953,7 @@ export default function ServicosPage() {
       <div
         ref={navRef}
         style={{
-          background: "linear-gradient(135deg, #0d1221 0%, #111827 100%)",
+          background: "#f3f4f6",
           borderBottom: "1px solid #1f2937",
           padding: "48px 0",
           top: 0,
@@ -830,7 +968,7 @@ export default function ServicosPage() {
               fontWeight: 700,
               letterSpacing: "0.16em",
               textTransform: "uppercase",
-              color: "#6b7280",
+              color: "#111827",
               marginBottom: "24px",
             }}
           >
@@ -854,11 +992,11 @@ export default function ServicosPage() {
                   aria-pressed={isActive}
                   onClick={() => toggleBloco(item.id)}
                   style={{
-                    background: isActive ? "#00c9a7" : "rgba(255, 255, 255, 0.04)",
-                    border: `1px solid ${isActive ? "#00c9a7" : "rgba(255, 255, 255, 0.08)"}`,
+                    background: isActive ? "#00c9a7" : "#f9fafb", // era rgba(255,255,255,0.04) -> gray-50
+                    border: `1px solid ${isActive ? "#00c9a7" : "#e5e7eb"}`, // era rgba(255,255,255,0.08) -> gray-200
                     borderRadius: "12px",
                     padding: "20px 16px",
-                    color: isActive ? "#0f1422" : "#e5e7eb",
+                    color: isActive ? "#e5e7eb" : "#0f1422",
                     fontSize: "13px",
                     fontWeight: 600,
                     lineHeight: 1.4,
@@ -872,15 +1010,15 @@ export default function ServicosPage() {
                   }}
                   onMouseEnter={e => {
                     if (!isActive) {
-                      e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
+                      e.currentTarget.style.background = "#f3f4f6"; // era rgba(255,255,255,0.08) -> gray-100
                       e.currentTarget.style.borderColor = "#00c9a7";
                       e.currentTarget.style.transform = "translateY(-2px)";
                     }
                   }}
                   onMouseLeave={e => {
                     if (!isActive) {
-                      e.currentTarget.style.background = "rgba(255, 255, 255, 0.04)";
-                      e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.08)";
+                      e.currentTarget.style.background = "#f9fafb"; // volta ao mesmo valor do background inativo -> gray-50
+                      e.currentTarget.style.borderColor = "#e5e7eb"; // volta ao mesmo valor da borda inativa -> gray-200
                       e.currentTarget.style.transform = "translateY(0)";
                     }
                   }}
