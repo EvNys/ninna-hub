@@ -712,57 +712,13 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                 <div className="absolute top-0 right-0 w-80 h-80 bg-[#00c9a7]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
 
-                  {/* Coluna visual (esquerda) */}
-                  <div className="relative order-2 lg:order-1">
-                    <div className="relative bg-[#fafafa] border border-gray-200 p-10 md:p-14 rounded-[40px] shadow-inner flex flex-col items-center justify-center text-center min-h-[380px]">
-                      <div
-                        className="w-20 h-20 rounded-3xl flex items-center justify-center mb-8"
-                        style={{ background: `${bloco.accent}15` }}
-                      >
-                        <Rocket className="w-10 h-10" style={{ color: bloco.accent }} />
-                      </div>
-                      <h4 className="text-2xl font-black text-gray-900 uppercase tracking-wide mb-3">
-                        Inovação Aberta
-                      </h4>
-                      <p className="text-gray-500 font-medium leading-relaxed max-w-xs">
-                        Conectamos sua corporação ao ecossistema de startups mais estratégico do país.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Coluna de texto (direita) */}
-                  <div className="order-1 lg:order-2 text-left lg:text-right">
+                  {/* Coluna da esquerda: título + botão */}
+                  <div>
                     <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-wide leading-[1]">
                       Por que ser uma <br /><span style={{ color: bloco.accent }}>Corporação?</span>
                     </h3>
 
-                    <div className="space-y-10 mt-12">
-                      {[
-                        { title: 'Acesso ao Dealflow', desc: 'Curadoria exclusiva de startups alinhadas aos seus desafios estratégicos.' },
-                        { title: 'Networking C-Level', desc: 'Troca de experiências com outros executivos de grandes corporações nacionais.' },
-                        { title: 'Visibilidade de Marca', desc: 'Posicionamento como líder em inovação no cenário global corporativo.' }
-                      ].map((item, i) => (
-                        <div key={i} className="flex items-start lg:items-start lg:justify-end space-x-6 lg:space-x-reverse lg:space-x-6">
-                          <div className="mt-1 flex-shrink-0 order-1 lg:order-2">
-                            <div
-                              className="w-6 h-6 rounded-full border-2 flex items-center justify-center p-1"
-                              style={{ borderColor: bloco.accent }}
-                            >
-                              <div
-                                className="w-full h-full rounded-full"
-                                style={{ background: bloco.accent }}
-                              />
-                            </div>
-                          </div>
-                          <div className="order-2 lg:order-1">
-                            <h4 className="text-xl font-black text-gray-900 uppercase tracking-wide mb-2">{item.title}</h4>
-                            <p className="text-gray-500 font-medium leading-relaxed">{item.desc}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-14 flex lg:justify-end">
+                    <div className="mt-14 flex lg:justify-start">
                       <a
                         href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20NINNA"
                         target="_blank"
@@ -774,10 +730,36 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                         <Rocket className="w-5 h-5" />
                         Contate o time NINNA!
                       </a>
-
                     </div>
                   </div>
 
+                  <div className="order-2 lg:order-1 text-left">
+                    <div className="space-y-10 mt-12">
+                      {[
+                        { title: 'Acesso ao Dealflow', desc: 'Curadoria exclusiva de startups alinhadas aos seus desafios estratégicos.' },
+                        { title: 'Networking C-Level', desc: 'Troca de experiências com outros executivos de grandes corporações nacionais.' },
+                        { title: 'Visibilidade de Marca', desc: 'Posicionamento como líder em inovação no cenário global corporativo.' }
+                      ].map((item, i) => (
+                        <div key={i}>
+                          <div className="flex items-center space-x-3">
+                            <div className="flex-shrink-0">
+                              <div
+                                className="w-6 h-6 rounded-full border-2 flex items-center justify-center p-1"
+                                style={{ borderColor: bloco.accent }}
+                              >
+                                <div
+                                  className="w-full h-full rounded-full"
+                                  style={{ background: bloco.accent }}
+                                />
+                              </div>
+                            </div>
+                            <h4 className="text-xl font-black text-gray-900 uppercase tracking-wide">{item.title}</h4>
+                          </div>
+                          <p className="text-gray-500 font-medium leading-relaxed mt-2">{item.desc}</p>
+                        </div>
+                      ))}
+                    </div>               
+                  </div>
                 </div>
               </div>
             </div>
