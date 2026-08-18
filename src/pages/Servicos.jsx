@@ -8,12 +8,32 @@ import { SearchCheck,
     Handshake,
     ChevronUp,
     Building2,
-    MessageSquare,
     CheckCircle,
-    Target,
-    TrendingUp,
-    Cpu, 
-    Zap } from "lucide-react";
+    Gauge,
+    Database, 
+    Cpu,
+    Telescope,
+    Route,
+    Compass,
+    Filter,
+    Settings,
+    Search,
+    FlaskConical,
+    Megaphone,
+    Network,
+    Award,
+    GraduationCap,
+    Code2,
+    Lightbulb,
+    Briefcase,
+    MonitorSmartphone,
+    Presentation,
+    Puzzle,
+    Users,
+    Globe,
+    CalendarDays,
+    ArrowRight,
+     } from "lucide-react";
 
 const NAV_ITEMS = [
   { id: "bloco1", icon: SearchCheck, label: "Quero clareza onde estou",          aria: "Diagnóstico" },
@@ -32,9 +52,9 @@ const BLOCOS = [
     subtitle2: "aaaaa",
     desc2: "aaaaaaaa",
     accent: "#00D4D4",
-    image: "/Fotos do Time NINNA/Rafael Alves.jpg",
-    image2: "a",
-    cta: "Comece com um diagnóstico →",
+    image: "/fotos_empresas/1.webp",
+    image2: "/fotos_empresas/2.webp",
+    cta: "Comece com um diagnóstico",
     description: "Antes de inovar, é preciso saber onde você está. Nossos diagnósticos combinam metodologias globais com uma leitura precisa da realidade da sua empresa — entregando clareza, prioridades e um ponto de partida sólido para qualquer jornada de transformação.",
     empresas: [
       { nome: "Empresa A", logo: "/Imagens_NINNA/l'auto.png" },
@@ -52,11 +72,11 @@ const BLOCOS = [
       { company: "Empresa B", result: "Mapeou barreiras culturais invisíveis que travavam projetos de inovação há 2 anos." },
     ],
     cards: [
-      { title: "Diagnóstico de Maturidade em Inovação",  icon: Target, desc: "Identifique o estágio de maturidade da sua empresa em inovação, suas principais lacunas e os caminhos para evoluir." },
-      { title: "Diagnóstico de Perfil de Uso de Dados",  icon: Target, desc: "Entenda como sua organização usa dados, identifique lacunas de competência e encontre potenciais embaixadores da cultura data-driven." },
-      { title: "Diagnóstico de Cultura e Inovação",       icon: Target, desc: "a" },
-      { title: "Diagnóstico de Transformação Digital",    icon: Target, desc: "Identifique o estágio de digitalização da sua empresa e os principais gargalos e oportunidades para avançar." },
-      { title: "Análise de Cenários Futuros",             icon: Target, desc: "Antecipe tendências e movimentos de mercado para construir cenários e preparar sua empresa para diferentes futuros." },
+      { title: "Diagnóstico de Maturidade em Inovação",   icon: Gauge, desc: "Identifique o estágio de maturidade da sua empresa em inovação, suas principais lacunas e os caminhos para evoluir." },
+      { title: "Diagnóstico de Perfil de Uso de Dados",   icon: Database, desc: "Entenda como sua organização usa dados, identifique lacunas de competência e encontre potenciais embaixadores da cultura data-driven." },
+      { title: "Diagnóstico de Cultura e Inovação",       icon: Cpu, desc: "a" },
+      { title: "Diagnóstico de Transformação Digital",    icon: Sprout, desc: "Identifique o estágio de digitalização da sua empresa e os principais gargalos e oportunidades para avançar." },
+      { title: "Análise de Cenários Futuros",             icon: Telescope, desc: "Antecipe tendências e movimentos de mercado para construir cenários e preparar sua empresa para diferentes futuros." },
     ],
   },
   {
@@ -67,9 +87,9 @@ const BLOCOS = [
     subtitle2: "a",
     desc2: "aaaaaaaa",
     accent: "#00E676",
-    image: "a",
-    image2: "a",
-    cta: "Monte sua estratégia →",
+    image: "/fotos_empresas/3.webp",
+    image2: "/fotos_empresas/4.webp",
+    cta: "Monte sua estratégia",
     description: "Ter vontade de inovar não é suficiente — é preciso estrutura. Ajudamos sua empresa a construir os processos, governança e estratégias que transformam iniciativas isoladas em um sistema de inovação contínuo e escalável.",
     empresas: [
       { nome: "Empresa A", logo: "/Imagens_NINNA/logo-a.png" },
@@ -88,10 +108,10 @@ const BLOCOS = [
       { company: "Empresa D", result: "Estruturou comitê de inovação com KPIs claros, conectando estratégia ao dia a dia dos times." },
     ],
     cards: [
-      { title: "Mapeamento da Jornada do Cliente Inovador", icon: Target, desc: "Identifica dores, pontos de atrito e oportunidades ao longo da experiência do consumidor. Propõe soluções priorizadas por impacto com base em evidências, gerando um roteiro claro de transformação." },
-      { title: "Construção de Estratégias Inovadoras",      icon: Target, desc: "Processo colaborativo que traduz a visão de futuro em um plano de ação factível. Entrega um portfólio de iniciativas para curto, médio e longo prazo, com métricas claras de sucesso e governança." },
-      { title: "Implantação de Funil de Inovação",          icon: Target, desc: "Estrutura a captura, seleção, desenvolvimento e implementação de ideias. Garante um pipeline transparente e mensurável, com papéis e critérios definidos para um fluxo contínuo de iniciativas." },
-      { title: "Sistema de Gestão da Inovação",             icon: Target, desc: "Estrutura de governança (comitês, KPIs, ritos e financiamento) inspirada na ISO 56000. Integra a inovação à operação diária, assegurando medição e melhoria contínua a longo prazo." },
+      { title: "Mapeamento da Jornada do Cliente Inovador", icon: Route, desc: "Identifica dores, pontos de atrito e oportunidades ao longo da experiência do consumidor. Propõe soluções priorizadas por impacto com base em evidências, gerando um roteiro claro de transformação." },
+      { title: "Construção de Estratégias Inovadoras",      icon: Compass, desc: "Processo colaborativo que traduz a visão de futuro em um plano de ação factível. Entrega um portfólio de iniciativas para curto, médio e longo prazo, com métricas claras de sucesso e governança." },
+      { title: "Implantação de Funil de Inovação",          icon: Filter, desc: "Estrutura a captura, seleção, desenvolvimento e implementação de ideias. Garante um pipeline transparente e mensurável, com papéis e critérios definidos para um fluxo contínuo de iniciativas." },
+      { title: "Sistema de Gestão da Inovação",             icon: Settings, desc: "Estrutura de governança (comitês, KPIs, ritos e financiamento) inspirada na ISO 56000. Integra a inovação à operação diária, assegurando medição e melhoria contínua a longo prazo." },
     ],
   },
   {
@@ -102,9 +122,9 @@ const BLOCOS = [
     subtitle2: "a",
     desc2: "aaaaaaaa",
     accent: "#7C6FF7",
-    image: "a",
-    image2: "a",
-    cta: "Encontre sua solução →",
+    image: "/fotos_empresas/5.webp",
+    image2: "/fotos_empresas/6.webp",
+    cta: "Encontre sua solução",
     description: "Identificar a tecnologia certa e os parceiros ideais faz toda a diferença na execução. Conectamos sua empresa às melhores soluções do mercado e gerenciamos o processo de validação e aceleração de ponta a ponta.",
     empresas: [
       { nome: "Empresa A", logo: "/Imagens_NINNA/logo-a.png" },
@@ -123,11 +143,11 @@ const BLOCOS = [
       { company: "Empresa F", result: "Recebeu 80+ inscrições qualificadas em chamada de startups focada em logística." },
     ],
     cards: [
-      { title: "Hunting de Soluções Tecnológicas",   icon: Target, desc: "Prospecção ativa e sob demanda de startups e tecnologias no Brasil e exterior. Entrega análises comparativas para decisões ágeis e baseadas em dados." },
-      { title: "Gestão de Prova de Conceito (PoC)",  icon: Target, desc: "Validação de soluções em ambiente controlado com escopo, métricas e governança definidos. Garante decisões seguras para avançar, pivotar ou descontinuar." },
-      { title: "Aceleração Corporativa de Soluções", icon: Target, desc: "Estruturação de squads e planos estratégicos para desenvolver tecnologias escaláveis. Facilita a integração na operação para gerar impacto real e rápido." },
-      { title: "Programa de Chamadas de Startups",   icon: Target, desc: "Atração inbound de soluções via edital público e seleção estruturada. Conecta startups ao seu desafio para gerar PoCs, parcerias comerciais ou investimentos." },
-      { title: "Programa de Inovação Aberta",        icon: Target, desc: "Plataforma contínua de conexão e cocriação com startups, universidades e centros de pesquisa. Constrói um canal permanente com o ecossistema de inovação." },
+      { title: "Hunting de Soluções Tecnológicas",   icon: Search, desc: "Prospecção ativa e sob demanda de startups e tecnologias no Brasil e exterior. Entrega análises comparativas para decisões ágeis e baseadas em dados." },
+      { title: "Gestão de Prova de Conceito (PoC)",  icon: FlaskConical, desc: "Validação de soluções em ambiente controlado com escopo, métricas e governança definidos. Garante decisões seguras para avançar, pivotar ou descontinuar." },
+      { title: "Aceleração Corporativa de Soluções", icon: Rocket, desc: "Estruturação de squads e planos estratégicos para desenvolver tecnologias escaláveis. Facilita a integração na operação para gerar impacto real e rápido." },
+      { title: "Programa de Chamadas de Startups",   icon: Megaphone, desc: "Atração inbound de soluções via edital público e seleção estruturada. Conecta startups ao seu desafio para gerar PoCs, parcerias comerciais ou investimentos." },
+      { title: "Programa de Inovação Aberta",        icon: Network, desc: "Plataforma contínua de conexão e cocriação com startups, universidades e centros de pesquisa. Constrói um canal permanente com o ecossistema de inovação." },
     ],
   },
   {
@@ -138,9 +158,9 @@ const BLOCOS = [
     subtitle2: "a",
     desc2: "aaaaaaaa",
     accent: "#FF6B6B",
-    image: "a",
-    image2: "a",
-    cta: "Engaje seu time →",
+    image: "/fotos_empresas/7.webp",
+    image2: "/fotos_empresas/8.webp",
+    cta: "Engaje seu time",
     description: "Inovação começa nas pessoas. Desenvolvemos programas que transformam colaboradores em agentes de mudança — engajando times, formando líderes e criando uma cultura onde novas ideias encontram espaço para crescer.",
    empresas: [
       { nome: "Empresa A", logo: "/Imagens_NINNA/logo-a.png" },
@@ -159,14 +179,14 @@ const BLOCOS = [
       { company: "Empresa H", result: "Hackathon corporativo gerou 3 projetos que viraram iniciativas oficiais da empresa." },
     ],
     cards: [
-      { title: "Programa de Embaixadores",                icon: Target, desc: "Forme líderes internos que disseminam a cultura de inovação de dentro para fora da organização." },
-      { title: "Programa de Mentores",                    icon: Target, desc: "Conecte talentos internos com mentores especializados para acelerar o desenvolvimento em inovação." },
-      { title: "Hackathons Corporativos",                 icon: Target, desc: "Eventos de alta energia para resolver desafios reais do negócio com equipes multidisciplinares." },
-      { title: "Programa de Ideias",                      icon: Target, desc: "Canal estruturado para capturar, avaliar e premiar as melhores ideias de toda a organização." },
-      { title: "Formação Executiva em Inovação",          icon: Target, desc: "Trilhas práticas para líderes que precisam tomar decisões mais ágeis e orientadas à inovação." },
-      { title: "Formação em Transformação Digital",       icon: Target, desc: "Capacitação estruturada para preparar gestores e times para operar no ambiente digital." },
-      { title: "Workshops Estratégicos para Lideranças",  icon: Target, desc: "Sessões de imersão para alinhar visão, prioridades e metodologia com alta liderança." },
-      { title: "Trilhas Customizadas para Times",         icon: Target, desc: "Jornadas de aprendizado adaptadas ao contexto, maturidade e objetivos de cada equipe." },
+      { title: "Programa de Embaixadores",                icon: Award, desc: "Identifica e capacita colaboradores multiplicadores para atuarem como agentes de transformação cultural, criando uma rede de influência que amplifica a inovação em todos os níveis da empresa." },
+      { title: "Programa de Mentores",                    icon: GraduationCap, desc: "Forma lideranças internas em mentoring, lean, design thinking e metodologias ágeis para apoiar times e projetos, entregando uma rede de mentores qualificados para a jornada de inovação." },
+      { title: "Hackathons Corporativos",                 icon: Code2, desc: "Imersão colaborativa que mobiliza times multidisciplinares para resolver desafios reais com criatividade e tecnologia, usando diamante duplo e vibecoding, gerando protótipos e fortalecendo a cultura de inovação." },
+      { title: "Programa de Ideias",                      icon: Lightbulb, desc: "Sistema estruturado de captura, avaliação e desenvolvimento de sugestões dos colaboradores, com apoio de IA e governança clara, transformando conhecimento tácito em inovação participativa mensurável." },
+      { title: "Formação Executiva em Inovação",          icon: Briefcase, desc: "Programa que prepara executivos para liderar a agenda de inovação com visão estratégica e método, desenvolvendo tomada de decisão, gestão de portfólio e liderança multidisciplinar." },
+      { title: "Formação em Transformação Digital",       icon: MonitorSmartphone, desc: "Capacita colaboradores e lideranças para atuar com fluência no ambiente digital, combinando conceitos e aplicações práticas adaptadas ao contexto da organização." },
+      { title: "Workshops Estratégicos para Lideranças",  icon: Presentation, desc: "Sessões imersivas que alinham o time executivo em torno de desafios prioritários, gerando direcionadores estratégicos, priorização de iniciativas e planos de ação de 90 dias." },
+      { title: "Trilhas Customizadas para Times",         icon: Puzzle, desc: "Programas de capacitação sob medida, baseados em diagnóstico de competências e desafios reais de cada equipe, combinando conteúdo técnico e metodologias ágeis." },
     ],
   },
   {
@@ -177,9 +197,9 @@ const BLOCOS = [
     subtitle2: "a",
     desc2: "aaaaaaaa",
     accent: "#FFB800",
-    image: "a",
-    image2: "a",
-    cta: "Faça parte do ecossistema →",
+    image: "/fotos_empresas/9.webp",
+    image2: "/fotos_empresas/10.webp",
+    cta: "Faça parte do ecossistema",
     description: "As melhores oportunidades surgem das conexões certas. Facilitamos o acesso ao ecossistema de inovação — aproximando sua empresa de startups, líderes, investidores e parceiros estratégicos que aceleram resultados reais.",
    empresas: [
       { nome: "Empresa A", logo: "/Imagens_NINNA/logo-a.png" },
@@ -197,11 +217,11 @@ const BLOCOS = [
       { company: "Empresa I", result: "Participou do LICOR e fechou parceria estratégica com outra corporação no mesmo evento." },
       { company: "Empresa J", result: "Imersão técnica no Vale do Silício redefiniu o roadmap de tecnologia para os próximos 3 anos." },
     ],
-    cards: [ { title: "LICOR",                        icon: Target, desc: "Encontro exclusivo de líderes de inovação corporativa para troca de experiências e geração de oportunidades." },
-      { title: "Conexão com Ecossistema",             icon: Target, desc: "Curadoria de conexões relevantes com startups, aceleradoras, investidores e parceiros estratégicos." },
-      { title: "Eventos para Comunidade de Inovação", icon: Target, desc: "Agenda de eventos abertos e fechados para fortalecer sua presença e influência no ecossistema." },
-      { title: "Imersões Técnicas",                   icon: Target, desc: "Visitas e imersões em hubs de inovação, universidades e centros de tecnologia de referência." },
-      { title: "Eventos de Conexões Estratégicas",    icon: Target, desc: "Encontros customizados para gerar negócios, parcerias e colaborações de alto impacto entre empresas." }, ],
+    cards: [ { title: "L.I.Cor",                      icon: Users, desc: "Encontro curado que reúne líderes de inovação corporativa para trocar desafios e tendências, com cocriação e benchmarking, gerando uma rede de pares qualificada para colaboração coletiva." },
+      { title: "Conexão com Ecossistema",             icon: Globe, desc: "Serviço de curadoria que mapeia e conecta a organização a startups, universidades, investidores e outros atores relevantes, estruturando parcerias com foco em geração de valor." },
+      { title: "Eventos para Comunidade de Inovação", icon: CalendarDays, desc: "Encontros abertos (palestras, painéis, hackathons, workshops) que mobilizam o ecossistema em torno de temas relevantes, gerando aprendizado, conexão e novas oportunidades de negócio." },
+      { title: "Imersões Técnicas",                   icon: Wrench, desc: "Experiências de aprendizado profundo em tecnologias emergentes e tendências de mercado, combinando teoria, práticas e visitas a hubs de inovação e startups." },
+      { title: "Eventos de Conexões Estratégicas",    icon: Handshake, desc: "Encontros seletivos com curadoria personalizada que aproximam a organização de parceiros, clientes e influenciadores, fortalecendo relacionamentos e identificando oportunidades de negócio." }, ],
   },
 ];
 
@@ -436,7 +456,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
             {/* Coluna da imagem */}
             <div className="flex justify-center lg:justify-start">
               {bloco.image ? (
-                <div className="w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                <div className="w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-gray-100">
                   <img
                     src={bloco.image2}
                     alt={bloco.title}
@@ -685,7 +705,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
           /*}
 
           {/* CTA / Proposal */}
-            <section className="py-32 border-b rounded-3xl mb-10 mt-10 border-gray-100 bg-[#f3f4f6] shadow-sm">
+            <section className="py-32 border-b rounded-3xl mb-10 mt-10 border-gray-100 bg-[#f3f4f6]">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-white p-12 md:p-24 rounded-[60px] border border-gray-100 shadow-2xl relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-80 h-80 bg-[#00c9a7]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
@@ -714,7 +734,6 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                     </div>
                     
                     <div className="relative">
-                      <div className="absolute -inset-1 bg-[#00c9a7]/20 blur-2xl rounded-[40px]" />
                       <div className="relative bg-[#fafafa] border border-gray-200 p-10 md:p-14 rounded-[40px] shadow-inner">
                         <h3 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-wide">Solicite uma Proposta</h3>
                         <form className="space-y-6">
@@ -756,9 +775,9 @@ function BlocoSection({ bloco, isOpen, onClose }) {
           <button
             style={{
               background: bloco.accent,
-              color: "#0B0E1A",
+              color: "#ffffff",
               border: "none",
-              borderRadius: "8px",
+              borderRadius: "10px",
               padding: "14px 28px",
               fontSize: "14px",
               fontWeight: 800,
@@ -767,11 +786,15 @@ function BlocoSection({ bloco, isOpen, onClose }) {
               cursor: "pointer",
               transition: "opacity 0.2s",
               fontFamily: "inherit",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
             }}
             onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}
             onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
           >
             {bloco.cta}
+            <ArrowRight size={16} strokeWidth={2.5} />
           </button>
 
           
