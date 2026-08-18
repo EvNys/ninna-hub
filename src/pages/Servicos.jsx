@@ -57,9 +57,10 @@ const BLOCOS = [
     cta: "Comece com um diagnóstico",
     description: "Antes de inovar, é preciso saber onde você está. Nossos diagnósticos combinam metodologias globais com uma leitura precisa da realidade da sua empresa — entregando clareza, prioridades e um ponto de partida sólido para qualquer jornada de transformação.",
     empresas: [
-      { nome: "Empresa A", logo: "/Imagens_NINNA/l'auto.png" },
-      { nome: "Empresa B", logo: "/Imagens_NINNA/Extrafarma.png" },
-      { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
+      { nome: "Empresa A", logo: "/Imagens_NINNA/M-Dias-Branco.png" },
+      { nome: "Empresa B", logo: "/Imagens_NINNA/Solar_CocaCola.png" },
+      { nome: "Empresa C", logo: "/Imagens_NINNA/Makro.png" },
+      { nome: "Empresa D", logo: "/Imagens_NINNA/Grupo_Camed.png" },
     ],
     checklist: [
       "Entender o nível atual de maturidade da organização em inovação, transformação digital e uso de dados.",
@@ -97,11 +98,11 @@ const BLOCOS = [
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
     checklist: [
-      "Sente que sua empresa está isolada das melhores referências do mercado de inovação.",
-      "Quer trocar experiências com outros líderes que enfrentam desafios parecidos.",
-      "Busca acesso qualificado a startups, investidores e parceiros estratégicos.",
-      "Já pensou em imersões técnicas, mas não sabe por onde nem com quem começar.",
-      "Quer participar de eventos e comunidades que gerem oportunidades reais de negócio.",
+      "Identificamos dores, atritos e oportunidades ao longo da experiência do consumidor, propondo soluções priorizadas por impacto e evidências.",
+      "Transformamos a visão de futuro em um plano de ação factível, com portfólio de iniciativas de curto, médio e longo prazo e métricas claras de sucesso.",
+      "Estruturamos a captura, seleção, desenvolvimento e implementação de ideias, garantindo um pipeline transparente e mensurável.",
+      "Criamos uma estrutura de governança (comitês, KPIs, ritos e financiamento) inspirada na ISO 56000, integrando a inovação à operação diária.",
+      "Unimos diagnóstico, estratégia, execução e governança em um único ecossistema, assegurando que a inovação seja contínua, mensurável e sustentável ao longo do tempo.",
     ],
     cases: [
       { company: "Empresa C", result: "Implantou funil de inovação e gerou pipeline de 30 projetos qualificados no primeiro trimestre." },
@@ -132,11 +133,11 @@ const BLOCOS = [
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
     checklist: [
-      "Sente que sua empresa está isolada das melhores referências do mercado de inovação.",
-      "Quer trocar experiências com outros líderes que enfrentam desafios parecidos.",
-      "Busca acesso qualificado a startups, investidores e parceiros estratégicos.",
-      "Já pensou em imersões técnicas, mas não sabe por onde nem com quem começar.",
-      "Quer participar de eventos e comunidades que gerem oportunidades reais de negócio.",
+      "Prospecção ativa e sob demanda de startups e tecnologias no Brasil e no exterior, com análises comparativas que embasam decisões ágeis.",
+      "Validamos soluções em ambiente controlado, com escopo, métricas e governança bem definidos, garantindo decisões seguras para avançar, pivotar ou descontinuar.",
+      "Estruturamos squads e planos estratégicos para desenvolver tecnologias escaláveis, facilitando a integração na operação e gerando impacto real e rápido.",
+      "Atraímos soluções via edital público e seleção estruturada, conectando startups aos desafios da empresa para gerar PoCs, parcerias comerciais ou investimentos.",
+      "Construímos uma plataforma contínua de conexão e cocriação com startups, universidades e centros de pesquisa, mantendo um canal permanente com o ecossistema de inovação.",
     ],
     cases: [
       { company: "Empresa E", result: "Conduziu PoC com 3 startups simultaneamente e implementou solução em produção em 90 dias." },
@@ -168,11 +169,11 @@ const BLOCOS = [
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
     checklist: [
-      "Sente que sua empresa está isolada das melhores referências do mercado de inovação.",
-      "Quer trocar experiências com outros líderes que enfrentam desafios parecidos.",
-      "Busca acesso qualificado a startups, investidores e parceiros estratégicos.",
-      "Já pensou em imersões técnicas, mas não sabe por onde nem com quem começar.",
-      "Quer participar de eventos e comunidades que gerem oportunidades reais de negócio.",
+      "Identificamos e capacitamos colaboradores multiplicadores, criando uma rede de influência que amplifica a inovação em todos os níveis da empresa.",
+      "Formamos lideranças internas em mentoring, lean, design thinking e metodologias ágeis, entregando uma rede de mentores qualificados para apoiar a jornada de inovação.",
+      "Promovemos imersões colaborativas que mobilizam times multidisciplinares para resolver desafios reais com criatividade e tecnologia, gerando protótipos e fortalecendo a cultura de inovação.",
+      "Estruturamos a captura, avaliação e desenvolvimento de sugestões dos colaboradores, com apoio de IA e governança clara, transformando conhecimento tácito em inovação participativa mensurável.",
+      "Preparamos executivos para liderar a agenda de inovação com visão estratégica e método, desenvolvendo tomada de decisão e liderança multidisciplinar.",
     ],
     cases: [
       { company: "Empresa G", result: "Formou 120 embaixadores de inovação espalhados por 8 unidades de negócio em 6 meses." },
@@ -207,11 +208,11 @@ const BLOCOS = [
       { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
     ],
     checklist: [
-      "Sente que sua empresa está isolada das melhores referências do mercado de inovação.",
-      "Quer trocar experiências com outros líderes que enfrentam desafios parecidos.",
-      "Busca acesso qualificado a startups, investidores e parceiros estratégicos.",
-      "Já pensou em imersões técnicas, mas não sabe por onde nem com quem começar.",
-      "Quer participar de eventos e comunidades que gerem oportunidades reais de negócio.",
+      "Promovemos um encontro curado que reúne líderes de inovação corporativa para trocar desafios e tendências, gerando uma rede de pares qualificada para colaboração coletiva.",
+      "Oferecemos curadoria que mapeia e conecta a organização a startups, universidades, investidores e outros atores relevantes, estruturando parcerias com foco em geração de valor.",
+      "Realizamos encontros abertos (palestras, painéis, hackathons, workshops) que mobilizam o ecossistema em torno de temas relevantes, gerando aprendizado, conexão e novas oportunidades de negócio.",
+      "Proporcionamos experiências de aprendizado profundo em tecnologias emergentes e tendências de mercado, combinando teoria, práticas e visitas a hubs de inovação e startups.",
+      "Conduzimos encontros seletivos com curadoria personalizada que aproximam a organização de parceiros, clientes e influenciadores, fortalecendo relacionamentos e identificando oportunidades de negócio.",
     ],
     cases: [
       { company: "Empresa I", result: "Participou do LICOR e fechou parceria estratégica com outra corporação no mesmo evento." },
@@ -405,7 +406,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-wide">
-                  empresas que acreditam no <span className="text-[#00c9a7] underline decoration-gray-200">NINNA</span>
+                  empresas que acreditam no <span style={{ color: bloco.accent }}>NINNA</span>
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto font-medium">
                   Conheça as corporações que acreditam e investem no NINNA Hub como motor de transformação e inovação.
@@ -431,7 +432,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                         <img
                           src={e.logo}
                           alt={e.nome}
-                          className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500 scale-90 group-hover:scale-100"
+                          className="w-full h-full object-contain transition-all duration-500 scale-90 group-hover:scale-100"
                           referrerPolicy="no-referrer"
                         />
                       ) : (
@@ -705,100 +706,83 @@ function BlocoSection({ bloco, isOpen, onClose }) {
           /*}
 
           {/* CTA / Proposal */}
-            <section className="py-32 border-b rounded-3xl mb-10 mt-10 border-gray-100 bg-[#f3f4f6]">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-white p-12 md:p-24 rounded-[60px] border border-gray-100 shadow-2xl relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-80 h-80 bg-[#00c9a7]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
-                    <div>
-                      <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-wide leading-[1]">Por que ser uma <br /><span className="text-[#00c9a7]">Corporação?</span></h3>
-                      <div className="space-y-10 mt-12">
-                        {[
-                          { title: 'Acesso ao Dealflow', desc: 'Curadoria exclusiva de startups alinhadas aos seus desafios estratégicos.', color: 'text-[#00c9a7]' },
-                          { title: 'Networking C-Level', desc: 'Troca de experiências com outros executivos de grandes corporações nacionais.', color: 'text-brand-purple' },
-                          { title: 'Visibilidade de Marca', desc: 'Posicionamento como líder em inovação no cenário global corporativo.', color: 'text-brand-green' }
-                        ].map((item, i) => (
-                          <div key={i} className="flex items-start space-x-6">
-                            <div className="mt-1 flex-shrink-0">
-                              <div className="w-6 h-6 rounded-full border-2 border-[#00c9a7] flex items-center justify-center p-1">
-                                <div className="w-full h-full bg-[#00c9a7] rounded-full" />
-                              </div>
-                            </div>
-                            <div>
-                              <h4 className="text-xl font-black text-gray-900 uppercase tracking-wide mb-2">{item.title}</h4>
-                              <p className="text-gray-500 font-medium leading-relaxed">{item.desc}</p>
-                            </div>
-                          </div>
-                        ))}
+          <section className="py-32 border-b rounded-3xl mb-10 mt-10 border-gray-100 bg-[#f3f4f6]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white p-12 md:p-24 rounded-[60px] border border-gray-100 shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#00c9a7]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+
+                  {/* Coluna visual (esquerda) */}
+                  <div className="relative order-2 lg:order-1">
+                    <div className="relative bg-[#fafafa] border border-gray-200 p-10 md:p-14 rounded-[40px] shadow-inner flex flex-col items-center justify-center text-center min-h-[380px]">
+                      <div
+                        className="w-20 h-20 rounded-3xl flex items-center justify-center mb-8"
+                        style={{ background: `${bloco.accent}15` }}
+                      >
+                        <Rocket className="w-10 h-10" style={{ color: bloco.accent }} />
                       </div>
-                    </div>
-                    
-                    <div className="relative">
-                      <div className="relative bg-[#fafafa] border border-gray-200 p-10 md:p-14 rounded-[40px] shadow-inner">
-                        <h3 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-wide">Solicite uma Proposta</h3>
-                        <form className="space-y-6">
-                          <div className="space-y-2">
-                            <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Nome Completo</label>
-                            <input type="text" placeholder="Seu nome" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
-                          </div>
-                          <div className="space-y-2">
-                            <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">E-mail Corporativo</label>
-                            <input type="email" placeholder="nome@empresa.com.br" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
-                          </div>
-                          <div className="space-y-2">
-                            <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] ml-2">Sua Empresa</label>
-                            <input type="text" placeholder="Nome da empresa" className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#00c9a7] text-gray-900" />
-                          </div>
-                          <div className="space-y-4 pt-2 mb-6">
-                            <label className="flex items-center space-x-3 cursor-pointer group">
-                              <div className="w-6 h-6 rounded border-2 border-gray-200 flex items-center justify-center group-hover:border-[#00c9a7] transition-all">
-                                {/* Visual Checkbox using a simple indicator */}
-                                <div className="w-full h-full p-1 opacity-100 bg-[#00c9a7]/0 group-hover:bg-[#00c9a7]/5">
-                                  <Rocket className="w-full h-full text-[#00c9a7] opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </div>
-                              </div>
-                              <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest group-hover:text-gray-900 transition-colors">Desejo conectar-me com soluções tecnológicas</span>
-                            </label>
-                          </div>
-                          <button className="w-full bg-gray-900 text-white py-5 rounded-2xl font-black uppercase text-sm tracking-widest shadow-xl hover:bg-[#00c9a7] transition-all">
-                            Enviar Solicitação
-                          </button>
-                        </form>
-                      </div>
+                      <h4 className="text-2xl font-black text-gray-900 uppercase tracking-wide mb-3">
+                        Inovação Aberta
+                      </h4>
+                      <p className="text-gray-500 font-medium leading-relaxed max-w-xs">
+                        Conectamos sua corporação ao ecossistema de startups mais estratégico do país.
+                      </p>
                     </div>
                   </div>
+
+                  {/* Coluna de texto (direita) */}
+                  <div className="order-1 lg:order-2 text-left lg:text-right">
+                    <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-wide leading-[1]">
+                      Por que ser uma <br /><span style={{ color: bloco.accent }}>Corporação?</span>
+                    </h3>
+
+                    <div className="space-y-10 mt-12">
+                      {[
+                        { title: 'Acesso ao Dealflow', desc: 'Curadoria exclusiva de startups alinhadas aos seus desafios estratégicos.' },
+                        { title: 'Networking C-Level', desc: 'Troca de experiências com outros executivos de grandes corporações nacionais.' },
+                        { title: 'Visibilidade de Marca', desc: 'Posicionamento como líder em inovação no cenário global corporativo.' }
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start lg:items-start lg:justify-end space-x-6 lg:space-x-reverse lg:space-x-6">
+                          <div className="mt-1 flex-shrink-0 order-1 lg:order-2">
+                            <div
+                              className="w-6 h-6 rounded-full border-2 flex items-center justify-center p-1"
+                              style={{ borderColor: bloco.accent }}
+                            >
+                              <div
+                                className="w-full h-full rounded-full"
+                                style={{ background: bloco.accent }}
+                              />
+                            </div>
+                          </div>
+                          <div className="order-2 lg:order-1">
+                            <h4 className="text-xl font-black text-gray-900 uppercase tracking-wide mb-2">{item.title}</h4>
+                            <p className="text-gray-500 font-medium leading-relaxed">{item.desc}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-14 flex lg:justify-end">
+                      <a
+                        href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20NINNA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 bg-gray-900 text-white px-10 py-5 rounded-2xl font-black uppercase text-sm tracking-widest shadow-xl transition-all"
+                        onMouseEnter={e => (e.currentTarget.style.background = bloco.accent)}
+                        onMouseLeave={e => (e.currentTarget.style.background = "")}
+                      >
+                        <Rocket className="w-5 h-5" />
+                        Contate o time NINNA!
+                      </a>
+
+                    </div>
+                  </div>
+
                 </div>
               </div>
-            </section>
-       
-          {/* CTA do bloco */}
-          <button
-            style={{
-              background: bloco.accent,
-              color: "#ffffff",
-              border: "none",
-              borderRadius: "10px",
-              padding: "14px 28px",
-              fontSize: "14px",
-              fontWeight: 800,
-              letterSpacing: "0.04em",
-              textTransform: "uppercase",
-              cursor: "pointer",
-              transition: "opacity 0.2s",
-              fontFamily: "inherit",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-            onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}
-            onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
-          >
-            {bloco.cta}
-            <ArrowRight size={16} strokeWidth={2.5} />
-          </button>
-
-          
-
+            </div>
+          </section>
+                 
           {/* botão voltar ao topo */}
           <div style={{ marginTop: "40px" }}>
             <button
@@ -809,7 +793,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                 gap: "6px",
                 background: "none",
                 border: "none",
-                color: "rgba(255,255,255,0.35)",
+                color: "rgba(0,0,0,0.35)",
                 fontSize: "13px",
                 fontWeight: 600,
                 cursor: "pointer",
@@ -817,8 +801,8 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                 fontFamily: "inherit",
                 padding: 0,
               }}
-              onMouseEnter={e => (e.currentTarget.style.color = "#00D4D4")}
-              onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.35)")}
+              onMouseEnter={e => (e.currentTarget.style.color = "#00A8A8")}
+              onMouseLeave={e => (e.currentTarget.style.color = "rgba(0,0,0,0.35)")}
             >
               <ChevronUp size={16} />
               Voltar à visão geral
@@ -831,7 +815,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
 }
 
 export default function ServicosPage() {
-  const [blocoAtivo, setBlocoAtivo] = useState(null);
+  const [blocoAtivo, setBlocoAtivo] = useState("bloco1");
   const blocoRefs = useRef({});
   const navRef = useRef(null);
 
