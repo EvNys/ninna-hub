@@ -406,10 +406,10 @@ function BlocoSection({ bloco, isOpen, onClose }) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-wide">
-                  empresas que acreditam no <span style={{ color: bloco.accent }}>NINNA</span>
+                  empresas que já colheram resultados com o <span style={{ color: bloco.accent }}>NINNA</span>
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto font-medium">
-                  Conheça as corporações que acreditam e investem no NINNA Hub como motor de transformação e inovação.
+                  Conheça as empresas que utilizaram os serviços do NINNA Hub e comprovaram na prática seus resultados.
                 </p>
               </div>
 
