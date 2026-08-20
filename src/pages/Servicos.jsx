@@ -61,6 +61,7 @@ const BLOCOS = [
       { nome: "Empresa B", logo: "/Imagens_NINNA/Solar_CocaCola.png" },
       { nome: "Empresa C", logo: "/Imagens_NINNA/Makro.png" },
       { nome: "Empresa D", logo: "/Imagens_NINNA/Grupo_Camed.png" },
+      { nome: "Empresa E", logo: "/Imagens_NINNA/Unimed.png"}
     ],
     checklist: [
       "Entender o nível atual de maturidade da organização em inovação, transformação digital e uso de dados.",
