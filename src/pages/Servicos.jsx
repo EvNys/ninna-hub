@@ -75,7 +75,6 @@ const BLOCOS = [
     cards: [
       { title: "Diagnóstico de Maturidade em Inovação",   icon: Gauge, desc: "Identifique o estágio de maturidade da sua empresa em inovação, suas principais lacunas e os caminhos para evoluir." },
       { title: "Diagnóstico de Perfil de Uso de Dados",   icon: Database, desc: "Entenda como sua organização usa dados, identifique lacunas de competência e encontre potenciais embaixadores da cultura data-driven." },
-      { title: "Diagnóstico de Cultura e Inovação",       icon: Cpu, desc: "a" },
       { title: "Diagnóstico de Transformação Digital",    icon: Sprout, desc: "Identifique o estágio de digitalização da sua empresa e os principais gargalos e oportunidades para avançar." },
       { title: "Análise de Cenários Futuros",             icon: Telescope, desc: "Antecipe tendências e movimentos de mercado para construir cenários e preparar sua empresa para diferentes futuros." },
     ],
