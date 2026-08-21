@@ -3,9 +3,11 @@
 Site do NINNA Hub: páginas públicas (institucional, startups, eventos, parceiros)
 e um **Painel Admin** (`/admin`) para gerenciar o conteúdo, além de uma **área de
 membros** (`/dashboard`).
+PS:. Área de membros ainda não implementada totalmente.
 
 **Stack:** React 19 + Vite + TypeScript • Tailwind CSS • Firebase (Auth + Firestore
-+ Storage) • Express (servidor) • React Router.
+
+- Storage) • Express (servidor) • React Router.
 
 ---
 
@@ -26,12 +28,12 @@ a página automaticamente (hot reload).
 
 ### Scripts disponíveis
 
-| Comando | O que faz |
-|---|---|
-| `npm run dev` | Sobe o site em modo desenvolvimento (porta 3000) |
-| `npm run lint` | Verifica erros de TypeScript (`tsc --noEmit`) — rode antes de subir mudanças |
-| `npm run build` | Gera a versão de produção em `dist/` |
-| `npm run start` | Sobe o servidor servindo a build de produção |
+| Comando         | O que faz                                                                    |
+| --------------- | ---------------------------------------------------------------------------- |
+| `npm run dev`   | Sobe o site em modo desenvolvimento (porta 3000)                             |
+| `npm run lint`  | Verifica erros de TypeScript (`tsc --noEmit`) — rode antes de subir mudanças |
+| `npm run build` | Gera a versão de produção em `dist/`                                         |
+| `npm run start` | Sobe o servidor servindo a build de produção                                 |
 
 ### Configuração do Firebase
 
