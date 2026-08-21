@@ -286,82 +286,101 @@ function BlocoSection({ bloco, isOpen, onClose }) {
       {/* conteúdo expansível */}
       <div className={`bloco-content ${isOpen ? "open" : "closed"}`}>
         <div style={{ padding: "60px 0 40px" }}>
-          {/* linha com imagem à esquerda e conteúdo à direita */}
-          <div style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "48px",
-            marginBottom: "48px",
-          }}>
+          <>
+          <style>{`
+            .bloco-row {
+              display: flex;
+              align-items: center;
+              gap: 48px;
+              margin-bottom: 48px;
+            }
+            .bloco-img {
+              width: 500px;
+              max-width: 100%;
+              flex-shrink: 0;
+              border-radius: 12px;
+              object-fit: cover;
+              border: 1px solid #f3f4f6;
+            }
+            .bloco-content {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              text-align: right;
+              flex: 1;
+              min-width: 0; /* evita overflow forçando o texto pra fora */
+            }
 
-          {bloco.image && (
-              <img
-                src={bloco.image}
-                alt={bloco.title}
-                style={{
-                  width: "500px",
-                  flexShrink: 0,
-                  borderRadius: "12px",
-                  objectFit: "cover",
-                  opacity: 1,
-                  border: "1px solid #f3f4f6",
-                }}
-              />
-            )}
+            @media (max-width: 768px) {
+              .bloco-row {
+                flex-direction: column;
+                gap: 24px;
+              }
+              .bloco-img {
+                width: 100%;
+              }
+              .bloco-content {
+                align-items: flex-start;
+                text-align: left;
+              }
+            }
+          `}</style>
 
-          {/* coluna de conteúdo: badge + título + texto, alinhados à direita */}
-          <div style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-end",
-            textAlign: "right",
-            flex: 1,
-          }}>
-            {/* badge */}
-            <span
-              style={{
-                display: "inline-block",
-                background: bloco.accent + "18",
-                border: `1px solid ${bloco.accent}40`,
-                color: bloco.accent,
-                fontSize: "11px",
-                fontWeight: 700,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                padding: "5px 14px",
-                borderRadius: "100px",
-              }}
-            >
-              {bloco.subtitle}
-            </span>
+          <div style={{ padding: "60px 0 40px" }}>
+            <div className="bloco-row">
+              {bloco.image && (
+                <img
+                  src={bloco.image}
+                  alt={bloco.title}
+                  className="bloco-img"
+                />
+              )}
 
-            {/* título */}
-            <h2
-              style={{
-                margin: "14px 0 24px",
-                fontSize: "clamp(26px, 4vw, 38px)",
-                fontWeight: 900,
-                color: "#111827",
-                textTransform: "uppercase",
-                letterSpacing: "-0.01em",
-              }}
-            >
-              <span style={{ color: bloco.accent }}>{bloco.title.split(" ")[0]} </span>
-              {bloco.title.split(" ").slice(1).join(" ")}
-            </h2>
+              <div className="bloco-content">
+                <span
+                  style={{
+                    display: "inline-block",
+                    background: bloco.accent + "18",
+                    border: `1px solid ${bloco.accent}40`,
+                    color: bloco.accent,
+                    fontSize: "11px",
+                    fontWeight: 700,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    padding: "5px 14px",
+                    borderRadius: "100px",
+                  }}
+                >
+                  {bloco.subtitle}
+                </span>
 
-            {/* descrição do bloco */}
-            <p style={{
-              fontSize: "15px",
-              color: "#4b5563",
-              lineHeight: 1.75,
-              maxWidth: "680px",
-              margin: 0,
-            }}>
-              {bloco.description}
-            </p>
+                <h2
+                  style={{
+                    margin: "14px 0 24px",
+                    fontSize: "clamp(26px, 4vw, 38px)",
+                    fontWeight: 900,
+                    color: "#111827",
+                    textTransform: "uppercase",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  <span style={{ color: bloco.accent }}>{bloco.title.split(" ")[0]} </span>
+                  {bloco.title.split(" ").slice(1).join(" ")}
+                </h2>
+
+                <p style={{
+                  fontSize: "15px",
+                  color: "#4b5563",
+                  lineHeight: 1.75,
+                  maxWidth: "680px",
+                  margin: 0,
+                }}>
+                  {bloco.description}
+                </p>
+              </div>
+            </div>
           </div>
-          </div>
+        </>
 
           <div key={bloco.id} className="text-center mb-16">
             <div
