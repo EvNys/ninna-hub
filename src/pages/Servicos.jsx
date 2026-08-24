@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { db } from '../lib/firebase';
+import { useParceiros } from "../hooks/useParceiros";
 import { SearchCheck,
     Wrench,
     Rocket,
@@ -34,6 +36,8 @@ import { SearchCheck,
     CalendarDays,
     ArrowRight,
      } from "lucide-react";
+
+    
 
 const NAV_ITEMS = [
   { id: "bloco1", icon: SearchCheck, label: "Quero clareza onde estou",          aria: "Diagnóstico" },
@@ -244,6 +248,8 @@ const CSS = `
   }
 `;
 
+
+
 function Card({ title, desc, accent, icon: Icon }) {
   return (
     
@@ -279,6 +285,66 @@ function Card({ title, desc, accent, icon: Icon }) {
     </div>
   );
 }
+
+function ResultadosSection({ bloco }) {
+    const { parceiros, loading } = useParceiros();
+    return (
+          <section className="py-32 rounded-3xl mb-10 bg-[#f3f4f6]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-20">
+                <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-wide">
+                  empresas que já colheram resultados com o <span style={{ color: bloco.accent }}>NINNA</span>
+                </h2>
+                <p className="text-gray-600 max-w-2xl mx-auto font-medium">
+                  Conheça as empresas que utilizaram os serviços do NINNA Hub e comprovaram na prática seus resultados.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                {parceiros.length > 0 ? (
+                  parceiros.map((p, index) => (
+                    <motion.div
+                      key={p.id || index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: Math.min(index * 0.05, 0.3) }}
+                      viewport={{ once: true }}
+                      className="group relative h-48 bg-white border border-gray-100 rounded-3xl flex items-center justify-center p-8 hover:bg-gray-50 hover:border-[#00c9a7]/30 hover:shadow-xl transition-all overflow-hidden"
+                      id={`resultado-card-${p.id || index}`}
+                    >
+                      {p.logo ? (
+                        <img
+                          src={p.logo}
+                          alt={p.nome}
+                          className="w-full h-full object-contain transition-all duration-500 scale-90 group-hover:scale-100"
+                          referrerPolicy="no-referrer"
+                        />
+                      ) : (
+                        <div className="flex flex-col items-center justify-center">
+                          <Building2 className="w-10 h-10 text-gray-300 group-hover:text-[#00c9a7] transition-colors mb-2" />
+                          <span className="font-extrabold text-[#1a1a1a] text-[10px] uppercase tracking-wider block text-center">
+                            {p.nome}
+                          </span>
+                        </div>
+                      )}
+                    </motion.div>
+                  ))
+                ) : (
+                  Array(10).fill(0).map((_, i) => (
+                    <div
+                      key={i}
+                      className="h-48 bg-white border border-gray-100 rounded-3xl flex items-center justify-center animate-pulse"
+                      id={`resultado-skeleton-${i}`}
+                    >
+                      <div className="h-10 w-24 bg-gray-200 rounded-lg" />
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+          </section>
+    );
+  } 
 
 function BlocoSection({ bloco, isOpen, onClose }) {
   return (
@@ -419,55 +485,8 @@ function BlocoSection({ bloco, isOpen, onClose }) {
             ))}
           </div>
         
+          <ResultadosSection bloco={bloco} />
           
-          {/* empresas atendidas */}
-          <section className="py-32 rounded-3xl mb-10 bg-[#f3f4f6]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-wide">
-                  empresas que já colheram resultados com o <span style={{ color: bloco.accent }}>NINNA</span>
-                </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto font-medium">
-                  Conheça as empresas que utilizaram os serviços do NINNA Hub e comprovaram na prática seus resultados.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                {!bloco.empresas || bloco.empresas.length === 0 ? (
-                  <div className="col-span-full py-20 text-center text-gray-400 font-bold uppercase tracking-widest text-sm">
-                    Nenhum parceiro cadastrado no momento.
-                  </div>
-                ) : (
-                  bloco.empresas.map((e, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.05 }}
-                      viewport={{ once: true }}
-                      className="group relative h-48 bg-white border border-gray-100 rounded-3xl flex items-center justify-center p-8 hover:bg-gray-50 hover:border-[#00c9a7]/30 hover:shadow-xl transition-all overflow-hidden"
-                    >
-                      {e.logo ? (
-                        <img
-                          src={e.logo}
-                          alt={e.nome}
-                          className="w-full h-full object-contain transition-all duration-500 scale-90 group-hover:scale-100"
-                          referrerPolicy="no-referrer"
-                        />
-                      ) : (
-                        <div className="flex flex-col items-center justify-center">
-                          <Building2 className="w-10 h-10 text-gray-300 group-hover:text-[#00c9a7] transition-colors mb-2" />
-                          <span className="font-extrabold text-[#1a1a1a] text-[10px] uppercase tracking-wider block text-center">
-                            {e.nome}
-                          </span>
-                        </div>
-                      )}
-                    </motion.div>
-                  ))
-                )}
-              </div>
-            </div>
-          </section>
 
         {/* Checklist Section - Com imagem à esquerda */}
        
@@ -1191,4 +1210,5 @@ export default function ServicosPage() {
       </div>
     </div>
   );
+  
 }
