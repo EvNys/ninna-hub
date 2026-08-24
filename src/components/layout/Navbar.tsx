@@ -280,10 +280,12 @@ const showStartupsDropdown = () => {
                       <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
                     </a>
 
-                    <Link
-                      to="/ecossistema?action=sponsor"
-                      onClick={() => setIsOpen(false)}
-                      className="flex items-center gap-2.5 p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
+                    <a 
+                    href="https://wa.me/558532114201?text=Ol%C3%A1%21%20Gostaria%20de%20ser%20parceiro%20do%20NINNA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsDropdownActive(false)}
+                    className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
                     >
                       <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
                         <Handshake className="w-3.5 h-3.5" />
@@ -292,7 +294,7 @@ const showStartupsDropdown = () => {
                         Seja um Parceiro
                       </span>
                       <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
-                    </Link>
+                    </a>
                   </div>
                 )}
               </div>
@@ -374,11 +376,13 @@ const showStartupsDropdown = () => {
                       <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
                     </a>
 
-                    <Link
-                      to="/ecossistema?action=sponsor"
-                      onClick={() => setIsDropdownActive(false)}
-                      className="group flex items-center justify-between p-4 bg-white/10 hover:bg-[#00c9a7] border border-transparent rounded-2xl transition-all"
-                    >
+                    <a 
+                    href="https://wa.me/558532114201?text=Ol%C3%A1%21%20Gostaria%20de%20ser%20parceiro%20do%20NINNA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsDropdownActive(false)}
+                    className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
+                    > 
                       <div className="flex items-center gap-4">
                         <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
                           <Sparkles className="w-5 h-5 text-amber-300" />
@@ -389,7 +393,7 @@ const showStartupsDropdown = () => {
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
 
