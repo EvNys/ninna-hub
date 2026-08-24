@@ -670,17 +670,25 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                       <div className="flex items-center justify-between gap-4">
                         {/* Logos & Connection 
                         <div className="flex items-center gap-4">
-                          {/* Startup Logo/Representation 
-                          <div className="w-16 h-16 bg-purple-500/[0.04] border border-purple-100 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0 bg-white">
-                            <Cpu className="w-5 h-5 text-purple-600 mb-0.5" />
-                            <span className="text-[8px] font-black text-purple-600 tracking-widest uppercase text-center leading-none">MOLD IAX</span>
+                          {/* NINNA Logo 
+                          <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
+                            <img 
+                            src="/Imagens_NINNA/NINNA.png" 
+                            alt="Suri.ai logo"
+                            className="max-h-16 max-w-16 object-contain"
+                            referrerPolicy="no-referrer"
+                            />
                           </div>
                           {/* Plus sign divider 
                           <div className="text-white/40 font-black text-xl">+</div>
-                          {/* NINNA Indicator 
-                          <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
-                            <Zap className="w-5 h-5 text-[#0ae2b1] mb-0.5" />
-                            <span className="text-[8px] font-black text-[#0ae2b1] tracking-widest uppercase">NINNA</span>
+                          {/* MOLD IAX Logo 
+                          <div className="w-16 h-16 bg-purple-500/[0.04] border border-purple-100 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0 bg-white">
+                            <img 
+                            src="/Startups/MoldIax.png" 
+                            alt="Suri.ai logo"
+                            className="max-h-16 max-w-16 object-contain"
+                            referrerPolicy="no-referrer"
+                            />
                           </div>
                         </div>
     
@@ -693,10 +701,10 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                     {/* Core Content 
                     <div className="p-8 md:p-10">
                       <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
-                        Acesso Expresso a Recursos Estaduais e Federais
+                        Acesso a Recursos Financeiros
                       </h3>
                       <p className="text-white/60 font-barlow text-sm leading-relaxed mb-8">
-                        Como a startup do nosso ecossistema focada em inteligência de hardware e processos industriais obteve acesso a recursos de inovação acelerado com fôlego e curadoria consultiva pelo time do NINNA Hub.
+                      A MoldIAX teve acesso a recursos não reembolsáveis por meio do edital Smart Factory, viabilizando o desenvolvimento de uma solução para a indústria baseada em visão computacional e melhorias em softwares, com o suporte estratégico do NINNA Hub na estruturação e submissão do projeto.
                       </p>
     
                       <div className="space-y-4 mb-8">
@@ -705,8 +713,8 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                             <Target className="w-3.5 h-3.5" />
                           </div>
                           <div>
-                            <h4 className="text-[10px] font-black uppercase text-white tracking-wide">O Desafio</h4>
-                            <p className="text-xs text-white/50 font-barlow leading-relaxed">Equipes pequenas de forte base técnica sem tempo para burocracia de fomento contínuo e submissões densas.</p>
+                            <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">O Desafio</h4>
+                            <p className="text-xs text-white/50 font-barlow leading-relaxed">Melhorar a produção e eficiência das indústrias com uso de visão computacional para melhorar a qualidade dos produtos, trazer auditorias e mostrar em tempo real como podem melhorar a produção.</p>
                           </div>
                         </div>
                         <div className="flex gap-3">
@@ -714,7 +722,7 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                             <TrendingUp className="w-3.5 h-3.5" />
                           </div>
                           <div>
-                            <h4 className="text-[10px] font-black uppercase text-white tracking-wide">A Solução</h4>
+                            <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">A Solução</h4>
                             <p className="text-xs text-white/50 font-barlow leading-relaxed">Mapeamento expresso e curadoria de editais efetuada em menos de 1 mês de aceleração integrada no hub.</p>
                           </div>
                         </div>
@@ -733,8 +741,8 @@ function BlocoSection({ bloco, isOpen, onClose }) {
                       <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-barlow">Estudo / Acesso</span>
                     </div>
                     <div>
-                      <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">100%</span>
-                      <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Compliance</span>
+                      <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">Indústria</span>
+                      <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Segmento</span>
                     </div>
                   </div>
                 </motion.div>

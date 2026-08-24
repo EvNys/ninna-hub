@@ -544,10 +544,10 @@ export default function PortfolioStartupsShowcase() {
                 {/* Core Content */}
                 <div className="p-8 md:p-10">
                   <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
-                    Acesso Expresso a Recursos Estaduais e Federais
+                    Acesso a Recursos Financeiros
                   </h3>
                   <p className="text-white/60 font-barlow text-sm leading-relaxed mb-8">
-                    Como a startup do nosso ecossistema focada em inteligência de hardware e processos industriais obteve acesso a recursos de inovação acelerado com fôlego e curadoria consultiva pelo time do NINNA Hub.
+                  A MoldIAX teve acesso a recursos não reembolsáveis por meio do edital Smart Factory, viabilizando o desenvolvimento de uma solução para a indústria baseada em visão computacional e melhorias em softwares, com o suporte estratégico do NINNA Hub na estruturação e submissão do projeto.
                   </p>
 
                   <div className="space-y-4 mb-8">
@@ -557,7 +557,7 @@ export default function PortfolioStartupsShowcase() {
                       </div>
                       <div>
                         <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">O Desafio</h4>
-                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Equipes pequenas de forte base técnica sem tempo para burocracia de fomento contínuo e submissões densas.</p>
+                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Melhorar a produção e eficiência das indústrias com uso de visão computacional para melhorar a qualidade dos produtos, trazer auditorias e mostrar em tempo real como podem melhorar a produção.</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
@@ -584,8 +584,8 @@ export default function PortfolioStartupsShowcase() {
                   <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-barlow">Estudo / Acesso</span>
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">100%</span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Compliance</span>
+                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">Indústria</span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Segmento</span>
                 </div>
               </div>
             </motion.div>
