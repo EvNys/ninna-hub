@@ -124,7 +124,7 @@ const handleVerMais = () => {
 
               <div className="flex flex-wrap justify-center gap-6">
                 <Link
-                  to=""
+                  to="https://app.flakeflow.com/forms/eaad3a2e-f02b-4dbf-b56e-70fefc5f094a"
                   className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20 flex items-center gap-3"
                 >
                   Submeter sua STARTUP <Rocket className="w-5 h-5" />
@@ -680,7 +680,7 @@ const handleVerMais = () => {
           </p>
 
           <Link
-            to=""
+            to="https://app.flakeflow.com/forms/eaad3a2e-f02b-4dbf-b56e-70fefc5f094a"
             className="inline-flex items-center gap-3 bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/30 hover:scale-[1.03] active:scale-95"
           >
               Submeter sua STARTUP<ArrowRight className="w-5 h-5" />
