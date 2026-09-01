@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'motion/react';
-import { 
-  Rocket, 
-  Handshake, 
-  Users, 
-  Compass, 
-  Trophy, 
-  Coins, 
-  ArrowRight, 
+import React, { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import {
+  Rocket,
+  Handshake,
+  Users,
+  Compass,
+  Trophy,
+  Coins,
+  ArrowRight,
   ShieldAlert,
   HeartPlus,
   Target,
   TrendingUp,
-  PenLine
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
-import { db } from '../lib/firebase';
+  PenLine,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import { collection, getDocs, query, where, orderBy } from "firebase/firestore";
+import { db } from "../lib/firebase";
 
 const Ninna4Startups = () => {
   const [mentores, setMentores] = useState<any[]>([]);
@@ -29,25 +29,29 @@ const Ninna4Startups = () => {
       try {
         // Fetch Mentores
         const mQ = query(
-          collection(db, 'mentores'), 
-          where('status', '==', 'ativo'),
-          orderBy('ordem', 'asc')
+          collection(db, "mentores"),
+          where("status", "==", "ativo"),
+          orderBy("ordem", "asc"),
         );
         const mSnapshot = await getDocs(mQ);
-        setMentores(mSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+        setMentores(
+          mSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })),
+        );
         setLoadingMentores(false);
 
         // Fetch Beneficios
         const bQ = query(
-          collection(db, 'beneficios'), 
-          where('status', '==', 'ativo'),
-          orderBy('ordem', 'asc')
+          collection(db, "beneficios"),
+          where("status", "==", "ativo"),
+          orderBy("ordem", "asc"),
         );
         const bSnapshot = await getDocs(bQ);
-        setBeneficios(bSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+        setBeneficios(
+          bSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })),
+        );
         setLoadingBeneficios(false);
       } catch (error) {
-        console.error('Erro ao buscar dados:', error);
+        console.error("Erro ao buscar dados:", error);
       }
     };
 
@@ -56,55 +60,58 @@ const Ninna4Startups = () => {
 
   const [visibleCount, setVisibleCount] = useState(6);
 
-const beneficiosVisiveis = beneficios.slice(0, visibleCount);
-const temMais = visibleCount < beneficios.length;
+  const beneficiosVisiveis = beneficios.slice(0, visibleCount);
+  const temMais = visibleCount < beneficios.length;
 
-const handleVerMais = () => {
-  setVisibleCount((prev) => prev + 6);
-};
+  const handleVerMais = () => {
+    setVisibleCount((prev) => prev + 6);
+  };
 
   const pilares = [
     {
       icon: Handshake,
       title: "Conexões com o Mercado",
-      desc: "Pontes de negócios diretas e parcerias estruturadas com grandes empresas e corporações líderes do mercado para viabilizar pilotos, validações e os primeiros grandes contratos comerciais (B2B)."
+      desc: "Pontes de negócios diretas e parcerias estruturadas com grandes empresas e corporações líderes do mercado para viabilizar pilotos, validações e os primeiros grandes contratos comerciais (B2B).",
     },
     {
       icon: Users,
       title: "Apoio de uma Rede de Mentores",
-      desc: "Mentoria de verdade focada em dores do dia a dia. Conexão direta com fundadores, executivos e especialistas consolidados que ajudam a desenhar caminhos rápidos para ultrapassar gargalos operacionais."
+      desc: "Mentoria de verdade focada em dores do dia a dia. Conexão direta com fundadores, executivos e especialistas consolidados que ajudam a desenhar caminhos rápidos para ultrapassar gargalos operacionais.",
     },
     {
       icon: Compass,
       title: "Posicionamento da Empresa",
-      desc: "Ajudamos no refinamento de marca, marketing estratégico, go-to-market e posicionamento institucional. Destaque-se na sua indústria com a chancela de credibilidade do NINNA Hub."
+      desc: "Ajudamos no refinamento de marca, marketing estratégico, go-to-market e posicionamento institucional. Destaque-se na sua indústria com a chancela de credibilidade do NINNA Hub.",
     },
     {
       icon: Trophy,
       title: "Apoio a Premiações",
-      desc: "Curadoria e preparo de candidaturas para listas de destaque nacional, rankings setoriais e premiações renomadas no cenário tech. Colocamos sua startup sob os holofotes do mercado."
+      desc: "Curadoria e preparo de candidaturas para listas de destaque nacional, rankings setoriais e premiações renomadas no cenário tech. Colocamos sua startup sob os holofotes do mercado.",
     },
     {
       icon: Coins,
       title: "Acesso a Fundo e Investimentos",
-      desc: "Proximidade contínua com redes de investidores anjo qualificados, syndicates e fundos de venture capital parceiros. Orientação técnica no pitch deck e modelagem para rodadas pre-seed e seed."
+      desc: "Proximidade contínua com redes de investidores anjo qualificados, syndicates e fundos de venture capital parceiros. Orientação técnica no pitch deck e modelagem para rodadas pre-seed e seed.",
     },
     {
       icon: PenLine,
       title: "Captação via Editais de Fomento",
-      desc: "Mapeamento e curadoria de editais como Smart Factory, Tecnova, FINEP e outros, com suporte na submissão para viabilizar o acesso a recursos não reembolsáveis."
-    }
+      desc: "Mapeamento e curadoria de editais como Smart Factory, Tecnova, FINEP e outros, com suporte na submissão para viabilizar o acesso a recursos não reembolsáveis.",
+    },
   ];
 
   return (
     <div className="bg-white">
-      <meta name="description" content="Programa do NINNA de apoio a startups, com foco em aceleração, desenvolvimento e crescimento" />
+      <meta
+        name="description"
+        content="Programa do NINNA de apoio a startups, com foco em aceleração, desenvolvimento e crescimento"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 bg-brand-darker">
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#00bcd4,transparent_70%)]" />
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -119,7 +126,10 @@ const handleVerMais = () => {
                 NINNA <span className="text-brand-teal">4 STARTUPS</span>
               </h1>
               <p className="text-xl text-gray-400 mb-12 font-medium leading-relaxed max-w-3xl mx-auto">
-                Dedicado a apoiar os negócios inovadores a superarem seus períodos mais desafiadores, impulsionando sua jornada comercial e de captação para evitar que excelentes ideias se percam cedo demais.
+                Dedicado a apoiar os negócios inovadores a superarem seus
+                períodos mais desafiadores, impulsionando sua jornada comercial
+                e de captação para evitar que excelentes ideias se percam cedo
+                demais.
               </p>
 
               <div className="flex flex-wrap justify-center gap-6">
@@ -128,7 +138,7 @@ const handleVerMais = () => {
                   className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20 flex items-center gap-3"
                 >
                   Submeter sua STARTUP <Rocket className="w-5 h-5" />
-                </Link> 
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -139,7 +149,6 @@ const handleVerMais = () => {
       <section className="py-24 bg-gray-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            
             <div className="lg:col-span-6">
               <div className="inline-block px-4 py-1.5 rounded-full bg-red-100 text-red-600 text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-red-200">
                 O Grande Desafio
@@ -149,10 +158,20 @@ const handleVerMais = () => {
                 <span className="text-red-600">VALE DA MORTE</span>
               </h2>
               <p className="text-gray-500 font-medium text-lg leading-relaxed mb-6">
-                Muitas das melhores ideias e soluções morrem cedo demais. A fase inicial e o caminho até a maturação comercial são cheios de incertezas, falta de capital, processos burocráticos lentos e ciclos infinitos de vendas B2B.
+                Muitas das melhores ideias e soluções morrem cedo demais. A fase
+                inicial e o caminho até a maturação comercial são cheios de
+                incertezas, falta de capital, processos burocráticos lentos e
+                ciclos infinitos de vendas B2B.
               </p>
               <p className="text-gray-500 font-medium text-lg leading-relaxed">
-                O programa <span className="font-extrabold text-brand-darker">NINNA 4 Startups</span> foi desenhado especificamente para atuar como um escudo estratégico durante essa etapa mais difícil. Protegemos e aceleramos a tração da sua empresa com as forças motrizes que fazem de fato a diferença.
+                O programa{" "}
+                <span className="font-extrabold text-brand-darker">
+                  NINNA 4 Startups
+                </span>{" "}
+                foi desenhado especificamente para atuar como um escudo
+                estratégico durante essa etapa mais difícil. Protegemos e
+                aceleramos a tração da sua empresa com as forças motrizes que
+                fazem de fato a diferença.
               </p>
             </div>
 
@@ -161,9 +180,12 @@ const handleVerMais = () => {
                 <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-500 flex items-center justify-center mb-6">
                   <ShieldAlert className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-black text-gray-900 uppercase tracking-wide  mb-2">90% das Startups</h3>
+                <h3 className="text-lg font-black text-gray-900 uppercase tracking-wide  mb-2">
+                  90% das Startups
+                </h3>
                 <p className="text-xs text-gray-500 font-medium leading-relaxed">
-                  Enfrentam dificuldades severas de tração comercial e estagnação financeira nos primeiros 2 anos.
+                  Enfrentam dificuldades severas de tração comercial e
+                  estagnação financeira nos primeiros 2 anos.
                 </p>
               </div>
 
@@ -171,13 +193,15 @@ const handleVerMais = () => {
                 <div className="w-12 h-12 rounded-2xl bg-brand-teal/10 text-brand-teal flex items-center justify-center mb-6">
                   <HeartPlus className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-black text-gray-900 uppercase tracking-wide  mb-2">Sobrevivência Ativa</h3>
+                <h3 className="text-lg font-black text-gray-900 uppercase tracking-wide  mb-2">
+                  Sobrevivência Ativa
+                </h3>
                 <p className="text-xs text-gray-500 font-medium leading-relaxed">
-                  A nossa intervenção e apoio contínuo dão fôlego e velocidade às conexões e validação das soluções.
+                  A nossa intervenção e apoio contínuo dão fôlego e velocidade
+                  às conexões e validação das soluções.
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -188,20 +212,25 @@ const handleVerMais = () => {
           <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-teal blur-[120px] rounded-full pointer-events-none" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 space-y-4 max-w-3xl mx-auto" id="ninna4startups-numbers-title">
+          <div
+            className="text-center mb-16 space-y-4 max-w-3xl mx-auto"
+            id="ninna4startups-numbers-title"
+          >
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em]">
               Resultados Práticos
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-wide ">
-              NOSSOS NÚMEROS NO <span className="text-brand-teal">ECOSSISTEMA</span>
+              NOSSOS NÚMEROS NO{" "}
+              <span className="text-brand-teal">ECOSSISTEMA</span>
             </h2>
             <p className="text-gray-400 font-barlow text-base leading-relaxed">
-              Evidências reais do nosso compromisso de viabilizar conexões, atrair investimentos e impulsionar caminhos de sucesso.
+              Evidências reais do nosso compromisso de viabilizar conexões,
+              atrair investimentos e impulsionar caminhos de sucesso.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -216,11 +245,12 @@ const handleVerMais = () => {
                 Startups conectadas
               </h3>
               <p className="text-sm text-gray-400 font-medium leading-relaxed">
-                Pontes comerciais de alto impacto abertas diretamente com grandes corporações e líderes de mercado.
+                Pontes comerciais de alto impacto abertas diretamente com
+                grandes corporações e líderes de mercado.
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -232,14 +262,15 @@ const handleVerMais = () => {
                 +89MM
               </span>
               <h3 className="text-lg font-black text-white uppercase tracking-wide  mb-2">
-                  Faturados nos Últimos 3 anos
+                Faturados nos Últimos 3 anos
               </h3>
               <p className="text-sm text-gray-400 font-medium leading-relaxed">
-                Recursos financeiros relevantes captados e estruturados nos últimos 3 anos de atuação direta.
+                Recursos financeiros relevantes captados e estruturados nos
+                últimos 3 anos de atuação direta.
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -264,7 +295,7 @@ const handleVerMais = () => {
       {/* The Pillars of Support (Como atuar) */}
       <section className="py-32 bg-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal/5 blur-[160px] rounded-full pointer-events-none" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-brand-teal/20">
@@ -274,7 +305,9 @@ const handleVerMais = () => {
               COMO APOIAMOS <span className="gradient-text">SUA STARTUP</span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
-              Dividimos nossa atuação em 5 pilares fundamentais, agindo diretamente nos pontos onde o ecossistema é mais exigente e vital para o crescimento.
+              Dividimos nossa atuação em 5 pilares fundamentais, agindo
+              diretamente nos pontos onde o ecossistema é mais exigente e vital
+              para o crescimento.
             </p>
           </div>
 
@@ -377,105 +410,120 @@ const handleVerMais = () => {
 
       {/* Benefits Section */}
       <section className="py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
-            Vantagens Exclusivas
-          </div>
-          <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-wide  leading-none mb-8">
-            CLUBE DE <span className="gradient-text">BENEFÍCIOS</span>
-          </h2>
-          <p className="text-gray-500 font-medium text-xl max-w-2xl mx-auto">
-            Temos parcerias estratégicas com as ferramentas que sua startup precisa para crescer com custo reduzido.
-          </p>
-        </div>
-
-        {/* NOVO: stat de prova social */}
-        <div className="flex items-center justify-center gap-4 pb-12">
-          <span className="text-6xl md:text-7xl font-black gradient-text leading-none">
-            +70
-          </span>
-          <div className="text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
+              Vantagens Exclusivas
+            </div>
+            <h2 className="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-wide  leading-none mb-8">
+              CLUBE DE <span className="gradient-text">BENEFÍCIOS</span>
+            </h2>
             <p className="text-gray-500 font-medium text-xl max-w-2xl mx-auto">
-              Benefícios<br/>Exclusivos
+              Temos parcerias estratégicas com as ferramentas que sua startup
+              precisa para crescer com custo reduzido.
             </p>
           </div>
-        </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
-          {loadingBeneficios ? (
-            Array(6).fill(0).map((_, i) => (
-              <div key={i} className="h-24 sm:h-28 md:h-32 bg-gray-50 animate-pulse rounded-2xl md:rounded-3xl" />
-            ))
-          ) : (
-            beneficiosVisiveis.map((beneficio, i) => {
-              const isAsaas = beneficio.nomeEmpresa?.toLowerCase() === 'asaas' || beneficio.logo?.toLowerCase().includes('asaas');
-              const logoSrc = isAsaas ? '/Imagens_NINNA/Asaas.png' : beneficio.logo;
-              const imgClass = isAsaas 
-                ? "max-h-10 sm:max-h-12 md:max-h-[64px] w-auto max-w-[90%] object-contain scale-110 transition-transform group-hover:scale-125" 
-                : "max-h-8 sm:max-h-10 md:max-h-12 w-auto object-contain transition-transform group-hover:scale-110";
-
-              return (
-                <motion.div
-                  key={beneficio.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: (i % 6) * 0.05 }}
-                  className="bg-white border border-gray-100 p-3 sm:p-4 md:p-6 rounded-2xl md:rounded-3xl flex items-center justify-center hover:shadow-xl transition-all group relative overflow-hidden h-24 sm:h-28 md:h-32"
-                >
-                  <img 
-                    src={logoSrc} 
-                    alt={beneficio.nomeEmpresa} 
-                    className={imgClass}
-                    referrerPolicy="no-referrer"
-                  />
-                </motion.div>
-              );
-            })
-          )}
-        </div>
-
-        {!loadingBeneficios && temMais && (
-          <div className="flex justify-center mt-10">
-            <button
-              onClick={handleVerMais}
-              className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest transition-all"
-            >
-              Ver Mais
-            </button>
-          </div>
-        )}
-
-        <div className="mt-20 p-12 rounded-[40px] bg-brand-dark overflow-hidden relative">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-brand-teal/10 blur-[100px] -translate-y-1/2 translate-x-1/2" />
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="max-w-xl">
-              <h3 className="text-3xl font-black text-white uppercase tracking-wide  mb-4">Sua empresa quer oferecer benefícios?</h3>
-              <p className="text-gray-400 font-medium">Junte-se ao nosso ecossistema e conecte sua solução com centenas de startups inovadoras.</p>
+          {/* NOVO: stat de prova social */}
+          <div className="flex items-center justify-center gap-4 pb-12">
+            <span className="text-6xl md:text-7xl font-black gradient-text leading-none">
+              +70
+            </span>
+            <div className="text-left">
+              <p className="text-gray-500 font-medium text-xl max-w-2xl mx-auto">
+                Benefícios
+                <br />
+                Exclusivos
+              </p>
             </div>
-            <img 
-                src="/Imagens_NINNA/qrcodePatrocinador.webp" 
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
+            {loadingBeneficios
+              ? Array(6)
+                  .fill(0)
+                  .map((_, i) => (
+                    <div
+                      key={i}
+                      className="h-24 sm:h-28 md:h-32 bg-gray-50 animate-pulse rounded-2xl md:rounded-3xl"
+                    />
+                  ))
+              : beneficiosVisiveis.map((beneficio, i) => {
+                  const isAsaas =
+                    beneficio.nomeEmpresa?.toLowerCase() === "asaas" ||
+                    beneficio.logo?.toLowerCase().includes("asaas");
+                  const logoSrc = isAsaas
+                    ? "/Imagens_NINNA/Asaas.png"
+                    : beneficio.logo;
+                  const imgClass = isAsaas
+                    ? "max-h-10 sm:max-h-12 md:max-h-[64px] w-auto max-w-[90%] object-contain scale-110 transition-transform group-hover:scale-125"
+                    : "max-h-8 sm:max-h-10 md:max-h-12 w-auto object-contain transition-transform group-hover:scale-110";
+
+                  return (
+                    <motion.div
+                      key={beneficio.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: (i % 6) * 0.05 }}
+                      className="bg-white border border-gray-100 p-3 sm:p-4 md:p-6 rounded-2xl md:rounded-3xl flex items-center justify-center hover:shadow-xl transition-all group relative overflow-hidden h-24 sm:h-28 md:h-32"
+                    >
+                      <img
+                        src={logoSrc}
+                        alt={beneficio.nomeEmpresa}
+                        className={imgClass}
+                        referrerPolicy="no-referrer"
+                      />
+                    </motion.div>
+                  );
+                })}
+          </div>
+
+          {!loadingBeneficios && temMais && (
+            <div className="flex justify-center mt-10">
+              <button
+                onClick={handleVerMais}
+                className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest transition-all"
+              >
+                Ver Mais
+              </button>
+            </div>
+          )}
+
+          <div className="mt-20 p-12 rounded-[40px] bg-brand-dark overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-teal/10 blur-[100px] -translate-y-1/2 translate-x-1/2" />
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="max-w-xl">
+                <h3 className="text-3xl font-black text-white uppercase tracking-wide  mb-4">
+                  Sua empresa quer oferecer benefícios?
+                </h3>
+                <p className="text-gray-400 font-medium">
+                  Junte-se ao nosso ecossistema e conecte sua solução com
+                  centenas de startups inovadoras.
+                </p>
+              </div>
+              <img
+                src="/Imagens_NINNA/qrcodePatrocinador.webp"
                 alt="Qr code para patrocinadores"
                 className="w-40 h-40 object-contain"
               />
-            <a 
-              href="https://forms.cloud.microsoft/r/J0brY9ucZF?origin=lprLink"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20"
-            >
-              Seja um Parceiro
-            </a>
+              <a
+                href="https://forms.cloud.microsoft/r/J0brY9ucZF?origin=lprLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/20"
+              >
+                Seja um Parceiro
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Cases Section */}
       <section className="py-32 bg-[#fafafa] relative overflow-hidden border-t border-gray-100">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-teal/5 blur-[140px] rounded-full pointer-events-none" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-4 border border-brand-teal/20">
@@ -485,30 +533,30 @@ const handleVerMais = () => {
               NINNA <span className="gradient-text">CASES</span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto font-medium mt-4">
-              Histórias reais de startups que aceleraram com inovação aberta, conexão corporativa e captação planejada de fomento no NINNA Hub.
+              Histórias reais de startups que aceleraram com inovação aberta,
+              conexão corporativa e captação planejada de fomento no NINNA Hub.
             </p>
           </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                
-                {/* Case 1: Pague Menos + Suri.ai */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className="bg-white border border-gray-150 rounded-[48px] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col justify-between"
-                >           
-                <div className="p-8 border-b border-gray-100 bg-gradient-to-r from-gray-50/50 to-white">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Case 1: Pague Menos + Suri.ai */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white border border-gray-150 rounded-[48px] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col justify-between"
+            >
+              <div className="p-8 border-b border-gray-100 bg-gradient-to-r from-gray-50/50 to-white">
+                <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center justify-between gap-4">
-                    <div className="flex items-center justify-between gap-4">
                     {/* Logos & Connection */}
                     <div className="flex items-center gap-4">
                       {/* Corporativa Logo */}
                       <div className="w-16 h-16 bg-red-500/[0.03] border border-red-500/20 rounded-2xl flex items-center justify-center p-3 shadow-sm bg-white shrink-0">
-                        <img 
-                          src="/Imagens_NINNA/PagueMenos.png" 
-                          alt="Pague Menos logo" 
+                        <img
+                          src="/Imagens_NINNA/PagueMenos.png"
+                          alt="Pague Menos logo"
                           className="max-h-full max-w-full object-contain"
                           referrerPolicy="no-referrer"
                         />
@@ -516,13 +564,13 @@ const handleVerMais = () => {
                       {/* Plus sign divider */}
                       <div className="text-white/40 font-black text-xl">+</div>
                       {/* Startup representation */}
-                      <img 
-                        src="/Startups/suri-cbm-logo-blue.png" 
+                      <img
+                        src="/Startups/suri-cbm-logo-blue.png"
                         alt="Suri.ai logo"
                         className="max-h-16 max-w-16 object-contain"
                         referrerPolicy="no-referrer"
-                        />
-                  </div>
+                      />
+                    </div>
                     <span className="text-[8px] font-black tracking-widest text-red-500 bg-red-50 px-2.5 py-1 rounded-full border border-red-100 uppercase">
                       Inovação Aberta
                     </span>
@@ -534,7 +582,9 @@ const handleVerMais = () => {
                     EFICIÊNCIA NO CANAL DE VENDAS VIA WHATSAPP
                   </h3>
                   <p className="text-gray-500 font-medium text-sm leading-relaxed mb-8">
-                    Uma das maiores redes de farmácias do Brasil, a Pague Menos uniu-se à Suri para digitalizar a jornada de compra e pagamento via WhatsApp nacionalmente.
+                    Uma das maiores redes de farmácias do Brasil, a Pague Menos
+                    uniu-se à Suri para digitalizar a jornada de compra e
+                    pagamento via WhatsApp nacionalmente.
                   </p>
 
                   <div className="space-y-4 mb-8">
@@ -543,8 +593,14 @@ const handleVerMais = () => {
                         <Target className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black uppercase text-gray-800 tracking-wide">O Desafio</h4>
-                        <p className="text-xs text-gray-500 font-medium">Simplificar a etapa de pagamento no WhatsApp, reduzindo abandono de carrinho e a dependência de atendimento humano.</p>
+                        <h4 className="text-[10px] font-black uppercase text-gray-800 tracking-wide">
+                          O Desafio
+                        </h4>
+                        <p className="text-xs text-gray-500 font-medium">
+                          Simplificar a etapa de pagamento no WhatsApp,
+                          reduzindo abandono de carrinho e a dependência de
+                          atendimento humano.
+                        </p>
                       </div>
                     </div>
                     <div className="flex gap-3">
@@ -552,8 +608,14 @@ const handleVerMais = () => {
                         <Rocket className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black uppercase text-gray-800 tracking-wide">A Solução</h4>
-                        <p className="text-xs text-gray-500 font-medium">Integração da Suri Shop ao WhatsApp Pay, unindo catálogo, pagamento via Pix e recuperação automatizada de carrinho.</p>
+                        <h4 className="text-[10px] font-black uppercase text-gray-800 tracking-wide">
+                          A Solução
+                        </h4>
+                        <p className="text-xs text-gray-500 font-medium">
+                          Integração da Suri Shop ao WhatsApp Pay, unindo
+                          catálogo, pagamento via Pix e recuperação automatizada
+                          de carrinho.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -563,16 +625,28 @@ const handleVerMais = () => {
               {/* Metrics block */}
               <div className="p-8 bg-gray-50 border-t border-gray-100 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">+15%</span>
-                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Transações via Pix</span>
+                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">
+                    +15%
+                  </span>
+                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">
+                    Transações via Pix
+                  </span>
                 </div>
                 <div className="border-l border-r border-gray-200">
-                  <span className="block text-2xl font-black text-gray-900 tracking-wide ">75%</span>
-                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Vendas Automatizadas</span>
+                  <span className="block text-2xl font-black text-gray-900 tracking-wide ">
+                    75%
+                  </span>
+                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">
+                    Vendas Automatizadas
+                  </span>
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">-80%</span>
-                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">Suporte Humano</span>
+                  <span className="block text-2xl font-black text-brand-teal tracking-wide ">
+                    -80%
+                  </span>
+                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">
+                    Suporte Humano
+                  </span>
                 </div>
               </div>
             </motion.div>
@@ -593,22 +667,22 @@ const handleVerMais = () => {
                     <div className="flex items-center gap-4">
                       {/* NINNA Logo */}
                       <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
-                        <img 
-                        src="/Imagens_NINNA/NINNA.png" 
-                        alt="Suri.ai logo"
-                        className="max-h-16 max-w-16 object-contain"
-                        referrerPolicy="no-referrer"
+                        <img
+                          src="/Imagens_NINNA/NINNA.png"
+                          alt="Suri.ai logo"
+                          className="max-h-16 max-w-16 object-contain"
+                          referrerPolicy="no-referrer"
                         />
                       </div>
                       {/* Plus sign divider */}
                       <div className="text-white/40 font-black text-xl">+</div>
                       {/* MOLD IAX Logo */}
                       <div className="w-16 h-16 bg-purple-500/[0.04] border border-purple-100 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0 bg-white">
-                        <img 
-                        src="/Startups/MoldIax.png" 
-                        alt="Suri.ai logo"
-                        className="max-h-16 max-w-16 object-contain"
-                        referrerPolicy="no-referrer"
+                        <img
+                          src="/Startups/MoldIax.png"
+                          alt="Suri.ai logo"
+                          className="max-h-16 max-w-16 object-contain"
+                          referrerPolicy="no-referrer"
                         />
                       </div>
                     </div>
@@ -625,7 +699,11 @@ const handleVerMais = () => {
                     Acesso a Recursos Financeiros
                   </h3>
                   <p className="text-white/60 font-barlow text-sm leading-relaxed mb-8">
-                  A MoldIAX teve acesso a recursos não reembolsáveis por meio do edital Smart Factory, viabilizando o desenvolvimento de uma solução para a indústria baseada em visão computacional e melhorias em softwares, com o suporte estratégico do NINNA Hub na estruturação e submissão do projeto.
+                    A MoldIAX teve acesso a recursos não reembolsáveis por meio
+                    do edital Smart Factory, viabilizando o desenvolvimento de
+                    uma solução para a indústria baseada em visão computacional
+                    e melhorias em softwares, com o suporte estratégico do NINNA
+                    Hub na estruturação e submissão do projeto.
                   </p>
 
                   <div className="space-y-4 mb-8">
@@ -634,8 +712,15 @@ const handleVerMais = () => {
                         <Target className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">O Desafio</h4>
-                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Melhorar a produção e eficiência das indústrias com uso de visão computacional para melhorar a qualidade dos produtos, trazer auditorias e mostrar em tempo real como podem melhorar a produção.</p>
+                        <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">
+                          O Desafio
+                        </h4>
+                        <p className="text-xs text-white/50 font-barlow leading-relaxed">
+                          Melhorar a produção e eficiência das indústrias com
+                          uso de visão computacional para melhorar a qualidade
+                          dos produtos, trazer auditorias e mostrar em tempo
+                          real como podem melhorar a produção.
+                        </p>
                       </div>
                     </div>
                     <div className="flex gap-3">
@@ -643,8 +728,13 @@ const handleVerMais = () => {
                         <TrendingUp className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">A Solução</h4>
-                        <p className="text-xs text-white/50 font-barlow leading-relaxed">Mapeamento expresso e curadoria de editais efetuada em menos de 1 mês de aceleração integrada no hub.</p>
+                        <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">
+                          A Solução
+                        </h4>
+                        <p className="text-xs text-white/50 font-barlow leading-relaxed">
+                          Mapeamento expresso e curadoria de editais efetuada em
+                          menos de 1 mês de aceleração integrada no hub.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -654,20 +744,31 @@ const handleVerMais = () => {
               {/* Metrics Block */}
               <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <span className="block text-2xl font-black text-purple-400 tracking-wide ">R$ 800K</span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Recursos</span>
+                  <span className="block text-2xl font-black text-purple-400 tracking-wide ">
+                    R$ 800K
+                  </span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">
+                    Recursos
+                  </span>
                 </div>
                 <div className="border-l border-r border-white/10">
-                  <span className="block text-2xl font-black text-white tracking-wide ">&lt; 1 mês</span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-barlow">Estudo / Acesso</span>
+                  <span className="block text-2xl font-black text-white tracking-wide ">
+                    &lt; 1 mês
+                  </span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-barlow">
+                    Estudo / Acesso
+                  </span>
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">Indústria</span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">Segmento</span>
+                  <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">
+                    Indústria
+                  </span>
+                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">
+                    Segmento
+                  </span>
                 </div>
               </div>
             </motion.div>
-
           </div>
         </div>
       </section>
@@ -675,7 +776,7 @@ const handleVerMais = () => {
       {/* Call to action section */}
       <section className="py-24 bg-brand-darker relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-teal/10 blur-[150px] rounded-full pointer-events-none" />
-        
+
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-brand-teal/20">
             Chegou a Sua Hora
@@ -685,14 +786,17 @@ const handleVerMais = () => {
             <span className="text-brand-teal">SE PERDER NO CAMINHO</span>
           </h2>
           <p className="text-gray-300 font-medium text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-            Junte-se a dezenas de empreendedores que já utilizam o NINNA Hub para catalisar o desenvolvimento de suas soluções. Estamos focados em caminhar junto com você.
+            Junte-se a dezenas de empreendedores que já utilizam o NINNA Hub
+            para catalisar o desenvolvimento de suas soluções. Estamos focados
+            em caminhar junto com você.
           </p>
 
           <Link
             to="https://app.flakeflow.com/forms/eaad3a2e-f02b-4dbf-b56e-70fefc5f094a"
             className="inline-flex items-center gap-3 bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest transition-all shadow-xl shadow-brand-teal/30 hover:scale-[1.03] active:scale-95"
           >
-              Submeter sua STARTUP<ArrowRight className="w-5 h-5" />
+            Submeter sua STARTUP
+            <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
