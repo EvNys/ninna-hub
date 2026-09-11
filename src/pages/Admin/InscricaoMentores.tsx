@@ -421,7 +421,9 @@ export default function AdminInscricoesMentores() {
             </span>
           </div>
         </div>
+      </div>
 
+      <div className="sticky top-24 z-10">
         {/* RIGHT COLUMN: Selective Candidate Profile Card Panel */}
         <div className="lg:col-span-1 self-start">
           <AnimatePresence mode="wait">
