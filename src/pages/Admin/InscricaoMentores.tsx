@@ -326,98 +326,93 @@ export default function AdminInscricoesMentores() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
         {/* LEFT COLUMN: Candidates Data Table list */}
         <div className="lg:col-span-2 bg-white border border-gray-100 rounded-[32px] overflow-hidden shadow-lg">
-          <div className="overflow-x-auto">
-            <table className="w-full table-auto border-collapse text-left">
-              <thead>
-                <tr className="border-b border-gray-100 bg-[#fafafa]">
-                  <th className="py-4.5 px-6 text-[10px] font-black uppercase tracking-widest text-gray-400">
-                    Dados do Candidato
-                  </th>
-                  <th className="py-4.5 px-6 text-[10px] font-black uppercase tracking-widest text-gray-400">
-                    Área Pretendida
-                  </th>
-                  <th className="py-4.5 px-6 text-[10px] font-black uppercase tracking-widest text-gray-400">
-                    Data
-                  </th>
-                  <th className="py-4.5 px-6 text-[10px] font-black uppercase tracking-widest text-gray-400">
-                    Status
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {loading ? (
-                  Array(5)
-                    .fill(0)
-                    .map((_, i) => (
-                      <tr
-                        key={i}
-                        className="border-b border-gray-50 animate-pulse"
-                      >
-                        <td className="py-4 px-6" colSpan={4}>
-                          <div className="h-10 bg-gray-50 rounded-2xl" />
-                        </td>
-                      </tr>
-                    ))
-                ) : filteredInscricoes.length === 0 ? (
-                  <tr>
-                    <td
-                      className="py-24 text-center cursor-default"
-                      colSpan={4}
-                    >
-                      <div className="flex flex-col items-center text-gray-400">
-                        <FileText className="w-12 h-12 mb-4 text-brand-teal opacity-25" />
-                        <span className="font-extrabold uppercase tracking-widest text-xs">
-                          Nenhum candidato encontrado
-                        </span>
-                      </div>
-                    </td>
-                  </tr>
-                ) : (
-                  filteredInscricoes.map((item) => (
+          <table className="w-full table-auto border-collapse text-left">
+            <thead>
+              <tr className="border-b border-gray-100 bg-[#fafafa]">
+                <th className="py-4.5 px-6 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                  Dados do Candidato
+                </th>
+                <th className="py-4.5 px-6 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                  Área Pretendida
+                </th>
+                <th className="py-4.5 px-6 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                  Data
+                </th>
+                <th className="py-4.5 px-6 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {loading ? (
+                Array(5)
+                  .fill(0)
+                  .map((_, i) => (
                     <tr
-                      key={item.id}
-                      onClick={() => setSelectedInscricao(item)}
-                      className={`border-b border-gray-50 hover:bg-brand-teal/[0.01] transition-all cursor-pointer ${
-                        selectedInscricao?.id === item.id
-                          ? "bg-brand-teal/[0.03]"
-                          : ""
-                      }`}
+                      key={i}
+                      className="border-b border-gray-50 animate-pulse"
                     >
-                      <td className="py-4.5 px-6">
-                        <div className="flex flex-col">
-                          <span className="font-extrabold text-[13px] text-gray-900 uppercase tracking-wide truncate max-w-[180px]">
-                            {item.nome}
-                          </span>
-                          <span className="text-xs text-gray-400 font-barlow tracking-wide">
-                            {item.email}
-                          </span>
-                          <span className="text-[10px] text-gray-400 font-medium tracking-wide mt-0.5">
-                            {item.telefone}
-                          </span>
-                        </div>
-                      </td>
-                      <td className="py-4.5 px-6">
-                        <div className="flex flex-col">
-                          <span className="text-[11px] font-bold text-gray-800 tracking-wide line-clamp-1">
-                            {item.areaMentoria}
-                          </span>
-                          <span className="text-[10px] text-gray-400 font-barlow">
-                            {item.cidade}
-                          </span>
-                        </div>
-                      </td>
-                      <td className="py-4.5 px-6 text-[11px] font-barlow text-gray-400 whitespace-nowrap">
-                        {formatDate(item.createdAt)}
-                      </td>
-                      <td className="py-4.5 px-6">
-                        {getStatusBadge(item.status)}
+                      <td className="py-4 px-6" colSpan={4}>
+                        <div className="h-10 bg-gray-50 rounded-2xl" />
                       </td>
                     </tr>
                   ))
-                )}
-              </tbody>
-            </table>
-          </div>
+              ) : filteredInscricoes.length === 0 ? (
+                <tr>
+                  <td className="py-24 text-center cursor-default" colSpan={4}>
+                    <div className="flex flex-col items-center text-gray-400">
+                      <FileText className="w-12 h-12 mb-4 text-brand-teal opacity-25" />
+                      <span className="font-extrabold uppercase tracking-widest text-xs">
+                        Nenhum candidato encontrado
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+              ) : (
+                filteredInscricoes.map((item) => (
+                  <tr
+                    key={item.id}
+                    onClick={() => setSelectedInscricao(item)}
+                    className={`border-b border-gray-50 hover:bg-brand-teal/[0.01] transition-all cursor-pointer ${
+                      selectedInscricao?.id === item.id
+                        ? "bg-brand-teal/[0.03]"
+                        : ""
+                    }`}
+                  >
+                    <td className="py-4.5 px-6">
+                      <div className="flex flex-col">
+                        <span className="font-extrabold text-[13px] text-gray-900 uppercase tracking-wide truncate max-w-[180px]">
+                          {item.nome}
+                        </span>
+                        <span className="text-xs text-gray-400 font-barlow tracking-wide">
+                          {item.email}
+                        </span>
+                        <span className="text-[10px] text-gray-400 font-medium tracking-wide mt-0.5">
+                          {item.telefone}
+                        </span>
+                      </div>
+                    </td>
+                    <td className="py-4.5 px-6">
+                      <div className="flex flex-col">
+                        <span className="text-[11px] font-bold text-gray-800 tracking-wide line-clamp-1">
+                          {item.areaMentoria}
+                        </span>
+                        <span className="text-[10px] text-gray-400 font-barlow">
+                          {item.cidade}
+                        </span>
+                      </div>
+                    </td>
+                    <td className="py-4.5 px-6 text-[11px] font-barlow text-gray-400 whitespace-nowrap">
+                      {formatDate(item.createdAt)}
+                    </td>
+                    <td className="py-4.5 px-6">
+                      {getStatusBadge(item.status)}
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
 
           <div className="p-4 bg-[#fafafa] border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 font-barlow">
             <span>
