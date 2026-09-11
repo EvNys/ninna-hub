@@ -436,7 +436,7 @@ export default function AdminInscricoesMentores() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 15 }}
-                className="bg-white border border-gray-100 p-8 rounded-[32px] shadow-xl text-left space-y-6 relative"
+                className="bg-white border border-gray-100 p-8 rounded-[32px] shadow-xl text-left space-y-6 sticky"
               >
                 {/* Profile Header */}
                 <div className="flex items-start justify-between border-b border-gray-100 pb-5">
