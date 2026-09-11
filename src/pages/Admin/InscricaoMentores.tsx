@@ -421,11 +421,9 @@ export default function AdminInscricoesMentores() {
             </span>
           </div>
         </div>
-      </div>
 
-      <div className="sticky top-24 z-10">
         {/* RIGHT COLUMN: Selective Candidate Profile Card Panel */}
-        <div className="lg:col-span-1 self-start">
+        <div className="lg:col-span-1 self-start lg:sticky lg:top-24 lg:z-10">
           <AnimatePresence mode="wait">
             {selectedInscricao ? (
               <motion.div
@@ -433,7 +431,7 @@ export default function AdminInscricoesMentores() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 15 }}
-                className="bg-white border border-gray-100 p-8 rounded-[32px] shadow-xl text-left space-y-6 sticky top-24"
+                className="bg-white border border-gray-100 p-8 rounded-[32px] shadow-xl text-left space-y-6"
               >
                 {/* Profile Header */}
                 <div className="flex items-start justify-between border-b border-gray-100 pb-5">
