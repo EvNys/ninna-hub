@@ -268,7 +268,7 @@ export default function AdminInscricoesMentores() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-12 px-6 font-sans">
+    <div className="max-h-[calc(100vh-2rem)] overflow-y-auto overscroll-contain max-w-7xl mx-auto py-12 px-6 font-sans">
       {/* Title Segment */}
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-6 pb-6 border-b border-gray-100">
         <div>
@@ -423,7 +423,7 @@ export default function AdminInscricoesMentores() {
         </div>
 
         {/* RIGHT COLUMN: Selective Candidate Profile Card Panel */}
-        <div className="lg:col-span-1 self-start lg:sticky lg:top-24 lg:z-10">
+        <div className="lg:col-span-1 self-start lg:sticky lg:top-6 lg:z-10">
           <AnimatePresence mode="wait">
             {selectedInscricao ? (
               <motion.div
@@ -431,7 +431,7 @@ export default function AdminInscricoesMentores() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 15 }}
-                className="bg-white border border-gray-100 p-8 rounded-[32px] shadow-xl text-left space-y-6"
+                className="max-h-[calc(100vh-3rem)] overflow-y-auto overscroll-contain bg-white border border-gray-100 p-8 rounded-[32px] shadow-xl text-left space-y-6"
               >
                 {/* Profile Header */}
                 <div className="flex items-start justify-between border-b border-gray-100 pb-5">
