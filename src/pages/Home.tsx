@@ -221,7 +221,7 @@ const Home = () => {
       cargo: "CEO e Fundador",
       empresa: "SURI",
       texto:
-        "O Ninna é um local de muitas trocas, onde existem grandes empresas que podem impulsionar as startups. A Suri, estava procurando exatamente esse tipo de local que pudesse impulsionar dentro das ideias do que a gente já vinha trabalhando.",
+        "O Ninna é um local de muitas trocas, onde existem grandes empresas que podem impulsionar as startups. A Suri estava procurando exatamente esse tipo de local que pudesse impulsionar dentro das ideias do que a gente já vinha trabalhando.",
       avatar: "Fotos do Time NINNA/TiagoAmarante.webp",
     },
     {

@@ -152,7 +152,7 @@ const Eventos = () => {
       descricao:
         "O maior fórum de conexões estratégicas de Fortaleza. Pitch sessions de startups pré-selecionadas com diretores de inovação corporativa de grandes marcas regionais.",
       data: "2026-06-18",
-      horario: "14:00 às 18:00",
+      horario: "14:00 Ás 18:00",
       local: "Auditório Principal NINNA",
       linkInscricao: "https://wa.me/5585989844779",
       destaque: true,
@@ -164,7 +164,7 @@ const Eventos = () => {
       descricao:
         "Painel interativo focado na implementação prática de ferramentas preditivas e LLMs para avaliação de teses tecnológicas em portfólios corporativos.",
       data: "2026-07-02",
-      horario: "09:00 às 11:30",
+      horario: "09:00 Ás 11:30",
       local: "Sala Pregão NINNA",
       linkInscricao: "https://wa.me/5585989844779",
       destaque: false,
@@ -254,12 +254,12 @@ const Eventos = () => {
                 IMPACTO
               </h2>
               <p className="text-white/60 text-lg leading-relaxed font-barlow">
-                No NINNA, nós não cedemos apenas espaço físico. Nós apoiaremos a
+                No NINNA, nós não cedemos apenas espaço físico. Nós apoiamos a
                 sua marca na ponte com o ecossistema tecnológico, ajudando na
                 atração de startups, corporações e decisores do mercado local.
               </p>
               <p className="text-white/60 text-lg leading-relaxed font-barlow">
-                Conecte-se com nosso hub e usufrua de uma comunidade vibrante
+                Conecte-se com nosso hub e usufrua de uma comunidade vibrante e
                 ativa de mentores, investidores, líderes institucionais e
                 parceiros estratégicos.
               </p>
@@ -398,7 +398,7 @@ const Eventos = () => {
                     Ver Agenda de Eventos
                   </h3>
                   <p className="text-white/60 font-barlow text-sm sm:text-base leading-relaxed">
-                    Participe de sessões de networking e treinamentos
+                    Participe de sessões de networking, treinamentos
                     enriquecedores e happy hours. Fique por dentro de todos os
                     encontros de startups e palestras promovidas no hub.
                   </p>
@@ -586,7 +586,7 @@ const Eventos = () => {
                   Sessões de mentoria coletiva e masterclasses altamente
                   técnicas. Formatos desenhados para que especialistas sêniores,
                   diretores de tecnologia e empresários voluntários de renome
-                  ofereçam deep-dives práticos direcionados à superação de
+                  ofereçam deep-dives práticos direcionados Á superação de
                   desafios técnicos operacionais, produto e capital de risco.
                 </p>
                 <ul className="space-y-3 pt-2">
@@ -811,7 +811,7 @@ const Eventos = () => {
                     Um ambiente dinâmico focado em metodologias ágeis de
                     cocriação, workshops focados em desenvolvimento e hackathons
                     empresariais. Projetado com layout modular que se adapta
-                    instantaneamente às dinâmicas de equipes.
+                    instantaneamente Ás dinâmicas de equipes.
                   </p>
 
                   <div className="border-t border-white/10 pt-6 space-y-4">
@@ -833,7 +833,7 @@ const Eventos = () => {
                       </div>
                       <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
-                        <span>Mesa para Coffee</span>
+                        <span>Mesa para Café</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
@@ -897,7 +897,7 @@ const Eventos = () => {
                       </div>
                       <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
-                        <span>Mesa para Coffee</span>
+                        <span>Mesa para Café</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
@@ -982,7 +982,7 @@ const Eventos = () => {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-6 right-6 bg-brand-teal text-white font-black uppercase text-[9px] tracking-widest px-4 py-1.5 rounded-full shadow-lg">
-                  Espaço de trabalho
+                  Espaço de Trabalho
                 </div>
               </div>
               <div className="p-8 flex-grow flex flex-col justify-between">
@@ -992,11 +992,11 @@ const Eventos = () => {
                       ESTAÇÕES DE TRABALHO
                     </h4>
                     <span className="text-[10px] font-black text-brand-teal uppercase tracking-widest bg-brand-teal/5 px-4 py-2 rounded-xl border border-brand-teal/10">
-                      Capacidade: 1 pessoa por cabine
+                      Capacidade: 1 Pessoa por cabine
                     </span>
                   </div>
                   <p className="text-white/60 font-barlow leading-relaxed mb-6">
-                    Um ambiente próprio para trabalho e projetos pessoais
+                    Um ambiente próprio para trabalho e projetos pessoais.
                   </p>
 
                   <div className="border-t border-white/10 pt-6 space-y-4">
@@ -1018,7 +1018,7 @@ const Eventos = () => {
                       </div>
                       <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
-                        <span>Àgua e Café</span>
+                        <span>Água e Café</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-white/70 font-barlow">
                         <Check className="w-4 h-4 text-brand-teal shrink-0" />
