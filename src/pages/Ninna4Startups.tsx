@@ -657,11 +657,11 @@ const Ninna4Startups = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[48px] overflow-hidden shadow-2xl hover:border-brand-teal/30 transition-all duration-500 flex flex-col justify-between"
+              className="bg-white border border-gray-100 rounded-[48px] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col justify-between"
             >
               <div>
                 {/* Header inside Card */}
-                <div className="p-8 border-b border-white/10 bg-gradient-to-r from-white/[0.02] to-transparent">
+                <div className="p-8 border-b border-gray-100 bg-gradient-to-r from-gray-50/50 to-white">
                   <div className="flex items-center justify-between gap-4">
                     {/* Logos & Connection */}
                     <div className="flex items-center gap-4">
@@ -675,7 +675,7 @@ const Ninna4Startups = () => {
                         />
                       </div>
                       {/* Plus sign divider */}
-                      <div className="text-white/40 font-black text-xl">+</div>
+                      <div className="text-gray-300 font-black text-xl">+</div>
                       {/* MOLD IAX Logo */}
                       <div className="w-16 h-16 bg-purple-500/[0.04] border border-purple-100 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0 bg-white">
                         <img
@@ -695,10 +695,10 @@ const Ninna4Startups = () => {
 
                 {/* Core Content */}
                 <div className="p-8 md:p-10">
-                  <h3 className="text-2xl font-black text-white uppercase tracking-wide  leading-none mb-4 group-hover:text-brand-teal transition-colors">
+                  <h3 className="text-2xl font-black text-gray-900 uppercase tracking-wide leading-none mb-4">
                     Acesso a Recursos Financeiros
                   </h3>
-                  <p className="text-white/60 font-barlow text-sm leading-relaxed mb-8">
+                  <p className="text-gray-500 font-medium text-sm leading-relaxed mb-8">
                     A MoldIAX teve acesso a recursos não reembolsáveis por meio
                     do edital Smart Factory, viabilizando o desenvolvimento de
                     uma solução para a indústria baseada em visão computacional
@@ -712,10 +712,10 @@ const Ninna4Startups = () => {
                         <Target className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">
+                        <h4 className="text-[10px] font-black uppercase text-gray-800 tracking-wide">
                           O Desafio
                         </h4>
-                        <p className="text-xs text-white/50 font-barlow leading-relaxed">
+                        <p className="text-xs text-gray-500 font-medium leading-relaxed">
                           Melhorar a produção e eficiência das indústrias com
                           uso de visão computacional para melhorar a qualidade
                           dos produtos, trazer auditorias e mostrar em tempo
@@ -728,10 +728,10 @@ const Ninna4Startups = () => {
                         <TrendingUp className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black font-inter uppercase text-white tracking-widest">
+                        <h4 className="text-[10px] font-black uppercase text-gray-800 tracking-wide">
                           A Solução
                         </h4>
-                        <p className="text-xs text-white/50 font-barlow leading-relaxed">
+                        <p className="text-xs text-gray-500 font-medium leading-relaxed">
                           Mapeamento expresso e curadoria de editais efetuada em
                           menos de 1 mês de aceleração integrada no hub.
                         </p>
@@ -742,20 +742,20 @@ const Ninna4Startups = () => {
               </div>
 
               {/* Metrics Block */}
-              <div className="p-8 bg-white/[0.015] border-t border-white/10 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
+              <div className="p-8 bg-gray-50 border-t border-gray-100 rounded-b-[48px] grid grid-cols-3 gap-4 text-center">
                 <div>
                   <span className="block text-2xl font-black text-purple-400 tracking-wide ">
                     R$ 800K
                   </span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">
+                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">
                     Recursos
                   </span>
                 </div>
-                <div className="border-l border-r border-white/10">
-                  <span className="block text-2xl font-black text-white tracking-wide ">
+                <div className="border-l border-r border-gray-200">
+                  <span className="block text-2xl font-black text-gray-900 tracking-wide">
                     &lt; 1 mês
                   </span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider font-barlow">
+                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">
                     Estudo / Acesso
                   </span>
                 </div>
@@ -763,7 +763,7 @@ const Ninna4Startups = () => {
                   <span className="block text-2xl font-black text-[#0ae2b1] tracking-wide ">
                     Indústria
                   </span>
-                  <span className="text-[8px] font-black uppercase text-white/40 tracking-wider">
+                  <span className="text-[8px] font-black uppercase text-gray-400 tracking-wider">
                     Segmento
                   </span>
                 </div>
