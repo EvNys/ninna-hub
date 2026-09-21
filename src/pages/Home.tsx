@@ -285,27 +285,32 @@ const Home = () => {
             </motion.div>
 
             <h1 className="text-7xl md:text-[80px] font-black tracking-wide leading-[1.00] mb-8 text-[#F5F5F5]">
-              CONECTANDO PESSOAS
-              <br className="mb-6" />
-              <span className="gradient-text">NEGÓCIOS E</span>{" "}
-              <span className="inline-block px-6 py-2 md:px-5 md:py-4 bg-gradient-to-r from-brand-teal to-brand-green text-white rounded-3xl md:rounded-[48px] shadow-xl shadow-brand-teal/20 transform hover:scale-[1.02] transition-transform duration-300 align-middle">
-                INOVAÇÃO
+              Transformamos
+              <br className="mb-1" />
+              <span className="gradient-text">desafios de negócio </span>{" "}
+              <span className="inline-block px-6 py-2 md:px-5 md:py-4 bg-gradient-to-r from-brand-teal to-brand-green text-white rounded-3xl md:rounded-[42px] shadow-xl shadow-brand-teal/20 transform hover:scale-[1.02] transition-transform duration-300 align-middle">
+                em inovação aplicada.
               </span>
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
               <p className="text-xl text-[#F5F5F5] leading-relaxed border-l-2 border-brand-teal pl-8 md:col-span-2 font-medium">
-                No NINNA Hub, startups, empresas, investidores e instituições
-                encontram o ambiente ideal para colaborar, desenvolver soluções
-                e construir o futuro da inovação.
+                Estratégia, Inteligência Artificial, inovação e ecossistema
+                conectados para transformar oportunidades em resultados.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row space-y-4 pt-7 sm:space-y-0 sm:space-x-6">
+            <div className="mt-10 flex w-full flex-col items-stretch justify-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+              <Link
+                to="/empresas"
+                className="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl bg-brand-teal px-6 py-4 text-center text-xs font-black uppercase tracking-widest text-white shadow-xl shadow-brand-teal/20 transition-all hover:bg-brand-teal/90 sm:w-auto sm:px-8"
+              >
+                Quero transformar minha empresa <Rocket className="w-5 h-5" />
+              </Link>
               <Link
                 to="/startups"
-                className="btn-primary flex items-center justify-center h-16 px-10 text-lg shadow-lg shadow-brand-teal/20"
+                className="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-center text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-white/10 sm:w-auto sm:px-8"
               >
-                Fazer Parte <ArrowRight className="ml-2 w-6 h-6" />
+                Sou uma startup <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </motion.div>
@@ -344,13 +349,20 @@ const Home = () => {
               </div>
               <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-wide leading-[1]">
                 O HUB QUE CONECTA <br />
-                <span className="text-brand-teal">INOVAÇÃO A RESULTADOS</span>
+                <span className="text-brand-teal">
+                  Inovação para gerar resultados.
+                </span>
               </h2>
               <p className="text-white/60 text-xl font-medium leading-relaxed max-w-xl">
-                O NINNA Hub conecta grandes empresas, startups, investidores,
-                universidades e lideranças para transformar desafios em
-                oportunidades de negócio. Somos um ambiente onde conexões geram
-                inovação, crescimento e impacto para todo o ecossistema.
+                Apoiamos organizações desde a definição de onde inovar até a
+                implementação de soluções. Combinamos estratégia, tecnologia,
+                inteligência artificial, startups e ecossistema para acelerar a
+                transformação dos negócios.{" "}
+                <strong className="text-white font-barlow">
+                  Estratégia + Execução + Ecossistema{" "}
+                </strong>
+                não entregamos apenas recomendações. Estruturamos a inovação e
+                apoiamos sua execução.
               </p>
             </motion.div>
 
@@ -380,18 +392,25 @@ const Home = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
             <div className="max-w-2xl">
               <div className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-[10px] font-black uppercase tracking-wider mb-4">
-                Nossas Frentes
+                DO NORDESTE PARA TRANSFORMAR NEGÓCIOS.
               </div>
               <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-wide">
-                UM ECOSSISTEMA.{" "}
+                UM ECOSSISTEMA <br />
                 <span className="gradient-text font-black">
-                  MÚLTIPLAS FORMAS DE GERAR IMPACTO
+                  que acelera a execução.
                 </span>
               </h2>
               <p className="text-white/60 text-xl leading-relaxed font-barlow">
-                Criamos conexões estratégicas entre empresas, startups e
-                comunidade para acelerar a inovação aberta, desenvolver novos
-                negócios e fortalecer o ecossistema de inovação do Nordeste.
+                Grandes transformações não acontecem isoladamente, o NINNA
+                conecta os atores necessários para transformar desafios em:
+                <br className="mb-4" />
+                <strong className="text-white font-barlow">
+                  soluções, corporações, startups, universidades & centros de
+                  pesquisa, especialistas, tecnologia.
+                </strong>
+                <br className="mb-8" />
+                Capital Mais do que conectar pessoas, orquestramos capacidades
+                para fazer a inovação acontecer.
               </p>
             </div>
           </div>

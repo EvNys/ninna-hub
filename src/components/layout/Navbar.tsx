@@ -1,9 +1,11 @@
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Menu, 
-  X, 
-  Rocket, 
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "motion/react";
+import {
+  Menu,
+  X,
+  Rocket,
+  Target,
+  Zap,
   ShieldCheck,
   Calendar,
   Laptop,
@@ -15,12 +17,19 @@ import {
   CalendarClock,
   Handshake,
   LogIn,
-} from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { useAuth } from '../../contexts/AuthContext';
-import { collection, getDocs, query, where, orderBy, limit } from 'firebase/firestore';
-import { db } from '../../lib/firebase';
-import { NAV_LINKS, EVENTOS_NINNA } from '../../data/navigation';
+} from "lucide-react";
+import { useState, useEffect } from "react";
+import { useAuth } from "../../contexts/AuthContext";
+import {
+  collection,
+  getDocs,
+  query,
+  where,
+  orderBy,
+  limit,
+} from "firebase/firestore";
+import { db } from "../../lib/firebase";
+import { NAV_LINKS, EVENTOS_NINNA } from "../../data/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,31 +38,49 @@ const Navbar = () => {
 
   // Dropdown hover handling
   const [isDropdownActive, setIsDropdownActive] = useState(false);
-  const [isStartupsDropdownActive, setIsStartupsDropdownActive] = useState(false);
+  const [isStartupsDropdownActive, setIsStartupsDropdownActive] =
+    useState(false);
+  const [isCompaniesDropdownActive, setIsCompaniesDropdownActive] =
+    useState(false);
   const [timeoutId, setTimeoutId] = useState<any>(null);
   const [startupsTimeoutId, setStartupsTimeoutId] = useState<any>(null);
+  const [companiesTimeoutId, setCompaniesTimeoutId] = useState<any>(null);
 
   const showDropdown = () => {
-  if (timeoutId) {
-    clearTimeout(timeoutId);
-    setTimeoutId(null);
-  }
-  // Fecha o dropdown de Startups ao abrir Ecossistema
-  if (startupsTimeoutId) clearTimeout(startupsTimeoutId);
-  setIsStartupsDropdownActive(false);
-  setIsDropdownActive(true);
-};
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+      setTimeoutId(null);
+    }
+    // Fecha o dropdown de Startups ao abrir Ecossistema
+    if (startupsTimeoutId) clearTimeout(startupsTimeoutId);
+    setIsStartupsDropdownActive(false);
+    setIsCompaniesDropdownActive(false);
+    setIsDropdownActive(true);
+  };
 
-const showStartupsDropdown = () => {
-  if (startupsTimeoutId) {
-    clearTimeout(startupsTimeoutId);
-    setStartupsTimeoutId(null);
-  }
-  // Fecha o dropdown de Ecossistema ao abrir Startups
-  if (timeoutId) clearTimeout(timeoutId);
-  setIsDropdownActive(false);
-  setIsStartupsDropdownActive(true);
-};
+  const showStartupsDropdown = () => {
+    if (startupsTimeoutId) {
+      clearTimeout(startupsTimeoutId);
+      setStartupsTimeoutId(null);
+    }
+    // Fecha o dropdown de Ecossistema ao abrir Startups
+    if (timeoutId) clearTimeout(timeoutId);
+    setIsDropdownActive(false);
+    setIsCompaniesDropdownActive(false);
+    setIsStartupsDropdownActive(true);
+  };
+
+  const showCompaniesDropdown = () => {
+    if (companiesTimeoutId) {
+      clearTimeout(companiesTimeoutId);
+      setCompaniesTimeoutId(null);
+    }
+    if (timeoutId) clearTimeout(timeoutId);
+    if (startupsTimeoutId) clearTimeout(startupsTimeoutId);
+    setIsDropdownActive(false);
+    setIsStartupsDropdownActive(false);
+    setIsCompaniesDropdownActive(true);
+  };
 
   const hideDropdown = () => {
     if (timeoutId) {
@@ -75,20 +102,34 @@ const showStartupsDropdown = () => {
     setStartupsTimeoutId(id);
   };
 
+  const hideCompaniesDropdown = () => {
+    if (companiesTimeoutId) {
+      clearTimeout(companiesTimeoutId);
+    }
+    const id = setTimeout(() => {
+      setIsCompaniesDropdownActive(false);
+    }, 300);
+    setCompaniesTimeoutId(id);
+  };
+
   // Clean timeouts on unmount
   useEffect(() => {
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
       if (startupsTimeoutId) clearTimeout(startupsTimeoutId);
+      if (companiesTimeoutId) clearTimeout(companiesTimeoutId);
     };
-  }, [timeoutId, startupsTimeoutId]);
+  }, [timeoutId, startupsTimeoutId, companiesTimeoutId]);
 
   // Dados de navegação ficam em src/data/navigation.ts (editáveis sem mexer no código).
   const ninnaEvents = EVENTOS_NINNA;
   const navLinks = NAV_LINKS;
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-lg border-b border-[#1a1a2e]" style={{ backgroundColor: '#1a1a2e' }}>
+    <nav
+      className="sticky top-0 z-50 backdrop-blur-lg border-b border-[#1a1a2e]"
+      style={{ backgroundColor: "#1a1a2e" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
@@ -104,37 +145,49 @@ const showStartupsDropdown = () => {
           {/* Desktop Links */}
           <div className="hidden lg:block h-full">
             <div className="ml-10 flex items-center space-x-4 lg:space-x-6 xl:space-x-8 h-full">
-              
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
                   onMouseEnter={
-                    link.name === 'Ecossistema' 
-                      ? showDropdown 
-                      : link.name === 'Startups'
-                      ? showStartupsDropdown
-                      : undefined
+                    link.name === "Empresas"
+                      ? showCompaniesDropdown
+                      : link.name === "Ecossistema"
+                        ? showDropdown
+                        : link.name === "Startups"
+                          ? showStartupsDropdown
+                          : undefined
                   }
                   onMouseLeave={
-                    link.name === 'Ecossistema' 
-                      ? hideDropdown 
-                      : link.name === 'Startups'
-                      ? hideStartupsDropdown
-                      : undefined
+                    link.name === "Empresas"
+                      ? hideCompaniesDropdown
+                      : link.name === "Ecossistema"
+                        ? hideDropdown
+                        : link.name === "Startups"
+                          ? hideStartupsDropdown
+                          : undefined
                   }
                   className={`px-3 py-2 rounded-md text-[10px] font-black uppercase tracking-[0.2em] transition-colors relative flex items-center gap-1 ${
                     location.pathname === link.path
-                      ? 'text-[#00c9a7]'
-                      : 'text-[#f8f8f8] hover:text-[#00c9a7]'
+                      ? "text-[#00c9a7]"
+                      : "text-[#f8f8f8] hover:text-[#00c9a7]"
                   }`}
                 >
                   <span>{link.name}</span>
-                  {link.name === 'Ecossistema' && (
-                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isDropdownActive ? 'rotate-180 text-[#00c9a7]' : 'text-[#f8f8f8]'}`} />
+                  {link.name === "Ecossistema" && (
+                    <ChevronDown
+                      className={`w-3 h-3 transition-transform duration-300 ${isDropdownActive ? "rotate-180 text-[#00c9a7]" : "text-[#f8f8f8]"}`}
+                    />
                   )}
-                  {link.name === 'Startups' && (
-                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isStartupsDropdownActive ? 'rotate-180 text-[#00c9a7]' : 'text-[#f8f8f8]'}`} />
+                  {link.name === "Startups" && (
+                    <ChevronDown
+                      className={`w-3 h-3 transition-transform duration-300 ${isStartupsDropdownActive ? "rotate-180 text-[#00c9a7]" : "text-[#f8f8f8]"}`}
+                    />
+                  )}
+                  {link.name === "Empresas" && (
+                    <ChevronDown
+                      className={`w-3 h-3 transition-transform duration-300 ${isCompaniesDropdownActive ? "rotate-180 text-[#00c9a7]" : "text-[#f8f8f8]"}`}
+                    />
                   )}
                 </Link>
               ))}
@@ -146,25 +199,27 @@ const showStartupsDropdown = () => {
                 >
                   Seja um mentor
                 </Link> */}
-              {user && (
-                <Link
-                  to={isAdmin || isEditor ? "/admin" : "/dashboard/comunidade"}
-                  className="flex items-center space-x-1 px-4 py-2 bg-brand-teal/10 hover:bg-brand-teal/20 rounded-full text-[10px] font-black uppercase tracking-widest text-brand-teal transition-all"
-                >
-                  <ShieldCheck className="w-4 h-4" />
-                  <span>{isAdmin || isEditor ? 'Admin' : 'Membro'}</span>
-                </Link>
-              )}
-              {!user && (
-                <Link
-                  to="/admin/login"
-                  className="px-4 py-2 border border-brand-teal/20 hover:bg-brand-teal/5 text-brand-teal rounded-full text-[10px] font-black uppercase tracking-widest transition-all"
-                >
-                  Login
-                </Link>
-              )}
+                {user && (
+                  <Link
+                    to={
+                      isAdmin || isEditor ? "/admin" : "/dashboard/comunidade"
+                    }
+                    className="flex items-center space-x-1 px-4 py-2 bg-brand-teal/10 hover:bg-brand-teal/20 rounded-full text-[10px] font-black uppercase tracking-widest text-brand-teal transition-all"
+                  >
+                    <ShieldCheck className="w-4 h-4" />
+                    <span>{isAdmin || isEditor ? "Admin" : "Membro"}</span>
+                  </Link>
+                )}
+                {!user && (
+                  <Link
+                    to="/admin/login"
+                    className="px-4 py-2 border border-brand-teal/20 hover:bg-brand-teal/5 text-brand-teal rounded-full text-[10px] font-black uppercase tracking-widest transition-all"
+                  >
+                    Login
+                  </Link>
+                )}
+              </div>
             </div>
-          </div>
           </div>
 
           {/* Mobile menu button */}
@@ -173,7 +228,11 @@ const showStartupsDropdown = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-brand-teal hover:bg-gray-100 focus:outline-none transition-colors"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -194,14 +253,94 @@ const showStartupsDropdown = () => {
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 rounded-lg text-xs font-black uppercase tracking-widest transition-colors ${
                     location.pathname === link.path
-                      ? 'text-brand-teal bg-brand-teal/10'
-                      : 'text-gray-300 hover:text-brand-teal hover:bg-white/5'
+                      ? "text-brand-teal bg-brand-teal/10"
+                      : "text-gray-300 hover:text-brand-teal hover:bg-white/5"
                   }`}
                 >
                   {link.name}
                 </Link>
 
-                {link.name === 'Startups' && (
+                {link.name === "Empresas" && (
+                  <div className="pl-2 pr-1 py-0.5 space-y-1">
+                    <Link
+                      to="/empresas#bloco1"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center gap-2.5 p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
+                    >
+                      <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
+                        <Target className="w-3.5 h-3.5" />
+                      </span>
+                      <span className="flex-1 min-w-0">
+                        <span className="block text-[10px] font-black uppercase tracking-wide text-white leading-tight">
+                          Estratégia &amp; Governança
+                        </span>
+                        <span className="block text-[10px] text-gray-400 normal-case font-normal leading-tight">
+                          Quero clareza onde estou
+                        </span>
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
+                    </Link>
+
+                    <Link
+                      to="/empresas#bloco2"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center gap-2.5 p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
+                    >
+                      <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
+                        <Zap className="w-3.5 h-3.5" />
+                      </span>
+                      <span className="flex-1 min-w-0">
+                        <span className="block text-[10px] font-black uppercase tracking-wide text-white leading-tight">
+                          Inovação Aplicada
+                        </span>
+                        <span className="block text-[10px] text-gray-400 normal-case font-normal leading-tight">
+                          Estruturar minha inovação
+                        </span>
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
+                    </Link>
+
+                    <Link
+                      to="/empresas#bloco3"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center gap-2.5 p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
+                    >
+                      <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
+                        <Handshake className="w-3.5 h-3.5" />
+                      </span>
+                      <span className="flex-1 min-w-0">
+                        <span className="block text-[10px] font-black uppercase tracking-wide text-white leading-tight">
+                          Inovação Aberta
+                        </span>
+                        <span className="block text-[10px] text-gray-400 normal-case font-normal leading-tight">
+                          Executar com parceiros
+                        </span>
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
+                    </Link>
+
+                    <button
+                      type="button"
+                      disabled
+                      title="Página em construção"
+                      className="flex w-full items-center gap-2.5 p-2 rounded-lg bg-white/[0.02] text-left opacity-60 cursor-not-allowed"
+                    >
+                      <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
+                        <Sparkles className="w-3.5 h-3.5" />
+                      </span>
+                      <span className="flex-1 min-w-0">
+                        <span className="block text-[10px] font-black uppercase tracking-wide text-white leading-tight">
+                          Inteligência Artificial
+                        </span>
+                        <span className="block text-[10px] text-gray-400 normal-case font-normal leading-tight">
+                          Página em construção
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                )}
+
+                {link.name === "Startups" && (
                   <div className="pl-2 pr-1 py-0.5 space-y-1">
                     <Link
                       to="/startups/ninna-4-startups"
@@ -262,10 +401,10 @@ const showStartupsDropdown = () => {
                   </div>
                 )}
 
-                {link.name === 'Ecossistema' && (
+                {link.name === "Ecossistema" && (
                   <div className="pl-2 pr-1 py-0.5 space-y-1">
                     <a
-                    href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20Audit%C3%B3rio%20para%20um%20evento"
+                      href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20Audit%C3%B3rio%20para%20um%20evento"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setIsOpen(false)}
@@ -280,12 +419,12 @@ const showStartupsDropdown = () => {
                       <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
                     </a>
 
-                    <a 
-                    href="https://wa.me/558532114201?text=Ol%C3%A1%21%20Gostaria%20de%20ser%20parceiro%20do%20NINNA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsDropdownActive(false)}
-                    className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
+                    <a
+                      href="https://wa.me/558532114201?text=Ol%C3%A1%21%20Gostaria%20de%20ser%20parceiro%20do%20NINNA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsDropdownActive(false)}
+                      className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
                     >
                       <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
                         <Handshake className="w-3.5 h-3.5" />
@@ -301,28 +440,30 @@ const showStartupsDropdown = () => {
             ))}
 
             {user ? (
-            <Link
-              to={isAdmin || isEditor ? "/admin" : "/dashboard/comunidade"}
-              onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 mt-0.5 rounded-lg text-xs font-black uppercase tracking-widest text-brand-teal hover:bg-white/5"
-            >
-              {isAdmin || isEditor ? 'Painel Administrativo' : 'Portal do Membro'}
-            </Link>
-          ) : (
-            <Link
-              to="/admin/login"
-              onClick={() => setIsOpen(false)}
-              className="flex items-center gap-2.5 mt-0.5 p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] transition-colors group border border-brand-teal/20"
-            >
-              <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
-                <LogIn className="w-3.5 h-3.5" />
-              </span>
-              <span className="flex-1 min-w-0 text-[10px] font-black uppercase tracking-wide text-brand-teal">
-                Login
-              </span>
-              <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
-            </Link>
-          )}
+              <Link
+                to={isAdmin || isEditor ? "/admin" : "/dashboard/comunidade"}
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 mt-0.5 rounded-lg text-xs font-black uppercase tracking-widest text-brand-teal hover:bg-white/5"
+              >
+                {isAdmin || isEditor
+                  ? "Painel Administrativo"
+                  : "Portal do Membro"}
+              </Link>
+            ) : (
+              <Link
+                to="/admin/login"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-2.5 mt-0.5 p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] transition-colors group border border-brand-teal/20"
+              >
+                <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
+                  <LogIn className="w-3.5 h-3.5" />
+                </span>
+                <span className="flex-1 min-w-0 text-[10px] font-black uppercase tracking-wide text-brand-teal">
+                  Login
+                </span>
+                <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
+              </Link>
+            )}
 
             {user && (
               <Link
@@ -330,14 +471,130 @@ const showStartupsDropdown = () => {
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 mt-0.5 rounded-lg text-xs font-black uppercase tracking-widest text-brand-teal hover:bg-white/5"
               >
-                {isAdmin || isEditor ? 'Painel Administrativo' : 'Portal do Membro'}
+                {isAdmin || isEditor
+                  ? "Painel Administrativo"
+                  : "Portal do Membro"}
               </Link>
             )}
           </div>
         </motion.div>
       )}
 
-    {/* Horizontal Mega Menu for Ecossistema */}
+      {/* Horizontal Mega Menu for Empresas */}
+      <AnimatePresence>
+        {isCompaniesDropdownActive && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            onMouseEnter={showCompaniesDropdown}
+            onMouseLeave={hideCompaniesDropdown}
+            className="absolute top-20 left-0 w-full border-b border-[#0a0a0a]/30 shadow-2xl z-40 hidden md:block"
+            style={{ backgroundColor: "#0a0a0a" }}
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-left">
+              <div className="mb-6">
+                <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em]">
+                  Soluções para empresas
+                </span>
+                <p className="text-white/50 text-xs font-inter mt-2">
+                  Da clareza estratégica à execução da inovação.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-4 gap-4">
+                <Link
+                  to="/empresas#bloco1"
+                  onClick={() => setIsCompaniesDropdownActive(false)}
+                  className="group flex flex-col justify-between min-h-48 p-5 bg-white/5 hover:bg-white/10 border border-transparent hover:border-[#00c9a7]/30 rounded-2xl transition-all"
+                >
+                  <div>
+                    <Target className="w-6 h-6 text-[#00c9a7] mb-5" />
+                    <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white group-hover:text-[#00c9a7] transition-colors">
+                      Estratégia &amp; Governança
+                    </h5>
+                    <p className="text-white/50 text-xs font-inter leading-relaxed mt-3">
+                      Definimos direcionadores, prioridades e mecanismos para
+                      transformar inovação em uma capacidade organizacional.
+                    </p>
+                  </div>
+                  <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-widest mt-5">
+                    Quero clareza onde estou{" "}
+                    <ArrowRight className="inline w-3 h-3 ml-1" />
+                  </span>
+                </Link>
+
+                <Link
+                  to="/empresas#bloco2"
+                  onClick={() => setIsCompaniesDropdownActive(false)}
+                  className="group flex flex-col justify-between min-h-48 p-5 bg-white/5 hover:bg-white/10 border border-transparent hover:border-[#00c9a7]/30 rounded-2xl transition-all"
+                >
+                  <div>
+                    <Zap className="w-6 h-6 text-[#00c9a7] mb-5" />
+                    <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white group-hover:text-[#00c9a7] transition-colors">
+                      Inovação Aplicada
+                    </h5>
+                    <p className="text-white/50 text-xs font-inter leading-relaxed mt-3">
+                      Transformamos desafios organizacionais em projetos,
+                      experimentos e novas soluções.
+                    </p>
+                  </div>
+                  <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-widest mt-5">
+                    Estruturar minha inovação{" "}
+                    <ArrowRight className="inline w-3 h-3 ml-1" />
+                  </span>
+                </Link>
+
+                <Link
+                  to="/empresas#bloco3"
+                  onClick={() => setIsCompaniesDropdownActive(false)}
+                  className="group flex flex-col justify-between min-h-48 p-5 bg-white/5 hover:bg-white/10 border border-transparent hover:border-[#00c9a7]/30 rounded-2xl transition-all"
+                >
+                  <div>
+                    <Handshake className="w-6 h-6 text-[#00c9a7] mb-5" />
+                    <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white group-hover:text-[#00c9a7] transition-colors">
+                      Inovação Aberta
+                    </h5>
+                    <p className="text-white/50 text-xs font-inter leading-relaxed mt-3">
+                      Conectamos desafios corporativos às melhores soluções do
+                      mercado e do ecossistema.
+                    </p>
+                  </div>
+                  <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-widest mt-5">
+                    Executar com parceiros{" "}
+                    <ArrowRight className="inline w-3 h-3 ml-1" />
+                  </span>
+                </Link>
+
+                <button
+                  type="button"
+                  disabled
+                  title="Página em construção"
+                  className="group flex flex-col justify-between min-h-48 p-5 bg-white/[0.02] text-left border border-white/5 rounded-2xl opacity-60 cursor-not-allowed"
+                >
+                  <div>
+                    <Sparkles className="w-6 h-6 text-[#00c9a7] mb-5" />
+                    <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white">
+                      Inteligência Artificial
+                    </h5>
+                    <p className="text-white/50 text-xs font-inter leading-relaxed mt-3">
+                      Apoiamos organizações na adoção estruturada de IA, da
+                      preparação das lideranças à identificação e implementação
+                      de casos de uso.
+                    </p>
+                  </div>
+                  <span className="text-[9px] font-black text-white/40 uppercase tracking-widest mt-5">
+                    Em breve
+                  </span>
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Horizontal Mega Menu for Ecossistema */}
       <AnimatePresence>
         {isDropdownActive && (
           <motion.div
@@ -348,48 +605,57 @@ const showStartupsDropdown = () => {
             onMouseEnter={showDropdown}
             onMouseLeave={hideDropdown}
             className="absolute top-20 left-0 w-full border-b border-[#0a0a0a]/30 shadow-2xl z-40 hidden md:block"
-            style={{ backgroundColor: '#0a0a0a' }}
+            style={{ backgroundColor: "#0a0a0a" }}
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-left">
               <div className="grid grid-cols-12 gap-8">
-                
                 {/* Ações e Reservas */}
                 <div className="col-span-5 border-r border-white/10 pr-8">
-                  <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block mb-4">Ações e Reservas</span>
+                  <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block mb-4">
+                    Ações e Reservas
+                  </span>
                   <div className="flex flex-col gap-3">
-                    <a 
-                    href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20Audit%C3%B3rio%20Premium%20do%20NINNA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsDropdownActive(false)}
-                    className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
-                  >
+                    <a
+                      href="https://wa.me/558532114201?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20Audit%C3%B3rio%20Premium%20do%20NINNA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsDropdownActive(false)}
+                      className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
+                    >
                       <div className="flex items-center gap-4">
                         <div className="w-10 h-10 rounded-xl bg-[#00c9a7]/20 flex items-center justify-center text-[#00c9a7] group-hover:scale-110 transition-transform">
                           <Calendar className="w-5 h-5" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Agende seu Evento</h5>
-                          <p className="text-white/40 text-xs font-inter">Reserve o Auditório Premium do NINNA</p>
+                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">
+                            Agende seu Evento
+                          </h5>
+                          <p className="text-white/40 text-xs font-inter">
+                            Reserve o Auditório Premium do NINNA
+                          </p>
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
                     </a>
 
-                    <a 
-                    href="https://wa.me/558532114201?text=Ol%C3%A1%21%20Gostaria%20de%20ser%20parceiro%20do%20NINNA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsDropdownActive(false)}
-                    className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
-                    > 
+                    <a
+                      href="https://wa.me/558532114201?text=Ol%C3%A1%21%20Gostaria%20de%20ser%20parceiro%20do%20NINNA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsDropdownActive(false)}
+                      className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/20 rounded-2xl transition-all"
+                    >
                       <div className="flex items-center gap-4">
                         <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
                           <Sparkles className="w-5 h-5 text-amber-300" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white">Seja um Parceiro</h5>
-                          <p className="text-white/60 text-xs font-inter">Impulsione a sua marca no ecossistema</p>
+                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white">
+                            Seja um Parceiro
+                          </h5>
+                          <p className="text-white/60 text-xs font-inter">
+                            Impulsione a sua marca no ecossistema
+                          </p>
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all" />
@@ -401,9 +667,11 @@ const showStartupsDropdown = () => {
                 <div className="col-span-7 pl-4 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block">Eventos do NINNA</span>
-                      <Link 
-                        to="/agenda" 
+                      <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block">
+                        Eventos do NINNA
+                      </span>
+                      <Link
+                        to="/agenda"
                         onClick={() => setIsDropdownActive(false)}
                         className="text-[9px] font-black text-white/40 hover:text-[#00c9a7] uppercase tracking-widest transition-all"
                       >
@@ -413,7 +681,10 @@ const showStartupsDropdown = () => {
 
                     <div className="grid grid-cols-2 gap-4">
                       {ninnaEvents.map((ev) => (
-                        <div key={ev.nome} className="bg-white/5 border border-white/10 p-5 rounded-2xl flex flex-col justify-between hover:shadow-md transition-shadow group">
+                        <div
+                          key={ev.nome}
+                          className="bg-white/5 border border-white/10 p-5 rounded-2xl flex flex-col justify-between hover:shadow-md transition-shadow group"
+                        >
                           <div className="space-y-1">
                             <h6 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest leading-normal text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">
                               {ev.nome}
@@ -438,11 +709,11 @@ const showStartupsDropdown = () => {
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                     <p className="text-[9px] text-white/40 font-bold uppercase tracking-widest italic text-right">
-                      Nossa equipe está pronta para integrar sua marca e comunidade.
+                      Nossa equipe está pronta para integrar sua marca e
+                      comunidade.
                     </p>
                   </div>
                 </div>
-
               </div>
             </div>
           </motion.div>
@@ -460,14 +731,15 @@ const showStartupsDropdown = () => {
             onMouseEnter={showStartupsDropdown}
             onMouseLeave={hideStartupsDropdown}
             className="absolute top-20 left-0 w-full border-b border-[#0a0a0a]/30 shadow-2xl z-40 hidden md:block"
-            style={{ backgroundColor: '#0a0a0a' }}
+            style={{ backgroundColor: "#0a0a0a" }}
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-left">
               <div className="grid grid-cols-12 gap-8">
-                
                 {/* Programas */}
                 <div className="col-span-6 border-r border-white/10 pr-8">
-                  <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block mb-4">Programas e Performance</span>
+                  <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block mb-4">
+                    Programas e Performance
+                  </span>
                   <div className="flex flex-col gap-3">
                     <Link
                       to="/startups/ninna-4-startups"
@@ -479,8 +751,12 @@ const showStartupsDropdown = () => {
                           <Rocket className="w-5 h-5" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">NINNA 4 Startups</h5>
-                          <p className="text-white/40 text-xs font-inter">Aceleração comercial, fomento e mentorias sob medida</p>
+                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">
+                            NINNA 4 Startups
+                          </h5>
+                          <p className="text-white/40 text-xs font-inter">
+                            Aceleração comercial, fomento e mentorias sob medida
+                          </p>
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
@@ -496,8 +772,12 @@ const showStartupsDropdown = () => {
                           <Laptop className="w-5 h-5" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">Portfólio de Startups</h5>
-                          <p className="text-white/40 text-xs font-inter">Conheça as soluções inovadoras do nosso ecossistema</p>
+                          <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-[#f8f8f8] group-hover:text-[#00c9a7] transition-colors">
+                            Portfólio de Startups
+                          </h5>
+                          <p className="text-white/40 text-xs font-inter">
+                            Conheça as soluções inovadoras do nosso ecossistema
+                          </p>
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#00c9a7] group-hover:translate-x-1 transition-all" />
@@ -508,7 +788,9 @@ const showStartupsDropdown = () => {
                 {/* Parceria */}
                 <div className="col-span-6 pl-4 flex flex-col justify-between">
                   <div>
-                    <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block mb-4">Inscrição e Parcerias</span>
+                    <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-[0.3em] block mb-4">
+                      Inscrição e Parcerias
+                    </span>
                     <Link
                       to="/empresas"
                       onClick={() => setIsStartupsDropdownActive(false)}
@@ -519,8 +801,13 @@ const showStartupsDropdown = () => {
                           <Sparkles className="w-6 h-6 text-amber-300" />
                         </div>
                         <div className="text-left">
-                          <h5 className="font-barlowCondensed-Black uppercase text-[11px] tracking-widest text-white">Faça parte do NINNA 4 Startups</h5>
-                          <p className="text-white/70 text-xs font-inter mt-1">Inscreva sua startup no portal para parceria estratégica com o NINNA</p>
+                          <h5 className="font-barlowCondensed-Black uppercase text-[11px] tracking-widest text-white">
+                            Faça parte do NINNA 4 Startups
+                          </h5>
+                          <p className="text-white/70 text-xs font-inter mt-1">
+                            Inscreva sua startup no portal para parceria
+                            estratégica com o NINNA
+                          </p>
                         </div>
                       </div>
                       <ArrowRight className="w-5 h-5 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all" />
@@ -529,11 +816,11 @@ const showStartupsDropdown = () => {
 
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 pt-6 border-t border-white/10">
                     <p className="text-[9px] text-white/40 font-bold uppercase tracking-widest italic">
-                      Conecte sua startup a dezenas de grandes corporações patrocinadoras do NINNA Hub.
+                      Conecte sua startup a dezenas de grandes corporações
+                      patrocinadoras do NINNA Hub.
                     </p>
                   </div>
                 </div>
-
               </div>
             </div>
           </motion.div>
