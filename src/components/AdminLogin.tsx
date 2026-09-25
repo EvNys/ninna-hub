@@ -1,40 +1,43 @@
-import React, { useState } from 'react';
-import { motion } from 'motion/react';
-import { Lock, Mail, ChevronLeft, ArrowRight, Eye, EyeOff } from 'lucide-react';
-import NinnaHubLogo from './NinnaLogo';
+import React, { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { motion } from "motion/react";
+import { Lock, Mail, ChevronLeft, ArrowRight, Eye, EyeOff } from "lucide-react";
+import NinnaHubLogo from "./NinnaLogo";
+import { auth } from "../lib/firebase";
 
 interface AdminLoginProps {
   onLoginSuccess: (email: string) => void;
   onClose: () => void;
 }
 
-const ADMIN_CREDENTIALS: Record<string, string> = {
-  [import.meta.env.VITE_ADMIN_EMAIL ?? '']: import.meta.env.VITE_ADMIN_PASSWORD ?? '',
-};
-
-export default function AdminLogin({ onLoginSuccess, onClose }: AdminLoginProps) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+export default function AdminLogin({
+  onLoginSuccess,
+  onClose,
+}: AdminLoginProps) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
+  const [errorMsg, setErrorMsg] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setErrorMsg('');
+    setErrorMsg("");
 
-    setTimeout(() => {
+    try {
       const cleanEmail = email.trim().toLowerCase();
-      const expectedPassword = ADMIN_CREDENTIALS[cleanEmail];
-
-      if (expectedPassword && password === expectedPassword) {
-        onLoginSuccess(cleanEmail);
-      } else {
-        setErrorMsg('Credenciais incorretas. Verifique seu e-mail e senha.');
-      }
+      const { user } = await signInWithEmailAndPassword(
+        auth,
+        cleanEmail,
+        password,
+      );
+      onLoginSuccess(user.email ?? cleanEmail);
+    } catch {
+      setErrorMsg("Credenciais incorretas. Verifique seu e-mail e senha.");
+    } finally {
       setLoading(false);
-    }, 800);
+    }
   };
 
   return (
@@ -60,7 +63,9 @@ export default function AdminLogin({ onLoginSuccess, onClose }: AdminLoginProps)
 
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-blue-600"></span>
-            <span className="text-xs font-bold text-slate-600">Painel de Acesso</span>
+            <span className="text-xs font-bold text-slate-600">
+              Painel de Acesso
+            </span>
           </div>
         </div>
 
@@ -73,7 +78,8 @@ export default function AdminLogin({ onLoginSuccess, onClose }: AdminLoginProps)
               </span>
             </div>
             <p className="text-xs text-slate-500 max-w-xs mx-auto leading-relaxed">
-              Consulte submissões registradas, emita pareceres de aptidão e exporte relatórios integrados.
+              Consulte submissões registradas, emita pareceres de aptidão e
+              exporte relatórios integrados.
             </p>
           </div>
 
@@ -114,7 +120,7 @@ export default function AdminLogin({ onLoginSuccess, onClose }: AdminLoginProps)
                   <Lock className="w-4.5 h-4.5 text-slate-400" />
                 </span>
                 <input
-                  type={showPassword ? 'text' : 'password'}
+                  type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
@@ -126,7 +132,11 @@ export default function AdminLogin({ onLoginSuccess, onClose }: AdminLoginProps)
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3.5 top-3.5 text-slate-400 hover:text-slate-600"
                 >
-                  {showPassword ? <EyeOff className="w-4.5 h-4.5" /> : <Eye className="w-4.5 h-4.5" />}
+                  {showPassword ? (
+                    <EyeOff className="w-4.5 h-4.5" />
+                  ) : (
+                    <Eye className="w-4.5 h-4.5" />
+                  )}
                 </button>
               </div>
             </div>

@@ -8,7 +8,7 @@ export interface MentorApplication {
   area: string;
   indicacao: string;
   motivacao: string;
-  status: 'pendente' | 'apto' | 'não apto';
+  status: "pendente" | "apto" | "não apto";
   observacoes: string;
   dataEnvio: string;
   score?: number; // 1 to 5 assessment rating
@@ -18,3 +18,5 @@ export interface AdminUser {
   email: string;
   role: string;
 }
+
+export * from "./types/firestore";

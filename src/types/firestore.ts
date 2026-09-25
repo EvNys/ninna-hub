@@ -15,10 +15,10 @@
  * também aqui para manter os tipos em dia.
  */
 
-import { Timestamp } from 'firebase/firestore';
+import { Timestamp } from "firebase/firestore";
 
 /** Status comum usado pela maioria das entidades. */
-export type Status = 'ativo' | 'inativo';
+export type Status = "ativo" | "inativo";
 
 /**
  * Campos presentes em todos os documentos.
@@ -27,8 +27,8 @@ export type Status = 'ativo' | 'inativo';
  */
 export interface BaseDoc {
   id: string;
-  createdAt?: Timestamp;
-  updatedAt?: Timestamp;
+  createdAt?: Timestamp | string;
+  updatedAt?: Timestamp | string;
 }
 
 /** Coleção: `startups` */
@@ -43,6 +43,8 @@ export interface Startup extends BaseDoc {
   site?: string;
   cidade?: string;
   estado?: string;
+  order?: number;
+  statusVitrine?: string;
   status: Status;
 }
 
@@ -115,6 +117,7 @@ export interface Premiacao extends BaseDoc {
   organizacao?: string;
   ano?: string;
   imagem?: string;
+  destaque?: boolean;
   status: Status;
 }
 
@@ -152,7 +155,7 @@ export interface Aula extends BaseDoc {
 export interface Usuario extends BaseDoc {
   name: string;
   email: string;
-  role: 'user' | 'admin' | 'editor';
+  role: "user" | "admin" | "editor";
   telefone?: string;
   nomeEmpresa?: string;
 }
