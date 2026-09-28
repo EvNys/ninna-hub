@@ -666,7 +666,7 @@ const Ninna4Startups = () => {
                     {/* Logos & Connection */}
                     <div className="flex items-center gap-4">
                       {/* NINNA Logo */}
-                      <div className="w-16 h-16 bg-brand-teal/5 border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
+                      <div className="w-16 h-16 bg-[#0a0e1a] border border-brand-teal/20 rounded-2xl flex flex-col items-center justify-center p-2 shadow-sm shrink-0">
                         <img
                           src="/Imagens_NINNA/NINNA.png"
                           alt="Suri.ai logo"
