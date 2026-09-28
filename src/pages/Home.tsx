@@ -252,7 +252,7 @@ const Home = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 pb-32 overflow-hidden">
+      <section className="relative min-h-screen flex items-center py-24 sm:pt-20 sm:pb-32 overflow-hidden">
         {/* Invading Shapes */}
 
         <div className="absolute inset-0 z-0">
@@ -270,31 +270,31 @@ const Home = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-4xl"
+            className="w-full max-w-4xl"
           >
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
-              className="inline-flex items-center space-x-3 px-4 py-2 rounded-full bg-brand-teal/5 border border-brand-teal/10 mb-10 backdrop-blur-sm"
+              className="inline-flex max-w-full items-center space-x-3 px-3 py-2 sm:px-4 rounded-full bg-brand-teal/5 border border-brand-teal/10 mb-8 sm:mb-10 backdrop-blur-sm"
             >
               <div className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
-              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">
+              <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.15em] sm:tracking-[0.3em] text-brand-teal">
                 Inovação se dá pelo resultado
               </span>
             </motion.div>
 
-            <h1 className="text-7xl md:text-[80px] font-black tracking-wide leading-[1.00] mb-8 text-[#F5F5F5]">
+            <h1 className="text-4xl sm:text-6xl md:text-[80px] font-black tracking-wide leading-[1.05] mb-6 sm:mb-8 text-[#F5F5F5]">
               Transformamos
               <br className="mb-1" />
               <span className="gradient-text">desafios de negócio </span>{" "}
-              <span className="inline-block px-6 py-2 md:px-5 md:py-4 bg-gradient-to-r from-brand-teal to-brand-green text-white rounded-3xl md:rounded-[42px] shadow-xl shadow-brand-teal/20 transform hover:scale-[1.02] transition-transform duration-300 align-middle">
+              <span className="inline-block max-w-full px-3 py-2 sm:px-6 md:px-5 md:py-4 bg-gradient-to-r from-brand-teal to-brand-green text-white rounded-2xl sm:rounded-3xl md:rounded-[42px] shadow-xl shadow-brand-teal/20 transform hover:scale-[1.02] transition-transform duration-300 align-middle">
                 em inovação aplicada.
               </span>
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
-              <p className="text-xl text-[#F5F5F5] leading-relaxed border-l-2 border-brand-teal pl-8 md:col-span-2 font-medium">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-end">
+              <p className="text-base sm:text-xl text-[#F5F5F5] leading-relaxed border-l-2 border-brand-teal pl-4 sm:pl-8 md:col-span-2 font-medium">
                 Estratégia, Inteligência Artificial, inovação e ecossistema
                 conectados para transformar oportunidades em resultados.
               </p>
@@ -302,15 +302,16 @@ const Home = () => {
             <div className="mt-10 flex w-full flex-col items-stretch justify-start gap-4 sm:flex-row sm:items-center sm:gap-5">
               <Link
                 to="/empresas"
-                className="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl bg-brand-teal px-6 py-4 text-center text-xs font-black uppercase tracking-widest text-white shadow-xl shadow-brand-teal/20 transition-all hover:bg-brand-teal/90 sm:w-auto sm:px-8"
+                className="inline-flex min-h-14 w-full max-w-full items-center justify-center gap-3 rounded-2xl bg-brand-teal px-4 sm:px-6 py-4 text-center text-[10px] sm:text-xs leading-relaxed font-black uppercase tracking-widest text-white shadow-xl shadow-brand-teal/20 transition-all hover:bg-brand-teal/90 sm:w-auto sm:px-8"
               >
-                Quero transformar minha empresa <Rocket className="w-5 h-5" />
+                Quero transformar minha empresa{" "}
+                <Rocket className="w-5 h-5 shrink-0" />
               </Link>
               <Link
                 to="/startups"
-                className="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-center text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-white/10 sm:w-auto sm:px-8"
+                className="inline-flex min-h-14 w-full max-w-full items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 sm:px-6 py-4 text-center text-[10px] sm:text-xs leading-relaxed font-black uppercase tracking-widest text-white transition-all hover:bg-white/10 sm:w-auto sm:px-8"
               >
-                Sou uma startup <ArrowRight className="w-5 h-5" />
+                Sou uma startup <ArrowRight className="w-5 h-5 shrink-0" />
               </Link>
             </div>
           </motion.div>

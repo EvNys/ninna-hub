@@ -243,7 +243,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="lg:hidden relative bg-[#0a0e1a] border-b border-white/10"
+          className="lg:hidden relative max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain bg-[#0a0e1a] border-b border-white/10"
         >
           <div className="px-3 pt-2 pb-3 space-y-0.5">
             {navLinks.map((link) => (
