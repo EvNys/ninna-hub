@@ -440,8 +440,8 @@ export default function PortfolioStartupsShowcase() {
           {/* Botão para o portfólio completo */}
           {!loading && startups.length > 0 && (
             <div className="flex justify-center mt-10">
-              <a
-                href="/Startups/Portfolio"
+              <Link
+                to="/startups/portfolio"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-teal text-white font-medium hover:bg-brand-teal/90 hover:shadow-lg hover:shadow-brand-teal/20 transition-all duration-300"
               >
                 Ver portfólio completo
@@ -450,7 +450,7 @@ export default function PortfolioStartupsShowcase() {
                   strokeLinejoin="round"
                   d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                 />
-              </a>
+              </Link>
             </div>
           )}
 
