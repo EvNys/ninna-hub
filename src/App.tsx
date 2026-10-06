@@ -30,6 +30,7 @@ import AdminLogin from "./pages/Admin/Login";
 import AdminDashboard from "./pages/Admin/Dashboard";
 import AdminStartups from "./pages/Admin/Startups";
 import AdminMentores from "./pages/Admin/Mentores";
+import AdminInvestidores from "./pages/Admin/Investidores";
 import AdminInscricoesMentores from "./pages/Admin/InscricaoMentores";
 import AdminInscricaoMasterClass from "./pages/Admin/InscricaoMasterClass";
 import AdminBeneficios from "./pages/Admin/Beneficios";
@@ -146,6 +147,16 @@ function AppContent() {
               <AdminProtectedRoute>
                 <AdminLayout>
                   <AdminMentores />
+                </AdminLayout>
+              </AdminProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/investidores"
+            element={
+              <AdminProtectedRoute>
+                <AdminLayout>
+                  <AdminInvestidores />
                 </AdminLayout>
               </AdminProtectedRoute>
             }

@@ -15,13 +15,27 @@ import {
   Cpu,
   ExternalLink,
   MessageCircle,
+  Mail,
+  Phone,
+  Building2,
+  Briefcase,
+  Send,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 // Lista da vitrine fica em src/data/startups-fallback.ts (editável sem mexer no código).
 import { NINNA_STARTUPS } from "../data/startups-fallback";
-import { collection, getDocs, query, where, orderBy } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  getDocs,
+  query,
+  serverTimestamp,
+  where,
+  orderBy,
+} from "firebase/firestore";
 import { db } from "../lib/firebase";
+import { toast } from "sonner";
 interface Startup {
   id: string;
   nome: string;
@@ -32,6 +46,17 @@ interface Startup {
 export default function PortfolioStartupsShowcase() {
   const [startups, setStartups] = useState<Startup[]>([]);
   const [loading, setLoading] = useState(true);
+  const [investorSubmitting, setInvestorSubmitting] = useState(false);
+  const [investorForm, setInvestorForm] = useState({
+    nome: "",
+    email: "",
+    telefone: "",
+    empresa: "",
+    tipoInvestidor: "",
+    teseInvestimento: "",
+    ticketInvestimento: "",
+    mensagem: "",
+  });
 
   useEffect(() => {
     const fetchStartups = async () => {
@@ -57,6 +82,35 @@ export default function PortfolioStartupsShowcase() {
 
     fetchStartups();
   }, []);
+
+  const handleInvestorSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setInvestorSubmitting(true);
+
+    try {
+      await addDoc(collection(db, "inscricoes_investidores"), {
+        ...investorForm,
+        status: "pendente",
+        createdAt: serverTimestamp(),
+      });
+      setInvestorForm({
+        nome: "",
+        email: "",
+        telefone: "",
+        empresa: "",
+        tipoInvestidor: "",
+        teseInvestimento: "",
+        ticketInvestimento: "",
+        mensagem: "",
+      });
+      toast.success("Interesse enviado! Nossa equipe entrará em contato.");
+    } catch (error) {
+      console.error("Erro ao enviar cadastro de investidor:", error);
+      toast.error("Não foi possível enviar seu cadastro. Tente novamente.");
+    } finally {
+      setInvestorSubmitting(false);
+    }
+  };
 
   return (
     <div>
@@ -408,6 +462,175 @@ export default function PortfolioStartupsShowcase() {
               Nenhuma startup ativa encontrada no momento.
             </p>
           )}
+        </div>
+      </section>
+
+      <section
+        id="investidores"
+        className="relative overflow-hidden bg-[#071018] py-24 text-white"
+      >
+        <div className="pointer-events-none absolute -right-20 top-0 h-96 w-96 rounded-full bg-brand-teal/10 blur-[130px]" />
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-5 lg:px-8">
+          <div className="lg:col-span-2 lg:pt-8">
+            <div className="mb-6 inline-block rounded-full border border-brand-teal/20 bg-brand-teal/10 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.3em] text-brand-teal">
+              Rede de capital NINNA
+            </div>
+            <h2 className="mb-6 text-4xl font-black uppercase leading-none tracking-wide md:text-6xl">
+              Invista no futuro da{" "}
+              <span className="text-brand-teal">inovação</span>
+            </h2>
+            <p className="mb-8 text-lg leading-relaxed text-gray-400">
+              Faça parte da rede de investidores do NINNA e conecte-se a
+              startups inovadoras e oportunidades estratégicas de investimento.
+              Conte um pouco sobre sua tese para começarmos essa conversa.
+            </p>
+            <div className="space-y-4 text-sm font-medium text-gray-300">
+              <div className="flex items-center gap-3">
+                <Briefcase className="h-5 w-5 text-brand-teal" />
+                Acesso a oportunidades qualificadas
+              </div>
+              <div className="flex items-center gap-3">
+                <Users className="h-5 w-5 text-brand-teal" />
+                Conexão com o ecossistema NINNA
+              </div>
+            </div>
+          </div>
+
+          <form
+            onSubmit={handleInvestorSubmit}
+            className="grid gap-5 rounded-[32px] border border-white/10 bg-white/[0.04] p-6 shadow-2xl sm:grid-cols-2 sm:p-9 lg:col-span-3"
+          >
+            <div className="space-y-2">
+              <label htmlFor="investor-name" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+                Nome completo *
+              </label>
+              <input
+                id="investor-name"
+                required
+                autoComplete="name"
+                value={investorForm.nome}
+                onChange={(event) => setInvestorForm({ ...investorForm, nome: event.target.value })}
+                className="w-full rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition focus:border-brand-teal"
+              />
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="investor-company" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+                Empresa / fundo
+              </label>
+              <div className="relative">
+                <Building2 className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
+                <input
+                  id="investor-company"
+                  value={investorForm.empresa}
+                  onChange={(event) => setInvestorForm({ ...investorForm, empresa: event.target.value })}
+                  className="w-full rounded-xl border border-white/10 bg-[#0b151e] py-3 pl-11 pr-4 text-white outline-none transition focus:border-brand-teal"
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="investor-email" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+                E-mail *
+              </label>
+              <div className="relative">
+                <Mail className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
+                <input
+                  id="investor-email"
+                  type="email"
+                  required
+                  autoComplete="email"
+                  value={investorForm.email}
+                  onChange={(event) => setInvestorForm({ ...investorForm, email: event.target.value })}
+                  className="w-full rounded-xl border border-white/10 bg-[#0b151e] py-3 pl-11 pr-4 text-white outline-none transition focus:border-brand-teal"
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="investor-phone" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+                Telefone
+              </label>
+              <div className="relative">
+                <Phone className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
+                <input
+                  id="investor-phone"
+                  type="tel"
+                  autoComplete="tel"
+                  value={investorForm.telefone}
+                  onChange={(event) => setInvestorForm({ ...investorForm, telefone: event.target.value })}
+                  className="w-full rounded-xl border border-white/10 bg-[#0b151e] py-3 pl-11 pr-4 text-white outline-none transition focus:border-brand-teal"
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="investor-type" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+                Perfil de investidor *
+              </label>
+              <select
+                id="investor-type"
+                required
+                value={investorForm.tipoInvestidor}
+                onChange={(event) => setInvestorForm({ ...investorForm, tipoInvestidor: event.target.value })}
+                className="w-full rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition focus:border-brand-teal"
+              >
+                <option value="">Selecione</option>
+                <option value="investidor-anjo">Investidor-anjo</option>
+                <option value="venture-capital">Fundo de venture capital</option>
+                <option value="corporativo">Investidor corporativo</option>
+                <option value="family-office">Family office</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="investor-ticket" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+                Faixa de investimento
+              </label>
+              <select
+                id="investor-ticket"
+                value={investorForm.ticketInvestimento}
+                onChange={(event) => setInvestorForm({ ...investorForm, ticketInvestimento: event.target.value })}
+                className="w-full rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition focus:border-brand-teal"
+              >
+                <option value="">Selecione</option>
+                <option value="ate-100-mil">Até R$ 100 mil</option>
+                <option value="100-a-500-mil">R$ 100 mil a R$ 500 mil</option>
+                <option value="500-mil-a-2-milhoes">R$ 500 mil a R$ 2 milhões</option>
+                <option value="acima-2-milhoes">Acima de R$ 2 milhões</option>
+                <option value="a-definir">A definir</option>
+              </select>
+            </div>
+            <div className="space-y-2 sm:col-span-2">
+              <label htmlFor="investor-thesis" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+                Tese / setores de interesse *
+              </label>
+              <input
+                id="investor-thesis"
+                required
+                placeholder="Ex.: saúde, agronegócio, inteligência artificial..."
+                value={investorForm.teseInvestimento}
+                onChange={(event) => setInvestorForm({ ...investorForm, teseInvestimento: event.target.value })}
+                className="w-full rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-brand-teal"
+              />
+            </div>
+            <div className="space-y-2 sm:col-span-2">
+              <label htmlFor="investor-message" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+                Como gostaria de se conectar?
+              </label>
+              <textarea
+                id="investor-message"
+                rows={3}
+                value={investorForm.mensagem}
+                onChange={(event) => setInvestorForm({ ...investorForm, mensagem: event.target.value })}
+                className="w-full resize-y rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition focus:border-brand-teal"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={investorSubmitting}
+              className="inline-flex items-center justify-center gap-3 rounded-xl bg-brand-teal px-6 py-4 text-xs font-black uppercase tracking-widest text-white transition hover:bg-brand-teal/90 disabled:cursor-not-allowed disabled:opacity-60 sm:col-span-2"
+            >
+              {investorSubmitting ? "Enviando..." : "Quero fazer parte da rede"}
+              <Send className="h-4 w-4" />
+            </button>
+          </form>
         </div>
       </section>
 

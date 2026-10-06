@@ -158,6 +158,11 @@ service cloud.firestore {
       allow read, update, delete: if isAdmin();
     }
 
+    match /inscricoes_investidores/{id} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+
     match /master_class/{id} {
       allow create: if true;
       allow read, update, delete: if isAdmin();
