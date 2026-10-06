@@ -499,7 +499,10 @@ export default function PortfolioStartupsShowcase() {
             className="grid gap-5 rounded-[32px] border border-white/10 bg-white/[0.04] p-6 shadow-2xl sm:grid-cols-2 sm:p-9 lg:col-span-3"
           >
             <div className="space-y-2">
-              <label htmlFor="investor-name" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+              <label
+                htmlFor="investor-name"
+                className="text-xs font-bold uppercase tracking-wider text-gray-300"
+              >
                 Nome completo *
               </label>
               <input
@@ -507,12 +510,17 @@ export default function PortfolioStartupsShowcase() {
                 required
                 autoComplete="name"
                 value={investorForm.nome}
-                onChange={(event) => setInvestorForm({ ...investorForm, nome: event.target.value })}
+                onChange={(event) =>
+                  setInvestorForm({ ...investorForm, nome: event.target.value })
+                }
                 className="w-full rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition focus:border-brand-teal"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="investor-company" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+              <label
+                htmlFor="investor-company"
+                className="text-xs font-bold uppercase tracking-wider text-gray-300"
+              >
                 Empresa / fundo
               </label>
               <div className="relative">
@@ -520,13 +528,21 @@ export default function PortfolioStartupsShowcase() {
                 <input
                   id="investor-company"
                   value={investorForm.empresa}
-                  onChange={(event) => setInvestorForm({ ...investorForm, empresa: event.target.value })}
+                  onChange={(event) =>
+                    setInvestorForm({
+                      ...investorForm,
+                      empresa: event.target.value,
+                    })
+                  }
                   className="w-full rounded-xl border border-white/10 bg-[#0b151e] py-3 pl-11 pr-4 text-white outline-none transition focus:border-brand-teal"
                 />
               </div>
             </div>
             <div className="space-y-2">
-              <label htmlFor="investor-email" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+              <label
+                htmlFor="investor-email"
+                className="text-xs font-bold uppercase tracking-wider text-gray-300"
+              >
                 E-mail *
               </label>
               <div className="relative">
@@ -537,13 +553,21 @@ export default function PortfolioStartupsShowcase() {
                   required
                   autoComplete="email"
                   value={investorForm.email}
-                  onChange={(event) => setInvestorForm({ ...investorForm, email: event.target.value })}
+                  onChange={(event) =>
+                    setInvestorForm({
+                      ...investorForm,
+                      email: event.target.value,
+                    })
+                  }
                   className="w-full rounded-xl border border-white/10 bg-[#0b151e] py-3 pl-11 pr-4 text-white outline-none transition focus:border-brand-teal"
                 />
               </div>
             </div>
             <div className="space-y-2">
-              <label htmlFor="investor-phone" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+              <label
+                htmlFor="investor-phone"
+                className="text-xs font-bold uppercase tracking-wider text-gray-300"
+              >
                 Telefone
               </label>
               <div className="relative">
@@ -553,26 +577,42 @@ export default function PortfolioStartupsShowcase() {
                   type="tel"
                   autoComplete="tel"
                   value={investorForm.telefone}
-                  onChange={(event) => setInvestorForm({ ...investorForm, telefone: event.target.value })}
+                  onChange={(event) =>
+                    setInvestorForm({
+                      ...investorForm,
+                      telefone: event.target.value,
+                    })
+                  }
                   className="w-full rounded-xl border border-white/10 bg-[#0b151e] py-3 pl-11 pr-4 text-white outline-none transition focus:border-brand-teal"
                 />
               </div>
             </div>
             <div className="space-y-2">
-              <label htmlFor="investor-ticket" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+              <label
+                htmlFor="investor-ticket"
+                className="text-xs font-bold uppercase tracking-wider text-gray-300"
+              >
                 Faixa de investimento
               </label>
               <input
                 id="investor-ticket"
                 type="text"
-                placeholder="Ex.: R$ 50 mil a R$ 200 mil por startup"
+                placeholder="ex.: R$ 1.000,00 - R$ 3.000,00"
                 value={investorForm.ticketInvestimento}
-                onChange={(event) => setInvestorForm({ ...investorForm, ticketInvestimento: event.target.value })}
+                onChange={(event) =>
+                  setInvestorForm({
+                    ...investorForm,
+                    ticketInvestimento: event.target.value,
+                  })
+                }
                 className="w-full rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-brand-teal"
               />
             </div>
             <div className="space-y-2 sm:col-span-2">
-              <label htmlFor="investor-thesis" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+              <label
+                htmlFor="investor-thesis"
+                className="text-xs font-bold uppercase tracking-wider text-gray-300"
+              >
                 Tese / setores de interesse *
               </label>
               <input
@@ -580,19 +620,32 @@ export default function PortfolioStartupsShowcase() {
                 required
                 placeholder="Ex.: saúde, agronegócio, inteligência artificial..."
                 value={investorForm.teseInvestimento}
-                onChange={(event) => setInvestorForm({ ...investorForm, teseInvestimento: event.target.value })}
+                onChange={(event) =>
+                  setInvestorForm({
+                    ...investorForm,
+                    teseInvestimento: event.target.value,
+                  })
+                }
                 className="w-full rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-brand-teal"
               />
             </div>
             <div className="space-y-2 sm:col-span-2">
-              <label htmlFor="investor-message" className="text-xs font-bold uppercase tracking-wider text-gray-300">
+              <label
+                htmlFor="investor-message"
+                className="text-xs font-bold uppercase tracking-wider text-gray-300"
+              >
                 Como gostaria de se conectar?
               </label>
               <textarea
                 id="investor-message"
                 rows={3}
                 value={investorForm.mensagem}
-                onChange={(event) => setInvestorForm({ ...investorForm, mensagem: event.target.value })}
+                onChange={(event) =>
+                  setInvestorForm({
+                    ...investorForm,
+                    mensagem: event.target.value,
+                  })
+                }
                 className="w-full resize-y rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition focus:border-brand-teal"
               />
             </div>
