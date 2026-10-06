@@ -75,19 +75,6 @@ service cloud.firestore {
       allow delete: if isAdmin();
     }
     
-  match /databases/{database}/documents {
-  
-    match /leads_eventos/{document} {
-      allow create: if true;
-      allow read, update, delete: if false;
-    }
-
-    match /eventos/{document} {
-      allow read: if true;
-      allow write: if false;
-    }
-  }
-
     match /leads_eventos/{id} {
       allow read, update: if request.auth != null && request.auth.token.admin == true;
       allow create: if true; // formulário público continua podendo criar
@@ -166,16 +153,6 @@ service cloud.firestore {
     match /master_class/{id} {
       allow create: if true;
       allow read, update, delete: if isAdmin();
-    }
-  }
-}
-
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /users/{userId} {
-      allow read: if request.auth != null;
-      allow write: if request.auth.uid == userId; // usuário só edita a si mesmo
     }
   }
 }

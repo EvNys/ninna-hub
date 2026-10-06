@@ -26,7 +26,6 @@ interface InvestorApplication {
   email: string;
   telefone?: string;
   empresa?: string;
-  tipoInvestidor?: string;
   teseInvestimento?: string;
   ticketInvestimento?: string;
   mensagem?: string;
@@ -125,7 +124,6 @@ export default function AdminInvestidores() {
       "E-mail",
       "Telefone",
       "Empresa/Fundo",
-      "Perfil",
       "Tese de investimento",
       "Faixa de investimento",
       "Mensagem",
@@ -137,7 +135,6 @@ export default function AdminInvestidores() {
       investor.email,
       investor.telefone,
       investor.empresa,
-      investor.tipoInvestidor,
       investor.teseInvestimento,
       investor.ticketInvestimento,
       investor.mensagem,
@@ -283,9 +280,6 @@ export default function AdminInvestidores() {
                     </td>
                     <td className="px-5 py-4">
                       <p className="font-medium text-gray-700">{investor.empresa || "—"}</p>
-                      <p className="mt-1 text-xs text-gray-400">
-                        {investor.tipoInvestidor || "—"}
-                      </p>
                     </td>
                     <td className="max-w-xs px-5 py-4">
                       <p className="text-gray-700">{investor.teseInvestimento || "—"}</p>

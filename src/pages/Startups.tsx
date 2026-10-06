@@ -52,7 +52,6 @@ export default function PortfolioStartupsShowcase() {
     email: "",
     telefone: "",
     empresa: "",
-    tipoInvestidor: "",
     teseInvestimento: "",
     ticketInvestimento: "",
     mensagem: "",
@@ -98,7 +97,6 @@ export default function PortfolioStartupsShowcase() {
         email: "",
         telefone: "",
         empresa: "",
-        tipoInvestidor: "",
         teseInvestimento: "",
         ticketInvestimento: "",
         mensagem: "",
@@ -561,41 +559,17 @@ export default function PortfolioStartupsShowcase() {
               </div>
             </div>
             <div className="space-y-2">
-              <label htmlFor="investor-type" className="text-xs font-bold uppercase tracking-wider text-gray-300">
-                Perfil de investidor *
-              </label>
-              <select
-                id="investor-type"
-                required
-                value={investorForm.tipoInvestidor}
-                onChange={(event) => setInvestorForm({ ...investorForm, tipoInvestidor: event.target.value })}
-                className="w-full rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition focus:border-brand-teal"
-              >
-                <option value="">Selecione</option>
-                <option value="investidor-anjo">Investidor-anjo</option>
-                <option value="venture-capital">Fundo de venture capital</option>
-                <option value="corporativo">Investidor corporativo</option>
-                <option value="family-office">Family office</option>
-                <option value="outro">Outro</option>
-              </select>
-            </div>
-            <div className="space-y-2">
               <label htmlFor="investor-ticket" className="text-xs font-bold uppercase tracking-wider text-gray-300">
                 Faixa de investimento
               </label>
-              <select
+              <input
                 id="investor-ticket"
+                type="text"
+                placeholder="Ex.: R$ 50 mil a R$ 200 mil por startup"
                 value={investorForm.ticketInvestimento}
                 onChange={(event) => setInvestorForm({ ...investorForm, ticketInvestimento: event.target.value })}
-                className="w-full rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition focus:border-brand-teal"
-              >
-                <option value="">Selecione</option>
-                <option value="ate-100-mil">Até R$ 100 mil</option>
-                <option value="100-a-500-mil">R$ 100 mil a R$ 500 mil</option>
-                <option value="500-mil-a-2-milhoes">R$ 500 mil a R$ 2 milhões</option>
-                <option value="acima-2-milhoes">Acima de R$ 2 milhões</option>
-                <option value="a-definir">A definir</option>
-              </select>
+                className="w-full rounded-xl border border-white/10 bg-[#0b151e] px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-brand-teal"
+              />
             </div>
             <div className="space-y-2 sm:col-span-2">
               <label htmlFor="investor-thesis" className="text-xs font-bold uppercase tracking-wider text-gray-300">
