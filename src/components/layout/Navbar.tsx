@@ -792,7 +792,7 @@ const Navbar = () => {
                       Inscrição e Parcerias
                     </span>
                     <Link
-                      to="/empresas"
+                      to="/startups/ninna-4-startups"
                       onClick={() => setIsStartupsDropdownActive(false)}
                       className="group flex items-center justify-between p-6 bg-white/10 hover:bg-[#00c9a7] border border-transparent rounded-[24px] transition-all cursor-pointer"
                     >
