@@ -303,6 +303,25 @@ const Navbar = () => {
                     <Link
                       to="/empresas#bloco3"
                       onClick={() => setIsOpen(false)}
+                      className="flex w-full items-center gap-2.5 p-2 rounded-lg bg-white/[0.04] text-left hover:bg-white/[0.08] transition-colors group"
+                    >
+                      <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
+                        <Sparkles className="w-3.5 h-3.5" />
+                      </span>
+                      <span className="flex-1 min-w-0">
+                        <span className="block text-[10px] font-black uppercase tracking-wide text-white leading-tight">
+                          Inteligência Artificial
+                        </span>
+                        <span className="block text-[10px] text-gray-400 normal-case font-normal leading-tight">
+                          Jornada de IA com método
+                        </span>
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
+                    </Link>
+
+                    <Link
+                      to="/empresas#bloco4"
+                      onClick={() => setIsOpen(false)}
                       className="flex items-center gap-2.5 p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] transition-colors group"
                     >
                       <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
@@ -318,25 +337,6 @@ const Navbar = () => {
                       </span>
                       <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-brand-teal transition-colors shrink-0" />
                     </Link>
-
-                    <button
-                      type="button"
-                      disabled
-                      title="Página em construção"
-                      className="flex w-full items-center gap-2.5 p-2 rounded-lg bg-white/[0.02] text-left opacity-60 cursor-not-allowed"
-                    >
-                      <span className="flex items-center justify-center w-7 h-7 rounded-md bg-brand-teal/15 text-brand-teal shrink-0">
-                        <Sparkles className="w-3.5 h-3.5" />
-                      </span>
-                      <span className="flex-1 min-w-0">
-                        <span className="block text-[10px] font-black uppercase tracking-wide text-white leading-tight">
-                          Inteligência Artificial
-                        </span>
-                        <span className="block text-[10px] text-gray-400 normal-case font-normal leading-tight">
-                          Página em construção
-                        </span>
-                      </span>
-                    </button>
                   </div>
                 )}
 
@@ -552,6 +552,28 @@ const Navbar = () => {
                   className="group flex flex-col justify-between min-h-48 p-5 bg-white/5 hover:bg-white/10 border border-transparent hover:border-[#00c9a7]/30 rounded-2xl transition-all"
                 >
                   <div>
+                    <Sparkles className="w-6 h-6 text-[#00c9a7] mb-5" />
+                    <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white group-hover:text-[#00c9a7] transition-colors">
+                      Inteligência Artificial
+                    </h5>
+                    <p className="text-white/50 text-xs font-inter leading-relaxed mt-3">
+                      Apoiamos organizações na adoção estruturada de IA, da
+                      preparação das lideranças à identificação e implementação
+                      de casos de uso.
+                    </p>
+                  </div>
+                  <span className="text-[9px] font-black text-[#00c9a7] uppercase tracking-widest mt-5">
+                    Jornada de IA com método{" "}
+                    <ArrowRight className="inline w-3 h-3 ml-1" />
+                  </span>
+                </Link>
+
+                <Link
+                  to="/empresas#bloco4"
+                  onClick={() => setIsCompaniesDropdownActive(false)}
+                  className="group flex flex-col justify-between min-h-48 p-5 bg-white/5 hover:bg-white/10 border border-transparent hover:border-[#00c9a7]/30 rounded-2xl transition-all"
+                >
+                  <div>
                     <Handshake className="w-6 h-6 text-[#00c9a7] mb-5" />
                     <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white group-hover:text-[#00c9a7] transition-colors">
                       Inovação Aberta
@@ -566,28 +588,6 @@ const Navbar = () => {
                     <ArrowRight className="inline w-3 h-3 ml-1" />
                   </span>
                 </Link>
-
-                <button
-                  type="button"
-                  disabled
-                  title="Página em construção"
-                  className="group flex flex-col justify-between min-h-48 p-5 bg-white/[0.02] text-left border border-white/5 rounded-2xl opacity-60 cursor-not-allowed"
-                >
-                  <div>
-                    <Sparkles className="w-6 h-6 text-[#00c9a7] mb-5" />
-                    <h5 className="font-barlowCondensed-Black uppercase text-[12px] tracking-widest text-white">
-                      Inteligência Artificial
-                    </h5>
-                    <p className="text-white/50 text-xs font-inter leading-relaxed mt-3">
-                      Apoiamos organizações na adoção estruturada de IA, da
-                      preparação das lideranças à identificação e implementação
-                      de casos de uso.
-                    </p>
-                  </div>
-                  <span className="text-[9px] font-black text-white/40 uppercase tracking-widest mt-5">
-                    Em breve
-                  </span>
-                </button>
               </div>
             </div>
           </motion.div>

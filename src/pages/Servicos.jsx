@@ -35,7 +35,11 @@ import {
   Users,
   Globe,
   CalendarDays,
-  ArrowRight,
+  GaugeCircle,
+  BookOpen,
+  Target,
+  Binary,
+  ShieldCheck,
 } from "lucide-react";
 
 const NAV_ITEMS = [
@@ -53,18 +57,24 @@ const NAV_ITEMS = [
   },
   {
     id: "bloco3",
+    icon: Cpu,
+    label: "Quero aplicar IA com método",
+    aria: "Jornada de IA",
+  },
+  {
+    id: "bloco4",
     icon: Rocket,
     label: "Quero executar com parceiros",
     aria: "Executar",
   },
   {
-    id: "bloco4",
+    id: "bloco5",
     icon: Sprout,
     label: "Quero ativar minha cultura",
     aria: "Cultura",
   },
   {
-    id: "bloco5",
+    id: "bloco6",
     icon: Handshake,
     label: "Quero me conectar ao ecossistema",
     aria: "Ecossistema",
@@ -197,6 +207,76 @@ const BLOCOS = [
   },
   {
     id: "bloco3",
+    title: "JORNADA DE IA COM MÉTODO",
+    subtitle: "PARA QUEM QUER IA COM RESULTADO, NÃO COM PROMESSA",
+    title2: "SEIS ETAPAS, UMA CAPACIDADE CONTÍNUA",
+    subtitle2: "JORNADA DE IA NINNA",
+    desc2:
+      "Do diagnóstico à governança: uma jornada para formar pessoas, priorizar oportunidades e transformar IA em resultado medido.",
+    accent: "#F9A1BC",
+    image: "/fotos_empresas/11.webp",
+    image2: "/fotos_empresas/12.webp",
+    cta: "Engaje seu time",
+    description:
+      "Ferramenta muda a cada seis meses. Método fica. A Jornada de IA NINNA leva sua empresa do diagnóstico à adoção em seis etapas, com formação para cada nível da liderança, oportunidades reais priorizadas por impacto e governança desde o início. Sem ações genéricas: o objetivo é deixar uma capacidade contínua dentro do seu time.",
+    empresas: [
+      { nome: "Empresa A", logo: "/Imagens_NINNA/logo-a.png" },
+      { nome: "Empresa B", logo: "/Imagens_NINNA/logo-b.png" },
+      { nome: "Empresa C", logo: null }, // sem logo, exibe só o nome
+    ],
+    checklist: [
+      "Entender o nível atual de adoção de IA da organização e estabelecer uma baseline de produtividade.",
+      "Formar a liderança executiva, a média liderança e os builders para decidir, redesenhar processos e construir com IA.",
+      "Mapear e priorizar oportunidades reais, com dono, critério de aceite e visão clara de ROI.",
+      "Transformar protótipos em soluções adotadas, medidas e governadas, escalando só o que provou valor.",
+    ],
+    cases: [
+      {
+        company: "Empresa G",
+        result:
+          "Formou 120 embaixadores de inovação espalhados por 8 unidades de negócio em 6 meses.",
+      },
+      {
+        company: "Empresa H",
+        result:
+          "Hackathon corporativo gerou 3 projetos que viraram iniciativas oficiais da empresa.",
+      },
+    ],
+    cards: [
+      {
+        title: "RAIO-X DE ADOÇÃO DE IA",
+        icon: GaugeCircle,
+        desc: "Avalie maturidade, ferramentas, processos, dados e riscos. Entrega: AI Readiness Assessment e baseline de produtividade.",
+      },
+      {
+        title: "FORMAÇÃO EM INTELIGÊNCIA ARTIFICIAL",
+        icon: BookOpen,
+        desc: "36 horas em três trilhas (executiva, média liderança e builders), com foco em pensamento crítico e método, não em ferramenta",
+      },
+      {
+        title: "PORTFÓLIO DE OPORTUNIDADES EM IA",
+        icon: Lightbulb,
+        desc: "Workshops para mapear e priorizar casos de uso por impacto, esforço e risco, com dono definido. Entrega: portfólio de oportunidades em IA.",
+      },
+      {
+        title: "LAB DE EXPERIMENTAÇÃO EM IA",
+        icon: Binary,
+        desc: "Bootcamp de Vibe Coding e prototipação para transformar oportunidades em protótipos testáveis: hipótese → protótipo → teste → evidência → decisão.",
+      },
+      {
+        title: "IMPLEMENTAÇÃO ASSISTIDA",
+        icon: Rocket,
+        desc: "Acompanhamento do piloto até a adoção, com plano de implantação, responsáveis, indicadores e mensuração de resultados.",
+      },
+      {
+        title: "GOVERNANÇA DE IA",
+        icon: ShieldCheck,
+        desc: "Camada transversal de critérios, papéis, acompanhamento e mensuração para escalar com segurança. Entrega: modelo de governança.",
+      },
+    ],
+  },
+  {
+    id: "bloco4",
     title: "Executar com Tecnologia e Parceiros",
     subtitle:
       "Para quem quer colocar a mão na massa com parceiros e tecnologia",
@@ -263,7 +343,7 @@ const BLOCOS = [
     ],
   },
   {
-    id: "bloco4",
+    id: "bloco5",
     title: "Ativar Cultura e Pessoas",
     subtitle: "Para quem quer engajar times e criar cultura de inovação",
     title2: "Pessoas engajadas são o motor da inovação",
@@ -344,7 +424,7 @@ const BLOCOS = [
     ],
   },
   {
-    id: "bloco5",
+    id: "bloco6",
     title: "Conectar ao Ecossistema",
     subtitle:
       "Para quem quer fazer parte de algo maior e se conectar com pares",
@@ -1283,7 +1363,7 @@ export default function ServicosPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
               gap: "12px",
             }}
           >
