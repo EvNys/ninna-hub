@@ -60,7 +60,7 @@ const AdminSidebar = () => {
     {
       icon: MessageCircleWarning,
       label: "Pop-Ups",
-      path: "/dashboard/DashboardPopups",
+      path: "/admin/DashboardPopups",
     },
     { icon: Rocket, label: "Startups", path: "/admin/startups" },
     { icon: Users, label: "Mentores", path: "/admin/mentores" },
