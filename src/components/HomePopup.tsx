@@ -3,22 +3,26 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
-import type { Popup } from "../pages/DashboardPopups"; // ajuste o caminho
+import type { Popup } from "../pages/Admin/DashboardPopups"; // ajuste o caminho
 
 const chaveVisto = (id: string) => `popup_visto_${id}`;
 
 const jaFoiVisto = (p: Popup) => {
   try {
-    if (p.frequencia === "uma_vez") return !!localStorage.getItem(chaveVisto(p.id!));
-    if (p.frequencia === "sessao") return !!sessionStorage.getItem(chaveVisto(p.id!));
+    if (p.frequencia === "uma_vez")
+      return !!localStorage.getItem(chaveVisto(p.id!));
+    if (p.frequencia === "sessao")
+      return !!sessionStorage.getItem(chaveVisto(p.id!));
   } catch {}
   return false;
 };
 
 const marcarVisto = (p: Popup) => {
   try {
-    if (p.frequencia === "uma_vez") localStorage.setItem(chaveVisto(p.id!), "1");
-    if (p.frequencia === "sessao") sessionStorage.setItem(chaveVisto(p.id!), "1");
+    if (p.frequencia === "uma_vez")
+      localStorage.setItem(chaveVisto(p.id!), "1");
+    if (p.frequencia === "sessao")
+      sessionStorage.setItem(chaveVisto(p.id!), "1");
   } catch {}
 };
 
@@ -47,10 +51,13 @@ const HomePopup = () => {
 
         if (elegivel) {
           setPopup(elegivel);
-          timer = setTimeout(() => {
-            setAberto(true);
-            marcarVisto(elegivel);
-          }, (elegivel.atraso ?? 0) * 1000);
+          timer = setTimeout(
+            () => {
+              setAberto(true);
+              marcarVisto(elegivel);
+            },
+            (elegivel.atraso ?? 0) * 1000,
+          );
         }
       } catch (error) {
         console.error("Erro ao carregar pop-up:", error);

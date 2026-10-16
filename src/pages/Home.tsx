@@ -24,7 +24,7 @@ import {
   limit,
 } from "firebase/firestore";
 import { db } from "../lib/firebase";
-import HomePopup from "./HomePopup";
+import HomePopup from "../components/HomePopup";
 // Lista de parceiros de fallback fica em src/data/parceiros-fallback.ts.
 import { PARCEIROS_FALLBACK } from "../data/parceiros-fallback";
 

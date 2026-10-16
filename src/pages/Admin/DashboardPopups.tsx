@@ -10,7 +10,7 @@ import {
   doc,
   serverTimestamp,
 } from "firebase/firestore";
-import { db, auth } from "../lib/firebase";
+import { db, auth } from "../../lib/firebase";
 import { motion, AnimatePresence } from "motion/react";
 import {
   Search,
@@ -79,8 +79,7 @@ const logError = (error: any, operationType: string, path: string) =>
     }),
   );
 
-const formatData = (d: string) =>
-  d ? d.split("-").reverse().join("/") : "—";
+const formatData = (d: string) => (d ? d.split("-").reverse().join("/") : "—");
 
 const statusDoPopup = (p: Popup) => {
   if (!p.ativo) return { label: "Inativo", cor: "bg-gray-100 text-gray-400" };
@@ -163,7 +162,9 @@ const DashboardPopups = () => {
       const q = query(collection(db, "popups"), orderBy("prioridade", "asc"));
       const snap = await getDocs(q);
       setPopups(
-        snap.docs.map((d) => ({ ...POPUP_VAZIO, id: d.id, ...d.data() }) as Popup),
+        snap.docs.map(
+          (d) => ({ ...POPUP_VAZIO, id: d.id, ...d.data() }) as Popup,
+        ),
       );
     } catch (error: any) {
       logError(error, "list", "popups");
@@ -582,7 +583,9 @@ const DashboardPopups = () => {
                       />
                     </span>
                     <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">
-                      {editando.ativo ? "Ativo na home" : "Salvar como rascunho"}
+                      {editando.ativo
+                        ? "Ativo na home"
+                        : "Salvar como rascunho"}
                     </span>
                   </button>
 

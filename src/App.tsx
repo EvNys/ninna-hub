@@ -28,6 +28,7 @@ import Servicos from "./pages/Servicos";
 // Admin Pages
 import AdminLogin from "./pages/Admin/Login";
 import AdminDashboard from "./pages/Admin/Dashboard";
+import DashboardPopups from "./pages/Admin/DashboardPopups";
 import AdminStartups from "./pages/Admin/Startups";
 import AdminMentores from "./pages/Admin/Mentores";
 import AdminInvestidores from "./pages/Admin/Investidores";
@@ -127,6 +128,16 @@ function AppContent() {
               <AdminProtectedRoute>
                 <AdminLayout>
                   <AdminDashboard />
+                </AdminLayout>
+              </AdminProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/popups"
+            element={
+              <AdminProtectedRoute>
+                <AdminLayout>
+                  <DashboardPopups />
                 </AdminLayout>
               </AdminProtectedRoute>
             }
