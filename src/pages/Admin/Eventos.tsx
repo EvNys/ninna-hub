@@ -4,7 +4,7 @@ import { storage } from '../../lib/firebase';
 import { toast } from 'sonner';
 import { useFirestoreCollection } from '../../hooks/useFirestoreCollection';
 import type { Evento } from '../../types';
-import { Edit2, Trash2, Calendar, Link as LinkIcon } from 'lucide-react';
+import { Edit2, Trash2, Calendar, Link as LinkIcon, Download, FileSpreadsheet, Upload } from 'lucide-react';
 import {
   AdminPageHeader,
   AdminFormModal,
@@ -12,8 +12,211 @@ import {
   AdminCheckbox,
 } from '../../components/admin';
 
+type EventoImportado = Omit<Evento, 'id' | 'createdAt' | 'updatedAt'>;
+
+interface PreviaImportacao {
+  eventos: EventoImportado[];
+  erros: string[];
+}
+
+const csvHeaders = [
+  'nome',
+  'descricao',
+  'data',
+  'horario',
+  'local',
+  'imagem',
+  'linkInscricao',
+  'status',
+  'destaque',
+];
+
+function parseCsv(content: string): string[][] {
+  const text = content.replace(/^\uFEFF/, '');
+  const separators = [',', ';', '\t'];
+  let separator = ',';
+  let highestSeparatorCount = -1;
+  let inQuotes = false;
+  let firstRecord = '';
+
+  for (let index = 0; index < text.length; index += 1) {
+    const character = text[index];
+    if (character === '"') {
+      if (inQuotes && text[index + 1] === '"') {
+        firstRecord += '""';
+        index += 1;
+        continue;
+      }
+      inQuotes = !inQuotes;
+    }
+    if ((character === '\n' || character === '\r') && !inQuotes) break;
+    firstRecord += character;
+  }
+
+  for (const candidate of separators) {
+    let count = 0;
+    let quoted = false;
+    for (let index = 0; index < firstRecord.length; index += 1) {
+      if (firstRecord[index] === '"') {
+        if (quoted && firstRecord[index + 1] === '"') {
+          index += 1;
+          continue;
+        }
+        quoted = !quoted;
+      } else if (firstRecord[index] === candidate && !quoted) {
+        count += 1;
+      }
+    }
+    if (count > highestSeparatorCount) {
+      separator = candidate;
+      highestSeparatorCount = count;
+    }
+  }
+
+  const rows: string[][] = [];
+  let row: string[] = [];
+  let field = '';
+  let quoted = false;
+
+  for (let index = 0; index < text.length; index += 1) {
+    const character = text[index];
+    if (character === '"') {
+      if (quoted && text[index + 1] === '"') {
+        field += '"';
+        index += 1;
+      } else {
+        quoted = !quoted;
+      }
+    } else if (character === separator && !quoted) {
+      row.push(field.trim());
+      field = '';
+    } else if ((character === '\n' || character === '\r') && !quoted) {
+      if (character === '\r' && text[index + 1] === '\n') index += 1;
+      row.push(field.trim());
+      if (row.some((value) => value !== '')) rows.push(row);
+      row = [];
+      field = '';
+    } else {
+      field += character;
+    }
+  }
+
+  if (quoted) throw new Error('O arquivo contém aspas não fechadas.');
+  row.push(field.trim());
+  if (row.some((value) => value !== '')) rows.push(row);
+  return rows;
+}
+
+function normalizeCsvHeader(header: string): string {
+  return header
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '');
+}
+
+function normalizeCsvValue(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+    .toLowerCase();
+}
+
+function parseEventoCsv(content: string): PreviaImportacao {
+  const rows = parseCsv(content);
+  if (rows.length < 2) {
+    throw new Error('O CSV precisa conter cabeçalho e pelo menos um evento.');
+  }
+
+  const headerAliases: Record<string, keyof EventoImportado> = {
+    nome: 'nome',
+    descricao: 'descricao',
+    data: 'data',
+    horario: 'horario',
+    local: 'local',
+    imagem: 'imagem',
+    linkinscricao: 'linkInscricao',
+    status: 'status',
+    destaque: 'destaque',
+  };
+  const headers = rows[0].map((header) => headerAliases[normalizeCsvHeader(header)]);
+  const requiredHeaders: Array<keyof EventoImportado> = ['nome', 'descricao', 'data'];
+  const missingHeaders = requiredHeaders.filter((header) => !headers.includes(header));
+  if (missingHeaders.length > 0) {
+    throw new Error(`Colunas obrigatórias ausentes: ${missingHeaders.join(', ')}.`);
+  }
+
+  const eventos: EventoImportado[] = [];
+  const erros: string[] = [];
+
+  rows.slice(1).forEach((row, index) => {
+    const values = Object.fromEntries(
+      headers
+        .map((header, columnIndex) => [header, row[columnIndex] ?? ''])
+        .filter(([header]) => header),
+    ) as Partial<Record<keyof EventoImportado, string>>;
+    const registro = index + 2;
+    const issues: string[] = [];
+
+    const nome = values.nome?.trim() ?? '';
+    const descricao = values.descricao?.trim() ?? '';
+    const dataInformada = values.data?.trim() ?? '';
+    let data = dataInformada;
+    const brDate = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(dataInformada);
+    if (brDate) data = `${brDate[3]}-${brDate[2]}-${brDate[1]}`;
+    const isoDate = /^(\d{4})-(\d{2})-(\d{2})$/.exec(data);
+    const parsedDate = isoDate ? new Date(`${data}T00:00:00Z`) : null;
+
+    if (!nome) issues.push('nome obrigatório');
+    if (!descricao) issues.push('descrição obrigatória');
+    if (!parsedDate || Number.isNaN(parsedDate.getTime()) || parsedDate.toISOString().slice(0, 10) !== data) {
+      issues.push('data inválida (use AAAA-MM-DD ou DD/MM/AAAA)');
+    }
+
+    const statusInformado = normalizeCsvValue(values.status ?? '');
+    if (statusInformado && statusInformado !== 'ativo' && statusInformado !== 'inativo') {
+      issues.push('status deve ser ativo ou inativo');
+    }
+
+    const destaqueInformado = normalizeCsvValue(values.destaque ?? '');
+    const destaqueValores: Record<string, boolean> = {
+      true: true,
+      sim: true,
+      yes: true,
+      '1': true,
+      false: false,
+      nao: false,
+      no: false,
+      '0': false,
+    };
+    if (destaqueInformado && !(destaqueInformado in destaqueValores)) {
+      issues.push('destaque deve ser sim/não ou true/false');
+    }
+
+    if (issues.length > 0) {
+      erros.push(`Registro ${registro}: ${issues.join(', ')}.`);
+      return;
+    }
+
+    eventos.push({
+      nome,
+      descricao,
+      data,
+      horario: values.horario?.trim() ?? '',
+      local: values.local?.trim() ?? '',
+      imagem: values.imagem?.trim() ?? '',
+      linkInscricao: values.linkInscricao?.trim() ?? '',
+      status: statusInformado === 'inativo' ? 'inativo' : 'ativo',
+      destaque: destaqueInformado ? destaqueValores[destaqueInformado] : false,
+    });
+  });
+
+  return { eventos, erros };
+}
+
 const AdminEventos = () => {
-  const { items: eventos, loading, create, update, remove } = useFirestoreCollection<Evento>({
+  const { items: eventos, loading, create, createMany, update, remove } = useFirestoreCollection<Evento>({
     collectionName: 'eventos',
     orderByField: 'data',
     orderDirection: 'desc',
@@ -27,6 +230,9 @@ const AdminEventos = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<Evento | null>(null);
   const [uploading, setUploading] = useState(false);
+  const [importacao, setImportacao] = useState<PreviaImportacao | null>(null);
+  const [nomeArquivo, setNomeArquivo] = useState('');
+  const [importando, setImportando] = useState(false);
 
   const [formData, setFormData] = useState({
     nome: '',
@@ -73,6 +279,59 @@ const AdminEventos = () => {
     remove(id, 'Excluir evento?');
   };
 
+  const handleCsvUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+    setImportacao(null);
+    setNomeArquivo('');
+    if (!file.name.toLowerCase().endsWith('.csv')) {
+      toast.error('Selecione um arquivo CSV.');
+      return;
+    }
+
+    try {
+      const preview = parseEventoCsv(await file.text());
+      setImportacao(preview);
+      setNomeArquivo(file.name);
+      if (preview.eventos.length === 0) {
+        toast.error('Nenhum evento válido encontrado no CSV.');
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error(error instanceof Error ? error.message : 'Não foi possível ler o arquivo CSV.');
+      setImportacao(null);
+      setNomeArquivo('');
+    }
+  };
+
+  const handleImport = async () => {
+    if (!importacao || importacao.eventos.length === 0) return;
+    setImportando(true);
+    try {
+      await createMany(importacao.eventos);
+      setImportacao(null);
+      setNomeArquivo('');
+    } finally {
+      setImportando(false);
+    }
+  };
+
+  const downloadCsvTemplate = () => {
+    const template = [
+      csvHeaders.join(';'),
+      ['Nome do evento', 'Descrição do evento', '2026-12-31', '19:00', 'NINNA Hub', '', '', 'ativo', 'false']
+        .map((value) => `"${value.replace(/"/g, '""')}"`)
+        .join(';'),
+    ].join('\r\n');
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(new Blob(['\uFEFF', template], { type: 'text/csv;charset=utf-8;' }));
+    link.href = url;
+    link.download = 'modelo-eventos.csv';
+    link.click();
+    window.setTimeout(() => URL.revokeObjectURL(url), 0);
+  };
+
   const openEdit = (item: Evento) => {
     setEditingItem(item);
     setFormData({
@@ -102,7 +361,73 @@ const AdminEventos = () => {
         subtitle="Gerencie as artes, datas e inscrições dos eventos do Hub."
         addButtonLabel="Novo Evento"
         onAdd={() => { resetForm(); setIsDialogOpen(true); }}
+        extraActions={
+          <>
+            <button
+              type="button"
+              onClick={downloadCsvTemplate}
+              className="rounded-xl border border-gray-200 bg-white px-5 py-4 text-[10px] font-black uppercase tracking-widest text-gray-500 transition-all hover:border-brand-teal hover:text-brand-teal"
+            >
+              <Download className="mr-2 inline h-4 w-4" /> Modelo CSV
+            </button>
+            <label className={`cursor-pointer rounded-xl bg-gray-900 px-5 py-4 text-[10px] font-black uppercase tracking-widest text-white transition-all hover:bg-gray-700 ${importando ? 'pointer-events-none opacity-50' : ''}`}>
+              <input type="file" accept=".csv,text/csv" className="hidden" onChange={handleCsvUpload} disabled={importando} />
+              <Upload className="mr-2 inline h-4 w-4" /> Importar CSV
+            </label>
+          </>
+        }
       />
+
+      <p className="-mt-8 mb-8 text-xs text-gray-400">
+        CSV com as colunas <strong>nome</strong>, <strong>descricao</strong> e <strong>data</strong> obrigatórias.
+        As datas podem estar em AAAA-MM-DD ou DD/MM/AAAA; use o modelo para ver todas as colunas disponíveis.
+      </p>
+
+      {importacao && (
+        <section className="mb-8 rounded-3xl border border-gray-100 bg-white p-6 shadow-lg">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h2 className="flex items-center gap-2 text-sm font-black uppercase tracking-widest text-gray-900">
+                <FileSpreadsheet className="h-5 w-5 text-brand-teal" /> Prévia da importação
+              </h2>
+              <p className="mt-2 text-sm text-gray-500">{nomeArquivo}</p>
+              <p className="mt-1 text-xs font-bold text-brand-teal">
+                {importacao.eventos.length} evento(s) pronto(s) para importar
+                {importacao.erros.length > 0 && ` · ${importacao.erros.length} registro(s) serão ignorados`}
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <button
+                type="button"
+                onClick={() => { setImportacao(null); setNomeArquivo(''); }}
+                disabled={importando}
+                className="rounded-xl border border-gray-200 px-5 py-3 text-[10px] font-black uppercase tracking-widest text-gray-500"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                onClick={handleImport}
+                disabled={importando || importacao.eventos.length === 0}
+                className="rounded-xl bg-brand-teal px-5 py-3 text-[10px] font-black uppercase tracking-widest text-white disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {importando ? 'Importando...' : `Importar ${importacao.eventos.length} evento(s)`}
+              </button>
+            </div>
+          </div>
+          {importacao.erros.length > 0 && (
+            <div className="mt-5 rounded-2xl bg-amber-50 p-4 text-xs text-amber-800">
+              <p className="mb-2 font-black uppercase tracking-wider">Registros inválidos</p>
+              <ul className="space-y-1">
+                {importacao.erros.slice(0, 5).map((erro) => <li key={erro}>{erro}</li>)}
+              </ul>
+              {importacao.erros.length > 5 && (
+                <p className="mt-2 font-bold">E mais {importacao.erros.length - 5} registro(s).</p>
+              )}
+            </div>
+          )}
+        </section>
+      )}
 
       <AdminFormModal
         isOpen={isDialogOpen}

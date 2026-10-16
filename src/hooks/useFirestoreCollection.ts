@@ -74,6 +74,8 @@ interface UseFirestoreCollectionResult<T> {
   refetch: () => Promise<void>;
   /** Cria um documento novo (injeta createdAt/updatedAt). */
   create: (data: Record<string, unknown>) => Promise<void>;
+  /** Cria vários documentos individualmente e retorna o resultado parcial. */
+  createMany: (records: Record<string, unknown>[]) => Promise<{ createdCount: number; failedCount: number }>;
   /** Atualiza um documento existente (injeta updatedAt). */
   update: (id: string, data: Record<string, unknown>) => Promise<void>;
   /** Exclui um documento. Se `confirmMessage` for passado, mostra window.confirm antes. */
@@ -90,12 +92,20 @@ function reportError(
   collectionName: string,
   fallbackMessage: string,
 ) {
+  logFirestoreError(error, operation, collectionName);
+  toast.error(fallbackMessage);
+}
+
+function logFirestoreError(
+  error: unknown,
+  operation: OperationType,
+  collectionName: string,
+) {
   try {
     handleFirestoreError(error, operation, collectionName);
   } catch {
-    // O log já foi feito por handleFirestoreError; aqui só avisamos o usuário.
+    // handleFirestoreError logs the structured error before re-throwing.
   }
-  toast.error(fallbackMessage);
 }
 
 export function useFirestoreCollection<T extends BaseDoc>(
@@ -151,6 +161,38 @@ export function useFirestoreCollection<T extends BaseDoc>(
     [collectionName, successLabels, refetch],
   );
 
+  const createMany = useCallback(
+    async (records: Record<string, unknown>[]) => {
+      let createdCount = 0;
+      let failedCount = 0;
+
+      for (const record of records) {
+        try {
+          await addDoc(collection(db, collectionName), {
+            ...record,
+            createdAt: serverTimestamp(),
+            updatedAt: serverTimestamp(),
+          });
+          createdCount += 1;
+        } catch (error) {
+          failedCount += 1;
+          logFirestoreError(error, OperationType.CREATE, collectionName);
+        }
+      }
+
+      if (createdCount > 0) {
+        toast.success(`${createdCount} registro(s) criado(s) com sucesso`);
+      }
+      if (failedCount > 0) {
+        toast.error(`Não foi possível criar ${failedCount} registro(s)`);
+      }
+
+      await refetch();
+      return { createdCount, failedCount };
+    },
+    [collectionName, refetch],
+  );
+
   const update = useCallback(
     async (id: string, data: Record<string, unknown>) => {
       try {
@@ -181,5 +223,5 @@ export function useFirestoreCollection<T extends BaseDoc>(
     [collectionName, successLabels, refetch],
   );
 
-  return { items, loading, refetch, create, update, remove };
+  return { items, loading, refetch, create, createMany, update, remove };
 }
