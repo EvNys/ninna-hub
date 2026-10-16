@@ -24,6 +24,7 @@ import {
   limit,
 } from "firebase/firestore";
 import { db } from "../lib/firebase";
+import HomePopup from "./HomePopup";
 // Lista de parceiros de fallback fica em src/data/parceiros-fallback.ts.
 import { PARCEIROS_FALLBACK } from "../data/parceiros-fallback";
 
@@ -968,6 +969,7 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+      <HomePopup />
     </div>
   );
 };
