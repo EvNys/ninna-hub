@@ -118,7 +118,7 @@ const HomePopup = () => {
             <div className="p-8 text-center">
               <h3
                 id="home-popup-titulo"
-                className="text-2xl font-black text-gray-900 uppercase tracking-wide italic leading-tight mb-3"
+                className="text-2xl font-black text-gray-900 uppercase tracking-wide leading-tight mb-3"
               >
                 {popup.titulo}
               </h3>
